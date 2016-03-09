@@ -1,0 +1,37 @@
+<article class="landingBanner">
+	<div class="waytostoreBanner fashDeco">
+		<div class="leftBanner" style="margin-left:0">
+			<div class="bannerHeadingText"><?php echo $h; ?></div>
+			<div class="bannerBottomTextBottom"><?php echo $t1; ?>
+				<div> <?php echo $t2; ?></div>
+			</div>
+		</div>
+		<div class="whiteBox4"><a
+				href="<?php echo $base_url . 'order/product_page/' . $banner_prod[0]->store_id . '/' . $banner_prod[0]->product_id; ?>">
+				<img width="120px" height="120px"
+				     src="<?php echo $store_url; ?>assets/images/stores/<?php echo $banner_prod[0]->store_id; ?>/<?php echo $banner_prod[0]->product_id; ?>/img1_171x171.jpg"/>
+			</a>
+
+			<div class="bprodText"><?php echo $banner_prod[0]->product_name; ?></div>
+			<div class="bpriceText"><?php echo $banner_prod[0]->selling_price - $banner_prod[0]->discount; ?></div>
+			<!-- <div class="ytext">Yahoo<br></div>--> </div>
+		<div class="whiteBox5"><a
+				href="<?php echo $base_url . 'order/product_page/' . $banner_prod[1]->store_id . '/' . $banner_prod[1]->product_id; ?>">
+				<img width="120px" height="120px"
+				     src="<?php echo $store_url; ?>assets/images/stores/<?php echo $banner_prod[1]->store_id; ?>/<?php echo $banner_prod[1]->product_id; ?>/img1_171x171.jpg"/>
+			</a>
+
+			<div class="bprodText"><?php echo $banner_prod[1]->product_name; ?></div>
+			<div class="bpriceText"><?php echo $banner_prod[1]->selling_price - $banner_prod[1]->discount; ?></div>
+			<!-- <div class="ytext">Yahoo<br></div>--> </div>
+		<div class="whiteBox6"><a
+				href="<?php echo $base_url . 'order/product_page/' . $banner_prod[2]->store_id . '/' . $banner_prod[2]->product_id; ?>">
+				<img width="120px" height="120px"
+				     src="<?php echo $store_url; ?>assets/images/stores/<?php echo $banner_prod[2]->store_id; ?>/<?php echo $banner_prod[2]->product_id; ?>/img1_171x171.jpg"/>
+			</a>
+
+			<div class="bprodText"><?php echo $banner_prod[2]->product_name; ?></div>
+			<div class="bpriceText"><?php echo $banner_prod[2]->selling_price - $banner_prod[2]->discount; ?></div>
+			<!-- <div class="ytext">Yahoo<br></div>--> </div>
+	</div>
+</article>

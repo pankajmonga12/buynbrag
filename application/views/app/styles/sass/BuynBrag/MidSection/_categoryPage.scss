@@ -1,0 +1,241 @@
+.categoryPage, .storePage, .searchPage{
+
+  .breadcrumb, .subCategoriesContainer{
+    background: #f1f1f1;
+//    border-bottom: none;
+    font-size: 0.8em;
+//    border-radius: 3px 3px 0 0;
+    padding: 1px 10px;
+    margin-bottom: 5px;
+  }
+
+  .breadcrumb{
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .subCategoriesContainer{
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .filtersContainer{
+    background: #f1f1f1;
+    margin-bottom: 0;
+  }
+
+  .fanciedProductsContainer {
+    margin-top: 5px;
+  }
+
+    #sliderFrame {
+    height: 255px;
+
+    #slider {
+      height: 238px;
+    }
+  }
+
+  .spinner{
+    margin-top: 10px !important;
+    margin-bottom: 30px !important;
+  }
+
+  //.sidebarNav{
+  //  margin: 0;
+  //  background: #fff;
+  //  padding: 5px 20px;
+  //  border: 1px solid #d8dae4;
+  //  border-radius: 4px;
+  //  height: auto;
+  //  overflow: hidden;
+  //  //position: fixed;
+  //  //top: 60px;
+  //
+  //  .navOpen{
+  //    font-family: gill_bold;
+  //    color: #1bc784 !important;
+  //    font-size: 15px;
+  //  }
+  //
+  //  .navList{
+  //
+  //    &>li{
+  //      margin: 10px 0;
+  //
+  //      a{
+  //        color: inherit;
+  //      }
+  //    }
+  //
+  //    .subNavList{
+  //      list-style: none;
+  //      margin-left: 15px;
+  //
+  //      &.lastLevel{
+  //        list-style: circle;
+  //        margin-left: 35px;
+  //
+  //        &>li{
+  //          margin: 8px 0;
+  //        }
+  //
+  //        li:before{
+  //          content: none;
+  //        }
+  //      }
+  //
+  //      &>li{
+  //        margin: 5px 0;
+  //      }
+  //
+  //      li:before{
+  //        content: '\2023';
+  //        font-size: 24px;
+  //        position: relative;
+  //        top: 2px;
+  //        margin: 0 5px 0 0;
+  //      }
+  //    }
+  //
+  //    a{
+  //      text-decoration: none;
+  //    }
+  //  }
+  //}
+
+  .fancyProductMediumContainer{
+    margin: 0;
+  }
+
+  .fancyItem{
+    //box-shadow: 0 1px 5px -2px rgba(0,0,0,0.52);
+    border-radius: 4px;
+    margin-bottom: 1.2em;
+    padding: 0;
+    border: 1px solid #d8dae4;
+//    margin-left: 17px;
+
+    .newBragBtn, .newTagBtn {
+      height: 40px;
+      width: 40px;
+      background-size: 160px;
+      top: 40%;
+    }
+
+//    .newCTA_wrapper {
+//      top: 7px;
+//    }
+
+    .fancyImageBG{
+      min-height: 166px;
+    }
+
+    .fancyItemImageContainer{
+
+      img{
+        border-radius: 2px;
+//        max-width: 200px;
+      }
+    }
+
+    //&:hover .fancyItemImageContainer{
+    //  -webkit-filter: saturate(1) contrast(1) brightness(1) blur(0);
+    //}
+  }
+
+  .itemDetailsContainer {
+    top: 3px;
+
+    .productOriPrice{
+      font-style: 0.9em;
+    }
+
+    .productDiscountedPrice {
+      font-size: 1.1em;
+    }
+  }
+
+  .fancyItemDetails {
+    padding: 0 9px;
+
+    a{
+      text-decoration: none;
+    }
+
+    .fancyItemName{
+      color: #555;
+      font-size: 12px;
+    }
+
+    .fancyItemStats{
+      color: #777;
+      font-size: 11px;
+    }
+
+    .productPriceContainer{
+      text-transform: uppercase;
+      font-size: 12px;
+//      font-family: HelveticaStd;
+      border: none;
+      padding: 0;
+      background: none;
+      color: #777;
+    }
+
+    .productOriPrice{
+      top: 0px;
+      line-height: initial;
+      font-size: 14px;
+    }
+
+    .productDiscountedPrice{
+      margin: 0;
+      top: 0;
+      line-height: initial;
+      font-size: 15px;
+      right: 4px;
+      text-shadow: 1px 1px 0px #ccc;
+    }
+  }
+
+  //.fancyItemHiddenContainer{
+  //  bottom: 75px;
+  //}
+
+  .quantityText{
+    font-size: 0.8rem;
+    top: 16px;
+    right: -13px;
+  }
+
+  .openQuickView, .itemDirectLink{
+    top: 58%;
+    font-size: 12px !important;
+  }
+
+  .productCtaContainer{
+    left: 0;
+    bottom: 15px;
+
+    .fancyItemBtn{
+      margin: 0;
+      width: 100%;
+      height: 32px;
+    }
+
+    .btnText{
+      padding-left: 10px;
+    }
+
+    .fancyIconPink, .fancyIconWhite{
+      left: -23px;
+      top: -4px;
+    }
+  }
+
+}

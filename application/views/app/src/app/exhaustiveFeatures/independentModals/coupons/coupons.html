@@ -1,0 +1,52 @@
+<div couponshandler>
+<div class="modal-header">
+    <button class="close hidden-iphone-portrait" role="button" data-dismiss="modal">&times;</button>
+    <h3>Coupons Available</h3>
+</div>
+<div class="modal-body">
+
+    <div class="couponsTableContainer" ng-hide="message == true">
+
+    <!-- <iframe style='width:100%;height:auto;border:none' ng-src="{{iframeUrl}}"></iframe> -->
+
+    <div ng-repeat="coupon in userCoupons.couponString.coupons">
+        <div ng-bind-html="coupon">            
+        </div>
+        
+    </div>
+
+        <!-- <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Coupon code</th>
+                <th class="hidden-iphone-landscape">Issued on</th>
+                <th class="hidden-iphone-landscape">Valid till</th>
+                <th>Coupon Value</th>
+                <th class="hidden-iphone-landscape">Minimum purchase amount</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="coupon in userCoupons">
+                <td>{{coupon.couponID}}</td>
+                <td class="hidden-iphone-landscape">{{ (coupon.validFrom)*1000 | date:'mediumDate' }}</td>
+                <td class="hidden-iphone-landscape">{{ (coupon.validUpto)*1000 | date:'mediumDate' }}</td>
+                <td ng-show="coupon.couponType == 1">&#8377; {{coupon.couponValue | number:0}}</td>
+                <td ng-show="coupon.couponType == 0">{{coupon.couponValue | number:0}} %</td>
+                <td class="hidden-iphone-landscape">&#8377; {{coupon.minPurchaseAmount | number:0}}</td>
+            </tr>
+            </tbody>
+        </table> -->
+
+    </div>
+
+    <div class="noCoupons text-center" ng-show="message == true">
+        <i class="icon-sad-smiley block bnbRed"></i>
+        <div class="noCouponsMsg">No coupons are available for you right now. Check back later.</div>
+    </div>
+
+</div>
+<div class="modal-footer visible-phone">
+    <button class="btn btn-flat" role="button" data-dismiss="modal">Close</button>
+</div>
+</div>

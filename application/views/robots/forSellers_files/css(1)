@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Josefin Sans Thin'), local('JosefinSans-Thin'), url(https://fonts.gstatic.com/s/josefinsans/v6/q9w3H4aeBxj0hZ8Osfi3d1dBB84BqlWy1BjOnCrU9PY.woff2) format('woff2'), url(https://fonts.gstatic.com/s/josefinsans/v6/q9w3H4aeBxj0hZ8Osfi3dy1dfeF-hbOdKKuBDEXxqhQ.woff) format('woff');
+}

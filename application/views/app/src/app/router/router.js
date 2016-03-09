@@ -1,0 +1,1 @@
+angular.module('router', ['router.renderRequest', 'router.routesConfig']);

@@ -1,0 +1,194 @@
+@charset "utf-8";
+.roundhBadgeActive {
+    background-image: url(../images/fancy/badges_click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    width: 65px;
+}
+
+.badgesMainContainer {
+    padding: 8px 0 40px;
+    display: inline-block;
+}
+
+.badgesHeading {
+    color: #666;
+    font-family: gill;
+    font-size: 28px;
+}
+
+.numOfBadges {
+    color: #da3c63;
+    font-family: gill_bold;
+}
+
+.discountBadgesRow {
+    padding-top: 30px;
+}
+
+.badgeContainer {
+    width: 201px;
+    margin-bottom: 25px;
+    display: inline-block;
+    text-align: center;
+}
+
+.badgeImg {
+    padding-bottom: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.badgeName1 {
+    text-align: center;
+    color: #666;
+    font-family: gill;
+    font-size: 18px;
+    width: 150px;
+}
+
+.badgeName {
+    color: #666;
+    white-space: nowrap;
+    font-variant: small-caps;
+    font-size: 14px;
+}
+
+.badgeSep {
+    width: 1024px;
+    background: url("../images/white_separator.png") repeat-x scroll 0 0 transparent;
+    height: 3px;
+}
+
+.button-block-right {
+    right: 5px !important;
+}
+
+.button-block-left {
+    right: 28px !important;
+}
+
+.socialBadgesRow {
+    padding-top: 24px;
+    display: inline-block;
+}
+
+.exploresItalicText {
+    color: #b0afaf;
+    font-family: gill_italic;
+    font-size: 17px;
+    padding-bottom: 12px;
+}
+
+.scrollerHolder4 {
+    width: 1024px;
+    height: 185px;
+    border: 1px solid #ecdee6;
+    position: relative;
+}
+
+.scrollerContents4 {
+    width: 1025px;
+    height: 185px;
+    overflow: hidden;
+}
+
+.sliderParentDiv4 {
+    width: 1025px;
+    height: 185px;
+    overflow: hidden;
+}
+
+.slider4 {
+    width: 3380px;
+    overflow: hidden;
+    height: 185px;
+}
+
+.store-list4 {
+    float: left;
+    padding-left: 7px;
+    list-style: none;
+    width: 248px;
+    height: 185px;
+}
+
+.top58 {
+    top: -58px !important;
+}
+
+.badge {
+    background-image: url("../images/thebrowser_I.png");
+    background-repeat: no-repeat;
+    width: 139px;
+    height: 143px;
+    margin: 0 auto;
+}
+
+.badge2 {
+    background-image: url("../images/thewindowshopper_I.png");
+    background-repeat: no-repeat;
+    width: 138px;
+    height: 142px;
+    margin-left: 20px;
+}
+
+.badge3 {
+    background-image: url("../images/locked_badges.png");
+    background-repeat: no-repeat;
+    width: 138px;
+    height: 138px;
+    margin: 0 auto;
+}
+
+.badgeText {
+    color: #666;
+    font-family: gill;
+    font-size: 17px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.badgeText2 {
+    color: #666;
+    font-family: gill;
+    font-size: 17px;
+    padding-top: 10px;
+}
+
+.badgeText3 {
+    color: #B0AFAF;
+    font-family: gill;
+    font-size: 17px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.button-block-left {
+    display: none;
+}
+
+.button-block-right {
+    background-image: url("../images/rightrarrow_2.png");
+}
+
+.button-block-right:hover {
+    background-image: url("../images/rightrarrow_1.png");
+}
+
+.button-block-left {
+    background-image: url("../images/leftarrow_2.png");
+}
+
+.button-block-left:hover {
+    background-image: url("../images/leftarrow_1.png");
+}
+
+.store-list-badge {
+    float: left;
+    height: 180px;
+    list-style: none outside none;
+    padding-left: 8px;
+    width: 250px;
+}

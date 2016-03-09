@@ -1,0 +1,47 @@
+#tooltip {
+    position: absolute;
+    z-index: 3000;
+    border: 1px solid #111;
+    background-color: #eee;
+    padding: 5px;
+    opacity: 1;
+}
+
+#tooltip h3, #tooltip div {
+    margin: 0;
+}
+
+#tooltip.pretty {
+    border: none;
+    width: 220px;
+    font: normal 18px gill !important;
+    color: #666;
+    height: 145px;
+    opacity: 1;
+}
+
+#tooltip.pretty h3 {
+    margin-bottom: .75em;
+    font: normal 18px gill !important;
+    width: 200px;
+    text-align: left;
+}
+
+#tooltip.pretty div {
+    width: 220px;
+    text-align: left;
+}
+
+#tooltip.fancy {
+    background: url(../images/problemwithorder_tooltip.png) no-repeat;
+    margin-top: -76px;
+    margin-left: -102px;
+    width: 159px;
+    height: 50px;
+    font: normal 18px gill !important;
+    color: #666;
+}
+
+#tooltip.fancy.viewport-right {
+    background: url(../images/problemwithorder_tooltip.png);
+}

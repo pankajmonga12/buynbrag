@@ -1,0 +1,182 @@
+@charset "utf-8";
+.tabHeader {
+    position: absolute;
+    top: 0;
+    padding: 25px 0 0 35px;
+}
+
+.friendsFolowerPopup {
+    width: 947px;
+    height: 733px;
+    position: relative;
+    display: none;
+}
+
+.ffContainer {
+    border-top: 1px solid #FFF;
+    height: 732px;
+    position: relative;
+    width: 947px;
+}
+
+.ffContainerBackground {
+    background-color: #FFF;
+    height: 726px;
+    opacity: .80;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+    filter: alpha(opacity = 80);
+    -moz-opacity: .80;
+    -khtml-opacity: .80;
+    width: 100%;
+}
+
+.ffPopupContents {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -moz-box-shadow: 0 6px 5px #000;
+    -webkit-box-shadow: 0 6px 5px #000;
+    -khtml-box-shadow: 0 6px 5px #000;
+    -pie-box-shadow: 0 6px 5px #000;
+    box-shadow: 0 6px 5px #000;
+    height: 726px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.ffIconText {
+    float: left;
+    height: 78px;
+    position: relative;
+    width: 230px;
+}
+
+.ffIcon {
+    margin: 30px 36px 0 0 !important;
+}
+
+.fftab1Content {
+    height: 648px;
+    position: relative;
+    width: 947px;
+}
+
+.fftab1contentBackground {
+    background-color: #FFF;
+    height: 648px;
+    opacity: .18;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=18)';
+    filter: alpha(opacity = 18);
+    -moz-opacity: .18;
+    -khtml-opacity: .18;
+    width: 947px;
+}
+
+.fffcontainer {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    height: 80px;
+    width: 227px;
+    float: left;
+    position: relative;
+    margin-right: 5px;
+}
+
+.fffTransp {
+    background-color: #FFF;
+    height: 81px;
+    opacity: .35;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=35)';
+    filter: alpha(opacity = 35);
+    -moz-opacity: .35;
+    -khtml-opacity: .35;
+    width: 227px;
+}
+
+.fffMain {
+    position: absolute;
+    top: 0;
+}
+
+.fffrow {
+    clear: both;
+    height: 81px;
+    padding: 5px 0 0 4px;
+}
+
+.fffrow1 {
+    clear: both;
+    height: 81px;
+    padding: 0 0 0 4px;
+}
+
+.peopleImage {
+    background-color: #FFF;
+    float: left;
+    height: 62px;
+    margin: 6px;
+    padding: 3px;
+    width: 62px;
+}
+
+.peopleLeft {
+    float: left;
+    padding-left: 5px;
+    padding-top: 4px;
+}
+
+.peopleName {
+    font: 16px gill;
+    color: #333;
+}
+
+.peoleCountry {
+    font: 14px gill;
+    color: #999;
+    padding-bottom: 7px;
+}
+
+.following {
+    width: 79px;
+    height: 24px;
+    background-color: #619049;
+    font: 14px gill;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.unfollow {
+    width: 79px;
+    height: 24px;
+    background-color: #4594c7;
+    font: 14px gill;
+    color: #fff;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+
+.fftab1contents {
+    position: absolute;
+    top: 0;
+    height: 598px;
+    overflow: auto;
+    width: 947px;
+    margin-top: 12px;
+}
+
+.popupslide {
+    background: none repeat-x scroll 0 0 #F5F5F5;
+    border-bottom: 1px solid #ADADAD;
+    border-top: 1px solid #FFF;
+    bottom: 6px;
+    clear: both;
+    height: 25px;
+    left: 10px;
+    position: absolute;
+    width: 917px;
+}
+
+.newmargin {
+    margin: -7px auto 0 !important;
+}

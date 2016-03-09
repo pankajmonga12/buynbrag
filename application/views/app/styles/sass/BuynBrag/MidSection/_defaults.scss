@@ -1,0 +1,53 @@
+#midSection{
+  //position: relative;
+  //top: 60px;
+  margin-top: 60px;
+  box-sizing: border-box;
+
+  &.siteMsgActive{
+    //top: 100px;
+    transform: translate3d(0px, 38px, 0px);
+  }
+
+//  &.homePage{
+//    margin-top: 15px;
+//  }
+}
+
+#banner{
+  margin: 10px 0;
+//  box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.52);
+  img{
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+#sliderFrame{
+  width: 100%;
+  height: 225px;
+  z-index: 0;
+
+  #slider{
+    width: 100%;
+    height: 205px;
+  }
+
+  .navBulletsWrapper{
+    top: 215px;
+    height: auto;
+    padding: 0;
+    text-align: center;
+    width: auto;
+    left: 0;
+
+    div{
+      float: none;
+      display: inline-block;
+    }
+  }
+
+  .mc-caption-bg, .mc-caption-bg2{
+    left: 25%;
+  }
+}

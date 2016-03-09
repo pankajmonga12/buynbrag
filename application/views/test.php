@@ -1,0 +1,1 @@
+<?php //print_r($catlist); $queue[] = array(); $pid = 1; for($i=0;$i<count($catlist);$i++) { if ($catlist[$i]->parent_catagory_id == $pid) { array_push($queue, $catlist[$i]); } for($i=0;$i<count($queue);$i++) { //if ( $queue[$i]->) } for($i=0;$i<count($queue);$i++) { echo $queue[$i]->category_name.br(1); } print_r($queue); $pid = $queue[$i]->category_id; } ?>

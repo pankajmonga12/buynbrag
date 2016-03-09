@@ -1,0 +1,78 @@
+<div class="resetSuccess">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>User info</h3>
+            </div>
+            <div class="modal-body">
+
+                <div class="userDetailContainer">
+
+                    <div class="profileImgContainer span2">
+
+                        <div class="userImgBorder relative">
+                            <div class="userImgContainer">
+                                <img ng-src="{{friendInfo.profilePic}}" alt=""/>
+                            </div>
+                            <div class="personCurativeScore hidden-phone" data-percent="100">
+                                <!--<canvas></canvas>-->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="profileDetailContainer pull-left relative">
+
+                        <div class="profileUserName inlineBlock">
+                            {{friendInfo.firstName}}<span class="userSurname relative">&nbsp;{{friendInfo.lastName}}</span>
+                        </div>
+
+                        <div class="userLocationContainer" ng-show="userInfo.userCity">
+                            <div class="userLocation inlineBlock relative">
+                                <!--<div class='pin icon-location-1'></div>-->
+                                <div class='pin icon-favorite-map-pin relative'></div>
+                                <!--<div class='pulse'></div>-->
+                            </div>
+                            <span class="userCity inlineBlock">{{friendInfo.userCity}}</span>
+                        </div>
+
+                        <!--<span class="profileOneLiner block">{{friendInfo.userAboutMe}}</span>-->
+
+                        <btn-follow usertofollow="{{userId}}" has-followed="{{friendInfo.hasFollowed}}"></btn-follow>
+
+                        <div class="profileStats">
+
+                            <a ng-href="profile/social/{{userId}}" data-dismiss="modal" class="rankStats inlineBlock">
+                                <div class="rank">{{friendInfo.userRank}}</div>
+                                <div>Rank</div>
+                            </a>
+
+                            <a ng-href="profile/fancy/{{userId}}" data-dismiss="modal" class="fancyStats inlineBlock">
+                                <div class="fancied">{{friendInfo.totalFanciedProducts}}</div>
+                                <div>Brags</div>
+                            </a>
+
+                            <a ng-href="profile/badges/{{userId}}" data-dismiss="modal" class="badgeStats inlineBlock">
+                                <div class="badges">{{friendInfo.totalBadges}}</div>
+                                <div>Badges</div>
+                            </a>
+
+                            <a ng-href="profile/social/{{userId}}" data-dismiss="modal" class="followingStats inlineBlock">
+                                <div class="following">{{friendInfo.totalFollowers}}</div>
+                                <div>Followers</div>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button btn-follow usertofollow="{{userId}}" has-followed="{{friendInfo.hasFollowed}}" ng-click="triggerFollow()" ng-show="followBtnVisible" class="btn {{activeClass && 'btn-red' || ''}} footerFollowBtn hide">{{followText}}</button>
+                <a ng-href="profile/fancy/{{userId}}" class="btn btn-red inlineBlock" ng-click="closeModal('personModal')" aria-hidden="true">View Profile</a>
+                <button type="button" class="btn btn-flat" ng-click="closeModal('personModal')" aria-hidden="true">Close</button>
+            </div>
+
+        </div>

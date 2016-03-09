@@ -1,0 +1,90 @@
+.fancyItemDetails{
+  line-height: 1.8;
+  white-space: nowrap;
+  padding: 0px 2px 0 10px;
+  margin-bottom: 5px;
+//  margin-top: -3px;
+}
+
+//.newCTA_wrapper{
+//  position: absolute;
+//  right: 10px;
+//  top: 4px;
+//
+//  .newTagBtn, .newShareBtn, .newCartBtn, .newBragBtn{
+//    height: 32px;
+//    background-size: 127px;
+//    width: 32px;
+//    display: inline-block
+//  }
+//}
+
+.fancyItemStats{
+  color: #777777;
+  font-size: 0.8em;
+  text-transform: capitalize;
+}
+
+.fancyIcon, .viewIcon{
+  padding-left: 25px;
+}
+.fancyCount, .viewCount{
+  padding-right: 5px;
+//  font-size: 14px;
+  text-shadow: 1px 1px 0px #ccc;
+}
+.fancyIcon{
+  margin-right: 10px;
+  background: url("../images/sprites/moustache_Icon.png") no-repeat 0 7px;
+  background-size: 20px !important;
+}
+.viewIcon{
+  padding-left: 25px;
+  background: url("../images/sprites/viwedthisproduct_icon.png") no-repeat 0 5px;
+  background-size: 18px;
+}
+
+//
+//.priceHolder{
+//  position: relative;
+//  top: 2px;
+//}
+
+.fancyItemName{
+//  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-weight: normal;
+  margin: 5px 0 0 0;
+  font-size: 0.9em;
+  color: #555;
+//  font-family: HelveticaStd;
+  //color: lighten($bnbDefaultText, 20%);
+}
+//.fanciedByHolder{
+//  margin-top: -15px;
+//  img{
+//    box-shadow: 0 0 5px #666;
+//    margin-right: 10px;
+//  }
+//}
+
+//.fanciedPersonInfo{
+//  position: relative;
+//  top: -4px;
+//
+//  width: 100%;
+//  white-space: nowrap;
+//
+//  .fanciedByNameHolder{
+//    overflow: hidden;
+//    text-overflow: ellipsis;
+//  }
+//}
+
+//.fanciedByName {
+//  @extend .fancyItemName;
+//  max-width: 50%;
+//}

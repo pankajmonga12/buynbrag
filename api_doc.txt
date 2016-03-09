@@ -1,0 +1,2241 @@
+1. GET /index.php/async/checkLogin
+{
+	"apiPath":"/index.php/async/checkLogin",
+	"description":"Tells if someone is logged-in or not",
+	"responseContentType":"application/json",
+	sample response (before login):
+		{
+			"0":{
+					"isLoggedIN":false
+			}
+		}
+
+	sample response (after login):
+
+	{
+		"0":{
+				"isLoggedIN":true
+		},
+		"1":{
+				"ID":"141",
+				"FBID":"707544199",
+				"fullName":"Shammi Shailaj",
+				"gender":"male",
+				"email":"cfi369@linuxmail.org",
+				"bragBucks":"265300.00",
+				"userCity":"0",
+				"isActive":"1",
+				"userJoinedDate":"2012-10-19",
+				"userCountry":"0",
+				"userDOB":"0000-00-00",
+				"rFlowStatus":"6",
+				"userAge":null
+		},
+		"2":{
+				"rank":"11",
+				"oldRank":"11",
+				"tNewRank":18,
+				"fancyCount":"514",
+				"cartCount":1,
+				"totalBadges":"41",
+				"storeURL":"http:\/\/buynbragstores.s3.amazonaws.com\/",
+				"baseURL":"https:\/\/buynbrag.com\/"
+		},
+		"3":{
+				"badgesData":{
+								"0":{
+										"type":"6",
+										"level":"14",
+										"img":"buy\/14.png",
+										"txt":"The Shopaholic - 1 Star",
+										"bbucks":75000,
+										"triggeredAt":50
+								}
+				}
+		},
+		"4":{
+				"isLoggedIN":true,
+				"isLoggedINViaFacebook":false,
+				"fbID":null,
+				"id":"141",
+				"needsAccountLinking":false,
+				"needsNewAccount":false
+		}
+	}
+}
+
+2. GET /index.php/async/catsData2
+{
+	"apiPath": "/index.php/async/catsData2",
+	"description": "Sends the entire categories data. Only the categories that are enabled from the DB are sent",
+	"responseContentType":"application/json",
+	sample response:
+	{
+		"0":{
+				"catID":"6",
+				"catName":"Furniture",
+				"parentCatID":"0"
+		},
+		"1":{
+				"catID":"8",
+				"catName":"Decor and Furnishings",
+				"parentCatID":"0"
+		},
+		"2":{
+				"catID":"7",
+				"catName":"Dining",
+				"parentCatID":"0"
+		}
+	}
+}
+
+3. GET /index.php/rapiv1/ldata/get/<page_number>
+returns: applicaton/json
+returns a json object with a property named "result" whose value contains an array of objects in the following format:
+
+				{
+					"productID": "11700",
+					"storeID": "186",
+					"catID": "8",
+					"productName": "Spin Up",
+					"hasFancied": "0",
+					"hasbragged": "0"
+				}
+
+				-- the productID contains the unique identifier of a product
+				-- the storeID contains the unique identifier of the store to which the product belongs
+				-- the productName contains the name of product
+				-- the hasFancied property has a value of "0" or "1" specifying whether -- the current user has fancied the product(0) or not(1).
+				-- the hasBragged property has a value of "0" or "1" specifying whether -- the current user has bragged the product(0) or not(1).
+
+PLEASE NOTE that this API is used only when a user is not logged-in in which case they are presented with a selected set of products using this API
+
+
+4. GET /index.php/async/badgeNotifications
+
+returns: the badgeDetails of which the user needs to be notified using some kind of pop-up
+when no user is not logged-in, returns:
+
+{"0":{"isLoggedIN":false}}
+
+after login:
+
+{
+	"0":{
+			"isLoggedIN":true
+		},
+	"result":{
+				"badgesData":{
+								"0":{
+										"type":"6",
+										"level":"14",
+										"img":"buy\/14.png",
+										"txt":"The Shopaholic - 1 Star",
+										"bbucks":75000,
+										"triggeredAt":50
+									}
+							}
+			}
+}
+
+
+5. POST /index.php/async/login
+
+expects the following n-v pair:
+
+signin_email: the email address being used to sign-in
+signin_pw: the password for the account specified by signin_email parameter
+
+response returned (sample):
+
+{
+	"0":{
+			"sessionSet":true,
+			"validCredentials":true,
+			"ID":"141",
+			"gender":"male",
+			"FBID":"707544199",
+			"fullName":"Shammi Shailaj",
+			"isActive":"1",
+			"rFlowStatus":"6"
+		},
+	"1":{
+			"rank":"11",
+			"oldRank":"11",
+			"tNewRank":18,
+			"fancyCount":"514",
+			"cartCount":0,
+			"totalBadges":"41",
+			"storeURL":"http:\/\/buynbragstores.s3.amazonaws.com\/",
+			"baseURL":"https:\/\/buynbrag.com\/"
+		},
+	"2":{
+			"userExists":true,
+			"newUserCreated":false,
+			"newUserID":null
+		},
+	"3":{
+			"badgesData":{}
+		}
+}
+
+sessionset - a value of true means the session was set and the user was logged-in successfully otherwise false
+validCredentials - a  value of true means that the credentials provied to the API were found in the DB and matched successfully against them otherwise false
+ID - unique user identification number
+gender - male/ female
+FBID - facebook ID of the user if they have any otherwise it contains a value of either null or "null" or ""
+fullName - full name of the user
+isActive - whether a user's account is active or not (1 = active, 0 = inactive)
+rFlowstatus - should contain a value of 6 for a user to see the member's first page otherwise they are presented with the registration flow
+rank - rank of the user
+oldRank - rank of the user according to the old algorithm
+tNewrank - rank of the user using the most recent algorithm
+fancyCount - total products bragged by a user
+cartCount - number of products in the users cart
+totalBadges - total number of badges earned by a user
+storeURL - the store URL which is used as the base URL while displaying images
+baseURL - current base URL from which the API is being served
+userExists - a value of true means the user exists in the DB otherwise false. This was being used earlier, of no use now
+newUserCreated - a value of true means the account was created successfully otherwise false. This was being used earlier, of no use now
+newUserID - user's unique identification number that was generated after creation of the account.This was being used earlier, of no use now
+
+
+badgesData - Dated. Use async/badgeNotifications instead
+
+
+6. GET /index.php/coupons/all
+used to get the details of all the coupons available
+
+
+{
+	"isLoggedIN":true,
+	"coupons":{
+				"0":"Use coupon code <b><u>BS25OFF<\/u><\/b> to get <b><u>25.00 % OFF<\/u><\/b> from the store <b><a href=\"https:\/\/buynbrag.com\/store\/Atmosphere-Bedsense\/251\" target=\"_top\" style=\"color:rgb(240,93,111)\">Atmosphere Bedsense<\/a><\/b>. Also get two cushion covers Size 16 inch X 16 inch FREE!. Valid till April 1st, 2014",
+				"1":"Use coupon code <b><u>IMPORT10OFF<\/u><\/b> to get <b><u>10.00 % OFF<\/u><\/b> on a minimum purchase of Rs. 2000.00 from the store <b><a href=\"https:\/\/buynbrag.com\/store\/Importwala\/252\" target=\"_top\" style=\"color:rgb(240,93,111)\">Importwala<\/a><\/b>. Valid till March 24th, 2014"
+			}
+}
+
+6.1. GET /index.php/coupons/allHTML
+
+this generates the complete HTML which just needs to be displayed. Please use this API to display avalable coupons. DO NOT USE API no. 6
+
+7. GET /index.php/async/cartData
+
+returns data regarding the current user's cart
+
+sample response:
+
+{
+	"0":{
+			"isLoggedIN":true
+		},
+	"1":{
+			"productsVariants":null,
+			"cartData":{
+							"0":{
+									"productID":"8677",
+									"cartID":"17132",
+									"storeID":"228",
+									"quantity":"1",
+									"vsize":"0",
+									"vcolor":"0",
+									"productName":"Slicer ",
+									"isOnDiscount":"0",
+									"originalPrice":"3465",
+									"processingTime":"7",
+									"discountAmount":"0",
+									"availableQuantity":"9"
+								}
+						},
+			"cartCount":1
+		}
+}
+
+isLoggedIN - true if a user is logged-in, false otherwise
+
+productsVariants - product variants if any, null otherwise
+
+productID - unique identification of a product
+cartID - unique identification of the product in the cart
+storeID - unique identification number of the store to which the product belongs
+quantity - number of pieces of the product being requested by the customer
+vsize - size variant if any, of the product being requested by the customer
+vcolor - colour variant if any of the product being requested by the customer
+productName - name of the product
+isOnDiscount - specifies whether a product is on discount(1) or not(0). If a product is on discount, then the effective price of that product becomes (originalPrice - discountAmoount)
+processingTime - the number of business days required to process the order only after which the shipping is initiated by the seller
+discountAmount - the amount to be discounted while displaying the final price if isOnDiscount has a value of 1(one)
+availableQuantity -  the quantity of the product that is available in the stock
+cartCount - the number of products in the cart
+
+8. /index.php/rapiv1/me/feed/<page_number>
+gets the feed data for the current user for the page number specified by page_number. The data is returned in chunks of 50 products at a time and the numbering of pages starts from 0(zero)
+
+Please note that the client needs to keep a check on the number of products recieved. if the total number of products is less than 50 then it is obvious that the next page contains no data and so no request should be made.
+
+sample response:
+
+{
+	"0":{
+			"productID":"9920",
+			"storeID":"242",
+			"productFancyCounter":"66",
+			"productIsOnDiscount":"0",
+			"productSellingPrice":"3000",
+			"productDiscount":"0",
+			"productName":"Canvas Print - Vintage Car",
+			"productVisitCounter":"142",
+			"productQuantity":"1",
+			"bbucks":"0.00",
+			"userID":"14861",
+			"badgeType":"4",
+			"badgeLevel":"1",
+			"badgeNotificationText":" Eye for Beauty - 0 Star",
+			"userName":"manikarora314",
+			"userFullName":"Manik Arora",
+			"userFBID":"100000505182574",
+			"userGender":"male",
+			"hasFancied":"0",
+			"hasbragged":"0"
+		},
+	"1":{
+			"productID":"9921",
+			"storeID":"242",
+			"productFancyCounter":"49",
+			"productIsOnDiscount":"0",
+			"productSellingPrice":"3000",
+			"productDiscount":"0",
+			"productName":"Canvas Print - A View of Paris",
+			"productVisitCounter":"103",
+			"productQuantity":"1",
+			"bbucks":"0.00",
+			"userID":"14861",
+			"badgeType":"4",
+			"badgeLevel":"0",
+			"badgeNotificationText":"",
+			"userName":"manikarora314",
+			"userFullName":"Manik Arora",
+			"userFBID":"100000505182574",
+			"userGender":"male",
+			"hasFancied":"0",
+			"hasbragged":"0"
+		},
+	"2":{
+			"productID":"982",
+			"storeID":"125",
+			"productFancyCounter":"62",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"1600",
+			"productDiscount":"480",
+			"productName":"Mother of Pearl Binocular",
+			"productVisitCounter":"143",
+			"productQuantity":"47",
+			"bbucks":"160.00",
+			"userID":"16201",
+			"badgeType":"4",
+			"badgeLevel":"0",
+			"badgeNotificationText":"",
+			"userName":"arunnalamati",
+			"userFullName":"Arun Nalamati",
+			"userFBID":"1169663764",
+			"userGender":"male",
+			"hasFancied":"1",
+			"hasbragged":"0"
+		},
+	"3":{
+			"productID":"7965",
+			"storeID":"221",
+			"productFancyCounter":"76",
+			"productIsOnDiscount":"0",
+			"productSellingPrice":"38299",
+			"productDiscount":"0",
+			"productName":"Fairy tale",
+			"productVisitCounter":"191",
+			"productQuantity":"5",
+			"bbucks":"1914.95",
+			"userID":"16201",
+			"badgeType":"4",
+			"badgeLevel":"0",
+			"badgeNotificationText":"",
+			"userName":"arunnalamati",
+			"userFullName":"Arun Nalamati",
+			"userFBID":"1169663764",
+			"userGender":"male",
+			"hasFancied":"0",
+			"hasbragged":"0"
+		},
+	"4":{
+			"productID":"3577",
+			"storeID":"170",
+			"productFancyCounter":"93",
+			"productIsOnDiscount":"0",
+			"productSellingPrice":"3650",
+			"productDiscount":"0",
+			"productName":"Stamp Print Laptop Bag - Khaki Brown",
+			"productVisitCounter":"302",
+			"productQuantity":"3",
+			"bbucks":"182.50",
+			"userID":"16198",
+			"badgeType":"4",
+			"badgeLevel":"0",
+			"badgeNotificationText":"",
+			"userName":"neha.virmani.5",
+			"userFullName":"Neha Virmani",
+			"userFBID":"514510797",
+			"userGender":"female",
+			"hasFancied":"0",
+			"hasbragged":"0"
+		},
+		...
+	"49":{
+			"productID":"8320",
+			"storeID":"160",
+			"productFancyCounter":"5",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"599",
+			"productDiscount":"290",
+			"productName":"Neo Nawab Tree Top Glass Candle with Steel lid - Ocean Breeze Scented",
+			"productVisitCounter":"17",
+			"productQuantity":"4",
+			"bbucks":"0.00",
+			"userID":"2927",
+			"badgeType":"4",
+			"badgeLevel":"13",
+			"badgeNotificationText":"The Curator - 0 Star",
+			"userName":"",
+			"userFullName":"akash gupta",
+			"userFBID":"100001082626083",
+			"userGender":"male",
+			"hasFancied":"0",
+			"hasbragged":"0"
+		}
+}
+
+productID - unique product identifier
+storeID - unique identifier of the store to which the product belongs
+productFancyCounter - number of times the product has been fancied
+productIsOnDiscount - whether discount is available on the product(1) or not(0)
+productSellingPrice - the actual selling price of the product
+productDiscount - the discount amount (in rupees) if any on the product
+productName - name of the product
+productVisitCounter - number of times the product has been viewed
+productQuantity - the quantity of product in stock
+bbucks - brag bucks associated with the product (still in development)
+userID - unique identification number of the user who bragged the product most recently
+badgeType - fancy badge type of the user when they bragged the product (will always be 4)
+badgeLevel - the badge level of the user for the specified badge type when they bragged the product
+badgeNotificationText - name of the badge specified by the bagdeType and badgeLevel
+userName - username of the user who most recently bragged the product
+userFullName - full name of the user who most recently bragged the product
+userFBID - facebook ID of the user who most recently bragged the product
+userGender - gender of the user who most recently bragged the product
+hasFancied - 1 if the current user has bragged the product otherwise 0
+hasBragged - 1 if the current user has shared the product otherwise 0
+
+
+9. GET /index.php/hdata/recent/<page_number>
+
+gets the data for the trending tab.
+
+For more information and explation of the schema format, please refer to API no 8.
+
+sample response:
+
+
+{
+	"0":{
+			"productID":"5065",
+			"userID":"16222",
+			"storeID":"186",
+			"productFancyCounter":"18",
+			"productIsOnDiscount":"0",
+			"productSellingPrice":"1999",
+			"productDiscount":"0",
+			"productName":"Chillrz",
+			"productVisitCounter":"94",
+			"productQuantity":"4",
+			"badgeType":"4",
+			"badgeLevel":"1",
+			"badgeNotificationText":" Eye for Beauty - 0 Star",
+			"userName":"aman854",
+			"userFullName":"Aman Gupta",
+			"userFBID":"100001246101836",
+			"userGender":"male",
+			"hasFancied":"0",
+			"hasbragged":"0"
+		},
+	"1":{
+			"productID":"11700",
+			"userID":"16222",
+			"storeID":"186",
+			"productFancyCounter":"87",
+			"productIsOnDiscount":"0",
+			"productSellingPrice":"6999",
+			"productDiscount":"0",
+			"productName":"Spin Up",
+			"productVisitCounter":"159",
+			"productQuantity":"10",
+			"badgeType":"4",
+			"badgeLevel":"0",
+			"badgeNotificationText":"",
+			"userName":"aman854",
+			"userFullName":"Aman Gupta",
+			"userFBID":"100001246101836",
+			"userGender":"male",
+			"hasFancied":"0",
+			"hasbragged":"0"
+			},
+			...
+	"49":{
+			"productID":"620",
+			"userID":"16203",
+			"storeID":"116",
+			"productFancyCounter":"105",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"23000",
+			"productDiscount":"1150",
+			"productName":"Gigi Lounge Chair",
+			"productVisitCounter":"434",
+			"productQuantity":"11",
+			"badgeType":"4",
+			"badgeLevel":"0",
+			"badgeNotificationText":"",
+			"userName":"neha.matta.1",
+			"userFullName":"Neha Matta",
+			"userFBID":"732052407",
+			"userGender":"female",
+			"hasFancied":"1",
+			"hasbragged":"0"
+		}
+}
+
+10. GET /index.php/hdata/popular/<page_number>
+get the data for the Most Popular tab. 
+
+For more information and explanation of the schema, please refer to API no. 8
+
+sample response:
+
+
+{
+	"0":{
+			"productID":"8729",
+			"userID":"16216",
+			"storeID":"229",
+			"productFancyCounter":"122",
+			"productIsOnDiscount":"0",
+			"productSellingPrice":"990",
+			"productDiscount":"0",
+			"bbucks":"0.00",
+			"productName":"Potato storage bag - 123.4 oz \/ 3.5 kg",
+			"productVisitCounter":"1464",
+			"productQuantity":"170",
+			"userName":null,
+			"userFullName":"Tracy Thomas",
+			"userFBID":"771905426",
+			"userGender":"female",
+			"badgeType":"4",
+			"badgeLevel":"0",
+			"badgeNotificationText":"",
+			"pScore":"1593",
+			"hasFancied":"0",
+			"hasbragged":"0"
+		},
+		"1":{
+				"productID":"4899",
+				"userID":"16222",
+				"storeID":"186",
+				"productFancyCounter":"58",
+				"productIsOnDiscount":"0",
+				"productSellingPrice":"485",
+				"productDiscount":"0",
+				"bbucks":"20.95",
+				"productName":"Loop",
+				"productVisitCounter":"731",
+				"productQuantity":"7",
+				"userName":"aman854",
+				"userFullName":"Aman Gupta",
+				"userFBID":"100001246101836",
+				"userGender":"male",
+				"badgeType":"4",
+				"badgeLevel":"0",
+				"badgeNotificationText":"",
+				"pScore":"795",
+				"hasFancied":"1",
+				"hasbragged":"0"
+		},
+		...
+		"49":{
+				"productID":"683",
+				"userID":"16116",
+				"storeID":"117",
+				"productFancyCounter":"63",
+				"productIsOnDiscount":"0",
+				"productSellingPrice":"2800",
+				"productDiscount":"0",
+				"bbucks":"140.00",
+				"productName":"Copper Ceiling Light",
+				"productVisitCounter":"260",
+				"productQuantity":"1",
+				"userName":"nandini.t.bhatia",
+				"userFullName":"Nandini Taneja Bhatia",
+				"userFBID":"689936426",
+				"userGender":"female",
+				"badgeType":"4",
+				"badgeLevel":"0",
+				"badgeNotificationText":"",
+				"pScore":"330",
+				"hasFancied":"0",
+				"hasbragged":"0"
+		}
+}
+
+
+
+11. GET /index.php/hdata/favourites/<page_number>
+get the data for the Most Popular tab. 
+
+For more information and explanation of the schema, please refer to API no. 8
+
+sample response:
+
+
+{
+	"0":{
+			"productID":"8729",
+			"userID":"16216",
+			"storeID":"229",
+			"productFancyCounter":"122",
+			"productIsOnDiscount":"0",
+			"productSellingPrice":"990",
+			"productDiscount":"0",
+			"bbucks":"0.00",
+			"productName":"Potato storage bag - 123.4 oz \/ 3.5 kg",
+			"productVisitCounter":"1464",
+			"productQuantity":"170",
+			"userName":null,
+			"userFullName":"Tracy Thomas",
+			"userFBID":"771905426",
+			"userGender":"female",
+			"badgeType":"4",
+			"badgeLevel":"0",
+			"badgeNotificationText":"",
+			"pScore":"1593",
+			"hasFancied":"0",
+			"hasbragged":"0"
+		},
+		"1":{
+				"productID":"4899",
+				"userID":"16222",
+				"storeID":"186",
+				"productFancyCounter":"58",
+				"productIsOnDiscount":"0",
+				"productSellingPrice":"485",
+				"productDiscount":"0",
+				"bbucks":"20.95",
+				"productName":"Loop",
+				"productVisitCounter":"731",
+				"productQuantity":"7",
+				"userName":"aman854",
+				"userFullName":"Aman Gupta",
+				"userFBID":"100001246101836",
+				"userGender":"male",
+				"badgeType":"4",
+				"badgeLevel":"0",
+				"badgeNotificationText":"",
+				"pScore":"795",
+				"hasFancied":"1",
+				"hasbragged":"0"
+		},
+		...
+		"49":{
+				"productID":"683",
+				"userID":"16116",
+				"storeID":"117",
+				"productFancyCounter":"63",
+				"productIsOnDiscount":"0",
+				"productSellingPrice":"2800",
+				"productDiscount":"0",
+				"bbucks":"140.00",
+				"productName":"Copper Ceiling Light",
+				"productVisitCounter":"260",
+				"productQuantity":"1",
+				"userName":"nandini.t.bhatia",
+				"userFullName":"Nandini Taneja Bhatia",
+				"userFBID":"689936426",
+				"userGender":"female",
+				"badgeType":"4",
+				"badgeLevel":"0",
+				"badgeNotificationText":"",
+				"pScore":"330",
+				"hasFancied":"0",
+				"hasbragged":"0"
+		}
+}
+
+
+12. GET /index.php/async/cats
+
+gets the base categories, their names and the number of stores inside them
+
+sample response:
+
+{
+	"cats":{
+				"0":{
+						"catID":"6",
+						"catName":"Furniture",
+						"parentCatID":"0",
+						"totalProducts":"37"
+				},
+				"1":{
+						"catID":"8",
+						"catName":"Decor and Furnishings",
+						"parentCatID":"0",
+						"totalProducts":"86"
+				},
+				"2":{
+						"catID":"7",
+						"catName":"Dining",
+						"parentCatID":"0",
+						"totalProducts":"58"
+				},
+				"3":{
+						"catID":"10",
+						"catName":"Lighting",
+						"parentCatID":"0",
+						"totalProducts":"28"
+				},
+				"4":{
+						"catID":"2",
+						"catName":"Fashion",
+						"parentCatID":"0",
+						"totalProducts":"57"
+				},
+				"5":{
+						"catID":"4",
+						"catName":"Gifts & Collectibles",
+						"parentCatID":"0",
+						"totalProducts":"42"
+				},
+				"6":{
+						"catID":"3",
+						"catName":"Art",
+						"parentCatID":"0",
+						"totalProducts":"8"
+				}
+	},
+	"storeURL":"http:\/\/buynbragstores.s3.amazonaws.com\/",
+	"baseURL":"https:\/\/buynbrag.com\/"
+}
+
+catID - unique identifier of the category
+catName - name of the category
+parentCatID - unique identifier of the category which is the parent of the category
+totalProducts - the number of stores that have products of this category
+
+PLEASE NOTE that the totalProducts is the total number of stores and not products as the name implies. This is a typo that we are living with right now.
+
+13. GET /index.php/async/newStores2/<page_number>/<root_category_id(optional)>
+gets the details of the stores that were either newly created or contain newly added products
+
+sample response:
+
+{
+	"0":{
+			"hasData":true
+	},
+	"1":{
+			"0":{
+					"storeDetails":{
+										"store_id":"186",
+										"visit_counter":"2308",
+										"fancy_counter":"29",
+										"store_name":"Hitplay",
+										"brag_counter":"1",
+										"storeScore":"3550",
+										"added_on":"2014-03-14 00:00:00",
+										"catID":"4",
+										"totalProducts":"450",
+										"totalFancied":"8332",
+										"storeVisitCounter":"38978",
+										"hasFanciedStore":"0",
+										"hasBraggedStore":"0"
+					},
+					"storeProducts":{
+										"0":{
+												"product_id":"5039",
+												"product_name":"Gun Mug"
+										},
+										"1":{
+												"product_id":"4904",
+												"product_name":"Words Worth Bookends"
+										},
+										"2":{
+												"product_id":"10694",
+												"product_name":"Little Black Dress"
+										}
+									}
+			},
+			"1":{
+					"storeDetails":{
+										"store_id":"275",
+										"visit_counter":"58",
+										"fancy_counter":"1",
+										"store_name":"The yellow door",
+										"brag_counter":"0",
+										"storeScore":"59",
+										"added_on":"2014-03-13 06:22:38",
+										"catID":"10",
+										"totalProducts":"124",
+										"totalFancied":"7",
+										"storeVisitCounter":"58",
+										"hasFanciedStore":"0",
+										"hasBraggedStore":"0"
+					},
+					"storeProducts":{
+										"0":{
+												"product_id":"14085",
+												"product_name":"Lamp Shade with Rope Decorative on Jar and Jute Shade"
+										},
+										"1":{
+												"product_id":"14071",
+												"product_name":"Bird Bowl with Lid"
+										},
+										"2":{
+												"product_id":"14084",
+												"product_name":"Lamp Shade with Jute Shade"
+										}
+					}
+			}
+	}
+}
+
+
+hasData - true if some data is being returned else false
+store_id - unique identifier of the store
+visit_counter - numer of times the store's store page has been visited
+fancy_counter - number of people who follow the store
+store_name - name of the store
+brag_counter - number of people that have bragged the store (not in use)
+storeScore - total score of the store
+added_on - the last date when the either the store was created or updated
+catID - the category to which the store belongs
+totalProducts - total number of products in  the store
+totalFancied - total number of time the products of the store have been bragged
+storeVisistCounter - total number of time people have viewd the products of this store
+hasFanciedStore - 1 if the current user follows the store 0 otherwise
+hasBragged - 1 if the current user has bragged the store o otherwise
+
+14. GET /index.php/async/topStores/<page_number>/<root_category_id(optional)>
+gets the top performing stores
+
+sample response:
+
+please refer to API no. 12
+
+15. GET /index.php/async/allStores/<page_number>/<root_category_id(optional)>
+gets all the stores sorted by their name in ascending order
+
+outputs details of 12 stores at a time
+
+16. GET /index.php/async/storeSections/<store_id>
+gets the information on the sections a store has and 
+
+sample data:
+
+{
+	"storeInfo":{
+					"0":{
+							"store_name":"THE KRAFTORIUM",
+							"about_store":"We proudly introduce ourselves as a renowned manufacturer and exporter of a wide spectrum of wooden as well as iron furniture and home textile. We are into export business of Handicrafts and Furniture since 1995. We are exporting our products world over including USA, Canada, Germany, France, Italy, Spain, England, Portugal, Norway, Denmark, Greece, Australia, Korea, Japan, South Africa, UAE, etc. We have a collection of over 4800 designs in iron handicrafts and furniture. In wood, we have a collection of over 2100 designs. We endeavour to improve ourselves with each day, so as to deliver the maximum value to our clients. ",
+							"return_policy":"1",
+							"EMI_policy":"0",
+							"COD_policy":"0",
+							"storeFancyCounter":"1",
+							"storeVisitCounterOld":"28",
+							"storeBragCounter":"0",
+							"storeScore":"29",
+							"totalProducts":"134",
+							"totalFancied":"7",
+							"storeVisitCounter":"116",
+							"hasFanciedStore":"0",
+							"hasBraggedStore":"0"
+					}
+	},
+	"storeSections":{
+						"0":{
+								"storeSectionID":"2641",
+								"storeSectionName":"Stools",
+								"isOnDiscount":"0",
+								"promotionID":"0"
+						},
+						"1":{
+								"storeSectionID":"2642",
+								"storeSectionName":"Benches",
+								"isOnDiscount":"0",
+								"promotionID":"0"
+						},
+						"2":{
+								"storeSectionID":"2643",
+								"storeSectionName":"Bar Stools",
+								"isOnDiscount":"0",
+								"promotionID":"0"
+						},
+						"3":{
+						"storeSectionID":"2644",
+						"storeSectionName":"Trolleys",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"4":{
+						"storeSectionID":"2645",
+						"storeSectionName":"Sofas",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"5":{
+						"storeSectionID":"2646",
+						"storeSectionName":"Ottomans",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"6":{
+						"storeSectionID":"2647",
+						"storeSectionName":"Outdoor Sets",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"7":{
+						"storeSectionID":"2648",
+						"storeSectionName":"Chest of Drawers",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"8":{
+						"storeSectionID":"2649",
+						"storeSectionName":"Console Tables",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"9":{
+						"storeSectionID":"2650",
+						"storeSectionName":"Cabinets",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"10":{
+						"storeSectionID":"2651",
+						"storeSectionName":"Almirahs",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"11":{
+						"storeSectionID":"2652",
+						"storeSectionName":"Bookshelves",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"12":{
+						"storeSectionID":"2653",
+						"storeSectionName":"Wardrobes",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"13":{
+						"storeSectionID":"2654",
+						"storeSectionName":"Side Boards",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"14":{
+						"storeSectionID":"2655",
+						"storeSectionName":"Shelfs",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"15":{
+						"storeSectionID":"2656",
+						"storeSectionName":"Display Shelves",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"16":{
+						"storeSectionID":"2657",
+						"storeSectionName":"Mirrors",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"17":{
+						"storeSectionID":"2658",
+						"storeSectionName":"Pedestal Study Desk ",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"18":{
+						"storeSectionID":"2659",
+						"storeSectionName":"Side Tables",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"19":{
+						"storeSectionID":"2660",
+						"storeSectionName":"Center Tables",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"20":{
+						"storeSectionID":"2661",
+						"storeSectionName":"Coffee Tables",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"21":{
+						"storeSectionID":"2662",
+						"storeSectionName":"Accent Tables",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"22":{
+						"storeSectionID":"2663",
+						"storeSectionName":"Racks",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"23":{
+						"storeSectionID":"2664",
+						"storeSectionName":"Study Tables",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"24":{
+						"storeSectionID":"2665",
+						"storeSectionName":"Dining Tables",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"25":{
+						"storeSectionID":"2666",
+						"storeSectionName":"Bedside Tables",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"26":{
+						"storeSectionID":"2667",
+						"storeSectionName":"Dining Chairs",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"27":{
+						"storeSectionID":"2668",
+						"storeSectionName":"Sideboards",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						},
+						"28":{
+						"storeSectionID":"2669",
+						"storeSectionName":"Chairs",
+						"isOnDiscount":"0",
+						"promotionID":"0"
+						}
+	},
+	"lastFanciedBy":{
+						"0":{
+								"user_id":"13762"
+						}
+	}
+}
+
+
+store_name - name of the store
+about_store - textual description about the store
+return_policy - 1 if the store accepts returns otherwise 0
+EMI_policy - 1 if the store allows EMI based orders otherwise 0
+COD_policy - 1 if the store allows COD based order otherwise 0
+storeFancyCounter - number of people who follow the store
+storeVisitCounterOld - number of people who have visited the store using the store page
+storeBragCounter - number of people who have bragged the store
+storeScore - score of the store
+totalProducts - total number of products in the store
+totalFancied - total no of products bragged from the store
+storeVisitCounter - total number views of all the products
+hasFanciedStore - 1 if the current user follows the store 0 otherwise
+hasBraggedStore - 1 if the current user has bragged the store 0 otherwise
+
+storeSectionID - unique identifier of the store section
+storeSectionName - name of the store section
+isOnDiscount -  1 if the store is on discount 0 otherwise
+promotionID - unique identifier of the promotion(s) associated with the store
+
+lastFanciedBy -> user_id  - list of user IDs who most recently followed the store
+
+17. GET /index.php/async/storeProducts/<store_id>/<sorting_filter>/<page_number>
+gets the products associated with a store specified by store_id sorted on the basis of the sorting filter for the page specified by the page_number.
+
+sorting_filter can have the following values: 
+
+6 - only pick products that are on discount
+1 - sort by lowest price
+2 - sort by highest price
+3 - sort by popularity
+4 - sort by newness
+5 - sort by store section
+7 - sort by last bragged time in descending order
+
+
+response is sent in multiple of 20 products at a time
+
+sample response:
+
+{
+	"0":{
+			"productID":"14160",
+			"productName":"The Wonder 4 Drawers 2 Doors Side Board",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"31249",
+			"bbucks":"0.00",
+			"productQuantity":"10",
+			"productDiscount":"6250",
+			"storesection_id":"2654",
+			"productFancyCounter":"1",
+			"productVisitCounter":"0",
+			"productBragCounter":"0",
+			"hasFancied":"0",
+			"hasbragged":"0"
+	},
+	"1":{
+			"productID":"14225",
+			"productName":"Old Vintage Union Mark Chest ",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"23749",
+			"bbucks":"0.00",
+			"productQuantity":"10",
+			"productDiscount":"4750",
+			"storesection_id":"2648",
+			"productFancyCounter":"1",
+			"productVisitCounter":"1",
+			"productBragCounter":"0",
+			"hasFancied":"0",
+			"hasbragged":"0"
+	},
+	"2":{
+			"productID":"14212",
+			"productName":"Industrial maison Iron Coffee Table",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"22499",
+			"bbucks":"0.00",
+			"productQuantity":"10",
+			"productDiscount":"4500",
+			"storesection_id":"2661",
+			"productFancyCounter":"1",
+			"productVisitCounter":"1",
+			"productBragCounter":"0",
+			"hasFancied":"0",
+			"hasbragged":"0"
+	},
+	"3":{
+			"productID":"14145",
+			"productName":"Fiche Kids A-Shape Bookshelf (Red)",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"24374",
+			"bbucks":"0.00",
+			"productQuantity":"10",
+			"productDiscount":"4875",
+			"storesection_id":"2652",
+			"productFancyCounter":"1",
+			"productVisitCounter":"3",
+			"productBragCounter":"0",
+			"hasFancied":"0",
+			"hasbragged":"0"
+	},
+	"4":{
+			"productID":"14116",
+			"productName":"Charleston Polo Canvas and Leather Stools, Set of 2\u00a0",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"28749",
+			"bbucks":"0.00",
+			"productQuantity":"10",
+			"productDiscount":"5750",
+			"storesection_id":"2641",
+			"productFancyCounter":"1",
+			"productVisitCounter":"2",
+			"productBragCounter":"0",
+			"hasFancied":"0",
+			"hasbragged":"0"
+	},
+	"5":{
+			"productID":"14238",
+			"productName":"Duco White & Brown Console Table",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"14999",
+			"bbucks":"0.00",
+			"productQuantity":"10",
+			"productDiscount":"3000",
+			"storesection_id":"2649",
+			"productFancyCounter":"1",
+			"productVisitCounter":"3",
+			"productBragCounter":"0",
+			"hasFancied":"0",
+			"hasbragged":"0"
+	},
+	"6":{
+			"productID":"14134",
+			"productName":"Cyan-Grey- Blue 16 Drawer Chest",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"25999",
+			"bbucks":"0.00",
+			"productQuantity":"10",
+			"productDiscount":"5200",
+			"storesection_id":"2648",
+			"productFancyCounter":"1",
+			"productVisitCounter":"2",
+			"productBragCounter":"0",
+			"hasFancied":"0",
+			"hasbragged":"0"
+	},
+	...
+	"19":{
+			"productID":"14213",
+			"productName":"RUSTIC ALMIRAH IN BLUE - MODERN VINTAGE",
+			"productIsOnDiscount":"1",
+			"productSellingPrice":"28749",
+			"bbucks":"0.00",
+			"productQuantity":"10",
+			"productDiscount":"5750",
+			"storesection_id":"2651",
+			"productFancyCounter":"0",
+			"productVisitCounter":"1",
+			"productBragCounter":"0",
+			"hasFancied":"0",
+			"hasbragged":"0"
+	}
+}
+
+productID - unique identification number of the product
+productName - name of the product
+productIsOnDiscount - 1 if the product is on discount 0 otherwise
+productSellingPrice - the selling price of the product
+bbucks - brag bucks associated with the product
+productQuantity - quantity of product in stock
+productDiscount - the discount available on the product
+storesection_id - unique identification of the store section to which the product belongs
+productFancyCounter - the number of times the product has been bragged
+productVisitCounter - the number of times people have viewed the product
+productBragCounter - the number of times the product has been shared
+hasFancied - 1 if the current user has bragged  the product 0 otherwise
+hasbragged - 1 if the current user has shared the product 0 otherwise
+
+
+18. GET /index.php/async/fancyStore/<store_id>
+used to make the current user follow a store specified by store_id
+
+sample response:
+
+{
+	"result":{
+				"storeUpdateOK":false,
+				"userStoreFollowOK":true,
+				"isLoggedIN":true,
+				"isAlreadyFancied":false,
+				"storeFancyCounter":"2"
+	}
+}
+
+
+storeUpdateOK - of no consequence. Please ignore this field
+userStoreFollowOK - true if the system was able to make the user successfully follow the store false otherwise
+isLoggedIN - true if a user is logged-in false otherwise
+isAlreadyFancied - true if the current user is already following the store
+storeFancyCounter - number of people who follow the store
+
+19.GET /index.php/async/productPageData/<product_id>
+
+gets the data for the product page
+
+ {
+ 	"hasData":true,
+ 	"qvData":{
+ 				"productID":"14116",
+ 				"storeID":"274",
+ 				"productName":"Charleston Polo Canvas and Leather Stools, Set of 2\u00a0",
+ 				"storeName":"THE KRAFTORIUM",
+ 				"storeReturnPolicy":"1",
+ 				"storeEMIPolicy":"0",
+ 				"storeCODPolicy":"0",
+ 				"productSellingPrice":"28749",
+ 				"isOnDiscount":"1",
+ 				"productDiscount":"5750",
+ 				"productQuantity":"10",
+ 				"catID":"6",
+ 				"subCatID1":"46",
+ 				"processingTime":"20",
+ 				"productDescription":"Tweed: not just for clothing anymore. This Charleston Polo leather and canvas stool will bring smart style to your living room. Trimmed in riveted leather patchwork and canvas upholstery to give it some edge, it\u2019s also multifunctional as you can use this storage cube as an ottoman too.\u003Cbr\u003E\u003Cbr\u003E\u003Cb\u003EWhat\u0027s in the box: \u003C\/b\u003ESet of Two Stools\u003Cbr\u003E\u003Cbr\u003E\u003Cb\u003EDimensions: \u003C\/b\u003ELength 45.000 cm x Width 45.000 cm x Height 45.000 cm\u003Cbr\u003E\u003Cbr\u003E\u003Cb\u003EMaterial Composition: \u003C\/b\u003ECanvas Upholstery with Leather Patchwork. Metal Rivets. Frame of Mango Wood. Foam Padding\u003Cbr\u003E\u003Cbr\u003E\u003Cb\u003EUsage: \u003C\/b\u003EIndoors\u003Cbr\u003E\u003Cbr\u003E\u003Cb\u003ECare: \u003C\/b\u003ETo protect your furniture from fading, avoid keeping your furniture next to windows and other places where it can be exposed to direct sunlight.\rTo avoid minor scratches which may hamper the finish of your furniture avoid sliding or passing items placed on\u003Cbr\u003E\u003Cbr\u003E\u003Cb\u003EAssembly: \u003C\/b\u003EFully Assembled\u003Cbr\u003E\u003Cbr\u003E\u003Cb\u003EAdditional Information: \u003C\/b\u003EProduct Descriptions - Every effort is made to ensure that the products you view online correspond as closely as possible to the samples we display in our store or in catalogues. Due to the nature of our handmade products slight variations can occur. No responsibility can be accepted for these variations. It is always important to bear in mind that computer browsers may present colours slightly differently. Our wood - It is important to note that the shade and grain of the wood will vary from piece to piece. This is because no two planks of wood are the same. We believe this is one of the positive qualities of wood and helps to make each product unique!  Fabric or Leather - Shade may vary slightly from those shown in samples and in photographic images on our website. Colours - The reproduction of colours on our website is as accurate as photographic and publishing processes will allow. Please note there may be variations in colours dependent on the calibration and settings. ",
+ 				"productFancyCounter":"1",
+ 				"productBragCounter":"0",
+ 				"productVisitCounter":"4",
+ 				"hasFancied":"0",
+ 				"hasBragged":null,
+ 				"userID1":"8318",
+ 				"user1FBID":"1402808348",
+ 				"user1Gender":"male",
+ 				"userID2":null,
+ 				"user2FBID":null,
+ 				"user2Gender":null,
+ 				"userID3":null,
+ 				"user3FBID":null,
+ 				"user3Gender":null,
+ 				"userID4":null,
+ 				"user4FBID":null,
+ 				"user4Gender":null,
+ 				"userID5":null,"user5FBID":null,
+ 				"user5Gender":null,
+ 				"braggedBy":{"0":{"user_id":"15142","fb_uid":"684832831","userGender":"male"}},
+ 				"mostFanciedProductID1":"3017",
+ 				"mostFanciedProductStoreID1":"156",
+ 				"mostFanciedProductName1":"Vintage Wheels Bicycle Chair",
+ 				"mostFanciedProductID2":"3018",
+ 				"mostFanciedProductStoreID2":"156",
+ 				"mostFanciedProductName2":"Re-cycled Bicycle Chair",
+ 				"mostFanciedProductID3":"3069",
+ 				"mostFanciedProductStoreID3":"156",
+ 				"mostFanciedProductName3":"Cool Stool",
+ 				"mostFanciedProductID4":"626",
+ 				"mostFanciedProductStoreID4":"116",
+ 				"mostFanciedProductName4":"Ludo Stools Set of Two",
+ 				"mostFanciedProductID5":"730",
+ 				"mostFanciedProductStoreID5":"118",
+ 				"mostFanciedProductName5":"Traditional Low Seat"
+ 	},
+ 	"variants":{"0":{"variantName":"color","variantTypes":null,"variantQuantity":null,"variantSize":null,"variantColor":"Red"}},
+ 	"filesExistence":{
+ 						"0":true,
+ 						"1":true,
+ 						"2":false,
+ 						"3":false,
+ 						"4":false
+ 	},
+ 	"moreStoreProducts":{
+ 							"0":{
+ 									"productID":"14116",
+ 									"productName":"Charleston Polo Canvas and Leather Stools, Set of 2\u00a0",
+ 									"storeID":"274",
+ 									"selling_price":"28749",
+ 									"is_on_discount":"1",
+ 									"discount":"5750",
+ 									"productQuantity":"10",
+ 									"fancyCounter":"1",
+ 									"visitCounter":"4",
+ 									"bragCounter":"0"
+ 							},
+ 							"1":{
+ 									"productID":"14117",
+ 									"productName":"Charleston Canvas and Leather Bench\u00a0",
+ 									"storeID":"274",
+ 									"selling_price":"14749",
+ 									"is_on_discount":"1",
+ 									"discount":"2950",
+ 									"productQuantity":"10",
+ 									"fancyCounter":"0",
+ 									"visitCounter":"1",
+ 									"bragCounter":"0"
+ 							},
+ 							"2":{
+ 									"productID":"14118",
+ 									"productName":"Iron Bar Stools with Leather Seat ( Set of 2\u00a0)",
+ 									"storeID":"274",
+ 									"selling_price":"17499",
+ 									"is_on_discount":"1",
+ 									"discount":"3500",
+ 									"productQuantity":"10",
+ 									"fancyCounter":"0",
+ 									"visitCounter":"1",
+ 									"bragCounter":"0"
+ 							},
+ 							"3":{
+		 							"productID":"14119",
+		 							"productName":"Michaelo Bicycle Wheel Adjustable Barstool ",
+		 							"storeID":"274",
+		 							"selling_price":"30499",
+		 							"is_on_discount":"1",
+		 							"discount":"6100",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"2",
+		 							"bragCounter":"0"
+ 							},
+ 							"4":{
+		 							"productID":"14120",
+		 							"productName":"Ivory Weathered Flower Cart",
+		 							"storeID":"274",
+		 							"selling_price":"18124",
+		 							"is_on_discount":"1",
+		 							"discount":"3625",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"2",
+		 							"bragCounter":"0"
+ 							},
+ 							"5":{
+		 							"productID":"14121",
+		 							"productName":"Sun-Valley 2 Seater Iron Couch",
+		 							"storeID":"274",
+		 							"selling_price":"18124","is_on_discount":"1",
+		 							"discount":"3625",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"2",
+		 							"bragCounter":"0"
+ 							},
+ 							"6":{
+		 							"productID":"14122",
+		 							"productName":"Ottoman with drawers Kensington",
+		 							"storeID":"274",
+		 							"selling_price":"18749",
+		 							"is_on_discount":"1",
+		 							"discount":"3750",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"2",
+		 							"bragCounter":"0"
+ 							},
+ 							"7":{
+		 							"productID":"14123",
+		 							"productName":"Anglo French Cast Iron Outdoor Set",
+		 							"storeID":"274",
+		 							"selling_price":"18124",
+		 							"is_on_discount":"1",
+		 							"discount":"3625",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"2",
+		 							"bragCounter":"0"
+ 							},
+ 							"8":{
+		 							"productID":"14124",
+		 							"productName":"Retro French Cast Iron Outdoor Set ",
+		 							"storeID":"274",
+		 							"selling_price":"18124",
+		 							"is_on_discount":"1",
+		 							"discount":"3625",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"1",
+		 							"bragCounter":"0"
+ 							},
+ 							"9":{
+		 							"productID":"14125",
+		 							"productName":"Emily 5 Drawer Chest",
+		 							"storeID":"274",
+		 							"selling_price":"18374",
+		 							"is_on_discount":"1",
+		 							"discount":"3675",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"1",
+		 							"bragCounter":"0"
+ 							},
+ 							"10":{
+		 							"productID":"14126",
+		 							"productName":"Console Table",
+		 							"storeID":"274",
+		 							"selling_price":"14999",
+		 							"is_on_discount":"1",
+		 							"discount":"3000",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"3",
+		 							"bragCounter":"0"
+ 							},
+ 							"11":{
+		 							"productID":"14127",
+		 							"productName":"Emily 3 Drawer Chest",
+		 							"storeID":"274",
+		 							"selling_price":"19124",
+		 							"is_on_discount":"1",
+		 							"discount":"3825",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"1",
+		 							"bragCounter":"0"
+ 							},
+ 							"12":{
+		 							"productID":"14128",
+		 							"productName":"Mahagon Brown 4 drawer cabinet",
+		 							"storeID":"274",
+		 							"selling_price":"21874",
+		 							"is_on_discount":"1",
+		 							"discount":"4375",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"0",
+		 							"bragCounter":"0"
+ 							},
+ 							"13":{
+		 							"productID":"14129",
+		 							"productName":"Simone 8 Drawer Chest",
+		 							"storeID":"274",
+		 							"selling_price":"23086",
+		 							"is_on_discount":"1",
+		 							"discount":"4617",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"1",
+		 							"bragCounter":"0"
+ 							},
+ 							"14":{
+		 							"productID":"14130",
+		 							"productName":"Walnut Finish 18 Drawer Alphabet Cabinet",
+		 							"storeID":"274",
+		 							"selling_price":"28749",
+		 							"is_on_discount":"1",
+		 							"discount":"5750",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"1",
+		 							"bragCounter":"0"
+ 							},
+ 							"15":{
+		 							"productID":"14131",
+		 							"productName":"Paradiso 3 Drawer Chest",
+		 							"storeID":"274",
+		 							"selling_price":"18749",
+		 							"is_on_discount":"1",
+		 							"discount":"3750",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"2",
+		 							"bragCounter":"0"
+ 							},
+ 							"16":{
+		 							"productID":"14132",
+		 							"productName":"Azure 5 Drawer Chest",
+		 							"storeID":"274",
+		 							"selling_price":"20624",
+		 							"is_on_discount":"1",
+		 							"discount":"4125",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"1",
+		 							"bragCounter":"0"
+ 							},
+ 							"17":{
+		 							"productID":"14133",
+		 							"productName":"Vanessa 11 Drawer Chest",
+		 							"storeID":"274",
+		 							"selling_price":"21249",
+		 							"is_on_discount":"1",
+		 							"discount":"4250",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"2",
+		 							"bragCounter":"0"
+ 							},
+ 							"18":{
+		 							"productID":"14134",
+		 							"productName":"Cyan-Grey- Blue 16 Drawer Chest",
+		 							"storeID":"274",
+		 							"selling_price":"25999",
+		 							"is_on_discount":"1",
+		 							"discount":"5200",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"1",
+		 							"visitCounter":"3",
+		 							"bragCounter":"0"
+ 							},
+ 							"19":{
+		 							"productID":"14135",
+		 							"productName":"Pranaam White 3 Drawer Chest",
+		 							"storeID":"274",
+		 							"selling_price":"24999",
+		 							"is_on_discount":"1",
+		 							"discount":"5000",
+		 							"productQuantity":"10",
+		 							"fancyCounter":"0",
+		 							"visitCounter":"2",
+		 							"bragCounter":"0"
+ 							}
+ 	},
+ 	"similarProducts":{
+						 	"0":{
+								 	"product_id":"3017",
+								 	"product_name":"Vintage Wheels Bicycle Chair",
+								 	"store_id":"156",
+								 	"selling_price":"5590",
+								 	"is_on_discount":"0",
+								 	"discount":"0",
+								 	"productQuantity":"4",
+								 	"fancyCounter":"52",
+								 	"visitCounter":"264",
+								 	"bragCounter":"6"
+						 	},
+								 	"1":{
+								 	"product_id":"3018",
+								 	"product_name":"Re-cycled Bicycle Chair",
+								 	"store_id":"156",
+								 	"selling_price":"5590",
+								 	"is_on_discount":"0",
+								 	"discount":"0",
+								 	"productQuantity":"4",
+								 	"fancyCounter":"42",
+								 	"visitCounter":"166",
+								 	"bragCounter":"1"
+						 	},
+						 	"2":{
+								 	"product_id":"3069",
+								 	"product_name":"Cool Stool",
+								 	"store_id":"156",
+								 	"selling_price":"10000",
+								 	"is_on_discount":"0",
+								 	"discount":"0",
+								 	"productQuantity":"2",
+								 	"fancyCounter":"41",
+								 	"visitCounter":"141",
+								 	"bragCounter":"1"
+						 	},
+						 	"3":{
+								 	"product_id":"626",
+								 	"product_name":"Ludo Stools Set of Two",
+								 	"store_id":"116",
+								 	"selling_price":"3500",
+								 	"is_on_discount":"1",
+								 	"discount":"35",
+								 	"productQuantity":"16",
+								 	"fancyCounter":"40",
+								 	"visitCounter":"184",
+								 	"bragCounter":"4"
+						 	},
+						 	"4":{
+								 	"product_id":"730",
+								 	"product_name":"Traditional Low Seat",
+								 	"store_id":"118",
+								 	"selling_price":"3500",
+								 	"is_on_discount":"1",
+								 	"discount":"175",
+								 	"productQuantity":"4",
+								 	"fancyCounter":"18",
+								 	"visitCounter":"145",
+								 	"bragCounter":"0"
+						 	},
+						 	"5":{
+								 	"product_id":"474",
+								 	"product_name":"Cocoa Full Leather Stool",
+								 	"store_id":"114",
+								 	"selling_price":"3199",
+								 	"is_on_discount":"0",
+								 	"discount":"0",
+								 	"productQuantity":"4",
+								 	"fancyCounter":"12",
+								 	"visitCounter":"68",
+								 	"bragCounter":"0"
+						 	},
+						 	"6":{
+								 	"product_id":"2101",
+								 	"product_name":"Step up 2 Footstool",
+								 	"store_id":"140",
+								 	"selling_price":"2844",
+								 	"is_on_discount":"0",
+								 	"discount":"0",
+								 	"productQuantity":"4",
+								 	"fancyCounter":"9",
+								 	"visitCounter":"66",
+								 	"bragCounter":"0"
+						 	},
+						 	"7":{
+								 	"product_id":"2981",
+								 	"product_name":"Good Round Adjustable Stool",
+								 	"store_id":"156",
+								 	"selling_price":"4700",
+								 	"is_on_discount":"0",
+								 	"discount":"0",
+								 	"productQuantity":"4",
+								 	"fancyCounter":"8",
+								 	"visitCounter":"83",
+								 	"bragCounter":"0"
+						 	},
+						 	"8":{
+								 	"product_id":"4178",
+								 	"product_name":"With Milk Stools",
+								 	"store_id":"156",
+								 	"selling_price":"18372",
+								 	"is_on_discount":"0",
+								 	"discount":"0",
+								 	"productQuantity":"4",
+								 	"fancyCounter":"4",
+								 	"visitCounter":"61",
+								 	"bragCounter":"0"
+						 	},
+						 	"9":{
+								 	"product_id":"10611",
+								 	"product_name":"The Whimsy Collection",
+								 	"store_id":"116",
+								 	"selling_price":"10624",
+								 	"is_on_discount":"1",
+								 	"discount":"2125",
+								 	"productQuantity":"5",
+								 	"fancyCounter":"4",
+								 	"visitCounter":"40",
+								 	"bragCounter":"0"
+						 	},
+						 	"10":{
+								 	"product_id":"2988",
+								 	"product_name":"Stool Of Rock",
+								 	"store_id":"156",
+								 	"selling_price":"7650",
+								 	"is_on_discount":"0",
+								 	"discount":"0",
+								 	"productQuantity":"5",
+								 	"fancyCounter":"4",
+								 	"visitCounter":"50",
+								 	"bragCounter":"0"
+						 	},
+						 	"11":{
+								 	"product_id":"9933",
+								 	"product_name":"The classic (in wood)",
+								 	"store_id":"156",
+								 	"selling_price":"8299",
+								 	"is_on_discount":"1",
+								 	"discount":"1550",
+								 	"productQuantity":"4",
+								 	"fancyCounter":"4",
+								 	"visitCounter":"36",
+								 	"bragCounter":"0"
+						 	},
+						 	"12":{
+								 	"product_id":"5649",
+								 	"product_name":"Retro Stool ",
+								 	"store_id":"197",
+								 	"selling_price":"11199",
+								 	"is_on_discount":"1",
+								 	"discount":"1120",
+								 	"productQuantity":"5",
+								 	"fancyCounter":"2",
+								 	"visitCounter":"36",
+								 	"bragCounter":"0"
+						 	},
+						 	"13":{
+								 	"product_id":"12351",
+								 	"product_name":"Teak Wood Nest Of Stools  with Dhokra and Warli Work",
+								 	"store_id":"184",
+								 	"selling_price":"30700",
+								 	"is_on_discount":"1",
+								 	"discount":"6146",
+								 	"productQuantity":"3",
+								 	"fancyCounter":"1",
+								 	"visitCounter":"26",
+								 	"bragCounter":"0"
+						 	},
+						 	"14":{
+								 	"product_id":"9937",
+								 	"product_name":"The classic (in steel)",
+								 	"store_id":"156",
+								 	"selling_price":"9599",
+								 	"is_on_discount":"1",
+								 	"discount":"1600",
+								 	"productQuantity":"5",
+								 	"fancyCounter":"1",
+								 	"visitCounter":"31",
+								 	"bragCounter":"0"
+						 	}
+						},
+"hasFancied":false
+}
+
+hasData - true if the server returned any data, false otherwise
+
+qvData - contains details information regarding the product being requested
+
+	productID - unique identifier of the product
+	storeID - unqiue identifier of the store to which the product belongs
+	productName - name of the product
+	storeName - name of the store to which the product belongs
+	storeReturnPolicy - 1 if the store to which the product belongs provides returns, 0 otherwise
+	storeEMIPolicy - 1 if the store to which the product belongs provides EMI, 0 otherwise
+	storeCODPolicy - 1 if the store to which the product belongs provides COD, 0 otherwise
+	productSellingPrice - the original selling price of the product
+	isOnDiscount - 1 if the product is on discount, 0 otherwise. If the value of this property is 1 then the effective price of the product is calculated by (productSellingPrice - productDiscount)
+	productDiscount - the discount amount on the product
+	productQuantity - quantity of the product in stock
+	catID - unique identifier of the root category of the product
+	subCatID1 - unique identifier of the 1st level category of the product
+	processingTime - number of days after which the product will be shipped by the seller
+	productDescription - exhaustive description of the product. contains HTML
+	productFancyCounter - number of people that bragged the product
+	productBragCounter - number of people who shared the product
+	productVisitCounter - number of people who viewed the product at its product page
+	hasFancied - 1 if the current user has bragged the product, 0 otherwise
+	hasBragged - 1 if the current user has shared the product, 0 otherwise
+	userID1 - unique identifier of the 2nd user who most recently bragged the product
+	user1FBID - facebook ID of the 2nd user who most recently bragged the product
+	user1Gender - gender of the 2nd user who most recently bragged the product
+	userID2 - unique identifier of the 2nd user who most recently bragged the product
+	user2FBID - facebook ID of the 2nd user who most recently bragged the product
+	user2Gender - gender of the 2nd user who most recently bragged the product
+	userID3 - unique identifier of the 3rd user who most recently bragged the product
+	user3FBID - facebook ID of the 3rd user who most recently bragged the product
+	user3Gender - gender of the 3rd user who most recently bragged the product
+	userID4 - unique identifier of the 4th user who most recently bragged the product
+	user4FBID - facebook ID of the 4th user who most recently bragged the product
+	user4Gender - gender of the 4th user who most recently bragged the product
+	userID5 - unique identifier of the 5th user who most recently bragged the product
+	user5FBID - facebook ID of the 5th user who most recently bragged the product
+	user5Gender - gender of the 5th user who most recently bragged the product
+
+	 braggedBy - contains information regarding the 5 most recent people who shared the product
+	 			
+	 			user_id - unique identifier of the user,
+	 			fb_uid - facebook ID of the user
+	 			userGender - gender of the user
+	 
+	mostFanciedProductID1 - not being used anymore
+	mostFanciedProductStoreID1 - not being used anymore
+	mostFanciedProductName1 - not being used anymore
+	mostFanciedProductID2 - not being used anymore
+	mostFanciedProductStoreID2 - not being used anymore
+	mostFanciedProductName2 - not being used anymore
+	mostFanciedProductID3 - not being used anymore
+	mostFanciedProductStoreID3 - not being used anymore
+	mostFanciedProductName3 - not being used anymore
+	mostFanciedProductID4 - not being used anymore
+	mostFanciedProductStoreID4 - not being used anymore
+	mostFanciedProductName4 - not being used anymore
+	mostFanciedProductID5 - not being used anymore
+	mostFanciedProductStoreID5 - not being used anymore
+	mostFanciedProductName5 - not being used anymore
+
+variants - false if the product has no variants otherwise has data in following format:
+
+			{"0":{"variantName":"color","variantTypes":null,"variantQuantity":null,"variantSize":null,"variantColor":"Red"}}
+
+			where
+					variantName  - type of the variant("color" or "size")
+					variantTypes - always null. probably inconsequential
+					variantQuantity - the quantity of variant available in stock. inconsequential
+					variantSize - size value of the variant. null if the variantName is not equal to "size"
+					variantColor - colour value of the variant. null if the variantName is not equal to color
+
+filesExistence - tells the existence of various image files of the product from different angles. there can be a maximum of 5 different files
+
+
+moreStoreProducts - more products from the same store
+ 						
+ 						productID - unique identifier of the product
+ 						productName - name of the product
+ 						storeID - unqiue identifier of the store to which the product belongs
+ 						selling_price - original selling price of the product
+ 						is_on_discount- 1 if the product is on discount, 0 otherwise. If the value of this property is 1 then the effective price of the product is calculated by (selling_price - discount)
+ 						discount - the discount amount on the selling price
+ 						productQuantity - quantity of the product in stock
+						fancyCounter - number of people who have bragged the product
+						visitCounter - number of people who have viewed the product
+						bragCounter - number of people who have shared the product
+
+similarProducts - contains products similiar to the current one
+					
+					product_id - UNIQUE PRODUCT IDENTIFIER
+					product_name - name of the product
+					store_id - unique identifier of the store to which the product belongs
+					selling_price - selling price of the product
+					is_on_discount - 1 if the product is on discount, 0 otherwise. If the value of this property is 1 then the effective price of the product is calculated by (selling_price - discount)
+					discount - the discount amount on the selling price
+					productQuantity - quantity of the product in stock
+					fancyCounter - number of people who have bragged the product
+					visitCounter - number of people who have viewed the product
+					bragCounter - number of people who have shared the product
+
+hasFancied - true if the current user has bragged the product, false otherwise
+
+
+
+20. GET /index.php/rapiv1/product/fanciedUsersFancies/<product_id>/<page_number>
+gets a list of products which has been fancied by the users who fancy the product specified by product_id
+
+sample response:
+
+[
+	{
+		"productID":"10378",
+		"storeID":"191",
+		"productName":"Bad Mickey ",
+		"storeName":"Cocaine"
+	},
+	{
+		"productID":"10377",
+		"storeID":"191",
+		"productName":"Cocaine ",
+		"storeName":"Cocaine"
+	},
+	...,
+	{
+		"productID":"240",
+		"storeID":"106",
+		"productName":"Reclaimed Wood Dining Chairs - Set of Two",
+		"storeName":"Home and Bazaar"
+	}
+]
+
+productID - unique identifier of the product
+storeID - unique identifier of the store to which the product belongs
+productName - name of the product
+storeName - name of the store to which the product belongs
+
+21. GET /index.php/rapiv1/profile/fancyListDetails/<user_id>
+
+gets the details of all the brag lists for a user
+
+sample response:
+
+{
+	"isLoggedIN":true,
+	"data":{
+				"fancyListsData":[
+									{
+										"fancyListID":"2",
+										"fancyListName":"Fashion",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"37"
+									},
+									{
+										"fancyListID":"3",
+										"fancyListName":"Art",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"11"
+									},
+									{
+										"fancyListID":"4",
+										"fancyListName":"Geekery",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"3"
+									},
+									{
+										"fancyListID":"5",
+										"fancyListName":"Personal Care",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"0"
+									},
+									{
+										"fancyListID":"6",
+										"fancyListName":"Furniture",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"125"
+									},
+									{
+										"fancyListID":"7",
+										"fancyListName":"Dining",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"47"
+									},
+									{
+										"fancyListID":"8",
+										"fancyListName":"Decor and Furnishings",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"108"
+									},
+									{
+										"fancyListID":"10",
+										"fancyListName":"Lighting",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"26"
+									},
+									{
+										"fancyListID":"47",
+										"fancyListName":"",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"36"
+									},
+									{
+										"fancyListID":"49",
+										"fancyListName":"",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"0"
+									},
+									{
+										"fancyListID":"55",
+										"fancyListName":"",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"0"
+									},
+									{
+										"fancyListID":"66",
+										"fancyListName":"Collectibles & Accessories",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"25"
+									},
+									{
+										"fancyListID":"152",
+										"fancyListName":"Gadgets & Collectibles",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"49"
+									},
+									{
+										"fancyListID":"1067",
+										"fancyListName":"Gifts & Collectibles",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"45"
+									},
+									{
+										"fancyListID":"5216",
+										"fancyListName":"Things I Love!",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"1"
+									},
+									{
+										"fancyListID":"5217",
+										"fancyListName":"My Collection",
+										"fancyListDescription":null,
+										"totalFanciedProducts":"1"
+									}
+				]
+	}
+}
+
+isLoggedIN - true if a user is logged-in, false otherwise
+data - contains all the data
+		fancyListData - an array containing all the brag lists and their associated information in the following format:
+				fancyListID - unqiue identifier of the brag list
+				fancyListName - name of the brag list
+				fancyListDescription - description of the brag list
+				totalFanciedProducts - number of products in the brag list
+
+22. GET /index.php/rapiv1/profile/inFancyList/<product_id>
+
+tells which of the user's brag lists the product specified by product_id is in
+
+
+
+sample response:
+
+{
+	"isLoggedIN":true,
+	"data":[{
+				"fancyListID":"6"
+			}]
+}
+
+isLoggedIN - true if a user is logged-in, false otherwise
+data - contains all the data
+		fancyListID - the id of the brag list of the user that contains the product
+
+
+
+23. POST /index.php/rapiv1/comments/save
+
+used to save the comment
+
+NV-pairs expected
+
+ctype - The type of comment. Always 1(signifies comment on a product).
+comments - the comment text
+pid - unique product identifier
+
+sample response:
+
+
+{
+	"isValid":true,
+	"isLoggedIN":true,
+	"result":true
+}
+
+isValid - true when all the data integrity check requirements are met, otherwise false
+isLoggedIN - true when a user is logged-in, false otherwise
+result - true if the save was successful on server-side, otherwise false
+
+24. GET /index.php/rapiv1/comments/read/<product_id>
+
+gets all the comments on the specified product
+
+sample reponse:
+
+
+{
+	"isLoggedIN":true,
+	"result":[{
+				"userID":"141",
+				"userComments":"looks nice....",
+				"commentTime":"1395643145",
+				"commentID":"35",
+				"userFBID":"707544199",
+				"userFullName":"Shammi Shailaj",
+				"userGender":"male",
+				"userCity":"0",
+				"userCountry":"0"
+	}]
+}
+
+isLoggedIN - true when a user is logged-in, false otherwise
+result - contains an array of comments and its related information
+
+		userID - the unique identifier of the user who has commented
+		userComments - the comment text
+		commentTime - the time at which the user commented
+		commentID - the comment's unique identifier
+		userFBID - facebook ID of the user who commented
+		userFullName - full name of the user who commented
+		userGender - gender of the user who commented
+		userCity - city of the user who commented
+		userCountry - contry of the user who commented
+
+25. POST /index.php/rapiv1/comments/update/<comment_id>
+
+used to save a comment after editing
+
+NV-pair
+
+comments - the new comment text after editing
+
+
+sample response:
+
+{
+	"isValid":true,
+	"isLoggedIN":true,
+	"result":true
+}
+
+isValid - true when all the data integrity check requirements are met, otherwise false
+isLoggedIN - true when a user is logged-in, false otherwise
+result - true if the save was successful on server-side, otherwise false
+
+26. GET /index.php/rapiv1/comments/delete/<comment_id>
+ used to delete a particular comment
+
+{
+	"isLoggedIN":true,
+	"result":true
+}
+
+isLoggedIN - true when a user is logged-in, false otherwise
+result - true if the save was successful on server-side, otherwise false
+
+27. POST /index.php/rapiv1/profile/moveToFancyList
+
+used to move a product from one brag list to another
+
+NV-pairs
+
+fromListID - the brag list from which to move the product
+toListID - the brag list to which the product is to be moved
+productID - the unique product identifier
+
+sample response:
+
+{
+	"isLoggedIN":true,
+	"data":{
+				"saved":true
+	}
+}
+
+isLoggedIN - true when a user is logged-in, false otherwise
+data - contains all the data
+		saved - true if the change was successful, false otherwise
+
+28. GET /index.php/async/addToCart/<product_id>/<vcolor>/<vsize>/<user_id>/<store_id>/<quantity>
+
+
+used to add a product to cart
+
+product_id  - unique product identifier
+vcolor - variant color, 0(zero) otherwise
+vsize - variant size, 0(zero) otherwise
+user_id - unique user identifier to whose cart should the product be added
+store_id - unique store identifier to which the product belongs
+quantity - the quantity of the product to add to the cart
+
+sample response:
+
+{
+	"addedProduct":true,
+	"cartCount":"2"
+}
+
+addedProduct - true if the product was successfully added to the cart, false otherwise
+cartCount - number of product in the cart
+
+29. GET /index.php/async/cartData
+
+get all the details about the current user's cart
+
+{
+	"0":{
+			"isLoggedIN":true
+	},
+	"1":{
+			"productsVariants":null,
+			"cartData":{
+							"0":{
+									"productID":"8677",
+									"cartID":"17132",
+									"storeID":"228",
+									"quantity":"1",
+									"vsize":"0",
+									"vcolor":"0",
+									"productName":"Slicer ",
+									"isOnDiscount":"0",
+									"originalPrice":"3465",
+									"processingTime":"7",
+									"discountAmount":"0",
+									"availableQuantity":"9"
+							},
+							"1":{
+									"productID":"10436",
+									"cartID":"17277",
+									"storeID":"1",
+									"quantity":"1",
+									"vsize":"0",
+									"vcolor":"0",
+									"productName":" Jeyo Sofa Chair",
+									"isOnDiscount":"1",
+									"originalPrice":"11699",
+									"processingTime":"20",
+									"discountAmount":"1200",
+									"availableQuantity":"5"
+							}
+			},
+			"cartCount":2
+	}
+}
+
+
+isLoggedIN - true when a user is logged-in, false otherwise
+productsVariants - contains variant details if any
+
+productID - unique product identifier
+cartID - unique cart item identifier
+storeID - unqiue identifier of the store to which the product belongs
+quantity - quantity of the product in cart
+vsize - size variant of the product desired by the customer, 0(zero) otherwise
+vcolor - colour variant of the product desired by the customer, 0(zero) otherwise
+productName- name of the product
+isOnDiscount - whether the product has some discount
+originalPrice - the original selling price of the product
+processingTime - number of days required by the seller before he/she initiates the shipping of the product
+discountAmount - discount amount, if any, of the product
+availableQuantity - the quantity of the product available in stock
+
+30. POST /index.php/async/fancy2/<product_id>
+
+used to brag a product (for the current user only)
+
+NV-pair
+
+listID - the unique identifier of the user's brag list to which the product has to be added to. null (javascript) is an acceptable value
+
+sample response:
+
+{
+	"catID":"10",
+	"subCatID1":"82",
+	"loggedIN":true,
+	"fancy":true,
+	"alreadyFancied":false,
+	"error":false
+}
+
+catID - unique category identifier to which the product belongs
+subCatID1 - unique sub-category identifier to which the product belongs
+loggedIN - true if a user is logged-in, false otherwise
+fancy - true if the product was successfully bragged, false otherwise
+alreadyFancied - true if the product had been already bragged by the user, false otherwise
+error - true if any error(s) occur(s), false otherwise
+

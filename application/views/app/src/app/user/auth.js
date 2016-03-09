@@ -1,0 +1,1 @@
+angular.module('userSession', ['userSession.signIn', 'userSession.signUp']);

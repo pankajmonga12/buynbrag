@@ -1,0 +1,27 @@
+.backIcon {
+  position: absolute;
+  left: -40px;
+  top: 2px;
+  cursor: pointer;
+
+  .tooltips{
+    position: absolute;
+    white-space: nowrap;
+    top: -90%;
+    left: -75%;
+    transform: translate3d(5px, 0, 0);
+    font-size: 11px;
+    font-family: Raleway;
+    font-weight: normal;
+    text-align: center;
+  }
+
+
+  &:hover{
+    .tooltips{
+      opacity: 1;
+      visibility: visible;
+      transform: translate3d(0px, 0, 0);
+    }
+  }
+}

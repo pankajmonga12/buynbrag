@@ -1,0 +1,8 @@
+<div class="column">Store Name</div>
+                    <div class="column width126">Date of Order Placed</div>
+                    <div class="column width126">Logistics Provider</div>
+                    <div class="column">Order ID</div>
+                    <div class="column">Track ID</div>
+                    <div class="column width112">Product Cost</div>
+                    <div class="column width126">Order status</div>
+                    <div class="column width90">Action</div>

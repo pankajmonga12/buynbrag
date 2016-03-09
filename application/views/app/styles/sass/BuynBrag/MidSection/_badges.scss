@@ -1,0 +1,88 @@
+.badgesPage, .profilePage .badgesViewContainer{
+
+  .badgesCategoryContainer {
+    margin-bottom: 25px;
+    border-radius: $bnbBorderRadius;
+  }
+
+  .badgeHeader{
+    padding: 10px 15px;
+    font-size: 12px;
+    //background: url("../images/sprites/header_footer_bg.png") repeat;
+    background: url("../images/sprites/binding_pattern_BG.jpg") repeat;
+    opacity: 0.9;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .badgeImgContainer{
+    border: 1px solid #ccc;
+    height: 100%;
+    overflow: hidden;
+    padding-left: 3%;
+  }
+
+  .badgeName{
+    font-size: 12px;
+  }
+
+  .badgeImg{
+    display: inline-block;
+    width: 12%;
+    margin: 15px 0 0 0;
+    height: 125px;
+
+    a{
+      display: inline-block;
+      width: 75%;
+      text-decoration: none;
+    }
+
+    &.locked{
+      a{
+        width: 70%;
+      }
+      .badgeName{
+        display: inline-block;
+        margin-top: 7px;
+      }
+    }
+  }
+
+}
+
+#badgeInfoModal.modal{
+  left: 10%;
+  right: 10%;
+  margin: 0 auto;
+  padding: 30px;
+
+  .badgeInfoContainer{
+    margin-left: 25px;
+    width: 70%;
+    font-size: 16px;
+  }
+
+  .badgeName{
+    margin: 10px 0;
+    font-size: 22px;
+    font-variant: small-caps;
+//    font-family: HelveticaStd;
+    font-weight: bold;
+  }
+
+  .badgeStats{
+    margin-top: 15px;
+  }
+
+  .bragBucks{
+    margin: 10px 0;
+    font-size: 17px;
+  }
+
+  .disclaimer {
+    border-top: 1px solid #ddd;
+    margin-top: 42px;
+    padding-top: 15px;
+  }
+}

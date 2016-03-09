@@ -1,0 +1,135 @@
+.header
+   {
+    border:4px solid #3e4547;
+    border-radius:3px;
+    -moz-border-radius:3px;
+   -webkit-border-radius:3px;
+    }
+.header {
+
+    height: 53px;
+    outline: 0;
+    display: block;
+    color: #e48f8f;
+    font-weight: bold;
+    text-shadow: 1px 1px #1f272b;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font-size: 45px;
+    background: #232B30; /* old browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#232B30',GradientType=0 ); 
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2); 
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); 
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); 
+}
+body {
+      
+      opacity: 40%;
+      filter:alpha(opacity=30);
+      
+      width: 100%;
+      min-height: 100%;
+      float: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+    .cont,.box{
+      background-color: white;
+      color: black;
+      font-size: 16px;
+      box-shadow: 0 0 25px 5px #999;
+      border-radius: 7px 7px 7px 7px;
+      padding: 20px;
+      position: absolute;
+      top: 10em;
+      left: 25em;
+      width: 600px;
+      height: auto;
+      display: none;
+      min-height: 200px;
+     
+    }
+
+   form 
+     {
+  margin-top: 6em;
+  margin-left: 1em;
+  }
+input[type=text]
+{
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  width: 150px;
+  min-height: 28px;
+  font-size: 12px;
+  -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  float: left;
+display: inline;
+margin-left: 1em;
+}
+label{
+  font-family: Tahoma;
+  float: left;
+  display: inline;
+  margin-left: 1em;
+}
+.button {
+    margin-top: 2em;
+    margin-left: 20em;
+    background: #E48F8F;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+
+}
+.button:hover{
+   cursor: pointer;
+}
+.storeName {
+  font-family: Cursive;
+   cursor: pointer;
+   background-color: grey;
+   float: left;
+   margin-left: 45px;
+width: 150px;
+}
+  select
+  {
+    font-family: Cursive;
+   cursor: pointer;
+   background-color: grey;
+ 
+}
+#Catagory {
+margin-left: 5px;
+}
+#datatype {
+margin-left: 10px;
+}
+.intern {
+margin-top: 60px;
+}
+.weeklabel {
+margin-left: 130px;
+}
+
+.button.b-close {
+border-radius: 7px 7px 7px 7px;
+
+font: bold 131% sans-serif;
+padding: 0 6px 2px;
+position: absolute;
+right: -7px;
+top: -50px;
+box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+color: #fff;
+cursor: pointer;
+display: inline-block;
+text-align: center;
+text-decoration: none;
+}

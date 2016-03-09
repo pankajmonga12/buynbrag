@@ -1,0 +1,359 @@
+@charset "utf-8";
+.minHeighttaste {
+    min-height: 650px !important;
+}
+
+.tastesIcon {
+    background-image: url(../images/tastes_click.png) !important;
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    float: left;
+    cursor: auto !important;
+    margin-right: 0;
+}
+
+.bannerIllustration {
+    background-image: url(../images/topbanner.png);
+    background-repeat: no-repeat;
+    width: 747px;
+    height: 136px;
+    position: absolute;
+    top: 0;
+    right: -148px;
+}
+
+.shoppingCartIconHolder {
+    width: 1024px;
+    height: 84px;
+    padding-top: 18px;
+    margin: 0 auto;
+}
+
+.tasteIcon {
+    background-image: url(../images/taste_icon.png);
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 41px;
+    margin-top: 6px;
+    float: left;
+}
+
+.itemTasteText {
+    font-family: gill;
+    font-size: 40px;
+    color: #333;
+    padding-top: 4px;
+    padding-left: 15px;
+    float: left;
+}
+
+.tasteIconHolder {
+    width: 1024px;
+    height: 74px;
+    padding-top: 18px;
+    margin: 0 auto;
+}
+
+.exploreText {
+    border-bottom: 1px solid #000;
+    color: #666;
+    float: right;
+    font-family: gill;
+    font-size: 18px;
+    padding-bottom: 1px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.testContainer {
+    height: auto;
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 1024px;
+}
+
+.profile_picture_Holder {
+    border-bottom: 1px solid #A8A9A5;
+    border-top: 1px solid #FFF;
+    height: 130px;
+    margin: 0 auto;
+    position: relative;
+    width: 1024px;
+}
+
+.profile_picture_background {
+    background-color: #FFF;
+    height: 130px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity = 40);
+    -moz-opacity: .4;
+    -khtml-opacity: .4;
+    opacity: .4;
+    width: 100%;
+}
+
+.profile_picture_contents {
+    position: absolute;
+    top: 0;
+    padding-top: 14px;
+    padding-left: 16px;
+    width: 1008px;
+}
+
+.profileLeftContainer {
+    width: 394px;
+    height: auto;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+.profileRightContainer {
+    width: 596px;
+    height: auto;
+    float: left;
+    border-left: 1px solid #fff;
+    padding-left: 14px;
+}
+
+.profileImage {
+    width: 96px;
+    height: 96px;
+    padding: 3px;
+    background-color: #fff;
+    float: left;
+    cursor: pointer;
+}
+
+.profileTextHolder {
+    font-family: gill;
+    font-size: 30px;
+    float: left;
+    color: #333;
+    padding-left: 8px;
+    width: 250px;
+}
+
+.bragButton {
+    background: #eb3762;
+    background: -moz-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -webkit-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -o-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -ms-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    -pie-background: linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    -moz-box-shadow: 0 5px 0 #dfa7a7;
+    -webkit-box-shadow: 0 5px 0 #dfa7a7;
+    -khtml-box-shadow: 0 5px 0 #dfa7a7;
+    -pie-box-shadow: 0 5px 0 #dfa7a7;
+    box-shadow: 0 5px 0 #dfa7a7;
+    width: 96px;
+    height: 31px;
+    float: left;
+    margin: 0 0 0 3px;
+    cursor: pointer;
+    font-family: gill_bold;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.bragButton:hover {
+    background: #f25178;
+    background: -moz-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -webkit-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -o-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -ms-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    -pie-background: linear-gradient(bottom, #f03c67 50%, #f25178 0);
+}
+
+.bragButton:active {
+    background: #cb3055;
+    background: -moz-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -webkit-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -o-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -ms-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    -pie-background: linear-gradient(bottom, #c51640 50%, #cb3055 0);
+}
+
+.retakeTestButton {
+    background: #749d5e;
+    background: -moz-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -webkit-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -o-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -ms-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    -pie-background: linear-gradient(bottom, #619049 50%, #749d5e 0);
+    -moz-box-shadow: 0 5px 0 #b3c5aa;
+    -webkit-box-shadow: 0 5px 0 #b3c5aa;
+    -khtml-box-shadow: 0 5px 0 #b3c5aa;
+    -pie-box-shadow: 0 5px 0 #b3c5aa;
+    box-shadow: 0 5px 0 #b3c5aa;
+    width: 134px;
+    height: 31px;
+    font-family: gill_bold;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    float: left;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.retakeTestButton:hover {
+    background: #8ec273;
+    background: -moz-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -webkit-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -o-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -ms-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    -pie-background: linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+}
+
+.retakeTestButton:active {
+    background: #537541;
+}
+
+.buttonsHolder {
+    padding-top: 24px;
+}
+
+.brag_icon {
+    background-image: url(../images/brag_icon_medium.png);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 22px;
+    float: left;
+    margin-left: 6px;
+}
+
+.peopleImage {
+    width: 62px;
+    height: 62px;
+    background-color: #fff;
+    float: left;
+    padding: 3px;
+    margin-right: 6px;
+}
+
+.otherPeopleText {
+    font-family: gill;
+    font-size: 16px;
+    color: #333;
+    text-shadow: 0 1px 0 #fff;
+    padding-bottom: 15px;
+}
+
+.test_image_holder {
+    float: left;
+    height: 280px;
+    list-style: none;
+    padding-left: 9px;
+    width: 249px;
+}
+
+.imageRow1 {
+    padding-top: 20px;
+    display: inline-block;
+}
+
+.imageRow2 {
+    padding-top: 12px;
+    clear: both;
+    display: inline-block;
+}
+
+.picksText {
+    float: left;
+    font: 16px gill_italic;
+    color: #666;
+}
+
+.redNumber {
+    color: #dc4e4e;
+}
+
+.showMoreItems {
+    float: right;
+    font: 14px gill;
+    color: #dc4e4e;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.textLeftRight {
+    height: 30px;
+}
+
+.ImageLeftRight {
+    height: 440px;
+    clear: both;
+}
+
+.ImageLeft {
+    background-color: #E1E1E1;
+    border: 1px dashed #949494;
+    float: left;
+    height: 425px;
+    padding: 10px;
+    width: 288px;
+}
+
+.imageRight {
+    float: right;
+    width: 695px;
+    height: 437px;
+}
+
+.smallImageBox {
+    width: 84px;
+    height: 70px;
+    background-color: #e7e8ea;
+    float: left;
+    padding: 4px;
+    position: relative;
+    margin-right: 6px;
+}
+
+.imageRows {
+    clear: both;
+    height: 90px;
+}
+
+.bigImageRow {
+    height: 153px;
+}
+
+.ImageBackground {
+    float: left;
+    padding: 4px;
+    width: 161px;
+    height: 134px;
+    background-color: #fff;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.closeOpacity {
+    background-image: url(../images/smallimage_hover_pattern.png);
+    background-repeat: repeat;
+    width: 92px;
+    height: 78px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.deleteIcon {
+    background-image: url(../images/delet_icon.png);
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 25px;
+    left: 33px;
+    cursor: pointer;
+}

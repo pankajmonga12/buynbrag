@@ -1,0 +1,32 @@
+body{
+    background: url("../../images/top_banner_background.png") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.wrapper {
+    clear: both;
+    height: auto;
+    position: relative;
+    width: 100% !important;
+}
+
+.banner {
+    background: url("../../images/top_banner_background.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    height: auto;
+    width: 100%;
+}
+
+.middleBackground {
+    background: url("../../images/middle_background.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: auto;
+    min-height: 886px;
+    padding-bottom: 30px;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.slide{
+    position: relative;
+    top: 0;
+}

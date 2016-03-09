@@ -1,0 +1,137 @@
+<!--=========================== FANCY LIST CONTAINER STARTS =======================================-->
+
+<div class="fancyListViewContainer container" ng-controller="FancyListController">
+
+    <ul class="spinner" ng-hide="hideSpinner">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <!-- <div class="fancyListContainer" ng-show="showFancyMessage">
+        <h3>You have not bragged any products yet.</h3>
+    </div> -->
+
+    <!-- Previous Fancy list view -->
+    <!-- <div class="fancyListContainer relative" ng-repeat="list in fancyList" ng-show="list.fanciedItemsToDisplay.length > 0">
+
+        <div class="categoryBg span2 stripedBg relative {{list.color}}">
+
+            <div class="categoryName">{{list.fancyListName}}<i class="editBtn icon-pencil"></i></div>
+            <strong class="totalItems"><span class="itemNo">{{list.totalFancies}}</span>&nbsp;items</strong>
+
+        </div>
+
+        <div class="fancyListImgWrapper">
+            <ul class="fancyProductMediumContainer">
+                <li class="span2 shadedBackground" ng-repeat="item in list.fanciedItemsToDisplay">
+                    <a href="/product/{{item.productName}}/{{item.productID}}">
+                        <img class="fancyItemImage" ng-src="{{s3baseUrl}}{{item.storeID}}/{{item.productID}}/img1_240x200.jpg" alt="{{item.productName}}">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <i class="leftArrow icon-left-open-big" ng-click="fetchPrevious(list.fancyListID)" ng-hide="list.page == 0"></i>
+        <i class="rightArrow icon-right-open-big" ng-click="fetchNext(list.fancyListID)" ng-hide="list.fanciedItemsToDisplay.length < 5"></i>
+
+    </div> -->
+
+    <!--<div class="fancyListContainer relative" ng-repeat="list in fancyList">-->
+
+
+        <!--<div ng-click="openModal('editFancyListModal', {list: list})" class="categoryBg span2 stripedBg relative {{list.color}}">-->
+
+            <!--<div class="categoryName">{{list.fancyListName}}<i class="editBtn icon-pencil"></i></div>-->
+            <!--<strong class="totalItems"><span class="itemNo">{{list.totalFancies}}</span>&nbsp;items</strong>-->
+            <!--<p>{{list.fancyListDescription}}</p>-->
+
+        <!--</div>-->
+
+        <!--<a ng-href="profile/fancy/{{userID}}/list/{{list.fancyListID}}">-->
+
+            <!--<div class="fancyListImgWrapper">-->
+                <!--<ul class="fancyProductMediumContainer">-->
+                    <!--<li class="span2 shadedBackground" ng-repeat="item in list.fanciedItemsToDisplay">-->
+                        <!--<img class="fancyItemImage" ng-src="{{s3baseUrl}}{{item.storeID}}/{{item.productID}}/img1_240x200.jpg" alt="{{item.productName}}">-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+        <!--</a>-->
+
+    <!--</div>-->
+
+    <!--<div class="fancyListContainer relative">-->
+
+        <!--<div ng-click="openModal('editFancyListModal', {list: list})" class="categoryBg span2 stripedBg relative {{list.color}}">-->
+
+            <!--<div class="categoryName">{{list.fancyListName}}<i class="editBtn icon-pencil"></i></div>-->
+            <!--<strong class="totalItems"><span class="itemNo">{{list.totalFancies}}</span>&nbsp;items</strong>-->
+            <!--<p>{{list.fancyListDescription}}</p>-->
+
+        <!--</div>-->
+
+    <!--</div>-->
+
+    <div class="fancyListContainer relative">
+
+        <a ng-href="profile/fancy/{{userID}}/list/{{list.fancyListID}}" ng-click="sendList(list)" ng-repeat="list in fancyList | orderBy: '-totalFancies'" class="{{ ($index%3==0) && 'span4 leftMar0' || 'span4' }}">
+            <div class="storeDetailContainer" ng-show="list.fancyListName">
+                <div class="storeBrandingContainer">
+                    <span class="storeBannerName inlineBlock ng-binding">{{list.fancyListName}}</span>
+                    <div class="prodNo">{{list.fancyListDescription}}</div>
+                </div>
+                <div class="storeProductsPreviewContainer">
+                    <span ng-repeat="item in list.fanciedItemsToDisplay | limitTo:5">
+                        <img ng-src="{{s3baseUrl}}{{item.storeID}}/{{item.productID}}/img1_240x200.jpg" alt="{{item.productName}}">
+                    </span>
+                    <span ng-show="list.totalFancies > 5">+{{+list.totalFancies - 5}} products</span>
+
+                    <!--<img alt="Melting Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4969/img1_171x171.jpg">-->
+                    <!--<img alt="Moodi Man" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/5029/img1_171x171.jpg">-->
+                    <!--<img alt="Pan Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4911/img1_171x171.jpg">-->
+                    <!--<img alt="Melting Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4969/img1_171x171.jpg">-->
+                    <!--<img alt="Moodi Man" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/5029/img1_171x171.jpg">-->
+                </div>
+            </div>
+        </a>
+
+        <!--<a href="#" class="span4">-->
+            <!--<div class="storeDetailContainer">-->
+                <!--<div class="storeBrandingContainer">-->
+                    <!--<span class="storeBannerName inlineBlock ng-binding"><i ng-click="openModal('editFancyListModal', {list: list})" class="editBtn icon-pencil"></i>Things I Love</span>-->
+                <!--</div>-->
+                <!--<div class="storeProductsPreviewContainer">-->
+                    <!--<img alt="Pan Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4911/img1_171x171.jpg">-->
+                    <!--<img alt="Melting Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4969/img1_171x171.jpg">-->
+                    <!--<img alt="Moodi Man" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/5029/img1_171x171.jpg">-->
+                    <!--<img alt="Pan Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4911/img1_171x171.jpg">-->
+                    <!--<img alt="Melting Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4969/img1_171x171.jpg">-->
+                    <!--<img alt="Moodi Man" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/5029/img1_171x171.jpg">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</a>-->
+
+        <!--<a href="#" class="span4">-->
+            <!--<div class="storeDetailContainer">-->
+                <!--<div class="storeBrandingContainer">-->
+                    <!--<span class="storeBannerName inlineBlock ng-binding"><i ng-click="openModal('editFancyListModal', {list: list})" class="editBtn icon-pencil"></i>Things I Love</span>-->
+                <!--</div>-->
+                <!--<div class="storeProductsPreviewContainer">-->
+                    <!--<img alt="Pan Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4911/img1_171x171.jpg">-->
+                    <!--<img alt="Melting Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4969/img1_171x171.jpg">-->
+                    <!--<img alt="Moodi Man" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/5029/img1_171x171.jpg">-->
+                    <!--<img alt="Pan Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4911/img1_171x171.jpg">-->
+                    <!--<img alt="Melting Clock" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4969/img1_171x171.jpg">-->
+                    <!--<img alt="Moodi Man" class="ng-scope" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/5029/img1_171x171.jpg">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</a>-->
+
+    </div>
+
+    </div>
+
+</div>

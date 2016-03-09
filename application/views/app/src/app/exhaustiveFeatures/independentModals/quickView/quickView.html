@@ -1,0 +1,149 @@
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <div class="loadingOverlay" ng-show="busy">
+        <ul class="spinner">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <em class="visible-desktop" style="line-height: 1;margin: -8px 0 4px 0;">Hover to Zoom</em>
+    <em class="visible-tablet" style="line-height: 1;margin: -8px 0 4px 0;">Tap to Zoom</em>
+    <div class="productInfoContainer" id="{{quickpid}}">
+        <div class="productImage inlineBlock hidden-phone pull-left relative">
+            <img image-zoom empty-img check-load="loaded()" ng-src="{{mainImage}}" alt="{{productName}}">
+
+            <div class="productImageThumbsContainer">
+                <span check-image class="productImageThumbs" ng-repeat="thumb in productImageThumbs">
+                    <img empty-img  class="bottom_image" ng-src="{{thumb.imageURL}}img{{thumb.num}}_40x40.jpg" ng-click="changeImage(thumb.imageURL, thumb.num)" alt="" />
+                </span>
+            </div>
+
+            <div class="imagePreviewZoom hide">
+                <img empty-img class="zoomedImage" ng-src="{{zoomedImage}}">
+            </div>
+        </div>
+        <div id="imagePreviewZoomBox"></div>
+
+        <!--<img class="productImage hidden-phone" check-load="loaded()" ng-src="{{mainImage}}" alt="Product Image">-->
+        <div class="productDescriptionContainer inlineBlock pull-right">
+            <a data-dismiss="modal" ng-href="#!/product/{{productName | beautify}}/{{quickpid}}"><h4 class="productName">{{productName}}</h4></a>
+            <div class="productStoreName hidden-phone">by <a data-dismiss="modal" ng-href="#!/store/{{storeName | beautify}}/{{quicksid}}"><span>{{storeName}}</span></a></div>
+            <div class="productBriefDescription">
+                <div>
+                    {{productDescriptionShort}}
+                </div>
+                <!-- <a href="#descriptionModal" class="block" role="button" ng-click="passDescription()" data-toggle="modal" data-dismiss="modal" aria-hidden="true">Detailed description</a> -->
+                <a id="rollLink" class="block" data-dismiss="modal" aria-hidden="true" ng-href="#!/product/{{productName | beautify}}/{{quickpid}}">Detailed information about this product...</a>
+            </div>
+            <!--<div class="productBriefDescription" ng-bind-html-unsafe="productDescr"></div>-->
+            <div class="productPriceContainer inlineBlock">
+
+                <!--<div class="btn-group pull-right relative">-->
+                    <!--<button class="btn btn-flat dropdown-toggle addToCart" data-toggle="dropdown">-->
+                        <!--<span class="btnText">-->
+                            <!--<span class="cartIconPink"></span>Add to cart<span class="caret"></span>-->
+                        <!--</span>-->
+                    <!--</button>-->
+
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="">1</a></li>-->
+                        <!--<li><a href="">2</a></li>-->
+                        <!--<li><a href="">3</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+
+                <div class=" {{ (origPrice == discountPrice) && 'productOriPrice strike hidden-phone hide' || 'productOriPrice strike hidden-phone' }} ">&#8377; {{origPrice}}</div>
+                <div class="productDiscountedPrice bnbRedFont">&#8377; {{discountPrice}}</div>
+                <div class="productAvailabilty hidden-phone">In stock : <span>{{totalQuantity}}</span></div>
+            </div>
+            <!--<div class="productVariablesContainer pull-right">-->
+            <!--<ul class="productColorOptions">-->
+            <!--<li class="pull-left"><span>Color options:</span></li>-->
+            <!--<li><label class="color01 customRadio radioOn" for="radio01"><input name="colorRadio" id="radio01" type="radio" checked /></label></li>-->
+            <!--<li><label class="color02 customRadio" for="radio02"><input name="colorRadio" id="radio02" type="radio" /></label></li>-->
+            <!--<li><label class="color03 customRadio" for="radio03"><input name="colorRadio" id="radio03" type="radio" /></label></li>-->
+            <!--</ul>-->
+            <!--<ul class="productSizeOptions">-->
+            <!--<li class="pull-left"><span>Size options:</span></li>-->
+            <!--<li><label class="size100 customRadio radioOn" for="radio600"><span>S</span><input name="sizeRadio" id="radio600" type="radio" checked /></label></li>-->
+            <!--<li><label class="size200 customRadio" for="radio700"><span>M</span><input name="sizeRadio" id="radio700" type="radio" /></label></li>-->
+            <!--<li><label class="size300 customRadio" for="radio800"><span>XL</span><input name="sizeRadio" id="radio800" type="radio" /></label></li>-->
+            <!--</ul>-->
+            <!--<div class="productDimension"> 24cm X 28cm X 30cm</div>-->
+            <!--</div>-->
+        </div>
+
+        <div class="productCtaContainer pull-right clear">
+            <div class="selectBoxContainer">
+                <label class="{{ colorVariants && 'productColor' || 'hide' }}">
+                    Color
+                    <select ng-model="selectedColorVariant" ng-options="variant.color for variant in colorVariants"></select>
+                </label>
+            </div>
+            <div class="selectBoxContainer">
+                <label class="{{ sizeVariants && 'productVariant' || 'hide' }}">
+                    Variant
+                    <select ng-model="selectedSizeVariant" ng-options="variant.size for variant in sizeVariants"></select>
+                </label>
+            </div>
+            <div class="selectBoxContainer">
+                <label class="productQuantity">
+                    Quantity
+                    <select ng-disabled="disableButton" ng-model="selectedQuantity" ng-options="quantity.num for quantity in productQuantity"></select>
+                </label>
+            </div>
+            <!--<button btn-fancy sid="{{quicksid}}" pid="{{quickpid}}" pname="{{productName}}" uname="{{user.userdata.name}}" has-fancied="{{hasFancied}}" dm-click="triggerFancy()" class="fancyItemBtn btn btn-red"><span class="btnText"><span class="fancyIconWhite"></span>{{fancytext}}</span></button>-->
+            <!--<button btn-brag pid="{{quickpid}}" sid="{{quicksid}}" user-name="{{user.userdata.name}}" product-name="{{productName}}" has-bragged="{{hasBragged}}" class="bragItemBtn btn btn-red" dm-click="triggerBrag()"><span class="btnText"><span class="bragIconWhite"></span>{{bragText}}</span></button>-->
+            <button class="addToCart btn btn-red" ng-disabled="quantity < 1 || disableButton" xhr-spinner btn-cart quantity="{{totalQuantity}}" pid="{{quickpid}}" sid="{{quicksid}}" sp="{{discountPrice}}" pname="{{productName}}" color="{{selectedColorVariant.color}}" size="{{selectedSizeVariant.size}}" selectedquantity="{{selectedQuantity.num}}" ng-hide="showCheckout"><span class="btnText"><span class="cartIconWhite"></span>{{cartText}}</span></button>
+            <a class="btn btn-blue" href="/cart/shopping_cart" ng-show="showCheckout"><span class="btnText">Checkout now</span></a>
+            <!--<a class="addToCart btn btn-blue" href="#paymentProcessing" role="button" data-toggle="modal" data-dismiss="modal"><span class="btnText"><span class="fancyIconWhite"></span>Express Checkout</span></a>-->
+        </div>
+
+    </div>
+
+    <div class="tabbable hidden-phone clear">
+        <ul class="nav nav-tabs topHeaderTabs">
+            <li class="active"><a href="#socialTab" data-toggle="tab">Social</a></li>
+            <!--<li><a href="#detailsTab" data-toggle="tab">More item details</a></li>-->
+            <li><a href="#storeTab" data-toggle="tab">More from this store</a></li>
+
+            <!-- <a class="moreInfo pull-right" data-dismiss="modal" aria-hidden="true" ng-href="#/product/{{productName && (productName | beautify)}}/{{quicksid}}/{{quickpid}}">More information about this product...</a> -->
+        </ul>
+
+        <div class="tab-content topHeaderTabsContent">
+            <div class="tab-pane fade in active" id="socialTab">
+                <div class="socialFeaturesContainer clear">
+                    <div class="braggedByContainer pull-left">
+                        Recently fancied by
+                        <div class="braggedByImgContainer">
+                            <span ng-repeat="image in bgUserImages">
+                            <a data-dismiss="modal" ng-href="#!/profile/fancy/{{image.userID}}"><img ng-src="{{image.imageURL}}" /></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mightBragContainer inlineBlock">
+                        You might also fancy
+                        <div class="mightBragImgContainer">
+                            <span ng-repeat="image in bgImages" style="cursor:pointer;">
+                                <img ng-src="{{image.imageURL}}" ng-click="pidtoquickview(image.fpID, image.fpsID)">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="tab-pane fade" id="detailsTab">-->
+            <!--<div ng-bind-html-unsafe="productDescr"></div>-->
+            <!--</div>-->
+
+            <div class="tab-pane fade" id="storeTab">
+                <div class="storeProductsContainer">
+                    <span style="cursor:pointer;" ng-repeat="image in moreProducts">
+                        <img ng-src="{{image.imageURL}}" ng-click="pidtoquickview(image.mpID, image.fpsID)">
+                    </span>
+                    <a data-dismiss="modal" ng-href="#!/store/{{storeName | beautify}}/{{quicksid}}">View all products...</a>
+                </div>
+            </div>
+        </div>
+    </div>

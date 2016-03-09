@@ -1,0 +1,65 @@
+@charset "utf-8";
+.leftPanelCategory {
+    color: #666;
+    font-family: gill_bold;
+    font-size: 20px;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    text-shadow: 0 1px #FFF;
+}
+
+.rightPanelProduct {
+    width: 1024px !important;
+}
+
+.newPanelSeperatorHeight {
+    height: 1180px !important;
+}
+
+.leftPanelSeperatorSmall {
+    border-bottom: 1px solid #F0F0EF;
+    border-top: 1px solid #C3BFBE;
+    height: 0;
+    margin: 8px 0 4px;
+    width: 200px;
+}
+
+.allPrices {
+    padding-bottom: 12px;
+    clear: both;
+}
+
+.checkboxPrice {
+    background: url(../images/fancy/fashion_checkbox.png) no-repeat scroll 0 0 transparent;
+    cursor: default;
+    float: left;
+    height: 24px;
+    text-align: left;
+    width: 23px;
+    margin: 5px;
+}
+
+.checkboxPrice input {
+    display: none;
+}
+
+.checkPriceLabel {
+    color: #666;
+    font-size: 16px;
+    font-family: gill;
+    float: left;
+    padding: 6px 4px;
+}
+
+.priceRangeTextbox {
+    background-color: #a0a0a0;
+    width: 58px;
+    height: 22px;
+    font-size: 14px;
+    font-family: RupeeForadian;
+    border-top: 1px solid #5f5f5f;
+    border-bottom: 1px solid #fefdfd;
+    border-width: 1px 0;
+    margin: 5px 4px 0;
+    padding: 0 5px;
+}

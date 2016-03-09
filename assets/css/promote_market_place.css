@@ -1,0 +1,271 @@
+@charset "utf-8";
+.promote_marketplace_click {
+    background-image: url("../images/marketplace_click.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    margin-left: 13px;
+    width: 66px;
+}
+
+.promote_discount_normal {
+    background-image: url("../images/promote_discount_normal.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    width: 66px;
+}
+
+.promote_discount_normal:hover {
+    background-image: url("../images/discount_hover.png");
+}
+
+.promote_discount_normal:active {
+    background-image: url("../images/promote_discount_click.png");
+}
+
+.promote_body_container {
+    height: auto;
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 1024px;
+}
+
+.addProductHere {
+    background-color: #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    height: 334px;
+    width: 334px;
+    position: relative;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.addProductHere img {
+    height: 330px;
+    width: 330px;
+}
+
+.joinedMarketplaceText {
+    color: #bbb;
+    font-family: gill;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFF;
+    width: 280px;
+    position: absolute;
+    top: 128px;
+    left: 23px;
+}
+
+.sortContainer {
+    position: relative;
+    border-top: 1px solid #fff;
+    width: 1024px;
+    height: 51px;
+    margin-top: 28px;
+    padding-bottom: 18px;
+}
+
+.sortContainerTransparent {
+    background: #ccc;
+    border-bottom: 1px solid #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    filter: alpha(opacity = 25);
+    -moz-opacity: .25;
+    -khtml-opacity: .25;
+    opacity: .25;
+    width: 100%;
+    height: 51px;
+}
+
+.sortContent {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.sortTextHolder {
+    float: left;
+    width: 520px;
+    height: 30px;
+    padding-top: 17px;
+    padding-left: 18px;
+}
+
+.sortText {
+    color: #999;
+    font-family: gill;
+    font-size: 16px;
+    text-shadow: 0 1px #fff;
+    padding-right: 12px;
+    padding-left: 12px;
+    float: left;
+}
+
+.sortText1 {
+    color: #999;
+    font-family: gill;
+    font-size: 16px;
+    text-shadow: 0 1px #fff;
+    float: left;
+}
+
+.topSellingStyle {
+    color: #5f5c5c;
+}
+
+.searchboxContainer {
+    width: 310px;
+    position: relative;
+    float: right;
+    padding: 8px;
+    height: 35px;
+}
+
+.search_icon {
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 24px;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+}
+
+.searchRight {
+    color: #999;
+    font-family: gill;
+    font-size: 14px;
+    text-shadow: 0 1px #fff;
+    padding-top: 8px;
+    float: left;
+    padding-right: 10px;
+}
+
+.searchBoxStyle {
+    width: 244px;
+    height: 35px;
+    background-color: #cfcfcc;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #afafad;
+    font-family: gill_italic;
+    font-size: 14px;
+    color: #7d7d7d;
+    padding-left: 12px;
+    text-shadow: 0 1px #fff;
+}
+
+.searchBoxStyle:focus {
+    background-color: #efefef;
+}
+
+.storesIcon {
+    background-image: url(../images/stores_click.png) !important;
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-right: 0 !important;
+    cursor: auto !important;
+}
+
+.moreStyleWidth {
+    width: 215px;
+    float: left;
+    padding-top: 15px;
+}
+
+.test_image_holder {
+    width: 1024px;
+    height: auto;
+}
+
+.marketImageHolder1 {
+    background-color: #FFF;
+    height: 330px;
+    padding-left: 4px;
+    padding-top: 4px;
+    margin-right: 11px;
+    margin-bottom: 12px;
+    width: 330px;
+    float: left;
+}
+
+.marketImageHolder2 {
+    background-color: #FFF;
+    height: 330px;
+    padding-top: 4px;
+    padding-left: 4px;
+    width: 330px;
+    float: left;
+    display: none;
+}
+
+.marketImageHolder2 img {
+    width: 326px !important;
+    height: 272px !important;
+}
+
+.joinHolder {
+    height: 30px !important;
+    width: 65px !important;
+    font-size: 18px !important;
+    margin-top: 7px;
+    margin-right: 14px;
+    float: right;
+}
+
+.leaveHolder {
+    height: 30px !important;
+    width: 77px !important;
+    font-size: 18px !important;
+    margin-top: 7px;
+    margin-right: 14px;
+    float: right;
+    display: none;
+}
+
+.addProducts {
+    background: #749d5e;
+    background: -moz-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -webkit-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -o-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -ms-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    -pie-background: linear-gradient(bottom, #619049 50%, #749d5e 0);
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    -moz-box-shadow: 0 5px 0 #b3c5aa;
+    -webkit-box-shadow: 0 5px 0 #b3c5aa;
+    -khtml-box-shadow: 0 5px 0 #b3c5aa;
+    -pie-box-shadow: 0 5px 0 #b3c5aa;
+    box-shadow: 0 5px 0 #b3c5aa;
+    font-family: gill_bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    width: 77px;
+    height: 30px;
+    margin-top: 7px;
+    margin-right: 14px;
+    cursor: pointer;
+    float: right;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.addProducts:hover {
+    background: #8ec273;
+    background: -moz-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -webkit-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -o-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -ms-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    -pie-background: linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+}
+
+.addProducts:active {
+    background: #537541;
+}

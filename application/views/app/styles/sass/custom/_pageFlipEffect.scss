@@ -1,0 +1,71 @@
+._Effect-PF {
+  perspective: 500px;
+  perspective-origin: 0 50%;
+
+  .PFE-wrapper {
+    transform-style: preserve-3d;
+  }
+
+  .baseContainer {
+    overflow: hidden;
+
+    img{
+      display: block;
+      transition: all 0.5s;
+    }
+  }
+
+  &:hover{
+
+    .baseContainer{
+
+        img, span, div, i{
+          transform-origin: 100% 50%;
+          transform: translateX(-30%) rotateY(-30deg);
+          // transform: translateX(-12%);
+          transition: all 0.5s;
+        }
+    }
+
+    .flipWrapper {
+      // opacity: 1;
+      // transform: rotateY(0deg);
+      transform: rotateY(0deg) translateX(0) translateX(0px);
+      transition: all 0.5s;
+    }
+  }
+
+  // &.PF-imgSlide:hover{
+  //   img {
+  //     transform: translateX(-12%);
+  //   }
+  // }
+
+  .flipWrapper {
+    height: 100%;
+    width: 30%;
+    background: #34495D;;
+    color: #222;
+    position: absolute;
+    padding: 0 15px;
+    top: 0;
+    right: 0;
+    // backface-visibility: hidden;
+    // transform-origin: 0 0;
+    transform-origin: 100% 50%;
+    // transform: rotateY(-90deg);
+    transform: rotateY(30deg) translateX(100%) translateX(0px);
+    transition: all 0.5s;
+  }
+
+}
+
+.profileSocial{
+  li{
+      font-size: 3rem;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+  }
+}

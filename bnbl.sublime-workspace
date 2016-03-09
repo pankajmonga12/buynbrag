@@ -1,0 +1,757 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"login",
+				"loginCheck"
+			],
+			[
+				"dbid",
+				"dbidSessItemName"
+			],
+			[
+				"unser",
+				"unset_userdata"
+			],
+			[
+				"user",
+				"userSessItemName"
+			],
+			[
+				"username",
+				"userNameSessItemName"
+			],
+			[
+				"userName",
+				"userNameSessItemName"
+			],
+			[
+				"userN",
+				"userNameSessItemName"
+			],
+			[
+				"dbi",
+				"dbidSessItemName"
+			],
+			[
+				"swi",
+				"switcher"
+			],
+			[
+				"out",
+				"output"
+			],
+			[
+				"cru",
+				"currentTime"
+			],
+			[
+				"day",
+				"dayLowerLimit"
+			],
+			[
+				"db",
+				"dbConnection"
+			],
+			[
+				"execution",
+				"executionStatusQuery"
+			],
+			[
+				"b",
+				"branch"
+			],
+			[
+				"strr",
+				"str_replace"
+			],
+			[
+				"curre",
+				"currentBranch"
+			],
+			[
+				"str",
+				"strchr"
+			],
+			[
+				"pdf",
+				"pdfGenerator"
+			],
+			[
+				"slo",
+				"sloggerConn"
+			],
+			[
+				"delete",
+				"deleteFromFancyList"
+			],
+			[
+				"fancy_list",
+				"fancy_list_id"
+			],
+			[
+				"cach",
+				"cacheData"
+			],
+			[
+				"cacheVariableNameP",
+				"cacheVariableNamePrefix"
+			],
+			[
+				"server",
+				"serverName"
+			],
+			[
+				"reponse",
+				"responseData"
+			],
+			[
+				"id",
+				"idToDelete"
+			],
+			[
+				"product",
+				"productsList"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"userLi",
+				"userList"
+			],
+			[
+				"bnb",
+				"bnbUID"
+			],
+			[
+				"fancyList",
+				"fancyListName"
+			],
+			[
+				"response",
+				"responseData"
+			],
+			[
+				"repo",
+				"responseData"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"cat",
+				"catID"
+			],
+			[
+				"cate",
+				"category_name"
+			],
+			[
+				"fl",
+				"flmodel"
+			],
+			[
+				"style",
+				"style_id"
+			],
+			[
+				"styl",
+				"style"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"sty",
+				"styleID"
+			],
+			[
+				"tag",
+				"tagLine"
+			],
+			[
+				"profile",
+				"profile_model"
+			],
+			[
+				"where",
+				"whereText"
+			],
+			[
+				"USER",
+				"user_id"
+			],
+			[
+				"tmpUse",
+				"tmpUsers"
+			],
+			[
+				"tm",
+				"tmpUser"
+			],
+			[
+				"tmpUs",
+				"tmpUsers"
+			],
+			[
+				"respons",
+				"responseData"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"lFU",
+				"lFUBadgeNotificationText"
+			],
+			[
+				"cac",
+				"cachedData"
+			],
+			[
+				"start",
+				"startFrom"
+			],
+			[
+				"reload",
+				"reloadFromDB"
+			],
+			[
+				"notification",
+				"notification_text"
+			],
+			[
+				"log",
+				"log_message"
+			],
+			[
+				"last",
+				"last_query"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"QU",
+				"QUERY___________________________"
+			],
+			[
+				"total",
+				"totalProducts"
+			],
+			[
+				"num",
+				"numProducts"
+			],
+			[
+				"to",
+				"totalProducts"
+			],
+			[
+				"badge",
+				"badge"
+			],
+			[
+				"lFUBa",
+				"lFUBadgeLevel"
+			],
+			[
+				"noti",
+				"notification_text"
+			],
+			[
+				"badge_",
+				"badge_type"
+			],
+			[
+				"lastFan",
+				"lastFanciedBy"
+			],
+			[
+				"lastF",
+				"lastFanciedAt"
+			],
+			[
+				"active",
+				"active_group"
+			],
+			[
+				"status",
+				"status_order"
+			],
+			[
+				"email",
+				"emailers"
+			],
+			[
+				"cont",
+				"contact_number"
+			],
+			[
+				"contact_",
+				"contact_email"
+			],
+			[
+				"shippi",
+				"shipping_emailid"
+			],
+			[
+				"produc",
+				"product_name"
+			],
+			[
+				"shipp",
+				"shipping_lname"
+			],
+			[
+				"date_of",
+				"date_of_pickup"
+			],
+			[
+				"__",
+				"__construct"
+			],
+			[
+				"j",
+				"job"
+			],
+			[
+				"t",
+				"tOID"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"or",
+				"order_no"
+			],
+			[
+				"cooki",
+				"cookie_domain"
+			],
+			[
+				"sms",
+				"smsMsg"
+			],
+			[
+				"mail",
+				"mail_info"
+			],
+			[
+				"aut",
+				"automate"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"table-",
+				"table-bordered"
+			],
+			[
+				"_bnb",
+				"_BNB_logged_in"
+			],
+			[
+				"_c",
+				"_CI_DBID"
+			],
+			[
+				"_ci",
+				"_CI_user_data"
+			],
+			[
+				"_CIus",
+				"_CI_user_data"
+			],
+			[
+				"_CI",
+				"_CI_last_activity"
+			],
+			[
+				"_BN",
+				"_BNB_logged_in"
+			],
+			[
+				"_",
+				"_BNB_id"
+			],
+			[
+				"_BNB",
+				"_BNB_id"
+			],
+			[
+				"_C",
+				"_CI_session_id"
+			],
+			[
+				"mobile",
+				"mobilenumbers"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"ret",
+				"retVal"
+			],
+			[
+				"joi",
+				"joined_date"
+			],
+			[
+				"l",
+				"li	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "RewriteEngine On\n\nRewriteBase /\n\n# New Rewrite rule for CI\nRewriteCond %{REQUEST_FILENAME} !-f\nRewriteCond %{REQUEST_FILENAME} !-d\n#RewriteRule .* index.php?/$0 [PT,L]\n#RewriteRule ^(.*)$ /index.php/$1 [L,QSA]\n# New CI rewrite rule copied from CI v3.0\nRewriteCond $1 !^(index\\.php|images|robots\\.txt)\nRewriteRule ^(.*)$ /index.php/$1 [L]\n\n\n# Enforce SSL\n#RewriteCond %{HTTPS} off\n#RewriteRule ^(.*)$ https://buynbrag.com/$1 [L,R=301]\n#RewriteCond %{SERVER_PORT} !^443$\n#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]\n\n#RewriteCond %{SERVER_PORT} 80\n#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]\n\n#RewriteCond % {HTTPS} != on\n#RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]\n\n# Enforce www\n# If you have subdomains, you can add them to\n# the list using the \"|\" (OR) regex operator\n# RewriteCond %{HTTP_HOST} !^(www|subdomain) [NC]\n# RewriteRule ^(.*)$ http://www.buynbrag.com/$1 [L,R=301]\n\n#blocking BAD bots\nRewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Bot\\ mailto:craftbot@yahoo.com [OR]\nRewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Custo [OR]\nRewriteCond %{HTTP_USER_AGENT} ^DISCo [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Download\\ Demon [OR]\nRewriteCond %{HTTP_USER_AGENT} ^eCatch [OR]\nRewriteCond %{HTTP_USER_AGENT} ^EirGrabber [OR]\nRewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [OR]\nRewriteCond %{HTTP_USER_AGENT} ^EmailWolf [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Express\\ WebPictures [OR]\nRewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [OR]\nRewriteCond %{HTTP_USER_AGENT} ^EyeNetIE [OR]\nRewriteCond %{HTTP_USER_AGENT} ^FlashGet [OR]\nRewriteCond %{HTTP_USER_AGENT} ^GetRight [OR]\nRewriteCond %{HTTP_USER_AGENT} ^GetWeb! [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Go!Zilla [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Go-Ahead-Got-It [OR]\nRewriteCond %{HTTP_USER_AGENT} ^GrabNet [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Grafula [OR]\nRewriteCond %{HTTP_USER_AGENT} ^HMView [OR]\nRewriteCond %{HTTP_USER_AGENT} HTTrack [NC,OR]\nRewriteCond %{HTTP_USER_AGENT} ^Image\\ Stripper [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Image\\ Sucker [OR]\nRewriteCond %{HTTP_USER_AGENT} Indy\\ Library [NC,OR]\nRewriteCond %{HTTP_USER_AGENT} ^InterGET [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Internet\\ Ninja [OR]\nRewriteCond %{HTTP_USER_AGENT} ^JetCar [OR]\nRewriteCond %{HTTP_USER_AGENT} ^JOC\\ Web\\ Spider [OR]\nRewriteCond %{HTTP_USER_AGENT} ^larbin [OR]\nRewriteCond %{HTTP_USER_AGENT} ^LeechFTP [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Mass\\ Downloader [OR]\nRewriteCond %{HTTP_USER_AGENT} ^MIDown\\ tool [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Mister\\ PiX [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Navroad [OR]\nRewriteCond %{HTTP_USER_AGENT} ^NearSite [OR]\nRewriteCond %{HTTP_USER_AGENT} ^NetAnts [OR]\nRewriteCond %{HTTP_USER_AGENT} ^NetSpider [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Net\\ Vampire [OR]\nRewriteCond %{HTTP_USER_AGENT} ^NetZIP [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Octopus [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Offline\\ Explorer [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Offline\\ Navigator [OR]\nRewriteCond %{HTTP_USER_AGENT} ^PageGrabber [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Papa\\ Foto [OR]\nRewriteCond %{HTTP_USER_AGENT} ^pavuk [OR]\nRewriteCond %{HTTP_USER_AGENT} ^pcBrowser [OR]\nRewriteCond %{HTTP_USER_AGENT} ^RealDownload [OR]\nRewriteCond %{HTTP_USER_AGENT} ^ReGet [OR]\nRewriteCond %{HTTP_USER_AGENT} ^SiteSnagger [OR]\nRewriteCond %{HTTP_USER_AGENT} ^SmartDownload [OR]\nRewriteCond %{HTTP_USER_AGENT} ^SuperBot [OR]\nRewriteCond %{HTTP_USER_AGENT} ^SuperHTTP [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Surfbot [OR]\nRewriteCond %{HTTP_USER_AGENT} ^tAkeOut [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Teleport\\ Pro [OR]\nRewriteCond %{HTTP_USER_AGENT} ^VoidEYE [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Web\\ Image\\ Collector [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Web\\ Sucker [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WebAuto [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WebFetch [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WebGo\\ IS [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WebLeacher [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WebReaper [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WebSauger [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Website\\ eXtractor [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Website\\ Quester [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WebStripper [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WebWhacker [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WebZIP [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Wget [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Widow [OR]\nRewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Xaldon\\ WebSpider [OR]\nRewriteCond %{HTTP_USER_AGENT} ^Zeus\nRewriteRule ^.* - [F,L]\n\n# For removing .html extension from the URL\n#RewriteRule ^([^\\.]+)$ $1.html [NC,L]\n\n# escaped fragment URI handling\n#RewriteCond %{REQUEST_URI}  ^/$\n#RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/?(.*)$\n#RewriteRule ^(.*)$ http://buyandbrag.in/snapshots/snapshots/sp_%1.html? [P,L]\n#RewriteRule ^(.*)$ /snapshots/snapshots/sp_%1.html? [P,L]\n\n# Blocking bots on sub domain\nRewriteCond %{HTTP_USER_AGENT} .*Googlebot.* [OR]\nRewriteCond %{HTTP_USER_AGENT} .*bingbot.* [OR]\nRewriteCond %{HTTP_USER_AGENT} .*Baiduspider.* [OR]\nRewriteCond %{HTTP_USER_AGENT} .*iaskspider.* [OR]\nRewriteCond %{HTTP_USER_AGENT} .*facebookexternalhit.* [OR]\nRewriteCond %{HTTP_USER_AGENT} \"Slurp\" [OR]\nRewriteCond %{HTTP_USER_AGENT} \"Yahoo!\"\nRewriteCond %{HTTP_HOST} !^(buynbrag\\.com|blog\\.buynbrag\\.com)$ [NC]\nRewriteRule ^.* - [F,L]\n\n# Allowing google bots\nRewriteCond %{HTTP_USER_AGENT} .*Googlebot.* [OR]\nRewriteCond %{HTTP_USER_AGENT} .*bingbot.* [OR]\nRewriteCond %{HTTP_USER_AGENT} .*Baiduspider.* [OR]\nRewriteCond %{HTTP_USER_AGENT} .*iaskspider.* [OR]\nRewriteCond %{HTTP_USER_AGENT} .*facebookexternalhit.* [OR]\nRewriteCond %{HTTP_USER_AGENT} \"Slurp\" [OR]\nRewriteCond %{HTTP_USER_AGENT} \"Yahoo!\"\nRewriteCond %{REQUEST_URI} !\\.[a-zA-Z0-9]{3,4}\n#RewriteCond %{REQUEST_URI} !/$\n#RewriteRule ^(.*)$ http://facebook.com/snapshots/snapshots/sp_$1.html [R=301,L]\nRewriteRule ^(.*)$ http://buyandbrag.in/snapshots/snapshots/sp_$1.html [P,L]\n#RewriteRule ^(.*)$ http://facebook.com [R=301,L]\n#RewriteRule ^(.*)$ http://buyandbrag.in/snapshots/snapshots/sp_.html [NC,L]\n#RewriteRule ^(.*)$ http://buyandbrag.in/?_escaped_fragment_=/%1 [NE,L]\n\n<Ifmodule mod_expires.c>\n    ExpiresActive On\n    ExpiresByType application/x-javascript A86400\n    ExpiresByType text/javascript A86400\n    ExpiresByType application/javascript A86400\n    ExpiresByType text/css A86400\n    ExpiresByType image/x-icon A86400\n    ExpiresByType image/icon A86400\n    ExpiresByType application/x-ico A86400\n    ExpiresByType application/ico A86400\n    ExpiresByType image/gif A86400\n    ExpiresByType image/jpeg A86400\n    ExpiresByType image/jpg A86400\n    ExpiresByType image/png A86400\n    ExpiresByType application/x-shockwave-flash A86400\n</Ifmodule>\n\n <ifmodule mod_deflate.c=\"\">\n  # force deflate for mangled headers\n  # developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/\n  <ifmodule mod_setenvif.c=\"\">\n    <ifmodule mod_headers.c=\"\">\n      SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\\s*,?\\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding\n      RequestHeader append Accept-Encoding \"gzip,deflate\" env=HAVE_Accept-Encoding\n    </ifmodule>\n  </ifmodule>\n\n  # HTML, TXT, CSS, JavaScript, JSON, XML, HTC:\n  <ifmodule filter_module=\"\">\n    FilterDeclare   COMPRESS\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/html\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/css\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/plain\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/xml\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $text/x-component\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/javascript\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/json\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/xml\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/xhtml+xml\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/rss+xml\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/atom+xml\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/vnd.ms-fontobject\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $image/svg+xml\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $application/x-font-ttf\n    FilterProvider  COMPRESS  DEFLATE resp=Content-Type $font/opentype\n    FilterChain     COMPRESS\n    FilterProtocol  COMPRESS  DEFLATE change=yes;byteranges=no\n  </ifmodule>\n\n  <ifmodule !mod_filter.c=\"\">\n    # Legacy versions of Apache\n    AddOutputFilterByType DEFLATE text/html text/plain text/css application/json\n    AddOutputFilterByType DEFLATE application/javascript\n    AddOutputFilterByType DEFLATE text/xml application/xml text/x-component\n    AddOutputFilterByType DEFLATE application/xhtml+xml application/rss+xml\n  AddOutputFilterByType DEFLATE application/atom+xml\n    AddOutputFilterByType DEFLATE image/svg+xml application/vnd.ms-fontobject\n  AddOutputFilterByType DEFLATE application/x-font-ttf font/opentype\n  </ifmodule>\n</ifmodule>\n\n\n\n# BEGIN Turn ETags Off\n<Ifmodule mod_headers.c>\n  Header unset ETag\n</Ifmodule>\nFileETag None\n# END Turn ETags Off\n",
+			"file": ".htaccess",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 9311,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/sam/Downloads/CodeIgniter_2.1.4/.gitignore",
+		"/home/sam/Downloads/CodeIgniter-release-3.0/.htaccess",
+		"/home/sam/Downloads/cvox (3).sql",
+		"/home/sam/dev/cvox/celeb/application/libraries/Twconnect.php",
+		"/home/sam/dev/cvox/app/Model/User.php",
+		"/home/sam/dev/cvox/lib/Cake/Utility/Security.php",
+		"/home/sam/dev/cvox/lib/Cake/Config/config.php",
+		"/home/sam/dev/cvox/celeb/system/core/Security.php",
+		"/home/sam/dev/cvox/app/Config/acl.php",
+		"/home/sam/dev/cvox/celeb/application/controllers/Cvsession.php",
+		"/home/sam/dev/cvox/celeb/application/libraries/Session/drivers/Session_cookie.php",
+		"/home/sam/dev/cvox/app/Controller/AppController.php",
+		"/home/sam/dev/cvox/app/Config/database.php",
+		"/home/sam/dev/cake/app/Controller/PagesController.php",
+		"/home/sam/dev/cake/app/Config/core.php",
+		"/home/sam/dev/cake/app/Config/database.php.default",
+		"/home/sam/.ssh/id_rsa.pub",
+		"/home/sam/dev/bnbl/application/config/routes.php",
+		"/home/sam/dev/bnbl/.htaccess",
+		"/home/sam/dev/bnbl/bnb_crm/application/controllers/crm.php",
+		"/tmp/fz3temp-1/log-2014-01-13.php",
+		"/home/sam/dev/bnbl/robots.txt",
+		"/home/sam/dev/bnbl/application/config/user_agents.php",
+		"/home/sam/dev/bnbl/application/controllers/cart.php",
+		"/home/sam/dev/bnbl/application/models/vc_orders.php",
+		"/home/sam/dev/bnbl/application/controllers/order2.php",
+		"/tmp/fz3temp-1/deployments.log",
+		"/home/sam/dev/bnbl/deploy.php",
+		"/tmp/fz3temp-1/autoload.php",
+		"/tmp/fz3temp-1/autoload 2.php",
+		"/tmp/fz3temp-1/log-2014-01-08 3.php",
+		"/tmp/fz3temp-1/database.php",
+		"/tmp/fz3temp-1/config.php",
+		"/tmp/fz3temp-1/error.log",
+		"/tmp/fz3temp-1/access.log",
+		"/tmp/fz3temp-1/log-2014-01-08 2.php",
+		"/home/sam/dev/bnbl/bnb_crm/application/controllers/download.php",
+		"/tmp/fz3temp-1/log-2014-01-08.php",
+		"/tmp/fz3temp-1/log-2014-01-07.php",
+		"/tmp/fz3temp-1/routes.php",
+		"/tmp/fz3temp-1/index.php",
+		"/tmp/fz3temp-1/.htaccess",
+		"/home/sam/dev/bnbl/application/models/rapiv1/profile_model.php",
+		"/home/sam/dev/bnbl/application/controllers/twitterLogin.php",
+		"/home/sam/dev/bnbl/application/controllers/test.php",
+		"/home/sam/dev/bnbl/application/models/slog.php",
+		"/home/sam/dev/bnbl/application/controllers/login.php",
+		"/home/sam/dev/bnbl/application/models/order.php",
+		"/home/sam/dev/bnbl/application/views/emailers/orderEmail20BNB.php",
+		"/home/sam/dev/bnbl/application/views/emailers/orderEmail11.php",
+		"/home/sam/dev/bnbl/assets/js/dashboard.js",
+		"/home/sam/dev/bnbl/application/views/order_status.php",
+		"/home/sam/dev/bnbl/application/views/checkout_second.php",
+		"/home/sam/dev/bnbl/application/controllers/hdata.php",
+		"/home/sam/dev/bnbl/application/controllers/async.php",
+		"/home/sam/dev/bnbl/application/models/search_m.php",
+		"/home/sam/dev/bnbl/application/controllers/search.php",
+		"/home/sam/dev/bnbl/application/controllers/rapiv1/product.php",
+		"/tmp/fz3temp-1/log-2014-01-02.php",
+		"/tmp/fz3temp-1/log-2013-12-30.php",
+		"/tmp/fz3temp-1/log-2013-12-30 2.php",
+		"/home/sam/dev/bnbl/application/models/rapiv1/landing_model.php",
+		"/tmp/fz3temp-1/log-2013-12-28.php",
+		"/tmp/fz3temp-1/log-2013-12-28 2.php",
+		"/tmp/fz3temp-1/DataSheet Reinvention Factory for upload.csv",
+		"/home/sam/Documents/bnb/triggers/badge_purchase",
+		"/tmp/fz3temp-1/log-2013-12-27.php",
+		"/tmp/fz3temp-1/log-2013-12-26.php",
+		"/tmp/fz3temp-1/log-2013-12-26 2.php",
+		"/home/sam/dev/bnbl/system/database/drivers/mysql/mysql_driver.php",
+		"/home/sam/dev/bnbl/system/database/DB_active_rec.php",
+		"/home/sam/dev/bnbl/application/config/database.php",
+		"/home/sam/dev/bnbl/system/database/DB_driver.php",
+		"/tmp/fz3temp-1/fz3temp-lockfile",
+		"/tmp/fz3temp-1/log-2013-12-24.php",
+		"/tmp/fz3temp-1/log-2013-12-23.php",
+		"/home/sam/dev/bnbl/application/models/automate_model.php",
+		"/home/sam/dev/bnbl/application/config/config.php",
+		"/tmp/fz3temp-1/log-2013-11-20.php",
+		"/home/sam/dev/bnbl/application/controllers/dashboard.php",
+		"/home/sam/dev/bnbl/application/controllers/automate.php",
+		"/home/sam/dev/bnbl/application/controllers/rapiv1/profile.php",
+		"/tmp/fz3temp-1/info.txt",
+		"/tmp/fz3temp-1/log-2013-11-18.php",
+		"/tmp/fz3temp-1/php.ini",
+		"/tmp/fz3temp-1/php 2.ini",
+		"/home/sam/dev/bnbl/application/config/autoload.php",
+		"/home/sam/dev/bnbl/application/views/dist/index.php",
+		"/home/sam/dev/bnbl/application/views/app/index.html",
+		"/tmp/fz3temp-1/log-2013-11-13.php",
+		"/home/sam/dev/bnbl/application/views/emailers/orderEmail20Buyer.php",
+		"/home/sam/dev/bnbl/application/views/dist/src/app/user/loginModal.html",
+		"/tmp/fz3temp-1/log-2013-11-07.php",
+		"/tmp/fz3temp-2/log-2013-11-07.php",
+		"/home/sam/dev/bnbl/application/controllers/header_for_controller.php",
+		"/home/sam/dev/bnbl/application/views/fbAlreadySignedUpError.php",
+		"/home/sam/dev/bnbl/application/controllers/fbLogin.php",
+		"/home/sam/dev/bnbl/application/models/fb_model.php",
+		"/home/sam/dev/bnbxtras/newmap.php",
+		"/home/sam/dev/iqr/emailer/emailer.html",
+		"/tmp/fz3temp-1/syslog",
+		"/home/sam/dev/bnbxtras/sitemap.cronjob",
+		"/home/sam/dev/sitemap.xml",
+		"/home/sam/dev/sitemap.xml.old",
+		"/home/sam/dev/newmap.php",
+		"/home/sam/dev/sitemap.cronjob"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"$hashType",
+			"on action(",
+			"request_filename",
+			"mkdir",
+			"\"([a-zA-Z0-9/#_=:]*)\"",
+			"wk",
+			"getStores",
+			"_insert",
+			"function _insert",
+			"_insert",
+			"lastBraggedBy",
+			"lastFanciedBy",
+			"qvData",
+			"userDetails",
+			"login",
+			"userDetails(",
+			"login()",
+			"fancyList(",
+			"mongo",
+			"extension",
+			"mongo",
+			"login",
+			"print_debugger",
+			"test([a-zA-Z]*)\\(\\)",
+			"order",
+			"order/store_page",
+			"qvData",
+			"changeOrderStatus",
+			"changeShipping",
+			"foreach",
+			"ip_date",
+			"scripts/",
+			"/views/app/",
+			"conf.d"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$route[\"\\1\"] = \"homepage\\1\";",
+			"$route[\"\\1\"] = \"homepage/\\1\";",
+			"$route[\"\\1\"] = \"homepage/\\1",
+			"$route[\"\\1\"] = \"homepage\\\\\\1\";",
+			"/views/dist/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": ".htaccess",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								337,
+								337
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2703.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "bnbl.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

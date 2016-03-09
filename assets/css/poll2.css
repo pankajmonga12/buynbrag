@@ -1,0 +1,450 @@
+@charset "utf-8";
+.banner {
+    background-repeat: repeat !important;
+    height: 234px !important;
+}
+
+.slide {
+    height: 237px !important;
+}
+
+.logoBoxActive {
+    padding: 2px 10px !important;
+}
+
+.PollIconPlusActive {
+    background-image: url("../images/poll_plus_click.png");
+    background-repeat: no-repeat;
+    height: 51px;
+    margin-bottom: 6px;
+    margin-left: 8px;
+    margin-top: 8px;
+    width: 49px;
+}
+
+.PollIconManageActive {
+    background-image: url("../images/fancy/poll_click.png");
+    background-repeat: no-repeat;
+    height: 65px;
+    margin-bottom: 6px;
+    margin-left: 8px;
+    margin-top: 8px;
+    width: 64px;
+}
+
+.roundPoll_active {
+    background-image: url("../images/fancy/poll_click.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.pollsContainer {
+    width: 1024px;
+    height: 1060px;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+
+.pollsLeft {
+    float: left;
+}
+
+.pollsHeading {
+    font: 23px gill_bold;
+    color: #333;
+    text-shadow: 0 1px 0 #fff;
+    padding-bottom: 10px;
+}
+
+.pollsLabel {
+    font: 20px gill;
+    color: #666;
+    text-shadow: 0 1px 0 #fff, 0.5px 0 0 #000;
+    padding-top: 35px;
+}
+
+.panelSeparator {
+    height: 930px !important;
+}
+
+.pollsRight {
+    float: right;
+}
+
+.poll_textboxes {
+    height: 46px;
+    padding-top: 10px;
+}
+
+.poll_textboxes input[type="text"] {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 44px;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 539px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.poll_textboxes input[type="text"]:focus {
+    background-color: #efefef;
+}
+
+.radioText2 {
+    float: left;
+}
+
+.radioText2 .radio2 {
+    background: url("../images/radio-buttons.png") no-repeat scroll 0 0 transparent;
+    cursor: default;
+    float: left;
+    height: 30px;
+    width: 30px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.radio2Text {
+    color: #666;
+    float: left;
+    font: 18px gill;
+    padding-left: 15px;
+    text-shadow: 0 1px 0 #FFF, 0.5px 0 0 #000;
+    width: 200px;
+    padding-top: 5px;
+}
+
+.radioBoxes {
+    display: inline-block;
+    padding-top: 25px;
+}
+
+.smbox {
+    width: 26px;
+    height: 26px;
+    background-color: #b1b3b4;
+    margin-left: 5px;
+    margin-top: 2px;
+    float: left;
+}
+
+.Radiocontent {
+    float: left;
+    width: 160px;
+}
+
+.itemAddDiv1 {
+    background-color: #E1E1E1;
+    border: 1px dashed #949494;
+    height: 145px;
+    margin-top: 20px;
+    padding: 8px;
+    width: 520px;
+}
+
+.itemContainer {
+    width: 168px;
+    height: 145px;
+    background-color: #e9e9e8;
+    position: relative;
+    float: left;
+    margin-right: 8px;
+}
+
+.add_text {
+    font: 18px gill;
+    color: #999;
+    text-shadow: 0 1px 0 #fff;
+    position: absolute;
+    top: 50px;
+    left: 57px;
+    text-align: center;
+}
+
+.itemAddDiv2 {
+    border: 1px dashed #949494;
+    height: 145px;
+    padding: 8px;
+    margin-top: 20px;
+    width: 354px;
+    background-color: #E1E1E1;
+    display: none;
+}
+
+.itemAddDiv3 {
+    border: 1px dashed #949494;
+    height: 145px;
+    padding: 8px;
+    width: 173px;
+    margin-top: 20px;
+    background-color: #E1E1E1;
+    display: none;
+}
+
+.width212 .sbSelector, .width212 .sbHolder {
+    width: 525px !important;
+}
+
+.width212 .sbOptions {
+    width: 535px !important;
+}
+
+.dtdrop {
+    margin-left: 15px;
+}
+
+.dtdrop .sbSelector, .dtdrop .sbHolder {
+    width: 86px !important;
+}
+
+.dtdrop .sbOptions {
+    width: 96px !important;
+}
+
+.yeardrop {
+    margin-left: 15px;
+}
+
+.yeardrop .sbSelector, .yeardrop .sbHolder {
+    width: 100px !important;
+}
+
+.yeardrop .sbOptions {
+    width: 110px !important;
+}
+
+.poll_drop {
+    padding-top: 20px;
+    height: 60px;
+}
+
+#poll_month, #poll_week {
+    display: none;
+}
+
+.item_searchDiv {
+    width: 427px;
+    height: auto;
+    background: #dfdedf;
+    background: -moz-linear-gradient(top, #f1f3f4, #f1f3f1);
+    background: -webkit-linear-gradient(top, #e0dfe0, #dedfdf);
+    background: -o-linear-gradient(top, #e0dfe0, #dedfdf);
+    background: -ms-linear-gradient(top, #e0dfe0, #dedfdf);
+    -pie-background: linear-gradient(top, #e0dfe0, #dedfdf);
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.itemSearchNav {
+    border-bottom: 1px solid #CCC;
+    height: 35px;
+    margin: 0 auto;
+    padding: 15px 0 0;
+    width: 400px;
+}
+
+.items {
+    color: #da3c63;
+    font: 19px gill;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+    cursor: pointer;
+}
+
+.searchpoll {
+    color: #999;
+    font: 19px gill;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.itemsSelect {
+    border-top: 1px solid #FFF;
+    margin: 0 auto;
+    padding: 20px 0 30px;
+    width: 400px;
+}
+
+.selectitems {
+    font: 20px gill_bold;
+    color: #666;
+    text-shadow: 0 1px 0 #fff, 0.5px 0 0 #000;
+}
+
+.width371 .sbSelector, .width371 .sbHolder {
+    width: 371px !important;
+    font-family: gill !important;
+    font-size: 18px !important;
+}
+
+.width371 .sbOptions {
+    width: 381px !important;
+}
+
+.paddingLeft18 {
+    padding-left: 18px;
+}
+
+.recentlyitemsnot {
+    padding: 18px 35px;
+}
+
+.rectext {
+    font: 18px gill;
+    color: #666;
+    text-shadow: 0 1px 0 #fff, 0.5px 0 0 #000;
+    padding-bottom: 10px;
+}
+
+.reasonText {
+    font: 16px gill;
+    color: #999;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.recentlyitemsnot {
+    display: none;
+}
+
+.recentlyadd_items {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.sep {
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #D3CFCD;
+    height: 0;
+    width: 411px;
+}
+
+.scrollerHolderPromote {
+    height: 296px;
+    padding-top: 14px;
+    position: relative;
+    width: 402px;
+}
+
+.scrollerContentsPromote {
+    height: 296px;
+    overflow: hidden;
+    width: 400px;
+}
+
+.sliderParentDivPromote {
+    margin-left: 5px;
+    overflow: hidden;
+    width: 400px;
+}
+
+.sliderPromote {
+    overflow: hidden;
+    width: 800px;
+}
+
+.store-listPromote {
+    float: left;
+    list-style: none outside none;
+    width: 400px;
+}
+
+.rightPanelImageHolder {
+    height: 296px;
+    width: 400px;
+}
+
+.panelImage1 {
+    float: left;
+    height: 94px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    width: 94px;
+}
+
+.extraTopPosition {
+    top: -32px !important;
+}
+
+.button-block-left {
+    right: 20px !important;
+}
+
+.search_show {
+    display: none;
+}
+
+.search_textboxes input[type="text"] {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    float: left;
+    font-family: gill;
+    font-size: 18px;
+    height: 44px;
+    margin-left: 19px;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 360px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.search_textboxes {
+    height: 46px;
+    padding-top: 10px;
+}
+
+.showingText {
+    font: 15px gill;
+    color: #666;
+    display: none;
+    padding: 12px 20px;
+}
+
+.check_box {
+    background: url("../images/categories_checkbox.png") no-repeat scroll 0 0 transparent;
+    cursor: default;
+    float: left;
+    height: 19px;
+    margin: 2px 10px 0 0;
+    padding: 0 0 0 20px;
+    text-align: left;
+    width: 0;
+}
+
+.check_box input {
+    display: none;
+}
+
+.postText {
+    color: #999;
+    float: left;
+    font: 18px gill_italic;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.postCheck {
+    display: inline-block;
+    padding-top: 25px;
+}
+
+.item_radio1 {
+    background: url("../images/radio-buttons.png") no-repeat 50% -40px !important;
+}

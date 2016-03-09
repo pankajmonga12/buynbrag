@@ -1,0 +1,645 @@
+@charset "utf-8";
+.checkboxesHolder2 {
+    width: 330px;
+    height: 240px;
+    overflow: auto;
+}
+
+.checkBoxText {
+    margin-bottom: 6px;
+    clear: both;
+    width: 310px;
+    height: 30px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #aaa;
+}
+
+.checkbox {
+    background: url("../images/categories_checkbox.png") no-repeat scroll 0 0 transparent;
+    cursor: default;
+    float: left;
+    height: 19px;
+    text-align: left;
+    width: 20px;
+    margin: 5px;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkText2 {
+    font: 13px gill;
+    color: #666;
+    text-shadow: 0 1px 0 #fff, 0.5px 0 0 #000;
+    float: left;
+    padding: 6px;
+    text-transform: capitalize;
+}
+
+.checkBoxText2 {
+    float: left;
+    padding: 8px 0 0 20px;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.headingAndClose {
+    padding-top: 25px;
+    height: 38px;
+}
+
+.leftRightPop {
+    padding-left: 20px;
+    padding-top: 25px;
+    height: 322px;
+}
+
+.FancyPopupContainer {
+    display: none;
+    width: 731px;
+    height: 506px;
+}
+
+.FancyPopupWrapper {
+    width: 721px;
+    position: relative;
+    height: 504px;
+    border-top: 1px solid #fff;
+}
+
+.FancyPopupTransp {
+    width: 100%;
+    height: 495px;
+    background: #fff;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=88)";
+    filter: alpha(opacity = 88);
+    -moz-opacity: .88;
+    -khtml-opacity: .88;
+    opacity: .88;
+}
+
+.FancyPopupActual {
+    width: 100%;
+    height: 495px;
+    box-shadow: 0 8px 10px #000;
+    -moz-box-shadow: 0 8px 10px #000;
+    -webkit-box-shadow: 0 8px 10px #000;
+    -khtml-box-shadow: 0 8px 10px #000;
+    -pie-box-shadow: 0 8px 10px #000;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.Addtofancytext {
+    color: #333;
+    font-family: gill;
+    font-size: 39px;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+    width: 500px;
+    padding-left: 32px;
+}
+
+.PopupClose {
+    float: right;
+    background-image: url(../images/problemwithorder_popup_close.png);
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 27px;
+    margin-top: 9px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.PopupClose:hover {
+    background: url(../images/popup_close_click.png);
+}
+
+.leftPop {
+    width: 333px;
+    height: 318px;
+}
+
+.ImageHolder {
+    background-color: #FFF;
+    padding-left: 6px;
+    padding-top: 4px;
+    width: 328px;
+    height: 318px;
+    position: relative;
+}
+
+.fanciedholder {
+    position: absolute;
+    top: 145px;
+    left: 125px;
+}
+
+.fancyBg {
+    background-color: #FFF;
+    border-left: 1px solid #CCC;
+    box-shadow: 0 2px 2px #424241;
+    cursor: pointer;
+    float: left;
+    height: 54px;
+    width: 83px;
+}
+
+.fanciedimage {
+    background: url("../images/fancie_icon.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 55px;
+    width: 56px;
+    margin-top: -27px;
+    margin-left: 14px;
+}
+
+.fanciedText {
+    text-align: center;
+    color: #666;
+    font: 15px gill;
+}
+
+.rightest {
+    float: right;
+    height: 320px;
+    padding-right: 15px;
+    width: 340px;
+}
+
+.rightPop {
+    background-color: #cbcbcb;
+    width: 330px;
+    padding-top: 10px !important;
+    padding-left: 10px;
+    height: 260px;
+    border-top: 1px solid #aaa;
+}
+
+.createNewList2 input[type="text"]:focus {
+    background-color: #efefef;
+}
+
+.plusText {
+    font: 25px gill_bold;
+    position: absolute;
+    color: #666;
+    top: 9px;
+    left: 13px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.bottomButton {
+    height: 50px;
+    padding: 25px 0 0 20px;
+}
+
+.rightPop2 {
+    background-color: #cbcbcb;
+    width: 330px;
+    padding-top: 4px !important;
+    padding-left: 10px;
+    height: 240px;
+    border-top: 1px solid #aaa;
+}
+
+.createNewList2 {
+    border-left: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 319px;
+    height: 60px;
+    padding: 10px;
+    position: relative;
+    background-color: #ededed;
+}
+
+.createNewList2 input[type="text"] {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 30px;
+    padding-left: 30px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 282px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.radioText {
+    float: left;
+    padding: 5px 0 0 0;
+}
+
+.radioText .radio1 {
+    float: left;
+    height: 30px;
+    width: 30px;
+    background: url("../images/radio-buttons.png") no-repeat;
+    background-repeat: no-repeat;
+    cursor: default;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.checkText {
+    font: 20px gill;
+    color: #666;
+    text-shadow: 0 1px 0 #fff, 0.5px 0 0 #000;
+    float: left;
+    padding-left: 15px;
+    width: 80px;
+}
+
+.updateList {
+    background: #749d5e;
+    background: -moz-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -webkit-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -o-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -ms-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    -pie-background: linear-gradient(bottom, #619049 50%, #749d5e 0);
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    -moz-box-shadow: 0 5px 0 #b3c5aa;
+    -webkit-box-shadow: 0 5px 0 #b3c5aa;
+    -khtml-box-shadow: 0 5px 0 #b3c5aa;
+    -pie-box-shadow: 0 5px 0 #b3c5aa;
+    box-shadow: 0 5px 0 #b3c5aa;
+    font-family: gill_bold;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    width: 160px;
+    height: 45px;
+    margin-top: 20px;
+    cursor: pointer;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.updateList:hover {
+    background: #8ec273;
+    background: -moz-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -webkit-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -o-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -ms-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    -pie-background: linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+}
+
+.updateList:active {
+    background: #537541;
+}
+
+.checkboxcontent {
+    height: auto;
+    width: auto;
+}
+
+.hoverHolder {
+    position: absolute;
+    top: 148px;
+    left: 39px;
+    display: none;
+}
+
+.fancyHolder {
+    height: 54px;
+    width: 83px;
+    float: left;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    -moz-box-shadow: 0 2px 2px #424241;
+    -webkit-box-shadow: 0 2px 2px #424241;
+    -khtml-box-shadow: 0 2px 2px #424241;
+    -pie-box-shadow: 0 2px 2px #424241;
+    box-shadow: 0 2px 2px #424241;
+    cursor: pointer;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.fancyHolder1 {
+    height: 54px;
+    width: 83px;
+    float: left;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    -moz-box-shadow: 0 2px 2px #424241;
+    -webkit-box-shadow: 0 2px 2px #424241;
+    -khtml-box-shadow: 0 2px 2px #424241;
+    -pie-box-shadow: 0 2px 2px #424241;
+    box-shadow: 0 2px 2px #424241;
+    cursor: pointer;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.hoverText {
+    text-align: center;
+    color: #666;
+    font: 15px gill;
+}
+
+.hoverFancy {
+    background: url("../images/homepage_fancy_icon.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 55px;
+    margin-top: -27px;
+    margin-left: 14px;
+    width: 56px;
+}
+
+.hoverFancy:hover {
+    background: url("../images/fancie_icon.png") repeat scroll 0 0 transparent;
+}
+
+.hoverFancyNext {
+    background: url("../images/fancie_icon.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 55px;
+    margin-top: -27px;
+    margin-left: 14px;
+    width: 56px;
+}
+
+.editFancynext {
+    background: url("../images/editfancy_icon.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 55px;
+    margin-top: -27px;
+    margin-left: 14px;
+    width: 56px;
+}
+
+.hoverPoll {
+    background: url("../images/homepage_poll_icon.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 55px;
+    margin-top: -27px;
+    margin-left: 10px;
+    width: 56px;
+}
+
+.hoverPoll:hover {
+    background: url("../images/polled.png") repeat scroll 0 0 transparent;
+}
+
+.hoverBrag {
+    background: url("../images/brag_grey.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 55px;
+    margin-top: -27px;
+    margin-left: 10px;
+    width: 56px;
+}
+
+.hoverBrag:hover {
+    background: url("../images/brag_pink.png") repeat scroll 0 0 transparent;
+    background-repeat: no-repeat;
+}
+
+.PollHolder {
+    height: 54px;
+    width: 83px;
+    float: left;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    -moz-box-shadow: 0 2px 2px #424241;
+    -webkit-box-shadow: 0 2px 2px #424241;
+    -khtml-box-shadow: 0 2px 2px #424241;
+    -pie-box-shadow: 0 2px 2px #424241;
+    box-shadow: 0 2px 2px #424241;
+    cursor: pointer;
+    margin-left: 4px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.store-list {
+    position: relative;
+}
+
+.store-list1 {
+    position: relative;
+    float: left;
+}
+
+.BragPopupContainer {
+    display: none;
+    height: 522px;
+    width: 668px;
+}
+
+.BragPopupWrapper {
+    border-top: 1px solid #FFF;
+    height: 521px;
+    position: relative;
+    width: 100%;
+}
+
+.BragPopupTransp {
+    background: none repeat scroll 0 0 #FFF;
+    height: 515px;
+    opacity: .88;
+    width: 100%;
+}
+
+.BragPopupActual {
+    box-shadow: 0 8px 10px #000;
+    height: 515px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.BragleftPop {
+    clear: both;
+    height: 330px;
+    width: 598px;
+}
+
+.radiobuttonConatainer {
+    clear: both;
+    height: 45px;
+    padding-top: 8px;
+}
+
+.diffstyle {
+    width: auto !important;
+    padding-right: 22px;
+}
+
+.imported_text {
+    font: 15px gill;
+    color: #666;
+}
+
+.selectAllContainer {
+    height: 85px;
+}
+
+.searchFriends {
+    clear: both;
+    background-color: #EDEDED;
+    border-left: 1px solid #AAA;
+    border-right: 1px solid #AAA;
+    border-top: 1px solid #ccc;
+    height: 33px;
+    padding: 10px;
+    position: relative;
+    width: 575px;
+}
+
+.searchFriends input[type="text"] {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 31px;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 560px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.searchFriends input[type="text"]:focus {
+    background-color: #efefef;
+}
+
+.padding_top8 {
+    padding-top: 18px !important;
+}
+
+.leftRightPop1 {
+    height: 375px;
+    padding-left: 35px;
+    padding-top: 8px;
+}
+
+.rightPops {
+    background-color: #CBCBCB;
+    border-top: 1px solid #AAA;
+    height: 293px;
+    margin-top: 12px;
+    padding-left: 10px;
+    padding-top: 4px !important;
+    width: 259px;
+}
+
+.width290 {
+    width: 587px !important;
+}
+
+.Bragrightest {
+    float: right;
+    height: 329px;
+    padding-right: 35px;
+    width: 269px;
+}
+
+.bragcheckboxesHolder {
+    height: 293px;
+    overflow: auto;
+    width: 259px;
+}
+
+.BragbottomButton {
+    height: 50px;
+    padding: 10px 0 0 35px;
+}
+
+.bragLabel {
+    color: #666;
+    float: left;
+    font: 20px gill;
+    padding: 30px 0 12px;
+    text-shadow: 0 1px 0 #FFF, 0.5px 0 0 #000;
+}
+
+.inviteText {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    float: left;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 46px;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 590px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.inviteText:focus {
+    background-color: #efefef;
+}
+
+.messageField {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 60px;
+    padding: 12px;
+    resize: none;
+    text-shadow: 0 1px 0 #FFF;
+    width: 576px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.messageField:focus {
+    background-color: #efefef;
+}
+
+.checkBoxText1 {
+    margin-bottom: 6px;
+    clear: both;
+    width: 560px;
+    height: 30px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #aaa;
+}
+
+.checkBoxTextright {
+    margin-bottom: 6px;
+    clear: both;
+    width: 237px;
+    height: 30px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #aaa;
+}
+
+.friendsimg {
+    float: left;
+    padding: 3px 0 0 5px;
+}
+
+.bragged {
+    background-image: url('../images/brag_pink.png') !important;
+}

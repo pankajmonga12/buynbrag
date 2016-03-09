@@ -1,0 +1,73 @@
+<div class="fanciedProductsContainer fancyListView container" ng-controller="AllBragsController">
+
+
+    <div infinite-scroll="getProducts()" infinite-scroll-distance='0.5'>
+        <div class="imageRepetition" ng-repeat="product in braggedProducts">
+
+            <ul class="fancyProductMediumContainer">
+                <li ng-click class="fancyItem shadedBackground hover-alive">
+                <!--<li ng-click class="{{ ($index%4==0) && 'span3 fancyItem shadedBackground leftMar0' || 'span3 fancyItem hover-alive shadedBackground' }}">-->
+                    <div class="fancyImageBG">
+                        <div class="fancyItemImageContainer">
+                            <a ng-href="product/{{product.productName | beautify}}/{{product.productID}}">
+                                <img class="fancyItemImage" ng-src="{{s3baseUrl}}{{product.storeID}}/{{product.productID}}/img1_240x200.jpg" alt="{{product.productName}} picture">
+                                <span class="imgHoverState"></span>
+                            </a>
+                        </div>
+
+                        <!--<i class="homeProdBrag newBragBtn {{fanciedClass}}" btn-fancy sid="{{product.storeID}}" pid="{{product.productID}}" uname="{{user.userdata.name}}" pname="{{product.productName}}" has-fancied="{{product.hasFancied}}" ng-click="triggerFancy()"></i>-->
+                        <!--<i class="newTagBtn" btn-tag ng-click="triggerTag()" pid="{{img.productID}}" sid="{{img.storeID}}" pname="{{img.productName}}" uname="{{user.userdata.name}}"></i>-->
+
+                        <btn-fancy sid="{{product.storeID}}" pid="{{product.productID}}" uname="{{user.userdata.name}}" pname="{{product.productName}}" has-fancied="{{product.hasFancied}}"></btn-fancy>
+
+                        <btn-tag pid="{{product.productID}}" sid="{{product.storeID}}" pname="{{product.productName}}" uname="{{user.userdata.name}}"></btn-tag>
+
+
+                        <!--<div class="itemDetailsContainer">-->
+                            <!--<div class="{{ (img.productIsOnDiscount == 1) && 'productOriPrice strike' || 'productOriPrice hide' }}"><i class="icon-fontawesome-webfont-5"></i>{{product.productSellingPrice}}</div>-->
+                            <!--<div class="productDiscountedPrice bnbRedFont"><i class="icon-fontawesome-webfont-5"></i>{{product.discountedPrice}}</div>-->
+
+                            <!--<span class="hidden-iphone-landscape outOfStockText {{ (product.productQuantity < 1) && 'quantityText' || 'quantityText hide' }}">Out of Stock!</span>-->
+                        <!--</div>-->
+
+                    </div>
+
+                    <!--<div class="fancyItemDetails">-->
+
+                        <!--<a ng-href="product/{{product.productName | beautify}}/{{product.productID}}"><h5 class="fancyItemName">{{product.productName}}</h5></a>-->
+
+                        <!--<div class="productPriceContainer pull-right">-->
+                            <!--<div class="{{ (product.productIsOnDiscount == 1) && 'productOriPrice strike' || 'productOriPrice hide' }}"><i class="icon-fontawesome-webfont-5"></i>{{product.productSellingPrice}}</div>-->
+                            <!--<div class="productDiscountedPrice bnbRedFont"><i class="icon-fontawesome-webfont-5"></i>{{product.discountedPrice}}</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="fancyItemStats">-->
+                            <!--<div class="fancyIcon block">-->
+                                <!--<span class="fancyCount bnbRedFont">{{product.productFancyCounter}}</span> brags-->
+                            <!--</div>-->
+                            <!--<div class="viewIcon block">-->
+                                <!--<span class="viewCount bnbRedFont">{{product.productVisitCounter}}</span> views-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--&lt;!&ndash;<div class="newCTA_wrapper">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<i class="newTagBtn"></i>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<i class="newShareBtn"></i>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                    <!--</div>-->
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <ul class="spinner" ng-hide="hideSpinner">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</div>

@@ -1,0 +1,78 @@
+@charset "utf-8";
+.badgePopupTransp {
+    background: #fff;
+    height: 393px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=88)";
+    filter: alpha(opacity = 88);
+    -moz-opacity: .88;
+    -khtml-opacity: .88;
+    opacity: .88;
+    width: 381px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -khtml-border-radius: 200px;
+    border-radius: 200px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.badgePopupActual {
+    height: 382px;
+    position: fixed;
+    top: 25%;
+    left: 0;
+    right: 0;
+    width: 370px;
+    display: block;
+    margin: 0 auto;
+}
+
+.badgePopup {
+    border-top: 1px solid #FFF;
+    height: 402px;
+    position: relative;
+    width: 381px;
+    display: none;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -khtml-border-radius: 200px;
+    border-radius: 200px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.b_icon_holder {
+    width: 320px;
+    height: 319px;
+    float: left;
+    background-image: url(../images/popup_badges_revised.png);
+}
+
+.b_icon_holder img {
+    margin-left: 91px;
+    margin-top: 94px;
+}
+
+.badge_close:hover {
+    background-image: url(../images/popup_close_click.png);
+}
+
+.badge_close {
+    background-image: url("../images/popup_close.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: right;
+    height: 27px;
+    margin: 20px 12px 0 0;
+    width: 26px;
+}
+
+.ui-widget-overlay {
+    opacity: .55 !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=55)";
+    filter: alpha(opacity = 55);
+    -moz-opacity: .55;
+    -khtml-opacity: .55;
+}
+
+.ui-dialog .ui-widget .ui-widget-content .ui-corner-all {
+    width: auto !important;
+}

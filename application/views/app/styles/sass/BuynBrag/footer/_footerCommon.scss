@@ -1,0 +1,143 @@
+#backtotop{
+  opacity: 0.6;
+  position: fixed;
+  background: url('../images/sprites/header_footer_bg.png') repeat;
+  right: 5.7%;
+  bottom: 50px;
+  padding: 10px;
+  font-size: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+//  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+footer{
+  background: url("../images/sprites/header_footer_bg.png") repeat;
+  position: fixed;
+  bottom: -38px;
+  width: 100%;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  z-index: 100;
+  //opacity: 0.8;
+  box-shadow: 0 -1px 3px  lighten($grayLight, 5%);
+  transform: translate3d(0,0,0);
+
+  //&:hover{
+  //  opacity: 0.9;
+  //  bottom: 0;
+  //}
+
+  &:focus{
+    opacity: 0.9;
+    bottom: 0;
+  }
+
+  &>a{
+    display: inline-block;
+    margin: 10px 20px;
+    text-decoration: none;
+    color: $white;
+
+    &:hover{
+      color: $bnbPink;
+      text-decoration: none;
+    }
+  }
+
+  .addThisFollowBtnContainer{
+
+    a {
+      margin-left: 15px;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+.footerReveal{
+  background: url("../images/sprites/header_footer_bg.png") repeat;
+  position: absolute;
+  right: 3%;
+  top: -30px;
+  padding: 5px 20px;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+// 3D transformations
+//.btnRotateContainer{
+//  -webkit-perspective: 800;
+//  -webkit-perspective-origin: 50% 200px;
+//
+//  button{
+//    -webkit-transition: all 400ms ease;
+//    -moz-transition: all 400ms ease;
+//    -ms-transition: all 400ms ease;
+//    transition: all 400ms ease;
+//    -webkit-transform-origin: 50% 0%;
+//    -moz-transform-origin: 50% 0%;
+//    -ms-transform-origin: 50% 0%;
+//    transform-origin: 50% 0%;
+//    -webkit-transform-style: preserve-3d;
+//    -moz-transform-style: preserve-3d;
+//    -ms-transform-style: preserve-3d;
+//    transform-style: preserve-3d;
+//
+//    &:after{
+//      display: block;
+//      position: absolute;
+//      left: 0;
+//      top: 0;
+//      padding: 0 2px;
+//      color: #fff;
+//      background: #e93a30;
+//      -webkit-transform-origin: 50% 0%;
+//      -moz-transform-origin: 50% 0%;
+//      -ms-transform-origin: 50% 0%;
+//      transform-origin: 50% 0%;
+//      -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+//      -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+//      -ms-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+//      transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+//    }
+//  }
+//
+//  &:hover button{
+//    -webkit-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+//    -moz-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+//    -ms-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+//    transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+//
+//    background-image: linear-gradient(to bottom, #ffffff, #f7f7f7);
+//    color: #000;
+//  }
+//}
+
+//button.btn{
+//  overflow: hidden;
+//
+//  .hover_shine{
+//    width: 100% !important;
+//    height: 840% !important;
+//    opacity: 0;
+//    pointer-events: none;
+//    transform: translate(-118%, -50%) rotate(25deg);
+//  }
+//
+//  &:hover .hover_shine{
+//    opacity: 0.15;
+//    transform: translate(-39%, -40%) rotate(25deg);
+//  }
+//}
+
+// end image hover effects
+

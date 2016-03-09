@@ -1,0 +1,3149 @@
+@charset "utf-8";
+@font-face {
+    font-family: ayitaPro-ie;
+    src: url("../font/ayitapro_semibold.eot");
+}
+
+@font-face {
+    font-family: RupeeForadian-ie;
+    src: url("../font/rupee_foradian.eot");
+}
+
+@font-face {
+    font-family: handsean-ie;
+    src: url("../font/handsean.eot");
+}
+
+@font-face {
+    font-family: gill-ie;
+    src: url("../font/gill.eot");
+}
+
+@font-face {
+    font-family: gillb-ie;
+    src: url("../font/gill_b.eot");
+}
+
+@font-face {
+    font-family: gilli-ie;
+    src: url("../font/gill_i.eot");
+}
+
+@font-face {
+    font-family: bebas-ie;
+    src: url("../font/Bebas_Neue.eot");
+}
+
+.description_text {
+    font-family: gill-ie !important;
+}
+
+.bannerTextHeading {
+    font-family: gillb-ie !important;
+}
+
+.bannerTextTop {
+    font-family: gilli-ie !important;
+}
+
+.bannerShopText {
+    font-family: gilli-ie !important;
+}
+
+.bannerURLText {
+    font-family: gillb-ie !important;
+}
+
+.yourShopImage {
+    font-family: gilli-ie !important;
+}
+
+.bannerButtonImage1 {
+    font-family: gillb-ie !important;
+}
+
+.bannerButtonImage2 {
+    font-family: gillb-ie !important;
+}
+
+.productsText {
+    font-family: gill-ie !important;
+}
+
+.login {
+    font-family: gill-ie !important;
+}
+
+.home {
+    font-family: gill-ie !important;
+}
+
+.nameHeading {
+    font-family: gill-ie !important;
+}
+
+.beachText {
+    font-family: gill-ie !important;
+}
+
+.mainHeadingText {
+    font-family: gill-ie !important;
+}
+
+.mainHeadingTextSelected {
+    font-family: gill-ie !important;
+}
+
+.furnitureText {
+    font-family: gill-ie !important;
+}
+
+.mainCatText {
+    font-family: gill-ie !important;
+}
+
+.fashionWeekText {
+    font-family: gill-ie !important;
+}
+
+.ourCompanyHeading {
+    font-family: gill-ie !important;
+}
+
+.aboutUsText {
+    font-family: gill-ie !important;
+}
+
+.usefulInfoHeading {
+    font-family: gill-ie !important;
+}
+
+.faqText {
+    font-family: gill-ie !important;
+}
+
+.sellerLandingText {
+    font-family: gill-ie !important;
+}
+
+.mobileInput input {
+    font-family: gill-ie !important;
+}
+
+.callmeButton {
+    font-family: gill-ie !important;
+}
+
+.timeText {
+    font-family: gill-ie !important;
+}
+
+.debitCardText {
+    font-family: gill-ie !important;
+}
+
+.allBankText {
+    font-family: gill-ie !important;
+}
+
+.dashboardText1 {
+    font-family: gill-ie !important;
+}
+
+.fancyText {
+    font-family: gill-ie !important;
+}
+
+.fancyNumber {
+    font-family: gill-ie !important;
+}
+
+.copyright {
+    font-family: gill-ie !important;
+}
+
+.grey {
+    font-family: gill-ie !important;
+}
+
+.darkText {
+    font-family: gillb-ie !important;
+}
+
+.pinkText {
+    font-family: gillb-ie !important;
+}
+
+.quesTextStyle {
+    font-family: gill-ie !important;
+}
+
+.voteButton {
+    font-family: gillb-ie !important;
+}
+
+.brandText {
+    font-family: gilli-ie !important;
+}
+
+.blogAbout {
+    font-family: gill-ie !important;
+}
+
+.clothingFestivalText {
+    font-family: gill-ie !important;
+}
+
+.createdJuneText {
+    font-family: gilli-ie !important;
+}
+
+.bucksEarned {
+    font-family: gillb-ie !important;
+}
+
+.earnedInfo {
+    font-family: gill-ie !important;
+}
+
+.loginHeading {
+    font-family: gill-ie !important;
+}
+
+.loginNow {
+    font-family: gill-ie !important;
+}
+
+.loginLabel {
+    font-family: gillb-ie !important;
+}
+
+.loginTextField input {
+    font-family: gilli-ie !important;
+}
+
+.sellerLoginButton {
+    font-family: gillb-ie !important;
+}
+
+.asideLogin {
+    font-family: gilli-ie !important;
+}
+
+.asideLoginRed {
+    font-family: gill-ie !important;
+}
+
+.lightText {
+    font-family: gilli-ie !important;
+}
+
+.pollCommentTextbox input {
+    font-family: gill-ie !important;
+}
+
+.homepodgeText {
+    font-family: gill-ie !important;
+}
+
+.rupee_quantity_text {
+    font-family: gillb-ie !important;
+}
+
+.fromItalicStyle {
+    font-family: gilli-ie !important;
+}
+
+.storeJeansText2 {
+    font-family: gill-ie !important;
+}
+
+.tiannaMeilingerText {
+    font-family: gilli-ie !important;
+}
+
+.renaissanceText {
+    font-family: gill-ie !important;
+}
+
+.commentTextBox input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.aboutMeContent {
+    font-family: gill-ie !important;
+}
+
+.addProducts {
+    font-family: gillb-ie !important;
+}
+
+.moveButton {
+    font-family: gillb-ie !important;
+}
+
+.bulkUpload {
+    font-family: gillb-ie !important;
+}
+
+.addCategory .sbHolder {
+    font-family: gilli-ie !important;
+}
+
+.addCategory .sbOptions a {
+    font-family: gilli-ie !important;
+}
+
+.addCategoryTextHiddenContent {
+    font-family: gillb-ie !important;
+}
+
+.addCategory .sbOptions .sbDisabled {
+    font-family: gilli-ie !important;
+}
+
+.purchaseText {
+    font-family: gilli-ie !important;
+}
+
+.searchProductsFieldMid input[type="text"] {
+    font-family: gilli-ie !important;
+}
+
+.addCategorySaveCancelContent input {
+    font-family: gilli-ie !important;
+}
+
+.yourShopTxt {
+    font-family: gilli-ie !important;
+}
+
+.label_italic {
+    font-family: gilli-ie !important;
+}
+
+.back_button {
+    font-family: gillb-ie !important;
+}
+
+.whyUsText {
+    font-family: ayitaPro-ie !important;
+}
+
+.topText {
+    font-family: ayitaPro-ie;
+}
+
+.rupee {
+    font-family: RupeeForadian-ie !important;
+}
+
+.discoverDrop div.sexy input {
+    font-family: handsean-ie !important;
+}
+
+.purchaseSpan {
+    font-family: gill-ie !important;
+}
+
+.shippingSpan {
+    font-family: gilli-ie !important;
+}
+
+.discoverDrop div.sexy li {
+    font-family: handsean-ie !important;
+}
+
+.discoverDrop div.sexy a, div.sexy a:visited, div.sexy a:active {
+    font-family: handsean-ie !important;
+}
+
+.or_icon {
+    font-family: gillb-ie !important;
+}
+
+.proceed {
+    font-family: gillb-ie !important;
+}
+
+.SendNoteHeading {
+    font-family: gillb-ie !important;
+}
+
+.problemTextareaMiddle textarea {
+    font-family: gilli-ie !important;
+}
+
+.send_text {
+    font-family: gillb-ie !important;
+}
+
+.or_text {
+    font-family: gilli-ie !important;
+}
+
+.expected_text {
+    font-family: gillb-ie !important;
+}
+
+.date_textfield_mid input[type="text"] {
+    font-family: gilli-ie !important;
+}
+
+.time_textfield_mid input[type="text"] {
+    font-family: gilli-ie !important;
+}
+
+.yourShopImage {
+    font-family: gill-ie !important;
+}
+
+.dashboardText {
+    font-family: gill-ie !important;
+}
+
+.orderStatusText {
+    font-family: gill-ie !important;
+}
+
+.currentlyShowingText {
+    font-family: gill-ie !important;
+}
+
+.sortbyText {
+    font-family: gill-ie !important;
+}
+
+.titleText {
+    font-family: gill-ie !important;
+}
+
+.quantityText {
+    font-family: gill-ie !important;
+}
+
+.stableglassHeading {
+    font-family: gill-ie !important;
+}
+
+.qtyNumber {
+    font-family: gill-ie !important;
+}
+
+.shippingTxt {
+    font-family: gill-ie !important;
+}
+
+.communicationNumber {
+    font-family: gillb-ie !important;
+}
+
+.feedbackText {
+    font-family: gill-ie !important;
+}
+
+.shippingDate {
+    font-family: gill-ie !important;
+}
+
+.completedText {
+    font-family: gill-ie !important;
+}
+
+.problrmWithOrderText {
+    font-family: gill-ie !important;
+}
+
+.orderdetails_text {
+    font-family: gillb-ie !important;
+}
+
+.back_button {
+    font-family: gill-ie !important;
+}
+
+.shipping_text {
+    font-family: gill-ie !important;
+}
+
+.stableglass_text {
+    font-family: gill-ie !important;
+}
+
+.label_italic {
+    font-family: gill-ie !important;
+}
+
+.label_details {
+    font-family: gill-ie !important;
+}
+
+.receipt_text {
+    font-family: gill-ie !important;
+}
+
+.top_text {
+    font-family: gill-ie !important;
+}
+
+.bottom_text {
+    font-family: gill-ie !important;
+}
+
+.name_text {
+    font-family: gill-ie !important;
+}
+
+.add_text {
+    font-family: gill-ie !important;
+}
+
+.comm_text {
+    font-family: gill-ie !important;
+}
+
+.callme {
+    font-family: gill-ie !important;
+}
+
+.amPm .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.amPm .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.expected_text {
+    font-family: gill-ie !important;
+}
+
+.date_pickup {
+    font-family: gill-ie !important;
+}
+
+.date_textfield_mid input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.time_textfield_mid input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.or_icon {
+    font-family: gill-ie !important;
+}
+
+.call_icon_text {
+    font-family: gill-ie !important;
+}
+
+.proceed {
+    font-family: gill-ie !important;
+}
+
+.SendNoteHeading {
+    font-family: gill-ie !important;
+}
+
+.problemTextareaMiddle textarea {
+    font-family: gill-ie !important;
+}
+
+.calling_text {
+    font-family: gill-ie !important;
+}
+
+.call_icon_text {
+    font-family: gill-ie !important;
+}
+
+.send_text {
+    font-family: gill-ie !important;
+}
+
+.or_text {
+    font-family: gill-ie !important;
+}
+
+.purchaseText {
+    font-family: gill-ie !important;
+}
+
+.add_productText {
+    font-family: gillb-ie !important;
+}
+
+.sameFont {
+    font-family: gill-ie !important;
+}
+
+.textItalic {
+    font-family: gill-ie !important;
+}
+
+.browseText {
+    font-family: gill-ie !important;
+}
+
+.textBorder input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.textareaBorder textarea {
+    font-family: gill-ie !important;
+}
+
+.fifthHeading {
+    font-family: gillb-ie !important;
+}
+
+.tag_text {
+    font-family: gillb-ie !important;
+}
+
+.prod_cancel {
+    font-family: gillb-ie !important;
+}
+
+prod_continue {
+    font-family: gillb-ie !important;
+}
+
+.widthChange1 input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.heading {
+    font-family: gill-ie !important;
+}
+
+.heading1 {
+    font-family: gill-ie !important;
+}
+
+.textItalic1 {
+    font-family: gill-ie !important;
+}
+
+.innerValues {
+    font-family: gill-ie !important;
+}
+
+.variantDetails {
+    font-family: gill-ie !important;
+}
+
+.quantity_text {
+    font-family: gill-ie !important;
+}
+
+.stock_italic {
+    font-family: gill-ie !important;
+}
+
+.quantity_textbox input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.radioText .texts {
+    font-family: gill-ie !important;
+}
+
+.radioText1 .texts1 {
+    font-family: gill-ie !important;
+}
+
+.yellowDiv {
+    font-family: gill-ie !important;
+}
+
+.message_text {
+    font-family: gill-ie !important;
+}
+
+.darkFont {
+    font-family: gill-ie !important;
+}
+
+.lightFont {
+    font-family: gill-ie !important;
+}
+
+.textTitle {
+    font-family: gill-ie !important;
+}
+
+.storeTextField input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.storeTextField input[type="email"] {
+    font-family: gill-ie !important;
+}
+
+.storeTextArea textarea {
+    font-family: gill-ie !important;
+}
+
+.darkFont1 {
+    font-family: gillb-ie !important;
+}
+
+.link_box {
+    font-family: gillb-ie !important;
+}
+
+.previewText {
+    font-family: gill-ie !important;
+}
+
+.previewText1 {
+    font-family: gill-ie !important;
+}
+
+.storeSectionText {
+    font-family: gillb-ie !important;
+}
+
+.storeLeahText {
+    font-family: gillb-ie !important;
+}
+
+.numberBold {
+    font-family: gillb-ie !important;
+}
+
+.fromItalicStyle {
+    font-family: gill-ie !important;
+}
+
+.storeLeahText {
+    font-family: gillb-ie !important;
+}
+
+.storeShopOwnerText {
+    font-family: gillb-ie !important;
+}
+
+.stableglassHeading {
+    font-family: gill-ie !important;
+}
+
+.prod_continue {
+    font-family: gillb-ie !important;
+}
+
+.prod_cancel {
+    font-family: gillb-ie !important;
+}
+
+.dashboardText {
+    font-family: gill-ie !important;
+}
+
+.rightText {
+    font-family: gill-ie !important;
+}
+
+.owner_name {
+    font-family: gill-ie !important;
+}
+
+.white_text {
+    font-family: gill-ie !important;
+}
+
+.logoNumber {
+    font-family: gill-ie !important;
+}
+
+.logoText {
+    font-family: gill-ie !important;
+}
+
+.activeText {
+    font-family: gill-ie !important;
+}
+
+.purchaseText1 {
+    font-family: gill-ie !important;
+}
+
+.headerdropdown dt a span {
+    font-family: gill-ie !important;
+}
+
+.profileText {
+    font-family: gill-ie !important;
+}
+
+.headerdropdown dd ul li a {
+    font-family: gill-ie !important;
+}
+
+.storeDecoratingText {
+    font-family: gill-ie !important;
+}
+
+.priceHolder {
+    font-family: gill-ie !important;
+}
+
+.categoriesText {
+    font-family: gill-ie !important;
+}
+
+.followButton {
+    font-family: gill-ie !important;
+}
+
+.messageButton {
+    font-family: gill-ie !important;
+}
+
+.storeText {
+    font-family: gill-ie !important;
+}
+
+.tooltip1 {
+    font-family: gill-ie !important;
+}
+
+.fancy_number {
+    font-family: gill-ie !important;
+}
+
+.fancy_name {
+    font-family: gill-ie !important;
+}
+
+.product_number {
+    font-family: gillb-ie !important;
+}
+
+.braged_name {
+    font-family: gill-ie !important;
+}
+
+.feedbackText {
+    font-family: gillb-ie !important;
+}
+
+.coppleStoreText {
+    font-family: gill-ie !important;
+}
+
+.ownerText {
+    font-family: gill-ie !important;
+}
+
+.leahStoreText {
+    font-family: gill-ie !important;
+}
+
+.positive {
+    font-family: gillb-ie !important;
+}
+
+.neutral {
+    font-family: gillb-ie !important;
+}
+
+.textarea_class {
+    font-family: gill-ie !important;
+}
+
+.categoryHeading {
+    font-family: gill-ie !important;
+}
+
+.banner_name {
+    font-family: gill-ie !important;
+}
+
+.search_product {
+    font-family: gill-ie !important;
+}
+
+.search_location {
+    font-family: gill-ie !important;
+}
+
+.leahStoreText {
+    font-family: gill-ie !important;
+}
+
+.productsFound {
+    font-family: gill-ie !important;
+}
+
+.searchLabel {
+    font-family: gill-ie !important;
+}
+
+.leftPanelCategory {
+    font-family: gillb-ie !important;
+}
+
+.subCategory {
+    font-family: gill-ie !important;
+}
+
+.subCategoryClear {
+    font-family: gill-ie !important;
+}
+
+.subCategory2 {
+    font-family: gill-ie !important;
+}
+
+.subSubCategory {
+    font-family: gill-ie !important;
+}
+
+.followingButton {
+    font-family: gill-ie !important;
+}
+
+.promoteText1 {
+    font-family: gill-ie !important;
+}
+
+.tooltip2 {
+    font-family: gill-ie !important;
+}
+
+.searchRight {
+    font-family: gill-ie !important;
+}
+
+.searchBoxStyle {
+    font-family: gill-ie !important;
+}
+
+.sortText {
+    font-family: gill-ie !important;
+}
+
+.pollText {
+    font-family: gill-ie !important;
+}
+
+.headin {
+    font-family: gillb-ie !important;
+}
+
+.body_text {
+    font-family: gill-ie !important;
+}
+
+.numberPercent {
+    font-family: gillb-ie !important;
+}
+
+.percentSign {
+    font-family: gillb-ie !important;
+}
+
+.offPercent {
+    font-family: gillb-ie !important;
+}
+
+.priceHolderSale {
+    font-family: gill-ie !important;
+}
+
+.add_productText {
+    font-family: gillb-ie !important;
+}
+
+.sameFont {
+    font-family: gill-ie !important;
+}
+
+.textItalic {
+    font-family: gill-ie !important;
+}
+
+.browseText {
+    font-family: gill-ie !important;
+}
+
+.textBorder input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.textareaBorder textarea {
+    font-family: gill-ie !important;
+}
+
+.fifthHeading {
+    font-family: gillb-ie !important;
+}
+
+.tag_text {
+    font-family: gill-ie !important;
+}
+
+.widthChange1 input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.heading {
+    font-family: gill-ie !important;
+}
+
+.heading1 {
+    font-family: gill-ie !important;
+}
+
+.innerValues {
+    font-family: gill-ie !important;
+}
+
+.variantDetails {
+    font-family: gill-ie !important;
+}
+
+.quantity_text {
+    font-family: gill-ie !important;
+}
+
+.stock_italic {
+    font-family: gill-ie !important;
+}
+
+.productNameNew {
+    font-family: gill-ie !important;
+}
+
+.namequantityRow input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.radioText .texts {
+    font-family: gill-ie !important;
+}
+
+.radioText1 .texts1 {
+    font-family: gill-ie !important;
+}
+
+.productNameNew:focus {
+    font-family: gill-ie !important;
+}
+
+.viewer .caption {
+    font-family: gillb-ie !important;
+}
+
+.badgesHeading {
+    font-family: gill-ie !important;
+}
+
+.numOfBadges {
+    font-family: gillb-ie !important;
+}
+
+.badgeName1 {
+    font-family: gill-ie !important;
+}
+
+.badgeName {
+    font-family: gill-ie !important;
+}
+
+.exploresItalicText {
+    font-family: gill-ie !important;
+}
+
+.badgeText {
+    font-family: gill-ie !important;
+}
+
+.badgeText2 {
+    font-family: gill-ie !important;
+}
+
+.badgeText3 {
+    font-family: gill-ie !important;
+}
+
+.currentlyTextHolder {
+    font-family: gill-ie !important;
+}
+
+.invoiceNumberHolder {
+    font-family: gill-ie !important;
+}
+
+.invoiceNumberdetail {
+    font-family: gill-ie !important;
+}
+
+.dateText {
+    font-family: gill-ie !important;
+}
+
+.dateNumber {
+    font-family: gill-ie !important;
+}
+
+.transactionNumber {
+    font-family: gill-ie !important;
+}
+
+.blogHeading {
+    font-family: gillb-ie !important;
+}
+
+.formLabel {
+    font-family: gill-ie !important;
+}
+
+.blog_input {
+    font-family: gill-ie !important;
+}
+
+.WelcomeBlog {
+    font-family: gill-ie !important;
+}
+
+.createText {
+    font-family: gill-ie !important;
+}
+
+.discussText {
+    font-family: gill-ie !important;
+}
+
+.discussAbout {
+    font-family: gill-ie !important;
+}
+
+.discussBlog {
+    font-family: gillb-ie !important;
+}
+
+.blogitalic {
+    font-family: gill-ie !important;
+}
+
+.pfno {
+    font-family: gill-ie !important;
+}
+
+.pftext {
+    font-family: gill-ie !important;
+}
+
+.body_text {
+    font-family: gill-ie !important;
+}
+
+.pollCreationDate {
+    font-family: gill-ie !important;
+}
+
+.pollnName {
+    font-family: gill-ie !important;
+}
+
+.blogProductDetails {
+    font-family: gill-ie !important;
+}
+
+.for_fancy {
+    font-family: gill-ie !important;
+}
+
+.bragText {
+    font-family: gill-ie !important;
+}
+
+.blogTextField input {
+    font-family: gill-ie !important;
+}
+
+.BigQuesText {
+    font-family: gillb-ie !important;
+}
+
+.featuredText {
+    font-family: gill-ie !important;
+}
+
+.byText {
+    font-family: gill-ie !important;
+}
+
+.checkoutText {
+    font-family: gill-ie !important;
+}
+
+.checkText {
+    font-family: gill-ie !important;
+}
+
+.checkText2 {
+    font-family: gill-ie !important;
+}
+
+.labelText {
+    font-family: gill-ie !important;
+}
+
+.formRow input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.formRow textarea {
+    font-family: gill-ie !important;
+}
+
+.formRow input[type="email"] {
+    font-family: gill-ie !important;
+}
+
+.labelFont {
+    font-family: gillb-ie !important;
+}
+
+.subText {
+    font-family: gill-ie !important;
+}
+
+.subAmount {
+    font-family: gillb-ie !important;
+}
+
+.totalText {
+    font-family: gillb-ie !important;
+}
+
+.totalAmt {
+    font-family: gillb-ie !important;
+}
+
+.linkText {
+    font-family: gill-ie !important;
+}
+
+.addressContent {
+    font-family: gill-ie !important;
+}
+
+.payLabel {
+    font-family: gill-ie !important;
+}
+
+.payDetails {
+    font-family: gill-ie !important;
+}
+
+.checkHeading {
+    font-family: gillb-ie !important;
+}
+
+.category1 .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.category1 .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.category1 .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.orderStatusText {
+    font-family: gill-ie !important;
+}
+
+.currentlyShowingText {
+    font-family: gill-ie !important;
+}
+
+.sortbyText {
+    font-family: gill-ie !important;
+}
+
+.quantityText {
+    font-family: gill-ie !important;
+}
+
+.titleText {
+    font-family: gill-ie !important;
+}
+
+.qtyNumber {
+    font-family: gill-ie !important;
+}
+
+.shippingTxt {
+    font-family: gill-ie !important;
+}
+
+.communicationNumber {
+    font-family: gillb-ie !important;
+}
+
+.feedbackImage {
+    font-family: gill-ie !important;
+}
+
+.shippingDate {
+    font-family: gill-ie !important;
+}
+
+.shippingSpan {
+    font-family: gill-ie !important;
+}
+
+.completedText {
+    font-family: gill-ie !important;
+}
+
+.problrmWithOrderText {
+    font-family: gill-ie !important;
+}
+
+.orderdetails_text {
+    font-family: gillb-ie !important;
+}
+
+.shipping_text {
+    font-family: gill-ie !important;
+}
+
+.stableglass_text {
+    font-family: gill-ie !important;
+}
+
+.label_italic2 {
+    font-family: gill-ie !important;
+}
+
+.label_details {
+    font-family: gill-ie !important;
+}
+
+.receipt_text {
+    font-family: gill-ie !important;
+}
+
+.top_text {
+    font-family: gill-ie !important;
+}
+
+.bottom_text {
+    font-family: gill-ie !important;
+}
+
+.name_text {
+    font-family: gill-ie !important;
+}
+
+.add_text {
+    font-family: gill-ie !important;
+}
+
+.comm_text {
+    font-family: gill-ie !important;
+}
+
+.names {
+    font-family: gill-ie !important;
+}
+
+.search_text_mid input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.date_pickup {
+    font-family: gill-ie !important;
+}
+
+.date_textfield_mid input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.time_textfield_mid input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.call_icon_text {
+    font-family: gill-ie !important;
+}
+
+.calling_text {
+    font-family: gill-ie !important;
+}
+
+.call_icon_text {
+    font-family: gill-ie !important;
+}
+
+.send_icon {
+    font-family: gillb-ie !important;
+}
+
+.orderDetailsParent ul li a {
+    font-family: gill-ie !important;
+}
+
+.dashboardText {
+    font-family: gill-ie !important;
+}
+
+.dashboardTextActive {
+    font-family: gill-ie !important;
+}
+
+.MainCategoryHeading {
+    font-family: gill-ie !important;
+}
+
+.dealName {
+    font-family: gill-ie !important;
+}
+
+.dealerName {
+    font-family: gill-ie !important;
+}
+
+.text_change {
+    font-family: gill-ie !important;
+}
+
+.designText {
+    font-family: gill-ie !important;
+}
+
+.text_label {
+    font-family: gill-ie !important;
+}
+
+.text_italic {
+    font-family: gill-ie !important;
+}
+
+.bold_text {
+    font-family: gillb-ie !important;
+}
+
+.under_text {
+    font-family: gill-ie !important;
+}
+
+.bold_italic {
+    font-family: gill-ie !important;
+}
+
+.small_tt {
+    font-family: gill-ie !important;
+}
+
+.valueBox1 input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.website_name {
+    font-family: gill-ie !important;
+}
+
+.font .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.font .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.font .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.font1 .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.font1 .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.font1 .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.webName {
+    font-family: gill-ie !important;
+}
+
+.shoppingCartText {
+    font-family: gill-ie !important;
+}
+
+.recently_text {
+    font-family: gillb-ie !important;
+}
+
+.your_cart_text {
+    font-family: gillb-ie !important;
+}
+
+.browse_text {
+    font-family: gill-ie !important;
+}
+
+.error_content {
+    font-family: gill-ie !important;
+}
+
+.fancyLinkActive {
+    font-family: gill-ie !important;
+}
+
+.fancyLink {
+    font-family: gill-ie !important;
+}
+
+.addList {
+    font-family: gillb-ie !important;
+}
+
+.listName {
+    font-family: gill-ie !important;
+}
+
+.noOfListItems {
+    font-family: gill-ie !important;
+}
+
+.deleteListHeading {
+    font-family: gill-ie !important;
+}
+
+.deleteListInfo {
+    font-family: gill-ie !important;
+}
+
+.deleteListButton {
+    font-family: gillb-ie !important;
+}
+
+.cancelListButton {
+    font-family: gillb-ie !important;
+}
+
+.detailListName {
+    font-family: gill-ie !important;
+}
+
+.itemsQuantity {
+    font-family: gill-ie !important;
+}
+
+.deleteDetailHeading {
+    font-family: gill-ie !important;
+}
+
+.deleteDetailInfo {
+    font-family: gill-ie !important;
+}
+
+.deleteDetailButton {
+    font-family: gillb-ie !important;
+}
+
+.cancelDetailButton {
+    font-family: gillb-ie !important;
+}
+
+.Addtotext {
+    font-family: gill-ie !important;
+}
+
+.createaList input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.plusText {
+    font-family: gillb-ie !important;
+}
+
+.checkText {
+    font-family: gill-ie !important;
+}
+
+.checkText2 {
+    font-family: gill-ie !important;
+}
+
+.add_button {
+    font-family: gillb-ie !important;
+}
+
+.Addtofancytext {
+    font-family: gill-ie !important;
+}
+
+.fanciedText {
+    font-family: gill-ie !important;
+}
+
+.plusText {
+    font-family: gillb-ie !important;
+}
+
+.createNewList2 input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.updateList {
+    font-family: gillb-ie !important;
+}
+
+.hoverText {
+    font-family: gill-ie !important;
+}
+
+.imported_text {
+    font-family: gill-ie !important;
+}
+
+.searchFriends input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.bragLabel {
+    font-family: gill-ie !important;
+}
+
+.inviteText {
+    font-family: gill-ie !important;
+}
+
+.messageField {
+    font-family: gill-ie !important;
+}
+
+.leftPanelLinks {
+    font-family: gill-ie !important;
+}
+
+.leftPanelLinksActive {
+    font-family: gill-ie !important;
+}
+
+.rightPanelHeading {
+    font-family: gill-ie !important;
+}
+
+.rightPanelHeadingpopup {
+    font-family: gill-ie !important;
+}
+
+.rightPanelDesc {
+    font-family: gill-ie !important;
+}
+
+.teamPhotoText {
+    font-family: gill-ie !important;
+}
+
+.founderName {
+    font-family: gill-ie !important;
+}
+
+.founderDesignation {
+    font-family: gill-ie !important;
+}
+
+.backToTop a {
+    font-family: gill-ie !important;
+}
+
+.rightPanelDescSmall {
+    font-family: gill-ie !important;
+}
+
+.rightPanelDescSmall2 {
+    font-family: gill-ie !important;
+}
+
+.backToTop2 a {
+    font-family: gill-ie !important;
+}
+
+.rightPanelDescSmall3 {
+    font-family: gill-ie !important;
+}
+
+.rightPanelDescSmall4 {
+    font-family: gill-ie !important;
+}
+
+.rightPanelDescSmall5 {
+    font-family: gill-ie !important;
+}
+
+.listStyle {
+    font-family: gill-ie !important;
+}
+
+.learnMore a {
+    font-family: gill-ie !important;
+}
+
+.graphicshead {
+    font-family: gillb-ie !important;
+}
+
+.graphicstext {
+    font-family: gill-ie !important;
+}
+
+#abtCircle .myabt {
+    font-family: gill-ie !important;
+}
+
+.myTakeATour {
+    font-family: gillb-ie !important;
+}
+
+.tourDesText {
+    font-family: gill-ie !important;
+}
+
+.peoleCountry {
+    font-family: gill-ie !important;
+}
+
+.following {
+    font-family: gill-ie !important;
+}
+
+.unfollow {
+    font-family: gill-ie !important;
+}
+
+.BigQuesText {
+    font-family: gillb-ie !important;
+}
+
+.storeDecoratingText {
+    font-family: gill-ie !important;
+}
+
+.priceHolder {
+    font-family: gill-ie !important;
+}
+
+.storeTextImage {
+    font-family: gillb-ie !important;
+}
+
+.storeText {
+    font-family: gillb-ie !important;
+}
+
+.storeDetails {
+    font-family: gill-ie !important;
+}
+
+.signatureText {
+    font-family: gill-ie !important;
+}
+
+.fancyIconText {
+    font-family: gill-ie !important;
+}
+
+.memberSigninText {
+    font-family: gill-ie !important;
+}
+
+.signup_facebook_text {
+    font-family: gill-ie !important;
+}
+
+.inviteFriendsText {
+    font-family: gill-ie !important;
+}
+
+.skipText {
+    font-family: gill-ie !important;
+}
+
+.friendName {
+    font-family: gill-ie !important;
+}
+
+.invite {
+    font-family: gillb-ie !important;
+}
+
+.inviteAll {
+    font-family: gillb-ie !important;
+}
+
+.button-red-mailme {
+    font-family: gillb-ie !important;
+}
+
+.amPm .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.amPm .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.category .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.category .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.category .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.category1 .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.category1 .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.category1 .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.category2 .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.category2 .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.category2 .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.addCategory .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.addCategory .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.addCategory .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.categoriesColumn .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.categoriesColumn .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.categoriesColumn .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.datesDropdown .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.datesDropdown .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.datesDropdown .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.sort_by .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.sort_by .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.sort_by .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.promotecategory .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.promotecategory .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.promotecategory2 .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.promotecategory2 .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+.promotecategory2 .sbOptions .sbDisabled {
+    font-family: gill-ie !important;
+}
+
+.ship_mode .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.ship_mode .sbOptions a {
+    font-family: gill-ie !important;
+}
+
+#tooltip.pretty {
+    font-family: gill-ie !important;
+}
+
+#tooltip.pretty h3 {
+    font-family: gill-ie !important;
+}
+
+#tooltip.fancy {
+    font-family: gill-ie !important;
+}
+
+.middleTabsContainer .ui-tabs .ui-tabs-nav li a {
+    font-family: gill-ie !important;
+}
+
+.tabsContainer .ui-tabs .ui-tabs-nav li a {
+    font-family: gill-ie !important;
+}
+
+.feedbackPopupContents .ui-tabs .ui-tabs-nav li a {
+    font-family: gill-ie !important;
+}
+
+.bottomPatternHolder .ui-tabs .ui-tabs-nav li a {
+    font-family: gillb-ie !important;
+}
+
+#bottomPatternHolder_StoreSection .ui-tabs .ui-tabs-nav li a {
+    font-family: gillb-ie !important;
+}
+
+.ffPopupContents .ui-tabs .ui-tabs-nav li a {
+    font-family: gill-ie !important;
+}
+
+.tabsContainerBill .ui-tabs .ui-tabs-nav li a {
+    font-family: gill-ie !important;
+}
+
+.soulTextHolder {
+    font-family: gill-ie !important;
+}
+
+.signup_facebook_text {
+    font-family: gill-ie !important;
+}
+
+.memberText {
+    font-family: gill-ie !important;
+}
+
+.signinText {
+    font-family: gill-ie !important;
+}
+
+.fancyHeading {
+    font-family: gill-ie !important;
+}
+
+.fancyContent {
+    font-family: gill-ie !important;
+}
+
+.memberSigninText {
+    font-family: gill-ie !important;
+}
+
+.signup_facebook_text {
+    font-family: gill-ie !important;
+}
+
+.fancy_heading {
+    font-family: gill-ie !important;
+}
+
+.fancy_body_Text {
+    font-family: gill-ie !important;
+}
+
+.sortText1 {
+    font-family: gill-ie !important;
+}
+
+.heading_style {
+    font-family: gill-ie !important;
+}
+
+.heading_selected {
+    font-family: gill-ie !important;
+}
+
+.trendingNewText {
+    font-family: gillb-ie !important;
+}
+
+.storesText {
+    font-family: gill-ie !important;
+}
+
+.pannelProductText {
+    font-family: gill-ie !important;
+}
+
+.heading_selected {
+    font-family: gill-ie !important;
+}
+
+.topHeading {
+    font-family: gillb-ie !important;
+}
+
+.left_Text {
+    font-family: gill-ie !important;
+}
+
+.right_Text {
+    font-family: gill-ie !important;
+}
+
+.congrat_text {
+    font-family: gillb-ie !important;
+}
+
+.unlockBadgeText {
+    font-family: gill-ie !important;
+}
+
+.footer_left_holder {
+    font-family: gillb-ie !important;
+}
+
+.friends_text {
+    font-family: gill-ie !important;
+}
+
+.fancy_text {
+    font-family: gill-ie !important;
+}
+
+.priceCatProd {
+    font-family: gill-ie !important;
+}
+
+.rangeText {
+    font-family: gill-ie !important;
+}
+
+.bprodText {
+    font-family: gill-ie !important;
+}
+
+.bpriceText {
+    font-family: gill-ie !important;
+}
+
+.ytext {
+    font-family: gill-ie !important;
+}
+
+.imageText {
+    font-family: gillb-ie !important;
+}
+
+.stores_text {
+    font-family: gill-ie !important;
+}
+
+.topic_text {
+    font-family: gill-ie !important;
+}
+
+.marketproduct {
+    font-family: gill-ie !important;
+}
+
+.st_tp {
+    font-family: gill-ie !important;
+}
+
+.joinbutton {
+    font-family: gillb-ie !important;
+}
+
+.leavebutton {
+    font-family: gillb-ie !important;
+}
+
+.leavemarketplace {
+    font-family: gillb-ie !important;
+}
+
+.communicationNumber {
+    font-family: gillb-ie !important;
+}
+
+.search_text input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.composeMessage {
+    font-family: gillb-ie !important;
+}
+
+.composeMessageText {
+    font-family: gill-ie !important;
+}
+
+.upLabel {
+    font-family: gill-ie !important;
+}
+
+.inviteText {
+    font-family: gill-ie !important;
+}
+
+.messageField {
+    font-family: gill-ie !important;
+}
+
+.fileInput input {
+    font-family: gill-ie !important;
+}
+
+.white_upload {
+    font-family: gillb-ie !important;
+}
+
+.ngoHeading {
+    font-family: gillb-ie !important;
+}
+
+.currentlyShowingText {
+    font-family: gill-ie !important;
+}
+
+.prathamText {
+    font-family: gillb-ie !important;
+}
+
+.idealistText {
+    font-family: gill-ie !important;
+}
+
+.contributorNumber {
+    font-family: gillb-ie !important;
+}
+
+.contriText {
+    font-family: gill-ie !important;
+}
+
+.failed_text {
+    font-family: gill-ie !important;
+}
+
+.back_to_cart {
+    font-family: gillb-ie !important;
+}
+
+.quantity_column {
+    font-family: gill-ie !important;
+}
+
+.products_ordered_text {
+    font-family: gillb-ie !important;
+}
+
+.thanks_text {
+    font-family: gill-ie !important;
+}
+
+.view_order {
+    font-family: gillb-ie !important;
+}
+
+.pollnName {
+    font-family: gill-ie !important;
+}
+
+.pollItemName {
+    font-family: gill-ie !important;
+}
+
+.pollItemInfo {
+    font-family: gill-ie !important;
+}
+
+.rockwellBold {
+    font-family: gillb-ie !important;
+}
+
+.pollItemStore {
+    font-family: gill-ie !important;
+}
+
+.noOfVotes {
+    font-family: gillb-ie !important;
+}
+
+.noOfPollComments {
+    font-family: gillb-ie !important;
+}
+
+.pollItemNameBig {
+    font-family: gill-ie !important;
+}
+
+.pollItemStoreBig {
+    font-family: gill-ie !important;
+}
+
+.storeName {
+    font-family: gill-ie !important;
+}
+
+.pollItemPrice {
+    font-family: gillb-ie !important;
+}
+
+.pollItemInfoRow {
+    font-family: gill-ie !important;
+}
+
+.pollUserRow1 {
+    font-family: gill-ie !important;
+}
+
+.createNewPollButton {
+    font-family: gillb-ie !important;
+}
+
+.pollLinkHead {
+    font-family: gill-ie !important;
+}
+
+.pollLinks {
+    font-family: gill-ie !important;
+}
+
+.moreInfo {
+    font-family: gill-ie !important;
+}
+
+.morepollInfoContent {
+    font-family: gill-ie !important;
+}
+
+.pollsHeading {
+    font-family: gillb-ie !important;
+}
+
+.pollsLabel {
+    font-family: gill-ie !important;
+}
+
+.poll_textboxes input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.radio2Text {
+    font-family: gill-ie !important;
+}
+
+.add_text {
+    font-family: gill-ie !important;
+}
+
+.items {
+    font-family: gill-ie !important;
+}
+
+.searchpoll {
+    font-family: gill-ie !important;
+}
+
+.selectitems {
+    font-family: gillb-ie !important;
+}
+
+.width371 .sbSelector, .width371 .sbHolder {
+    font-family: gill-ie !important;
+}
+
+.rectext {
+    font-family: gill-ie !important;
+}
+
+.reasonText {
+    font-family: gill-ie !important;
+}
+
+.search_textboxes input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.showingText {
+    font-family: gill-ie !important;
+}
+
+.postText {
+    font-family: gill-ie !important;
+}
+
+.numberText {
+    font-family: gill-ie !important;
+}
+
+.icoText {
+    font-family: gill-ie !important;
+}
+
+.priceText {
+    font-family: gillb-ie !important !important;
+}
+
+.priceTextper {
+    font-family: gillb-ie !important !important;
+    margin-top: 52px !important;
+    margin-left: 32px !important;
+}
+
+.iconText {
+    font-family: gill-ie !important;
+}
+
+.prodItemText {
+    font-family: gillb-ie !important;
+}
+
+.prodHeading {
+    font-family: gill-ie !important;
+}
+
+.prodAbout {
+    font-family: gill-ie !important;
+}
+
+.stockIcon {
+    font-family: gill-ie !important;
+}
+
+.drop_heading {
+    font-family: gill-ie !important;
+}
+
+.dropdown dt a span {
+    font-family: gill-ie !important;
+}
+
+.dropdown dd ul li a {
+    font-family: gill-ie !important;
+}
+
+.commentText {
+    font-family: gillb-ie !important;
+}
+
+.FriendsText {
+    font-family: gill-ie !important;
+}
+
+.friendCircle {
+    font-family: gill-ie !important;
+}
+
+.AllText {
+    font-family: gill-ie !important;
+}
+
+.allCircle {
+    font-family: gill-ie !important;
+}
+
+.showingText {
+    font-family: gill-ie !important;
+}
+
+.pro_name {
+    font-family: gillb-ie !important;
+}
+
+.comment {
+    font-family: gill-ie !important;
+}
+
+.post_button {
+    font-family: gillb-ie !important;
+}
+
+.BigQuesText {
+    font-family: gillb-ie !important;
+}
+
+.quest_text {
+    font-family: gill-ie !important;
+}
+
+.request_text {
+    font-family: gill-ie !important;
+}
+
+.productName {
+    font-family: gill-ie !important;
+}
+
+.textarea_class1 {
+    font-family: gill-ie !important;
+}
+
+.luxurySofaSet {
+    font-family: gillb-ie !important;
+}
+
+.timerBoxes {
+    font-family: gill-ie !important;
+}
+
+.timerHours {
+    font-family: gill-ie !important;
+}
+
+.expiresText {
+    font-family: gill-ie !important;
+}
+
+.outofStockIcon {
+    font-family: gill-ie !important;
+}
+
+.currently_text {
+    font-family: gillb-ie !important;
+}
+
+.addCart {
+    font-family: gillb-ie !important;
+}
+
+.inCart {
+    font-family: gillb-ie !important;
+}
+
+.categoryText {
+    font-family: gill-ie !important;
+}
+
+.productText {
+    font-family: gill-ie !important;
+}
+
+.searchProductsFieldMid input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.priceAmount {
+    font-family: gill-ie !important;
+}
+
+.quantityColumn input {
+    font-family: gill-ie !important;
+}
+
+.promotionAppliesText {
+    font-family: gill-ie !important;
+}
+
+.addText {
+    font-family: gill-ie !important;
+}
+
+.faq_text {
+    font-family: gill-ie !important;
+}
+
+.promotionAppliesText {
+    font-family: gill-ie !important;
+}
+
+.faq_text {
+    font-family: gill-ie !important;
+}
+
+.appliesCategoriesSection ul li .text {
+    font-family: gill-ie !important;
+}
+
+.promotionFields input {
+    font-family: gill-ie !important;
+}
+
+.categoryText {
+    font-family: gill-ie !important;
+}
+
+.productText {
+    font-family: gill-ie !important;
+}
+
+.searchProductsFieldMid input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.category_text {
+    font-family: gill-ie !important;
+}
+
+.priceAmount {
+    font-family: gill-ie !important;
+}
+
+.faq_text {
+    font-family: gill-ie !important;
+}
+
+.formRow input {
+    font-family: gill-ie !important;
+}
+
+.formRow textarea {
+    font-family: gill-ie !important;
+}
+
+.promotionCodeText {
+    font-family: gill-ie !important;
+}
+
+.theCodeText {
+    font-family: gill-ie !important;
+}
+
+.loremIpsumText {
+    font-family: gill-ie !important;
+}
+
+.joinedMarketplaceText {
+    font-family: gill-ie !important;
+}
+
+.sortText1 {
+    font-family: gill-ie !important;
+}
+
+.searchRight {
+    font-family: gill-ie !important;
+}
+
+.searchBoxStyle {
+    font-family: gill-ie !important;
+}
+
+.viewpurchase {
+    font-family: gill-ie !important;
+}
+
+.statusText {
+    font-family: gill-ie !important;
+}
+
+.shippedText {
+    font-family: gill-ie !important;
+}
+
+.TrackText {
+    font-family: gill-ie !important;
+}
+
+.trackID {
+    font-family: gill-ie !important;
+}
+
+.peopleName {
+    font-family: gill-ie !important;
+}
+
+.peopleFollowers {
+    font-family: gill-ie !important;
+}
+
+.peopleStores {
+    font-family: gill-ie !important;
+}
+
+.noOfFollowers {
+    font-family: gill-ie !important;
+}
+
+.peopleStoreName {
+    font-family: gill-ie !important;
+}
+
+.peopleSocialRow {
+    font-family: gill-ie !important;
+}
+
+.leftPanelCategory {
+    font-family: gillb-ie !important;
+}
+
+.checkPriceLabel {
+    font-family: gill-ie !important;
+}
+
+.searchBox div.sexy input {
+    font-family: gill-ie !important;
+}
+
+.searchBox div.sexy li {
+    font-family: gill-ie !important;
+}
+
+.searchBox div.sexy a, div.sexy a:visited, div.sexy a:active {
+    font-family: gill-ie !important;
+}
+
+.moveDrop div.sexy input {
+    font-family: gillb-ie !important;
+}
+
+.moveDrop div.sexy li {
+    font-family: gill-ie !important;
+}
+
+.moveDrop div.sexy a, div.sexy a:visited, div.sexy a:active {
+    font-family: gill-ie !important;
+}
+
+.firstDropdown div.sexy input {
+    font-family: gill-ie !important;
+}
+
+.firstDropdown div.sexy li {
+    font-family: gill-ie !important;
+}
+
+.shoppingCartText {
+    font-family: gill-ie !important;
+}
+
+.priceAmount {
+    font-family: gill-ie !important;
+}
+
+.productsHeading {
+    font-family: gill-ie !important;
+}
+
+.quantityHeading {
+    font-family: gill-ie !important;
+}
+
+.categoriesColumn input {
+    font-family: gill-ie !important;
+}
+
+.stableTextCheckbox {
+    font-family: gill-ie !important;
+}
+
+.cartv {
+    font-family: gill-ie !important;
+}
+
+.showPictureText {
+    font-family: gill-ie !important;
+}
+
+.shopText {
+    font-family: gill-ie !important;
+}
+
+.costAmount {
+    font-family: gill-ie !important;
+}
+
+.totalStyle {
+    font-family: gillb-ie !important;
+}
+
+.rupeeAmount {
+    font-family: gillb-ie !important;
+}
+
+.saving_text {
+    font-family: gill-ie !important;
+}
+
+.total_amount_text {
+    font-family: gill-ie !important;
+}
+
+.rupeeAmountNew {
+    font-family: gillb-ie !important;
+}
+
+.redeemCredits {
+    font-family: gillb-ie !important;
+}
+
+.continueShopping {
+    font-family: gillb-ie !important;
+}
+
+.proceedCheckout {
+    font-family: gillb-ie !important;
+}
+
+.productName {
+    font-family: gill-ie !important;
+}
+
+.textareaClass {
+    font-family: gill-ie !important;
+}
+
+.newRupeeStyle {
+    font-family: gillb-ie !important;
+}
+
+.inputClass {
+    font-family: gill-ie !important;
+}
+
+.yellowDiv {
+    font-family: gill-ie !important;
+}
+
+.message_text {
+    font-family: gill-ie !important;
+}
+
+.darkFont {
+    font-family: gill-ie !important;
+}
+
+.lightFont {
+    font-family: gill-ie !important;
+}
+
+.textTitle {
+    font-family: gill-ie !important;
+}
+
+.formContainer input[type="text"], .formContainer input[type="email"] {
+    font-family: gill-ie !important;
+}
+
+textarea {
+    font-family: gill-ie !important;
+}
+
+.darkFont1 {
+    font-family: gillb-ie !important;
+}
+
+.link_box {
+    font-family: gillb-ie !important;
+}
+
+.previewText {
+    font-family: gill-ie !important;
+}
+
+.previewText1 {
+    font-family: gill-ie !important;
+}
+
+.storeSectionText2 {
+    font-family: gillb-ie !important;
+}
+
+.tiannaMeilingerText {
+    font-family: gill-ie !important;
+}
+
+.storeJeansText {
+    font-family: gill-ie !important;
+}
+
+.storeSectionText {
+    font-family: gillb-ie !important;
+}
+
+.personalText {
+    font-family: gill-ie !important;
+}
+
+.labelText {
+    font-family: gill-ie !important;
+}
+
+.formRow input[type="text"] {
+    font-family: gill-ie !important;
+}
+
+.formRow input[type="email"] {
+    font-family: gill-ie !important;
+}
+
+.formRow textarea {
+    font-family: gill-ie !important;
+}
+
+.checkText {
+    font-family: gill-ie !important;
+}
+
+.fancText {
+    font-family: gill-ie !important;
+}
+
+.bannerDescriptionText {
+    font-family: gill-ie !important;
+}
+
+.badgesText {
+    font-family: gill-ie !important;
+}
+
+.storeSectionText {
+    font-family: gillb-ie !important;
+}
+
+.shopHomeText {
+    font-family: gill-ie !important;
+}
+
+.storeShopOwnerText {
+    font-family: gillb-ie !important;
+}
+
+.storeLeahText {
+    font-family: gillb-ie !important;
+}
+
+.newYorkText {
+    font-family: gill-ie !important;
+}
+
+.storeContactText {
+    font-family: gill-ie !important;
+}
+
+.storeShopRankingText {
+    font-family: gillb-ie !important;
+}
+
+.hurrayOfferText {
+    font-family: gill-ie !important;
+}
+
+.storeJeansText {
+    font-family: gill-ie !important;
+}
+
+.numberBold {
+    font-family: gillb-ie !important;
+}
+
+.imageDescriptionText {
+    font-family: gill-ie !important;
+}
+
+.storeSectionText2 {
+    font-family: gillb-ie !important;
+}
+
+.hiddenCategories {
+    font-family: gill-ie !important;
+}
+
+.categoryText {
+    font-family: gill-ie !important;
+}
+
+.allText {
+    font-family: gill-ie !important;
+}
+
+.addCategoryButton {
+    font-family: gill-ie !important;
+}
+
+.save_icon {
+    font-family: gillb-ie !important;
+}
+
+.cancel_icon {
+    font-family: gillb-ie !important;
+}
+
+.addCategorySaveCancelContent input {
+    font-family: gill-ie !important;
+}
+
+.dragDropText {
+    font-family: gill-ie !important;
+}
+
+.itemsTextContainer {
+    font-family: gill-ie !important;
+}
+
+.itemsText {
+    font-family: gill-ie !important;
+}
+
+.quantityTextContainer {
+    font-family: gill-ie !important;
+}
+
+.priceTextContainer {
+    font-family: gill-ie !important;
+}
+
+.actionTextContainer {
+    font-family: gill-ie !important;
+}
+
+.chairItem1 {
+    font-family: gill-ie !important;
+}
+
+.quantityTextContainerRow {
+    font-family: gill-ie !important;
+}
+
+.priceTextContainerRow {
+    font-family: gill-ie !important;
+}
+
+.actionTextContainerRow {
+    font-family: gill-ie !important;
+}
+
+.chairCategoryText {
+    font-family: gill-ie !important;
+}
+
+.shop_text {
+    font-family: gill-ie !important;
+}
+
+.policyDetails {
+    font-family: gill-ie !important;
+}
+
+.text_label {
+    font-family: gill-ie !important;
+}
+
+.faq_text {
+    font-family: gillb-ie !important;
+}
+
+.ques {
+    font-family: gill-ie !important;
+}
+
+.ans {
+    font-family: gill-ie !important;
+}
+
+.detail_text {
+    font-family: gill-ie !important;
+}
+
+.address_inputs {
+    font-family: gill-ie !important;
+}
+
+.add_area {
+    font-family: gill-ie !important;
+}
+
+.uniqueChairText {
+    font-family: gill-ie !important;
+}
+
+.priceQuantityText {
+    font-family: gill-ie !important;
+}
+
+.categoryChairText {
+    font-family: gill-ie !important;
+}
+
+.changeItalicText {
+    font-family: gill-ie !important;
+}
+
+.checkText {
+    font-family: gill-ie !important;
+}
+
+.darkFont1 {
+    font-family: gillb-ie !important;
+}
+
+.textTitle {
+    font-family: gill-ie !important;
+}
+
+.styleboardMainContainer textarea {
+    font-family: gill-ie !important;
+}
+
+.itemTasteText {
+    font-family: gill-ie !important;
+}
+
+.exploreText {
+    font-family: gill-ie !important;
+}
+
+.profileTextHolder {
+    font-family: gill-ie !important;
+}
+
+.bragButton {
+    font-family: gillb-ie !important;
+}
+
+.retakeTestButton {
+    font-family: gillb-ie !important;
+}
+
+.otherPeopleText {
+    font-family: gill-ie !important;
+}
+
+.picksText {
+    font-family: gill-ie !important;
+}
+
+.showMoreItems {
+    font-family: gill-ie !important;
+}
+
+.sortCriteria {
+    font-family: gill-ie !important;
+}
+
+.sortSeparator {
+    font-family: gill-ie !important;
+}
+
+.italicSmallText {
+    font-family: gill-ie !important;
+}
+
+.networkPplname {
+    font-family: gill-ie !important;
+}
+
+.networkPplPink {
+    font-family: gill-ie !important;
+}
+
+.noOfNetworkItems {
+    font-family: gill-ie !important;
+}
+
+.storeJeansText {
+    font-family: gill-ie !important;
+}
+
+.rightPanelDescSmall3 {
+    font-family: gill-ie !important;
+}
+
+.rightPanelDescSmall2 {
+    font-family: gill-ie !important;
+}
+
+.moreActivitiesText {
+    font-family: gill-ie !important;
+}
+
+.networkPplImgGray {
+    font-family: gill-ie !important;
+}
+
+.bannerHeadingText {
+    font-family: bebas-ie !important;
+}
+
+.bannerBottomTextBottom {
+    font-family: bebas-ie !important;
+}
+
+.addCartText {
+    padding-top: 2px;
+}
+
+.signIn_Text {
+    font-family: gillb-ie !important;
+}
+
+.orText {
+    font-family: gillb-ie !important;
+}
+
+.signIn_Text_address_text {
+    font-family: gillb-ie !important;
+}
+
+.text_Field input[type] {
+    font-family: gillb-ie !important;
+}
+
+.getStarted {
+    font-family: gillb-ie !important;
+}
+
+.checkboxText2 {
+    font-family: gillb-ie !important;
+}
+
+.checkboxTextLeft {
+    font-family: gillb-ie !important;
+}
+
+.signInImage {
+    font-family: gillb-ie !important;
+}
+
+.accountImage {
+    font-family: gillb-ie !important;
+}
+
+.errorMessage {
+    font-family: gilli-ie !important;
+}

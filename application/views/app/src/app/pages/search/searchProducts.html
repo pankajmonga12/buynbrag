@@ -1,0 +1,119 @@
+<div class="" ng-controller="SearchProductsController">
+
+    <ul class="spinner" ng-hide="hideSpinner">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <div class="" ng-show="noResults">
+        <h3>No results.</h3>
+    </div>
+
+    <div infinite-scroll="getProducts()" infinite-scroll-distance='1'>
+    <div class="fanciedProductsContainer relative" masonry-resize>
+
+        <div class="inlineBlock" ng-repeat="product in products">
+        <div class="imageRepetition" masonry-layout>
+
+            <ul class="{{ ($index%2==0) && 'fancyProductMediumContainer row' || 'fancyProductMediumContainer row rightMar0' }}">
+                    <li class="fanciedByInfoContainer font15 span1">
+                        <a ng-href="profile/fancy/{{product.userID}}" class="fanciedPersonName relative block" role="button" data-toggle="modal">
+                            <img ng-src="{{userImg({id: product.userFBID, dimension: 75, gender: product.userGender})}}">
+                            <!--<div class="hover_shine cssTransitionSlow"></div>-->
+                            <span class="tooltips left invisible cssTransitionSlow">{{product.userFullName}}</span>
+                            <!-- <span class="tooltips hide">{{img.userFullName}}</span> -->
+                        </a>
+                        <!--<div class="fanciedPersonRank">-->
+                            <!--<span>{{img.userRank}}</span>-->
+                            <!--<span class="rankText">User Rank</span>-->
+                        <!--</div>-->
+                        <!--<button class="followUserBtn"><span class="followIconWhite"></span><span class="followText">Follow</span></button>-->
+                        <a href="profile/badges/{{product.userID}}" data-toggle="modal" class="fanciedByTopBadge relative hidden-phone">
+                            <img ng-src="{{product.badgeSrc}}" alt="{{product.userFullName}} top badge"/>
+                            <span class="tooltips left invisible cssTransitionSlow">{{product.badgeText}}</span>
+                        </a>
+                    </li>
+
+                    <li class="span5 fancyItem shadedBackground">
+                        <div class="fancyImageBG  _Effect-PF">
+                            <div class="fancyItemImageContainer PFE-wrapper" resize-image>
+                                <a class="baseContainer" ng-href="product/{{product.productName | beautify}}/{{product.productID}}">
+                                    <img class="fancyItemImage" ng-src="{{product.src}}{{imageType}}.jpg" alt="{{product.productName}}">
+                                    <span class="imgHoverState"></span>
+
+                                    <div class="itemDetailsContainer">
+                                        <div class="{{ (product.productIsOnDiscount == 1) && 'productOriPrice strike' || 'productOriPrice hide' }}"><i class="icon-fontawesome-webfont-5"></i>{{product.productSellingPrice}}</div>
+                                        <div class="productDiscountedPrice bnbRedFont"><i class="icon-fontawesome-webfont-5"></i>{{product.discountedPrice}}</div>
+
+                                        <div class="hidden-phone outOfStockText {{ (product.productQuantity < 1) && 'productQuantityInfo' || 'productQuantityInfo hide' }}">
+                                            <span class="quantityText">Out of Stock!</span>
+                                        </div>
+
+                                    </div>
+                                </a>
+
+                                <!--<figcaption class="flipWrapper">-->
+                                    <!--<ul class="profileSocial unstyled">-->
+                                        <!--<li class="fb-share-button" data-href="https://buynbrag.com/product/{{img.productName | beautify}}/{{img.productID}}" data-type="icon"></li>-->
+                                        <!--<li><a href="#" class="icon-facebook-1 "></a></li>-->
+                                        <!--<li><a href="#" class="icon-twitter"></a></li>-->
+                                        <!--<li><a href="#" class="icon-google-plus"></a></li>-->
+                                        <!--<li><a href="#" class="icon-fontello"></a></li>-->
+                                    <!--</ul>-->
+                                <!--</figcaption>-->
+
+                            </div>
+
+                            <btn-fancy pid="{{product.productID}}" sid="{{product.storeID}}" pname="{{product.productName}}" uname="{{user.userdata.name}}" has-fancied="{{product.hasFancied}}"></btn-fancy>
+
+                            <btn-tag pid="{{product.productID}}" sid="{{product.storeID}}" pname="{{product.productName}}" uname="{{user.userdata.name}}"></btn-tag>
+
+                            <share-btns urltoshare="https://buynbrag.com/product/{{product.productName | beautify}}/{{product.productID}}" productname="{{product.productName}}"></share-btns>
+
+                        </div>
+
+                        <div class="fancyItemDetails">
+                            <a ng-href="product/{{product.productName | beautify}}/{{product.productID}}"><h5 class="fancyItemName">{{product.productName}}</h5></a>
+                            <!-- from <a ng-href="store/{{product.storeName | beautify}}/{{product.storeID}}" title=""><h5 class="fancyItemName">{{product.storeName}}</h5></a>
+                            <div class="fancyItemStats">
+                                <div class="fancyIcon inlineBlock">
+                                    <span class="fancyCount bnbRedFont">{{product.productFancyCounter}}</span> brags
+                                </div>
+                                <div class="viewIcon inlineBlock">
+                                    <span class="viewCount bnbRedFont">{{product.productVisitCounter}}</span> views
+                                </div>
+                            </div> -->
+
+                            <!--<div class="newCTA_wrapper">-->
+                                <!--<i class="newTagBtn" btn-tag ng-click="triggerTag()" pid="{{img.productID}}" sid="{{img.storeID}}" pname="{{img.productName}}" uname="{{user.userdata.name}}"></i>-->
+                                <!--&lt;!&ndash;<i class="newShareBtn" btn-share></i>&ndash;&gt;-->
+                            <!--</div>-->
+                        </div>
+
+                        <!--<div class="altUserDetails hide">-->
+                            <!--<a ng-href="profile/fancy/{{product.userID}}" class="fanciedPersonImg inlineBlock" role="button" data-toggle="modal">-->
+                                <!--<img ng-src="{{userImg({id: product.userFBID, dimension: 75, gender: product.userGender})}}">-->
+                            <!--</a>-->
+                            <!--<div ng-click="openModal('prodBraggedUserModal', {pid: product.productID})" class="inlineBlock userWrapper">-->
+                                <!--<span class="userName block">-->
+                                    <!--&lt;!&ndash;<a href="" ng-click="openUserInfo(img.userID)" class="fanciedPersonName inlineBlock" role="button" data-toggle="modal">&ndash;&gt;-->
+                                        <!--{{product.userFullName}}-->
+                                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                <!--</span>-->
+                                <!--&lt;!&ndash; <span class="countText">&nbsp;added this to&nbsp;<span class="bnbRedFont">{{product.bragListName}}</span></span> &ndash;&gt;-->
+                                <!--<span class="countText"><span class="bnbRedFont">+{{+product.productFancyCounter-1}}</span>&nbsp;more bragged this</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </li>
+
+                </ul>
+
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+</div>

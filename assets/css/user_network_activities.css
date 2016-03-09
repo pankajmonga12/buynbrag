@@ -1,0 +1,382 @@
+@charset "utf-8";
+.roundNetwork_active {
+    background-image: url(../images/fancy/networkactivities_click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    width: 65px;
+}
+
+.roundNetwork {
+    background-image: url(../images/fancy/networkactivities_normal.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    width: 65px;
+}
+
+.roundNetwork:hover {
+    background-image: url(../images/fancy/networkactivities_hover.png);
+}
+
+.roundNetwork:active {
+    background-image: url(../images/fancy/networkactivities_click.png);
+}
+
+.scrollerContents {
+    overflow: hidden;
+    width: 302px;
+    height: auto !important;
+}
+
+.sliderParentDiv {
+    overflow: hidden;
+    height: auto !important;
+    width: auto !important;
+}
+
+.slider {
+    overflow: hidden;
+    width: 906px;
+    height: auto !important;
+}
+
+.topDotSeparatorAct {
+    background: url("../images/top_dot_seperator.png") repeat-x scroll 0 0 transparent;
+    height: 3px;
+    width: 694px;
+}
+
+.newWidth {
+    width: 680px !important;
+}
+
+.sortbyText {
+    font-family: gill;
+    font-size: 15px;
+    float: left;
+    padding: 19px 12px 19px 20px;
+    text-shadow: 0 1px 0 #fff;
+    color: #999;
+    cursor: pointer;
+}
+
+.sortCriteria {
+    color: #666;
+    font-family: gill;
+    font-size: 18px;
+    float: left;
+    padding-top: 17px;
+}
+
+.sortSeparator {
+    color: #999;
+    font-family: gill;
+    font-size: 18px;
+    float: left;
+    padding: 16px 10px;
+}
+
+.networkContainer {
+    width: 680px;
+    height: auto;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.networkContents {
+    background: #f2f2f3;
+    background: -moz-linear-gradient(top, #f1f3f3, #f3f4f4);
+    background: -webkit-linear-gradient(top, #f1f3f3, #f3f4f4);
+    background: -o-linear-gradient(top, #f1f3f3, #f3f4f4);
+    background: -ms-linear-gradient(top, #f1f3f3, #f3f4f4);
+    -pie-background: linear-gradient(top, #f1f3f3, #f3f4f4);
+    width: 666px;
+    height: auto;
+    padding: 7px 7px 10px;
+    display: inline-block;
+    border-bottom: 1px solid #CFCFCF;
+    border-top: 1px solid #FEFEFE;
+}
+
+.networkPplImg {
+    background-color: #FFF;
+    height: 96px;
+    padding: 3px;
+    width: 96px;
+    float: left;
+    margin-right: 11px;
+}
+
+.italicSmallText {
+    color: #666;
+    font-family: gill_italic;
+    font-size: 13px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+}
+
+.networkPplname {
+    color: #000;
+    font-family: gill;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.networkPplPink {
+    color: #a65e6f;
+    font-family: gill;
+}
+
+.networkPplTime {
+    color: #b5b5b5;
+    font-size: 11px;
+    font-family: "Trebuchet MS";
+    font-style: italic;
+}
+
+.networkItemImg {
+    width: 128px;
+    height: 108px;
+    background-color: #fff;
+    float: left;
+    margin-right: 5px;
+    padding: 3px;
+}
+
+.noOfNetworkItems {
+    background-color: #f36;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-family: gill;
+    padding-top: 42px;
+    width: 134px;
+    height: 72px;
+    float: left;
+}
+
+.noOfItems {
+    font-size: 26px;
+}
+
+.noOfNetworkItemsSmall {
+    background-color: #F36;
+    color: #FFF;
+    float: left;
+    height: 46px;
+    margin-right: 10px;
+    padding-top: 16px;
+    text-align: center;
+    width: 62px;
+}
+
+.networkComments {
+    clear: both;
+    width: 680px;
+    height: auto;
+    background: #ededea;
+    background: -moz-linear-gradient(top, #eceeee, #e9e9ee);
+    background: -webkit-linear-gradient(top, #eceeee, #e9e9ee);
+    background: -o-linear-gradient(top, #eceeee, #e9e9ee);
+    background: -ms-linear-gradient(top, #eceeee, #e9e9ee);
+    -pie-background: linear-gradient(top, #eceeee, #e9e9ee);
+    border-top: 1px solid #FEFEFE;
+    margin-top: -4px;
+}
+
+.commentsHeader {
+    height: 34px;
+    width: 680px;
+    border-bottom: 1px dotted #666;
+}
+
+.commentsIconSmall {
+    background-image: url(../images/activities/comments_normal.png);
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 17px;
+    margin: 9px 6px 0 11px;
+    float: left;
+}
+
+.commentsText {
+    color: #666;
+    font-family: "Trebuchet MS";
+    font-style: italic;
+    font-size: 13px;
+    padding-top: 7px;
+    float: left;
+}
+
+.viewIconSmall {
+    background-image: url(../images/activities/view_normal.png);
+    width: 17px;
+    height: 15px;
+    float: left;
+    margin: 9px 8px 0 12px;
+}
+
+.viewIconSmall:hover {
+    background-image: url(../images/activities/view_hover.png);
+}
+
+.viewIconSmall:active {
+    background-image: url(../images/activities/view_click.png);
+}
+
+.commentRow {
+    border-bottom: 1px dotted #333;
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 680px;
+    clear: both;
+}
+
+.networkCommentBox {
+    border-bottom: 1px solid #D3CED3;
+    clear: both;
+    height: 60px;
+    width: 680px;
+    border-top: 1px solid #FEFEFE;
+    margin-top: -4px;
+}
+
+.borderStyle {
+    border-bottom: 1px solid #D3CED3 !important;
+}
+
+.NetworkCommentor {
+    float: left;
+    height: 49px;
+    margin: 5px 10px;
+    width: 49px;
+}
+
+.marginNetwork {
+    margin-top: 12px !important;
+}
+
+.storeJeansText {
+    font-family: gill;
+    font-size: 24px;
+    padding-left: 8px;
+    padding-bottom: 5px;
+    width: 280px;
+    color: #333;
+}
+
+.voteButton {
+    background: #767676;
+    background: -moz-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -webkit-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -o-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -ms-linear-gradient(bottom, #666 50%, #767676 0);
+    -pie-background: linear-gradient(bottom, #666 50%, #767676 0);
+    border: none;
+    border-bottom: 1px solid #DFDBD9;
+    box-shadow: 0 5px 0 #959696;
+    -moz-box-shadow: 0 5px 0 #959696;
+    -webkit-box-shadow: 0 5px 0 #959696;
+    -khtml-box-shadow: 0 5px 0 #959696;
+    -pie-box-shadow: 0 5px 0 #959696;
+    color: #FFF;
+    cursor: pointer;
+    float: left;
+    font-family: gill_bold;
+    font-size: 16.73px;
+    height: 31px;
+    margin-right: 8px;
+    text-align: center;
+    width: 68px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.voteButton:hover {
+    background: #969595;
+    background: -moz-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -webkit-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -o-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -ms-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    -pie-background: linear-gradient(bottom, #8b8989 50%, #969595 0);
+}
+
+.voteButton:active {
+    background: #535353;
+    background: -moz-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -webkit-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -o-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -ms-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    -pie-background: linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+}
+
+.newBackground {
+    background: #faf9fa !important;
+    background: -moz-linear-gradient(top, #f9f8f9, #f7f7f9);
+    background: -webkit-linear-gradient(top, #f9f8f9, #f7f7f9);
+    background: -o-linear-gradient(top, #f9f8f9, #f7f7f9);
+    background: -ms-linear-gradient(top, #f9f8f9, #f7f7f9);
+    -pie-background: linear-gradient(top, #f9f8f9, #f7f7f9);
+}
+
+.spanStyleboard {
+    color: #333;
+    font-family: gill;
+}
+
+.moreActivities {
+    border-bottom: 1px solid #D3CED3;
+    border-top: 1px solid #FEFEFE;
+    clear: both;
+    height: 42px;
+    margin-top: -4px;
+    width: 680px;
+    background: #ededea;
+    background: -moz-linear-gradient(top, #eceeee, #e9e9ee);
+    background: -webkit-linear-gradient(top, #eceeee, #e9e9ee);
+    background: -o-linear-gradient(top, #eceeee, #e9e9ee);
+    background: -ms-linear-gradient(top, #eceeee, #e9e9ee);
+    -pie-background: linear-gradient(top, #eceeee, #e9e9ee);
+}
+
+.moreActivitiesText {
+    font-family: gill;
+    font-size: 15px;
+    color: #666;
+    padding: 13px;
+    cursor: pointer;
+}
+
+.moreName {
+    color: #333;
+}
+
+.hasShared {
+    color: #999;
+    font-family: gill_italic;
+}
+
+.roundMyAct_active {
+    background-image: url(../images/fancy/myactivities_click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.networkPplImgGray {
+    background-color: #DDD;
+    color: #666;
+    font-family: gill;
+    font-size: 32px;
+    height: 68px;
+    padding: 14px 10px;
+    width: 76px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.oldWidthStyle {
+    width: 302px !important;
+}

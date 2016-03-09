@@ -1,0 +1,107 @@
+<div id="midSection" class="container checkoutCartPage" cartpagecheckout>
+
+    <h4>Review your order</h4>
+
+    <div class="cartContentContainer">
+        <div class="loadingOverlay" ng-show="showSpinner">
+            <ul class="spinner">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <h2 class="ng-hide" ng-show="emptyCart">Your cart is empty.</h2>
+
+        <div class="cart-list" ng-show="!emptyCart">
+            <table class="tb-cart table" ng-repeat="store in cartData.stores" ng-show="store.itemCount > 0">
+                <thead>
+                    <tr>
+                        <th class="item">Orders fulfilled by<em><a ng-href="store/{{store.storeName | beautify}}/{{store.storeID}}" title="">{{store.storeName}}</a></em>( {{store.itemCount}} )</th>
+                        <th class="price">Price</th>
+                        <th class="qty">Quantity</th>
+                        <th class="total">Total</th>
+                    </tr>
+                </thead>
+                <tbody><!-- ngRepeat: item in cartData.items -->
+                    <tr ng-repeat-start="item in store.items">
+                        <td class="item">
+                            <div class="relative cartDetailWrapper">
+
+                                <a ng-href="product/{{item.productName | beautify}}/{{item.productID}}" class="figure">
+                                    <span class="figure-img">
+                                        <img ng-src="{{s3baseUrl}}{{item.storeID}}/{{item.productID}}/img1_240x200.jpg">
+                                    </span>
+                                    <b class="figcaption ng-binding">{{item.productName}}</b>
+                                </a>
+
+                                <span class="detail">
+                                    <em class="option" ng-show="item.variants.sizeVariants.length > 0">
+                                        <small>Size:</small>
+                                        <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedSize" ng-options="variant.size for variant in item.variants.sizeVariants" ng-change="updateCart(item)"></select>
+                                    </em> 
+
+                                    <em class="option" ng-show="item.variants.colorVariants.length > 0">
+                                        <small>Color:</small>
+                                        <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedColor" ng-options="variant.color for variant in item.variants.colorVariants" ng-change="updateCart(item)"></select>
+                                    </em>  
+
+                                    <em class="arrival">
+                                        <small>Estimated Arrival</small>
+                                        <span class="ng-binding">{{item.dispatchDate | date:'mediumDate'}}</span></em></span></div>
+                        </td>
+                        <td class="price ng-binding">Rs. {{item.sellingPrice}}</td>
+
+                        <td class="qty">
+                            <select class="embo-select ng-pristine ng-valid" cid="1720089" sicid="5866195" ng-model="item.selectedQuantity" ng-options="quantity.num for quantity in item.quantityRange" ng-change="updateCart(item)"></select>
+                        </td>
+
+                        <td class="total">
+                            <div class="relative"><b class="ng-binding">Rs. {{item.totalPayable}}</b>
+                                <button class="btn btn-mini btn-red pull-right removeItm" ng-click="deleteCartItem(item)">
+                                    <i class="icon-trash"></i>Remove
+                                </button>
+                            </div>
+                        </td>
+                    </tr> 
+                    <tr class="hide" ng-repeat-end>
+                        <td colspan="4" class="space"></td>
+                    </tr>
+                    <!-- end ngRepeat: item in cartData.items -->
+                    
+                </tbody>
+            </table>
+
+
+            <div class="totalSummary">
+                <div class="redeemCouponContainer span6">
+                    <a href="" ng-click="openModal('couponSelectModal')">Redeem coupon or BragBucks</a>
+                    <div class="couponSuccess" ng-show="cartData.coupon">You availed discount of&nbsp;<em><strong>Rs {{cartData.discount}}</strong></em>&nbsp;using coupon&nbsp;<em><strong>{{cartData.coupons[0].couponID}}</strong></em>.</div>
+                    <!-- <div class="couponSuccess">You availed discount of&nbsp;<em><strong>Rs 500</strong></em>&nbsp;using&nbsp;<em><strong>1000 BragBucks</strong></em>.</div> -->
+                    <div class="couponChange" ng-show="cartData.coupon"><span class="changeText">Change coupon</span>&nbsp;or&nbsp;<span class="changeText" ng-click="removeCoupon()">Remove coupon</span>?</div>
+                </div>
+                <div class="rightFloatWrapper span4 pull-right">
+                    <div class="grandTotal">Grand total :<strong class="pull-right">Rs {{cartData.totalAmount}}</strong></div>
+                    <div class="discounts">Total Discounts :<strong class="pull-right">-&nbsp;&nbsp;Rs {{cartData.discount}}</strong></div>
+                    <div class="separator"></div>
+                    <div class="finalPrice">Total payable :<strong class="pull-right">Rs {{cartData.totalPayable}}</strong></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer ng-scope">
+        <button class="btn btn-blue pull-left" role="button" data-dismiss="modal">Continue shopping</button>
+        <!--<button class="btn btn-blue">Redeem coupon or BragBucks</button>-->
+        <a target="" ng-href="checkout" ng-click="saveCart()" class="btn btn-red" role="button">Checkout now</a>
+    </div>
+
+</div>
+
+<!--================== End Mid Section ================================-->
+
+
+
+<!--================== Coupon Modal section ================================-->
+
+<div id="couponSelectModal" dynamic-modal url="/application/views/app/src/app/pages/cart/redeemCouponModal.html" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false"></div>

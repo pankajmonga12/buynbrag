@@ -1,0 +1,568 @@
+/* Retina display rules */
+@media (min--moz-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3/2),
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+}
+
+// Helper classes
+.visible-iphone-portrait, .visible-iphone-landscape{
+  display: none !important;
+}
+
+// Height based media queries
+@media (max-height: 768px){
+
+}
+
+@media (min-width: 979px){
+
+}
+
+@media (max-width: 979px){
+
+  .altLanding .welcomeBg {
+    min-height: 435px;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  //  Post registration page styles
+
+  .postRegPage{
+
+    .storeProductsPreviewContainer{
+      min-height: 72px;
+    }
+  }
+
+  .regBragProducts {
+
+    .fanciedProductsContainer{
+      text-align: center;
+    }
+
+    .fancyItem {
+      min-height: 87px;
+    }
+  }
+
+  .regFollowPeople {
+
+    .storeBrandingContainer {
+      min-height: 57px;
+    }
+
+    .storeBannerName {
+      font-weight: normal;
+      padding: 0;
+    }
+  }
+
+  //  End Post registration page styles
+
+  //  Alt landing page styles
+
+  .altLanding {
+
+    .fancyItem {
+      min-height: 87px;
+    }
+  }
+
+  //  End Alt landing page styles
+}
+
+@media (max-width: 979px) and (min-width: 768px){
+
+  //  Post registration page styles
+
+  #midSection.postRegPage{
+    padding-top: 79px;
+
+    .msgBanner {
+      width: 724px;
+      height: 79px;
+
+      .backBtn, button{
+        width: 39px;
+        height: 39px;
+        top: 17px;
+        right: 0px;
+      }
+
+      .backBtn{
+        right: 45px;
+      }
+    }
+  }
+
+  .regFollowPeople {
+
+    .storeBannerName {
+      line-height: 1;
+    }
+
+    .userStatsContainer {
+      top: 36%;
+      left: 17%;
+    }
+
+    .storeBannerButton {
+      margin: 10px 7px;
+    }
+  }
+
+  //  End Post registration page styles
+
+  //  Start cart styling
+
+  #checkoutModal {
+    width: auto;
+    margin: 0 auto;
+    left: 10px;
+    right: 10px;
+
+    tbody {
+      font-size: 0.8rem !important;
+    }
+
+    .removeItm {
+      right: 8px !important;
+    }
+  }
+
+  //  End Start cart styling
+}
+
+@media (max-width: 767px){
+
+  body{
+    padding: 0;
+  }
+
+  .headerTop{
+    padding: 0 10px;
+  }
+
+  //  Alt landing page styles
+
+  .landingActive{
+
+    header{
+      .logo {
+        display: inherit !important;
+      }
+    }
+
+    .btn.btn-navbar{
+      display: none;
+    }
+  }
+
+  .altLanding{
+
+    .welcomeBg {
+      min-height: 0px;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .innerTxtWrapper {
+      position: static;
+      margin-top: 46px;
+      padding-top: 40px;
+
+      h1 {
+        font-size: 3.4rem;
+        line-height: 1;
+        margin-top: 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .fbBtn {
+      margin: 30px auto;
+
+      &.pageEndBtn{
+        left: 0;
+      }
+    }
+
+    .imageRepetition {
+      width: 32%;
+      display: inline-block !important;
+    }
+
+    .fancyProductMediumContainer {
+      margin: 5% 5% 3%;
+    }
+
+    .fancyItem {
+      margin-bottom: 0;
+    }
+  }
+
+  // End  Alt landing page styles
+
+  //  Post registration page styles
+
+  .postRegPage{
+    margin-top: 0 !important;
+    padding-top: 25px !important;
+
+    .storeSelectContainer{
+      padding-top: 64px;
+      position: relative;
+    }
+
+    .msgBanner{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      width: 99%;
+      backface-visibility: hidden;
+      height: 75px;
+      padding: 6px 10px;
+
+      .bannerText, .subHeading{
+        display: block !important;
+      }
+
+      .backBtn, button{
+        width: 130px;
+        height: 33px;
+        top: 16px;
+        right: 4px;
+        border-radius: 1px;
+        opacity: 1 !important;
+      }
+
+      .backBtn{
+        display: none !important;
+      }
+    }
+
+    .inlineBlock{
+      width: 100%;
+    }
+
+    ul.span6{
+      margin: 0 auto 20px auto !important;
+    }
+  }
+
+  .regBragProducts {
+
+    .imageRepetition{
+      width: 32%;
+      display: inline-block !important;
+    }
+
+    .fancyProductMediumContainer {
+      margin: 0 5% 1rem;
+    }
+
+    .storeSelectContainer {
+      padding-top: 47px;
+    }
+  }
+
+  .regFollowPeople{
+
+    .userImg {
+      width: 8%;
+      margin: 11px;
+    }
+
+    .storeBannerName {
+      line-height: 2rem;
+      width: 65% !important;
+    }
+
+    .userStatsContainer {
+      top: 43%;
+      left: 11.5%;
+    }
+
+    .storeBannerButton {
+      position: absolute;
+    }
+  }
+
+  //  End Post registration page styles
+
+  //  Start cart styling
+
+  #checkoutModal {
+    width: auto;
+    margin: 0 auto;
+    left: 10px;
+    right: 10px;
+
+    tbody {
+      font-size: 0.8rem !important;
+    }
+
+    .removeItm {
+      right: 8px !important;
+    }
+  }
+
+  //  End Start cart styling
+
+}
+
+// iPhone 5 landscape media queries
+//@media only screen and (max-width : 600px) and (orientation:landscape){
+@media only screen and (max-width : 600px){
+
+  //  Post registration page styles
+
+  .hidden-iphone-landscape{
+    display: none !important;
+  }
+
+  .visible-iphone-landscape{
+    display: block !important;
+  }
+
+  .regFollowPeople{
+
+    .userImg {
+      width: 10%;
+      margin: 6px;
+    }
+
+    .storeBannerName {
+      line-height: 1rem;
+    }
+
+    .userStatsContainer {
+      top: 40%;
+      left: 13%;
+    }
+  }
+
+  //  End Post registration page styles
+}
+
+@media only screen and (max-width : 480px){
+  @import "../bootstrap/responsive-navbar";
+}
+
+
+@media only screen and (max-width : 320px){
+
+  .hidden-iphone-portrait{
+    display: none !important;
+  }
+
+  .visible-iphone-portrait{
+    display: inherit !important;
+  }
+
+//  Post registration page styles
+
+  .postRegPage{
+
+    .storeSelectContainer{
+//      padding-top: 85px;
+      padding-top: 135px;
+    }
+
+    .msgBanner{
+      text-align: center;
+      background: $bnbMidNightBlue;
+      height: 140px;
+      left: 0;
+      margin: 0;
+      top: 0;
+      width: 100%;
+      z-index: 99999;
+
+      button{
+        width: 100%;
+        margin: 0px;
+        height: 35px;
+        position: relative;
+        background: $bnbRed;
+        color: #FFFFFF;
+        margin-top: -15px;
+
+        &:after{
+          content: 'CONTINUE';
+        }
+      }
+    }
+
+    .postRegPage{
+
+      .btn{
+        width: 18%;
+      }
+
+      .storeProductsPreviewContainer img {
+        width: 33%;
+        padding: 0;
+        margin: 1px;
+      }
+    }
+
+  }
+
+  .regSelectCat {
+    .storeProductsPreviewContainer {
+      img {
+        width: 40%;
+        margin: 4% 2%;
+      }
+    }
+  }
+
+  .regBragProducts {
+
+    .imageRepetition{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .fancyItem{
+      margin-left: 0;
+    }
+
+    .fancyProductMediumContainer {
+      margin: 0 3% 0.3rem 3%;
+    }
+
+    .storeSelectContainer {
+      padding-top: 115px;
+    }
+
+    .mobileCtaWrapper {
+
+      button {
+        border: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .regFollowPeople{
+
+    .storeSelectContainer {
+      padding-top: 105px;
+    }
+
+    .userImg {
+      width: 18%;
+    }
+
+    .storeBannerName {
+      width: 75% !important;
+      max-width: 75%;
+    }
+
+    .userStatsContainer {
+      left: 23.5%;
+    }
+
+    .storeBannerButton {
+      float: none;
+      margin: 2px 0px 6px;
+      position: relative;
+      width: 100%;
+    }
+
+    .storeProductsPreviewContainer {
+      min-height: 63px;
+      margin-bottom: 0;
+    }
+
+    .storeDetailContainer{
+       .secondBtn{
+         .followBtn{
+           width: 100%;
+           margin: 10px 0px 15px;
+           padding-left: 15px;
+           display: block !important;
+         }
+       }
+    }
+
+    .storeProductsPreviewContainer img {
+      width: 33%;
+      padding: 0;
+      margin: 1px 0;
+    }
+
+//    .followBtn{
+//      display: block !important;
+//      width: 100%;
+//      margin: 10px 0 15px;
+//      padding-left: 15px;
+//    }
+  }
+
+//  End Post registration page styles
+
+//  Alt landing page styles
+
+  .altLanding{
+
+    .welcomeBg {
+      min-height: 300px;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .innerImgWrapper h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .imageRepetition {
+      width: 47%;
+    }
+
+    .fancyItem {
+      min-height: 112px;
+    }
+
+    .fbBtn {
+      min-width: 265px;
+
+      &.pageEndBtn{
+        font-size: 0.9rem;
+        padding-left: 55px;
+      }
+    }
+  }
+
+// End  Alt landing page styles
+
+}

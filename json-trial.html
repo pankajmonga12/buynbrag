@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>json trial</title></head>
+<body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+//<!--
+jQuery.ajax(
+{
+    type: "GET",
+    crossDomain: true,
+    url: "http://staging.buynbrag.com/async/cats",
+    success: function(result, status, xhr)
+    {
+		console.log("xhr = "+xhr.toSource());
+        console.log("result = "+result.toSource());
+    }
+});
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.registerContainer, .loginContainer, .forgotPasswordPage, .forgotPasswordPage{
+  position: relative;
+  top: 50px;
+}
+
+.registerForm, .loginForm{
+  input[type="text"], input[type="password"], input[type="email"]{
+    display: block;
+    width: 75%;
+  }
+  input[type="radio"]{
+    margin: 15px 15px 15px 5px;
+    position: relative;
+    top: -2px;
+  }
+
+  button{
+    display: block;
+  }
+}
+
+.loginForm{
+  float: none;
+  margin: 0 auto;
+
+  input[type="text"], input[type="password"], input[type="email"]{
+    width: 98%;
+  }
+
+  button{
+    width: 101%;
+    display: block;
+    margin: 25px auto;
+  }
+}
+
+.modal-body{
+  //overflow: hidden;
+
+  .registerContainer, .loginContainer{
+    top: 0;
+  }
+
+  .registerForm{
+    width: 450px;
+    input[type="text"], input[type="password"], input[type="email"]{
+      width: 97%;
+    }
+  }
+}
+
+.formError{
+  color: red;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  margin: -10px auto 5px auto;
+}

@@ -1,0 +1,529 @@
+@charset "utf-8";
+.middleBackground {
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    min-height: 640px !important;
+    background: url(../images/middle_background.png) repeat;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.designHover {
+    background-image: url(../images/Design-Hover.png);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 27px;
+    margin-top: 9px;
+    margin-left: 13px;
+    float: left;
+}
+
+.designLink1 {
+    float: left;
+    height: 47px;
+    cursor: pointer;
+    border-top: 1px solid #a0a0a0;
+    background: url("../images/middle_background.png") repeat;
+    -moz-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -webkit-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -khtml-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -pie-box-shadow: 0 1px 0 #f8f9f8 inset;
+    box-shadow: 0 1px 0 #f8f9f8 inset;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.bannerTextContentHolder {
+    position: relative;
+    width: 1002px;
+}
+
+.text_banner {
+    position: absolute;
+    top: 120px;
+    left: 11px;
+    z-index: 8;
+    width: 100%;
+}
+
+.text_change {
+    font-family: gill;
+    font-size: 66px;
+    color: #fff;
+    text-align: center;
+}
+
+.designText {
+    font-family: gill;
+    font-size: 20px;
+    color: #da3c63;
+    padding: 10px 10px 0 7px;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+}
+
+.designContainer {
+    width: 1024px;
+    margin: 0 auto;
+    height: auto;
+    padding: 30px 0;
+    position: relative;
+}
+
+.valueWrapper {
+    padding-bottom: 25px;
+    height: 100px;
+}
+
+.valueBox1 {
+    float: left;
+}
+
+.valueBox2 {
+    padding-left: 25px;
+    float: left;
+}
+
+.valueBox3 {
+    float: left;
+    padding-top: 45px;
+    padding-left: 12px;
+}
+
+.text_label {
+    color: #999;
+    font: 20px gill;
+    padding-bottom: 15px;
+    text-shadow: 0 1px 0 #FFF, -0.5px 0 0 #000;
+}
+
+.text_italic {
+    color: #999;
+    font: 15px gill_italic;
+    text-shadow: 0 1px 0 #FFF;
+    padding-left: 5px;
+}
+
+.bold_text {
+    float: left;
+    font: 24px gill_bold;
+    color: #c8c8c8;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.under_text {
+    font: 15px gill_italic;
+    text-shadow: 0 1px 0 #fff;
+    color: #999;
+    padding-top: 5px;
+}
+
+.bold_italic {
+    float: left;
+    font: 24px gill_italic;
+    color: #c8c8c8;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.small_tt {
+    float: left;
+    font: 24px gill;
+    color: #c8c8c8;
+    padding-left: 11px;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.valueBox1 input[type="text"] {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill;
+    font-size: 18px;
+    height: 40px;
+    padding-left: 11px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 467px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.website_name {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    float: left;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 40px;
+    padding-left: 11px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 285px;
+    margin: 0 10px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.website_name:focus {
+    background-color: #efefef;
+    color: #333;
+    font-size: 18px;
+}
+
+.website_wrapper {
+    padding-bottom: 20px;
+    height: 48px;
+}
+
+.valueBox1 input[type="text"]:focus {
+    background-color: #efefef;
+}
+
+.font .sbHolder {
+    background: #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 18px;
+    font-family: gill;
+    font-style: normal;
+    height: 40px;
+    padding-left: 10px;
+    vertical-align: middle;
+    width: 215px;
+    position: relative;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.font .sbSelector {
+    display: block;
+    height: 30px;
+    left: 12px;
+    line-height: 30px;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    width: 213px;
+    color: #333;
+}
+
+.font .sbSelector:link, .sbSelector:visited, .sbSelector:hover {
+    color: #333;
+    outline: none;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.font .sbToggle {
+    background: url(../images/popup_arrow.png) 0 10px no-repeat;
+    display: block;
+    height: 21px;
+    outline: none;
+    position: absolute;
+    right: 11px;
+    top: 4px;
+    width: 16px;
+}
+
+.font .sbToggle:hover {
+    background: url(../images/popup_arrow.png) 0 -10px no-repeat;
+}
+
+.font .sbToggleOpen {
+    background: url(../images/popup_arrow.png) 0 -30px no-repeat;
+}
+
+.font .sbToggleOpen:hover {
+    background: url(../images/popup_arrow.png) 0 -30px no-repeat;
+}
+
+.font .sbHolderDisabled {
+    background-color: #3C3C3C;
+    border: solid 1px #515151;
+}
+
+.font .sbOptions {
+    background-color: #f2f2f2;
+    border: 1px solid #D9D9D9;
+    list-style: none;
+    left: -1px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 38px !important;
+    width: 225px;
+    z-index: 9;
+    overflow-y: auto;
+    -moz-box-shadow: 2px 2px 2px #6e6f6f;
+    -webkit-box-shadow: 2px 2px 2px #6e6f6f;
+    -khtml-box-shadow: 2px 2px 2px #6e6f6f;
+    -pie-box-shadow: 2px 2px 2px #6e6f6f;
+    box-shadow: 2px 2px 2px #6e6f6f;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.font .sbOptions li {
+    padding: 0;
+}
+
+.font .sbOptions a {
+    display: block;
+    outline: none;
+    padding: 7px 0 7px 8px;
+    background: none repeat scroll 0 0 #E3E3E3;
+    border-bottom: 1px solid #D0D0D0;
+    border-top: 1px solid #F7F7F7;
+    color: #666;
+    cursor: pointer;
+    font: 15px gill_italic;
+    margin: 0;
+}
+
+.font .sbOptions a:link, .sbOptions a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+.font .sbOptions a:hover {
+    color: #666;
+    background: #fff;
+}
+
+.font .sbOptions li.last a {
+    border-bottom: none;
+}
+
+.font .sbOptions .sbDisabled {
+    color: #fff;
+    display: block;
+    padding: 7px 0 7px 8px;
+    background: none repeat scroll 0 0 #E3E3E3;
+    border-bottom: 1px solid #D0D0D0;
+    border-top: 1px solid #F7F7F7;
+    cursor: pointer;
+    font: 15px gill_italic;
+}
+
+.font .sbOptions .sbGroup {
+    border-bottom: dotted 1px #515151;
+    color: #EBB52D;
+    display: block;
+    font-weight: bold;
+    padding: 7px 0 7px 3px;
+}
+
+.font .sbOptions .sbSub {
+    padding-left: 17px;
+}
+
+.font1 .sbHolder {
+    background: #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 18px;
+    font-family: gill;
+    font-style: normal;
+    height: 39px;
+    padding-left: 10px;
+    vertical-align: middle;
+    width: 55px;
+    position: relative;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.font1 .sbSelector {
+    display: block;
+    height: 30px;
+    left: 12px;
+    line-height: 30px;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    width: 53px;
+    color: #333;
+}
+
+.font1 .sbSelector:link, .sbSelector:visited, .sbSelector:hover {
+    color: #333;
+    outline: none;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.font1 .sbToggle {
+    background: url(../images/popup_arrow.png) 0 10px no-repeat;
+    display: block;
+    height: 21px;
+    outline: none;
+    position: absolute;
+    right: 11px;
+    top: 4px;
+    width: 16px;
+}
+
+.font1 .sbToggle:hover {
+    background: url(../images/popup_arrow.png) 0 -10px no-repeat;
+}
+
+.font1 .sbToggleOpen {
+    background: url(../images/popup_arrow.png) 0 -30px no-repeat;
+}
+
+.font1 .sbToggleOpen:hover {
+    background: url(../images/popup_arrow.png) 0 -30px no-repeat;
+}
+
+.font
+
+1
+.sbHolderDisabled {
+    background-color: #3C3C3C;
+    border: solid 1px #515151;
+}
+
+.font1 .sbOptions {
+    background-color: #f2f2f2;
+    border: 1px solid #D9D9D9;
+    list-style: none;
+    left: -1px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 38px !important;
+    width: 65px;
+    z-index: 9;
+    overflow-y: auto;
+    -moz-box-shadow: 2px 2px 2px #6e6f6f;
+    -webkit-box-shadow: 2px 2px 2px #6e6f6f;
+    -khtml-box-shadow: 2px 2px 2px #6e6f6f;
+    -pie-box-shadow: 2px 2px 2px #6e6f6f;
+    box-shadow: 2px 2px 2px #6e6f6f;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.font1 .sbOptions li {
+    padding: 0;
+}
+
+.font1 .sbOptions a {
+    display: block;
+    outline: none;
+    padding: 7px 0 7px 8px;
+    background: none repeat scroll 0 0 #E3E3E3;
+    border-bottom: 1px solid #D0D0D0;
+    border-top: 1px solid #F7F7F7;
+    color: #666;
+    cursor: pointer;
+    font: 15px gill_italic;
+    margin: 0;
+}
+
+.font1 .sbOptions a:link, .sbOptions a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+.font1 .sbOptions a:hover {
+    color: #666;
+    background: #fff;
+}
+
+.font1 .sbOptions li.last a {
+    border-bottom: none;
+}
+
+.font1 .sbOptions .sbDisabled {
+    color: #fff;
+    display: block;
+    padding: 7px 0 7px 8px;
+    background: none repeat scroll 0 0 #E3E3E3;
+    border-bottom: 1px solid #D0D0D0;
+    border-top: 1px solid #F7F7F7;
+    cursor: pointer;
+    font: 15px gill_italic;
+}
+
+.font1 .sbOptions .sbGroup {
+    border-bottom: dotted 1px #515151;
+    color: #EBB52D;
+    display: block;
+    font-weight: bold;
+    padding: 7px 0 7px 3px;
+}
+
+.font1 .sbOptions .sbSub {
+    padding-left: 17px;
+}
+
+.bigBannerDiv {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    width: 100%;
+    height: 312px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.imageScrollContainer {
+    padding-top: 25px;
+}
+
+.bottomContainer {
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.webName {
+    color: #333;
+    font: 18px gill;
+    padding-top: 7px;
+}
+
+.save_width {
+    width: 200px;
+}
+
+.submitDivs {
+    height: 53px;
+    width: 322px;
+}
+
+.select_banner {
+    font: 20px gill;
+    text-shadow: 0 1px 0 #fff;
+    color: #999;
+    position: absolute;
+    bottom: 150px;
+}
+
+#galleria {
+    height: 480px;
+}
+
+#color1 {
+    display: none;
+}
+
+#icp_color1 img {
+    position: absolute !important;
+    top: 77px !important;
+}

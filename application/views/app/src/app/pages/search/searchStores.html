@@ -1,0 +1,49 @@
+<div class="allStoresPage container" ng-controller="SearchStoresController">
+
+    <ul class="spinner" ng-hide="hideSpinner">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <div class="fanciedProductsContainer" ng-show="noResults">
+        <h3>No results.</h3>
+    </div>
+
+        <div class="featuredStoresContainer" infinite-scroll="getStores()" infinite-scroll-distance="1">
+
+            <div class="inlineBlock" ng-repeat="store in stores">
+                <ul class="{{ ($index%3==0) && 'span4 leftMar0' || 'span4' }}">
+                    <li class="storeDetailContainer">
+                        <div class="storeBrandingContainer shadedBackground">
+                            <span class="storeBannerName inlineBlock">{{store.storeDetails.storeName}}</span>
+                            <a ng-href="/store/{{store.storeDetails.storeName | beautify}}/{{store.storeDetails.storeID}}" class="storeBannerButton btn btn-red btn-mini">Enter Store</a>
+                        </div>
+                        <div class="storeProductsPreviewContainer">
+                            <img ng-repeat="product in store.storeProducts" ng-src="{{s3baseUrl}}{{store.storeDetails.storeID}}/{{product.productID}}/img1_171x171.jpg" alt="{{product.productName}}">
+                        </div>
+                        <div class="storeStatsContainer shadedBackground">
+                            <div class="pull-left">
+                                <div>
+                                    <span class="fancyCount bnbRedFont ng-binding">{{store.storeDetails.storeFancyCounter}}</span> followers
+                                </div>
+                                <div>
+                                    <span class="viewCount bnbRedFont ng-binding">{{store.storeDetails.totalFancied}}</span> products bragged
+                                </div>
+                            </div>
+                            <div class="pull-right">
+                                <div>
+                                    <span class="viewCount bnbRedFont ng-binding">{{store.storeDetails.totalProducts}}</span> products
+                                </div>
+                                <div>
+                                    <span class="viewCount bnbRedFont ng-binding">{{store.storeDetails.storeVisitCounter}}</span> views
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>

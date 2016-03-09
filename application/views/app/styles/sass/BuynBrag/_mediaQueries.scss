@@ -1,0 +1,1767 @@
+/* Retina display rules */
+@media (min--moz-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3/2),
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+}
+
+// Height based media queries
+@media (max-height: 768px){
+  #quickViewModal{
+    top: 8% !important;
+  }
+}
+
+//@media (min-width: 1200px){
+//  .signInAccountHolder, .signedInProfileHolder{
+//    margin-right: 10px;
+//  }
+//
+//  .fancyProductLargeContainer{
+//    .fancyItemImage{
+//      padding-left: 18px;
+//    }
+//  }
+//
+//  .fancyProductMediumContainer{
+//    .fancyItemImageContainer{
+//      max-width: 450px !important;
+//      //padding: 0 45px;
+//    }
+//  }
+//
+//  .fancyProductLargeContainer{
+//    .fancyItemImageContainer{
+//      max-width: 100% !important;
+//      //padding: 0 85px;
+//    }
+//  }
+//}
+
+//@media (min-width: 724px) {
+//  .fancyIcon, .viewIcon{
+//    //display: inline-block;
+//  }
+//}
+
+@media (min-width: 979px){
+
+//  .storePage{
+//    .storeFancyBtn{
+//      position: absolute;
+//      right: 20px;
+//      top: 5px;
+//      width: 120px;
+//    }
+//  }
+
+}
+
+@media (max-width: 979px){
+
+  #uvTab, .zopim{
+    display: none !important;
+  }
+
+  //.searchBoxContainer .searchText{
+  //  display: none !important;
+  //}
+}
+
+@media (max-width: 979px) and (min-width: 768px){
+  .headerTop{
+    position: relative;
+
+    .navbar{
+      margin-bottom: 0;
+
+      .nav-collapse{
+        a{
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .homePageHeading{
+    font-size: 25px;
+  }
+
+  .filtersContainer{
+
+    .filterButtons button{
+      width: auto;
+    }
+  }
+
+  .fancyProductMediumContainer{
+    .fancyItemImageContainer{
+      max-width: 270px !important;
+    }
+
+    .productOriPrice{
+      font-size: 15px;
+    }
+
+    .productDiscountedPrice {
+      font-size: 18px;
+    }
+
+    .productQuantityInfo {
+      font-size: 13px;
+    }
+  }
+
+  .fancyProductLargeContainer{
+    .fancyItemImageContainer{
+      max-width: 642px !important;
+    }
+  }
+
+  .fancyItem{
+    .productCtaContainer{
+      left: 0;
+
+      .btn{
+        padding: 0;
+        font-size: 12px;
+        height: 27px !important;
+      }
+    }
+
+    .openQuickView{
+      top: 50%;
+    }
+  }
+
+  .fanciedByInfoContainer {
+    .fanciedPersonRank {
+      font-size: 1.1em;
+      height: 60px;
+
+      span{
+        top: 10%;
+      }
+
+      .rankText{
+        line-height: 11px;
+      }
+    }
+
+    .fanciedByTopBadge {
+      height: 50px;
+    }
+
+    .followUserBtn{
+      .followIconWhite{
+        height: 22px;
+        width: 22px;
+      }
+      .followText{
+        font-size: 9px;
+        margin-left: -5px;
+      }
+    }
+  }
+
+// Quick view items
+  .productInfoContainer {
+    padding-bottom: 5%;
+    //margin-bottom: 5%;
+  }
+
+  .productBriefDescription{
+    margin: 10px 0;
+  }
+
+  .productDescriptionContainer{
+    .productCtaContainer{
+      margin-top: 3.5%;
+      button{
+        width: 30.5% !important;
+      }
+    }
+  }
+
+  .categoryPage, .storePage{
+
+    .fancyProductMediumContainer{
+      .span4{
+        width: 218px;
+        margin-left: 30px;
+      }
+    }
+
+    .openQuickView{
+      top: 55%;
+      font-size: 11px;
+    }
+
+    .quantityText{
+      font-size: 11px;
+      top: 76px;
+      left: 10px;
+    }
+
+    .fancyItemImageContainer{
+      img{
+        max-width: 147px !important;
+      }
+    }
+
+    //.fancyItemHiddenContainer{
+    //  bottom: 74px;
+    //}
+  }
+
+  .productVariablesContainer{
+    width: 75%;
+  }
+
+  .storeBrandingContainer{
+
+    .storeBannerName{
+      padding: 7px;
+      font-size: 12px;
+      max-width: 135px;
+    }
+
+    .storeBannerButton {
+      padding: 7px;
+    }
+
+    //.storeBannerImgContainer img {
+    //  max-height: 36px;
+    //  max-width: 135px;
+    //}
+  }
+
+  .storeDetailContainer {
+    min-width: initial;
+  }
+
+  #inviteFriendsModal{
+    .socialInviteContainer{
+      .btn{
+        padding: 10px 20px 10px 15px;
+        margin-right: 5px;
+      }
+    }
+
+    .referralLinksContainer{
+      input{
+        margin-bottom: 10px;
+        width: 80%;
+      }
+      .btn{
+        width: 86%;
+      }
+      .orDecorative{
+        margin: 15px 53px;
+      }
+      .socialIcons{
+        margin-left: 20px;
+      }
+    }
+
+    .emailInviteContainer{
+      input, textarea{
+        width: 95%;
+      }
+      .btn{
+        margin-top: 0;
+        width: 101%;
+      }
+    }
+  }
+
+  .bannerTextShadedContainer{
+    h2{
+      margin: 25px 0 5px 0 !important;
+      font-size: 23px !important;
+    }
+
+    .bannerStats{
+      font-size: 13px;
+    }
+  }
+
+  .inviteFriendsPage{
+    width: 724px;
+  }
+
+  .productPage, .storePage{
+
+    .productNameWrapper, .storeNameWrapper{
+
+      .productName, .storeName{
+        //width: 255px;
+        font-size: 17px;
+        margin-top: 2px;
+      }
+
+    }
+
+    .productDeliveryBadges img {
+      width: 30%;
+    }
+
+    .productImageThumbsContainer{
+      margin: 0 0 0 7px !important;
+    }
+
+    .productDetailsContainer, .productPriceContainer, .productCartContainer, .productDeliveryBadges, .commentsContainer, .reviewsContainer{
+      padding: 10px 15px !important;
+    }
+
+//    .productCartContainer{
+//      padding: 20px 15px;
+//    }
+
+    .productInfoWrapper{
+
+      .fancyItemImageContainer{
+        max-width: 352px;
+      }
+    }
+
+  }
+
+  #midSection.storePage{
+
+    .storeName{
+      margin-top: 2px;
+      line-height: 1;
+      width: 380px;
+    }
+
+    .storeStats{
+      line-height: 1;
+    }
+
+    .storeFancyBtn{
+      float: left;
+      margin: 8px 20px 0;
+      width: 200px;
+    }
+  }
+
+  #midSection.storePage, #midSection.categoryPage{
+    .productPriceContainer{
+      padding: 0 !important;
+    }
+  }
+
+  .storePage, .categoryPage, .searchPage{
+
+    .fancyImageBG{
+      min-height: 122px !important;
+    }
+
+    .newBragBtn{
+      right: 30%;
+      left: 0;
+    }
+
+    .newTagBtn{
+      left: 30%;
+      right: 0;
+    }
+    //.fancyItem{
+    //  min-height: 256px;
+    //}
+
+    .filtersContainer{
+      button{
+        width: 18% !important;
+      }
+    }
+
+    .fancyItemName{
+      font-size: 11px;
+    }
+
+    .productDiscountedPrice{
+      font-size: 13px;
+    }
+
+  }
+
+  .productPage{
+
+    .imageContainers{
+      left: -2px;
+    }
+
+    .imageRepetition{
+      margin: 0.6% 1%;
+
+      .span2{
+        max-width: 165px;
+        width: 156px;
+        margin: 0;
+        float: none;
+      }
+    }
+
+//    .productCartContainer{
+//
+//      select{
+//        height: 35px;
+//      }
+//
+//      button{
+//        margin-top: 0;
+//        height: 39px;
+//        font-size: 12px;
+//      }
+//
+//      .cartIconPink, .cartIconWhite{
+//        height: 20px;
+//        width: 20px;
+//        top: -6px;
+//      }
+//    }
+
+    .productName, .productStoreName {
+      width: 680px !important;
+    }
+
+    .statWrapper{
+      font-size: 0.8rem !important;
+    }
+
+    .newBragBtn, .newTagBtn{
+      height: 40px;
+      width: 40px;
+      background-size: 160px;
+    }
+
+    .commentsContainer form{
+      width: 80%;
+    }
+  }
+
+  .badgesPage{
+
+    .badgeImg{
+      margin-bottom: 0;
+    }
+  }
+
+//  Profile page settings
+
+  .profilePage{
+
+    .userImgContainer{
+      width: 156px;
+      height: 156px;
+
+      img{
+        width: 155px;
+        border: 0px solid black;
+      }
+    }
+
+    .userLocationContainer {
+      display: block !important;
+      margin: 0px 0 6px 0px;
+
+      .userLocation {
+        margin-left: 12px;
+      }
+
+      .pin{
+        font-size: 18px;
+      }
+
+      .userCity {
+        font-size: 12px;
+      }
+    }
+
+    .profileStats{
+      margin: 20px 0 0 0;
+
+      .rankStats, .fancyStats, .badgeStats, .followingStats{
+        padding: 10px 15px 5px;
+
+        .rank, .fancied, .badges, .following{
+          font-size: 21px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .profileOneLiner{
+      margin: -6px 0 17x 0;
+    }
+
+    .followUserSwitch{
+
+      .followBtnStyle{
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+      }
+    }
+
+    // Fancy list view container
+    .fancyListContainer {
+      padding: 10px 5px 10px 16px;
+
+      .span2{
+        margin-left: 0.8em;
+      }
+
+      .categoryBg {
+        height: 87px;
+        padding: 5px 11px;
+        font-size: 15px;
+        line-height: 17px;
+      }
+
+      .rightArrow {
+        right: -7px;
+      }
+    }
+
+    // Social view container
+    .commentsContainer{
+      .comment{
+
+        button{
+          font-size: 10px;
+        }
+
+        .commentContent {
+          width: 51%;
+        }
+      }
+    }
+
+    // Settings container
+    .settingsContainer{
+
+      .saveButton, .resetButton{
+        width: 18%;
+        margin-top: -3px;
+      }
+    }
+
+  }
+
+  #personModal{
+
+    .profileImgContainer{
+      margin-left: 0;
+    }
+
+    .profileDetailContainer {
+      margin-left: 85px;
+      width: 59%;
+    }
+
+    .rankStats, .fancyStats, .badgeStats, .followingStats {
+      padding: 6px 13px 4px;
+    }
+
+    .rankStats {
+      padding-left: 0;
+    }
+  }
+
+// End Profile page settings
+
+
+  // Search box styling
+  .searchBoxContainer, .loggedIn .searchBoxContainer{
+
+    &.searchActive{
+      .searchInput{
+        width: 405px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 767px){
+  header{
+    border-top: none;
+    margin-bottom: 10px;
+    left: 0;
+  }
+
+  .headerTop{
+    position: relative;
+
+    .navbar{
+      margin-bottom: 0;
+    }
+
+    .nav{
+      margin-left: 0 !important;
+    }
+  }
+
+  .homePageHeading{
+    font-size: 25px;
+    display: block;
+  }
+
+  .filtersContainer{
+    display: block !important;
+    margin: 0 !important;
+
+    .filterButtons button{
+      width: auto;
+    }
+  }
+
+  .fancyItemImageContainer{
+    display: block !important;
+  }
+
+  #midSection{
+    top: 52px;
+  }
+
+  .fanciedByInfoContainer, .fancyItem{
+    box-shadow: none;
+  }
+
+  .notificationCounterContainer{
+    margin-top: 7px;
+  }
+
+  .signedInProfileHolder, .signInAccountHolder{
+    margin-right: 10px !important;
+  }
+
+  .logo{
+    width: 120px;
+    height: 50px;
+  }
+
+  .userFancyCount, .userFancyCount:hover, .userRankCount, .userCartCount:hover, .userCartCount {
+    height: 15px;
+    width: 15px;
+  }
+
+  .userBadgesCount, .userBadgesCount:hover{
+    height: 19px !important;
+    width: 19px !important;
+  }
+
+  .userCartCount:hover, .userCartCount{
+    width: 16px !important;
+  }
+
+  .fanciedByInfoContainer{
+    background: transparent;
+    margin: 0px 2px 1px 0;
+    overflow: hidden;
+
+    img{
+      float: left;
+      height: 50px;
+      margin: 0;
+    }
+
+    .fanciedPersonRank{
+      float: left;
+      //font-size: 35px !important;
+      width: 30% !important;
+      height: 50px !important;
+      display: inline-block;
+
+      span{
+        top: 15%;
+      }
+
+      .rankText{
+        top: 7%;
+      }
+    }
+
+    .followUserBtn{
+      width: 52% !important;
+      height: 50px !important;
+
+      .followIconWhite{
+        left: 40%;
+        width: 20px;
+        height: 20px;
+      }
+
+      .followText{
+        padding-top: 14%;
+      }
+    }
+  }
+
+  .imageRepetition{
+    display: block !important;
+  }
+
+  .fancyProductMediumContainer {
+    margin-right: 0;
+
+    .fanciedPersonName {
+      display: inline;
+    }
+
+    .fancyItemImageContainer{
+      max-width: 100% !important;
+    }
+
+    .itemDirectLink{
+      top: 50%;
+      font-size: 12px !important;
+    }
+
+    .productCtaContainer{
+      left: 0;
+      bottom: 0;
+
+      .fancyItemBtn, .addToCart{
+        margin-bottom: 4%;
+      }
+    }
+  }
+
+  .featuredBanner, .mostVisitedStoresBanner, .allStoresBanner{
+    padding: 13px;
+  }
+
+  .allStoresPage{
+    div.inlineBlock.wrapper{
+      width: 100%;
+    }
+  }
+
+  .storeBrandingContainer{
+    //.storeBannerImgContainer img {
+    //  max-height: 46px;
+    //}
+
+    .storeBannerName{
+      font-size: 12px;
+      max-width: 410px;
+    }
+  }
+
+  .categoryPage{
+
+    .fancyProductMediumContainer{
+      .span4{
+        width: inherit;
+        margin-left: 0;
+      }
+    }
+
+  }
+
+  #newVisitorModal{
+    left: 20px;
+    right: 20px;
+  }
+
+  #badgesModal{
+    left: 45%;
+    top: 28%;
+  }
+
+  #fbSignUpModal{
+    left: 20px;
+    right: 20px;
+    width: 465px;
+
+    .span5{
+      margin: 30px 0 35px 40px;
+
+      p{
+        margin-bottom: 25px;
+      }
+
+      a{
+        margin-left: 32px;
+      }
+    }
+  }
+
+  #inviteFriendsModal{
+    .inviteHeadingContainer {
+      padding: 15px 0 0 0;
+      border: none;
+    }
+
+    .socialInviteContainer{
+      padding: 15px 0;
+      .btn{
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+
+    .referralLinksContainer{
+      border: none;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+      margin: 15px 0px 0 0;
+      padding-bottom: 20px;
+      input{
+        width: 97%;
+        margin-bottom: 10px;
+      }
+      .btn{
+        width: 100%;
+      }
+      .orDecorative{
+        margin: 10px 0;
+        text-align: center;
+      }
+      .socialIcons{
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+
+    .emailInviteContainer{
+      width: 100%;
+      padding: 15px 0 0px 0;
+      input, textarea{
+        width: 97%;
+      }
+      .btn{
+        width: 100%;
+      }
+    }
+  }
+
+  #badgeInfoModal{
+    padding: 15px 30px;
+
+    img{
+      width: 25%;
+      margin-top: 5px;
+    }
+
+    .badgeInfoContainer {
+      width: 68%;
+      font-size: 14px;
+    }
+
+    .badgeName{
+      font-size: 17px;
+    }
+
+    .bragBucks{
+      font-size: 15px;
+    }
+
+    .disclaimer{
+      margin-top: 5px;
+    }
+  }
+
+  .productPage, .storePage{
+
+    .productNameWrapper, .storeNameWrapper{
+
+      .productName, .storeName{
+        width: 520px;
+        font-size: 17px;
+        margin-top: 2px;
+      }
+      .storeName{
+        margin-top: 5px;
+      }
+    }
+
+    .productInfoWrapper{
+      .fancyItemImageContainer{
+        height: auto;
+      }
+    }
+
+    .productImageThumbsContainer img{
+      display: inline-block;
+      margin-bottom: 15px;
+      margin-right: 2%;
+    }
+
+    .modal-header{
+      h5{
+        margin-bottom: 0;
+      }
+    }
+
+    .modal-body{
+      max-height: 310px;
+    }
+
+    .modal-footer{
+      padding: 7px 10px 10px;
+    }
+
+  }
+
+  #midSection.productPage{
+    margin-top: 0px !important;
+    top: 44px;
+
+    .imageRepetition{
+      display: inline-block !important;
+      margin: 1%;
+      width: 31%;
+
+      .span2{
+        float: none;
+        display: inline-block;
+        width: auto;
+      }
+    }
+
+    .productCostContainer, .productCartContainer, .productDetailsContainer{
+      float: none;
+    }
+
+    .productCartContainer, .productDetailsContainer{
+      width: 100%;
+    }
+
+    .productDetailsContainer{
+      overflow: auto;
+      max-height: 100%;
+    }
+
+    .commentForm{
+      margin-top: 4px;
+    }
+  }
+
+  .storePage, .categoryPage{
+    .fancyItem{
+      margin-left: 0 !important;
+    }
+
+    .filtersContainer{
+      text-align: center;
+      font-size: 13px;
+      button{
+        width: 40% !important;
+
+        &.btn-red{
+          width: 82% !important;
+          float: none;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    //.fancyItemHiddenContainer{
+    //  bottom: 73px;
+    //}
+
+    .productCtaContainer{
+      bottom: 0;
+    }
+  }
+
+  .storePage, .categoryPage, .searchPage{
+
+    .storeName {
+      margin-top: 5px;
+      width: 50%;
+      margin-left: 0;
+    }
+
+    .imageRepetition {
+      display: inline-block !important;
+      margin: 0.6% 1%;
+      width: 48%;
+    }
+
+    .fancyItem {
+      width: auto;
+      margin: 0;
+      float: none;
+    }
+  }
+
+  .badgesPage{
+
+    .badgeHeader{
+      padding: 7px 12px;
+    }
+  }
+
+//  Profile page styling
+  #midSection.profilePage{
+    top: 45px;
+
+    &.siteMsgActive{
+      top: 83px;
+    }
+  }
+
+  .profilePage{
+
+    .profileImgContainer{
+      display: inline-block;
+      width: auto;
+    }
+
+    .userImgContainer {
+      width: 100px;
+      height: 100px;
+      margin-left: 5%;
+    }
+
+    .profileDetailContainer{
+      display: inline-block;
+      width: 75%;
+      margin-left: 2%;
+    }
+
+    //Social Page
+    .socialViewContainer{
+
+      .commentsContainer {
+        margin-left: 0;
+      }
+    }
+  }
+
+  #personModal{
+
+    .profileImgContainer{
+      float: left;
+    }
+
+    .userImgBorder {
+      padding: 0;
+    }
+
+    .userImgContainer {
+      width: 100px;
+      height: 100px;
+      margin-left: 0;
+    }
+
+    .profileDetailContainer{
+      margin-left: 15px;
+      width: 61%;
+    }
+
+    .profileUserName {
+      margin-top: 4px;
+    }
+
+    .profileStats {
+      margin: 10px 0 0 0;
+    }
+
+    .rankStats, .fancyStats, .badgeStats, .followingStats {
+      padding: 6px 8px 4px;
+      min-width: 40px;
+
+      .rank, .fancied, .badges, .following{
+        font-size: 17px;
+        margin-bottom: 2px;
+      }
+    }
+
+    .rankStats{
+      padding-left: 0;
+    }
+
+    .followUser {
+      top: 6px;
+      font-size: 10px;
+      width: 26%;
+    }
+
+    .modal-footer .btn {
+      font-size: 10px;
+      width: 16%;
+    }
+
+  }
+
+// Search box styling
+  .searchBoxContainer{
+
+    .searchInput{
+      transition: all 0s ease-in-out !important;
+    }
+
+    &.searchActive{
+      float: none;
+      width: 100%;
+      box-sizing: border-box;
+      position: fixed;
+      z-index: 100;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      cursor: default;
+
+      .searchInput{
+        width: 80% !important;
+        box-sizing: border-box;
+        height: 36px;
+        margin-top: 4px;
+        left: 6px;
+      }
+
+      .closeSearch{
+        display: inline-block !important;
+        position: absolute;
+        right: 5px;
+        z-index: 101;
+        width: 17.9%;
+        font-size: 11px;
+        padding: 7px;
+        top: -1px;
+      }
+    }
+  }
+
+}
+
+// iPhone 5 landscape media queries
+@media only screen and (max-width : 600px) and (orientation:landscape){
+
+  .hidden-iphone5-landscape{
+    display: none !important;
+  }
+
+//Modal Common styling
+  .modal{
+    top: 15px;
+
+    .modal-header{
+      padding: 0 15px;
+    }
+
+    .modal-body{
+      max-height: 165px;
+    }
+
+    .modal-footer{
+      padding: 10px 15px;
+    }
+  }
+
+  //Register Page
+  .resetPasswordPage{
+    padding: 0;
+
+    .resetError{
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+  }
+
+//Detailed description modal
+  #descriptionModal, #couponsModal{
+
+    .modal-footer{
+      button{
+        width: 100%;
+      }
+    }
+  }
+
+  #personModal{
+
+    .modal-header {
+      padding: 9px 15px;
+    }
+  }
+
+}
+
+@media only screen and (max-width : 480px){
+  @import "../bootstrap/responsive-navbar";
+
+  .hidden-iphone-landscape{
+    display: none !important;
+  }
+
+  .visible-iphone-landscape{
+    display: block !important;
+  }
+
+  .headerTop{
+    .inviteLink{
+      float: none;
+      font-weight: bold;
+      color: #aaa;
+      border-top: 1px solid #333;
+      display: block;
+    }
+  }
+
+//Modal Common styling
+  .modal{
+    top: 10px;
+
+    .modal-header{
+      padding: 0 15px;
+    }
+
+    .modal-body{
+      max-height: 180px;
+    }
+
+    .modal-footer{
+      padding: 10px 15px;
+    }
+  }
+
+//Detailed description modal
+  #descriptionModal, #couponsModal{
+
+    .modal-footer{
+      button{
+        width: 100%;
+      }
+    }
+  }
+
+  .nav-collapse .open>.dropdown-menu{
+    height: 270px !important;
+    overflow: hidden;
+    overflow-y: auto !important;
+  }
+
+  //.fancyItemHiddenContainer{
+  //  .productOriPrice{
+  //    font-size: 15px;
+  //  }
+  //
+  //  .productDiscountedPrice {
+  //    font-size: 18px;
+  //  }
+  //
+  //  .itemDirectLink{
+  //    top: 55%;
+  //  }
+  //}
+
+  .badgesPage{
+
+    .badgeImg{
+      width: 32%;
+      height: auto;
+      margin: 10px 0;
+    }
+  }
+
+  #storeBanner{
+    position: relative;
+
+    .dropdown{
+      position: relative;
+      top: 8px;
+      right: 0;
+      margin-bottom: 25px;
+    }
+  }
+
+  .featuredStoresContainer, .mostVisitedStoresContainer, .allStoresContainer{
+    > .row{
+      margin: 0px 0 30px 0;
+    }
+  }
+
+  .homePageHeading{
+    font-size: 21px;
+    margin: 12px 0;
+    line-height: 35px;
+  }
+
+  .productPage, .storePage{
+
+    .productName, .storeName{
+      width: 400px !important;
+    }
+
+  }
+
+  #midSection.storePage, #midSection.categoryPage{
+    .filtersContainer{
+      button{
+        width: 100% !important;
+
+        &.btn-red{
+          width: 100% !important;
+          float: none;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+//Register Page
+  .resetPasswordPage{
+    padding: 0;
+
+    h3{
+      font-size: 17px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ddd;
+      display: inline-block;
+    }
+
+    form{
+      margin: 8px 0;
+
+      input{
+        width: 100% !important;
+        box-sizing: border-box;
+        padding: 18px 10px;
+      }
+
+      button{
+        width: 100% !important;
+      }
+    }
+
+    .resetError{
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+  }
+
+  #personModal{
+
+    .modal-header {
+      padding: 2px 9px 0;
+
+      .close {
+        padding-top: 5px;
+      }
+    }
+
+    .profileImgContainer{
+      float: none;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .userImgContainer {
+      margin: 0 auto;
+    }
+
+    .profileDetailContainer {
+      margin: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .profileUserName {
+      width: 100%;
+    }
+
+    .userCity {
+      width: initial;
+      max-width: 90%;
+    }
+
+    .rankStats, .fancyStats, .badgeStats, .followingStats {
+      padding: 6px 5px 4px;
+      min-width: 34px;
+
+      .rank, .fancied, .badges, .following{
+        font-size: 14px;
+        margin-bottom: 0px;
+      }
+    }
+
+    .followUser{
+      display: none !important;
+    }
+
+    .footerFollowBtn{
+      display: inline-block;
+    }
+
+    .modal-footer{
+
+      .btn {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        margin-bottom: 7px;
+        height: 35px;
+      }
+    }
+
+  }
+
+}
+
+
+@media only screen and (max-width : 320px){
+
+  .hidden-iphone-portrait{
+    display: none !important;
+  }
+
+//Modal Common styling
+  .modal{
+
+    .modal-body{
+      max-height: 300px;
+    }
+  }
+
+  header{
+    .nav {
+      .dropdown-menu{
+        overflow-y: scroll;
+      }
+    }
+  }
+
+  .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a{
+    padding: 5px 17px !important;
+    font-weight: normal;
+    color: #ccc !important;
+
+      &:hover, &:focus{
+        border: 2px solid #c01d1d;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 1px !important;
+    }
+  }
+
+  //.trendsDropdown{
+  //  .dropdown-toggle{
+  //    background: transparent !important;
+  //  }
+  //  .dropdown-menu{
+  //    height: auto !important;
+  //  }
+  //}
+
+  .filtersContainer{
+
+    .filterButtons {
+      display: block !important;
+      width: 100%;
+
+      button{
+        width: 100%;
+      }
+    }
+  }
+
+  #badgesModal{
+    left: 38%;
+    top: 23%;
+  }
+
+.loginPage{
+    form#login{
+      input{
+        width: 260px;
+        max-width: 260px;
+      }
+
+      button{
+        width: 270px;
+        max-width: 270px;
+      }
+
+      .add-on{
+        display: none;
+      }
+    }
+
+    a.bnbPink{
+      display: block;
+      margin-top: 5px;
+      text-transform: uppercase;
+    }
+  }
+
+  //#loginModal123, #loginModal{
+  //  .fbLoginImgContainer{
+  //    margin: 0 10px 10px 10px;
+  //  }
+  //
+  //  form#login{
+  //    input {
+  //      width: 165px;
+  //    }
+  //    button{
+  //      width: 275px;
+  //    }
+  //  }
+  //}
+
+  #registerModal, #loginModal{
+    padding-bottom: 0;
+
+    .fbRegisterImg, .fbLoginImg, .signInBtn{
+      width: 90% !important;
+      display: block !important;
+      margin: 25px auto !important;
+    }
+
+    .signInBtn{
+      margin: 15px auto !important;
+    }
+
+    .fbLoginImg{
+      margin: 10px auto !important;
+    }
+
+    .loginHeading{
+      font-size: 20px;
+      margin-top: -15px;
+    }
+
+    input{
+      width: 85% !important;
+    }
+
+    .fbCouponMsg {
+      font-size: 20px;
+      padding: 0 20px;
+
+      span {
+        font-size: 18px;
+        margin-left: 23px;
+      }
+    }
+
+    .modal-footer{
+      display: block;
+      margin-top: 15px;
+      padding-bottom: 15PX;
+
+      button{
+        width: 100%;
+      }
+    }
+  }
+
+  #badgeInfoModal{
+
+    img{
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+      float: none;
+    }
+
+    .badgeInfoContainer {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  //.fancyItemHiddenContainer{
+  //  //bottom: 84px !important;
+  //
+  //  .addToCart{
+  //    display: none;
+  //  }
+  //
+  //  .productCtaContainer{
+  //    button{
+  //      width: 100% !important;
+  //      height: 32px !important;
+  //    }
+  //  }
+  //}
+
+//Detailed description modal
+  #descriptionModal, #couponsModal{
+
+    .modal-footer{
+      button{
+        width: 100%;
+      }
+    }
+  }
+
+//.fancyItem .shareItemIcon, .fancyItem .productOriPrice, .fancyItem .productDiscountedPrice, .fancyItem .productQuantityInfo {
+//  top: 87px;
+//}
+
+  .storePage, .categoryPage{
+
+    .productCtaContainer{
+      bottom: 10px !important;
+    }
+
+    .storeDescription{
+      font-size: 14px;
+    }
+
+  }
+
+  .storePage, .categoryPage, .searchPage{
+    .imageRepetition {
+      margin: 1% 0%;
+      width: 100%;
+    }
+  }
+
+  .storeBrandingContainer{
+
+    .storeBannerName{
+      max-width: 235px !important;
+    }
+
+    .storeBannerButton{
+      width: 70px;
+    }
+  }
+
+  #midSection.productPage, #midSection.storePage{
+
+    .productName, .storeName{
+      width: 240px !important;
+      overflow: inherit;
+      word-wrap: inherit;
+      text-overflow: inherit;
+      word-break: break-all;
+      white-space: normal;
+      font-size: 15px;
+    }
+
+    .productDeliveryBadges img {
+      width: 30%;
+    }
+
+    .productCtaContainer{
+      .bragItemBtn{
+        display: none;
+      }
+    }
+
+//    .productCartContainer{
+//      select{
+//        height: 32px;
+//      }
+//
+//      button{
+//        height: 37px;
+//        margin-top: 0;
+//        font-size: 12px;
+//      }
+//
+//      .cartIconWhite, .cartIconPink{
+//        height: 18px;
+//        width: 18px;
+//        top: -5px;
+//      }
+//    }
+
+  }
+
+  #midSection.storePage{
+
+    .storeName{
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .storeStats{
+      text-align: left;
+      margin: 0;
+    }
+
+    .storeFancyBtn{
+      float: none;
+      margin: 3% 0 0;
+      width: 100%;
+      height: 37px;
+    }
+  }
+
+  #midSection.productPage{
+
+    .imageRepetition{
+      margin: 0% 1%;
+      width: 48%;
+
+      .span2{
+        min-height: 108px;
+      }
+    }
+  }
+
+  //#midSection.productPage .fancyItemHiddenContainer{
+  //  bottom: 0 !important;
+  //  height: 0;
+  //}
+
+  .similarProductsContainer, .storeProductsContainer{
+
+    .fancyItemName{
+      font-size: 13px;
+    }
+
+    .productDiscountedPrice{
+      font-size: 16px;
+    }
+
+    .storeProdHeading, .similarProdHeading{
+      font-size: 15px;
+    }
+
+    .imageContainers{
+      width: auto;
+    }
+    .imageRepetition{
+      margin-right: 0;
+    }
+  }
+
+  .storesContainer{
+    .dropdown{
+      width: 100%;
+      margin-bottom: 20px;
+      margin-top: 10px;
+
+      .dropdown-toggle{
+        padding: 8px 0;
+        width: 99%;
+      }
+    }
+  }
+
+  #passwordChangeModal{
+
+    .modal-header{
+      padding: 10px;
+
+      h3{
+        font-size: 15px;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      margin: 0 0 10px 0;
+      height: 34px;
+    }
+
+    form{
+      margin-bottom: 0;
+    }
+  }
+
+}

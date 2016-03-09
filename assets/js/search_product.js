@@ -1,0 +1,1 @@
+$(function(){$(".checkboxPrice").dgStyle2()});function panelProducts(a){$.ajax({url:"search_product_contents.php?typeID="+a,success:function(b){$(".rightPanel").html(b)},})};

@@ -1,0 +1,35 @@
+<div id="midSection" class="postRegPage regSelectCat container-fluid" select-category>
+
+    <div class="storeSelectContainer container">
+
+        <div class="featuredStoresContainer">
+
+            <div id="msgBanner" class="msgBanner">
+                <span class="bannerText hide"><b>Step 1/3 --- </b>Discover amazing things, tell us what you love to get started.</span>
+                <p class="subHeading hide">Select at least 1 category</p>
+                <!--<button class="btn pull-right" ng-click="switchView()" ng-disabled="categoriesSelected < 3">{{buttonText}}</button>-->
+                <img class="visible-desktop" src="/application/views/dist/images/registerationBanners/reg_step_1.png" alt="Banner desktop"/>
+                <img class="visible-tablet" src="/application/views/dist/images/registerationBanners/reg_step_ipad_1.jpg" alt="Banner iPad"/>
+                <button class="btn pull-right {{(categoriesSelected > 0) && 'btn-green' || ''}}" ng-click="switchView()" ng-disabled="categoriesSelected < 1"></button>
+            </div>
+
+            <div class="inlineBlock" ng-repeat="category in categoriesToSelect">
+                <!--<ul class="span6 leftMar0">-->
+                <ul class="{{ ($index%2==0) && 'span6 leftMar0' || 'span6' }}">
+                    <li class="storeDetailContainer">
+                        <div class="storeBrandingContainer shadedBackground">
+                            <span class="storeBannerName inlineBlock">{{category.catName}}</span>
+                            <button class="storeBannerButton btn btn-mini cssTransition {{(selectText == 'Select') && 'btn-red' || 'btn-selected'}}" select-cat ng-click="selectCat(category)">{{selectText}}</button>
+                        </div>
+                        <div class="storeProductsPreviewContainer" >
+                            <img ng-repeat="product in category.products" alt="{{product.productName}}" ng-src="{{s3baseUrl}}{{product.storeID}}/{{product.productID}}/img1_171x171.jpg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,201 @@
+<?php $status = $_REQUEST['status'];
+$pro = $_REQUEST['pro'];
+$i = 0;
+foreach ($search_product as $item): $i++; ?> <?php require_once('stylesheets.php'); ?>
+	<div class="stableGlassContainerRelative message_box" id="<?php echo $item->product_id; ?>">
+		<div class="stableGlassContainerTransp" id="row_transp<?php echo $i + 1; ?>"></div>
+		<div class="stableGlassContainer1">
+			<div class="stableGlassRelative">
+				<div class="stableglassHolderProducts">
+					<div class="stableglassImage"><img
+							src="<?php echo $store_url; ?>assets/images/stores/<?php echo $item->store_id;?>/<?php echo $item->product_id;?>/img1_73x73.jpg"
+							alt="<?php echo $item->product_name; ?>"/></div>
+					<div class="stableglassText">
+						<div class="stableglassHeading"><?php echo $item->product_id;?>
+							- <?php echo truncateOptionVal($item->product_name, 18); ?></div>
+						BNB Code
+						- <?php echo $item->bnb_product_code;?> <?php /*?> <div class="purchaseText">purchase date<span class="purchaseSpan">Jan 24, 2012</span></div> <div class="silverImage"><img src="<?php echo $base_url; ?>assets/images/stable_badge.png" alt="stable" /></div><?php */?>
+					</div> <?php if ($item->quantity > 0) { ?>
+						<div class="onsaleImage"></div> <?php } else { ?>
+						<div class="soldoutImage"></div> <?php } ?> </div>
+				<div class="categoriesColumn">
+					<div class="priceAmount"><?php echo $item->category_name; ?></div>
+				</div>
+				<div class="priceColumn">
+					<div class="priceAmount"><span class="rupee">`</span> <?php echo $item->selling_price; ?></div>
+				</div> <?php if ($item->quantity != 0) { ?>
+					<div class="quantityColumn">
+						<div class="priceAmount"><?php echo $item->quantity; ?></div>
+					</div>
+					<div class="statusColumn">
+						<div class="checkboxes"><input id="check<?php echo $i; ?>" name="1"
+						                               value="<?php echo $item->product_id; ?>" type="checkbox"><label
+								for="check<?php echo $i; ?>"></label></div>
+					</div> <?php } else if ($item->quantity == 0) { ?>
+					<div class="quantityColumn">
+						<div class="priceAmount"><?php echo $item->quantity; ?></div>
+					</div>
+					<div class="statusColumn">
+						<div class="checkboxes"><input id="check<?php echo $i; ?>" name="1"
+						                               value="<?php echo $item->product_id; ?>" type="checkbox"
+						                               <?php if($item->is_enable == 0) :?>checked="false"<?php endif; ?>><label
+								for="check<?php echo $i; ?>"></label></div>
+					</div> <?php } ?>
+				<div class="actionColumn"><a
+						href="<?php echo $base_url;?>index.php/dashboard/editProduct/<?php echo $item->product_id; ?>/<?php echo $item->store_id; ?>">
+						<div class="actionEdit"></div>
+					</a>
+
+					<div class="actionClose" onClick="deleteProduct(<?php echo $item->product_id; ?>)"></div>
+				</div>
+			</div>
+		</div>
+	</div> <?php endforeach; ?> <?php function cleanString($movie_name, $displayChar)
+{
+	$movie_name1 = str_replace("_", " ", $movie_name);
+	$movie_name2 = str_replace("-", " ", $movie_name1);
+	$movie_name = trim($movie_name2);
+	if ($movie_name == "") return "N/A";
+	if (strlen($movie_name) >= $displayChar) return substr($movie_name, 0, $displayChar) . "&nbsp;..."; else return $movie_name;
+} ?>
+	<div class="pickup_popup" id="pickupPopup">
+		<div class="pickupPopupRelative">
+			<div class="pickupPopupTransp"></div>
+			<div class="pickup_mid">
+				<div class="expected_header">
+					<div class="expected_text">Expected Date & Time</div>
+					<div class="pickup_close" id="pickup_close"></div>
+				</div>
+				<div class="expected_separator"></div>
+				<div class="pickup_form">
+					<div class="date_pickup">Date of Pick up</div>
+					<div class="date_textfield">
+						<div class="date_textfield_mid"><input type="text" id="ip_date" placeholder="date/month/year"/>
+						</div>
+					</div>
+					<div class="clear_both">
+						<div class="date_pickup">Pick up time</div>
+						<div class="time_textfield">
+							<div class="time_textfield_mid"><input type="text" id="ip_time" placeholder="hour:minute"/>
+							</div>
+						</div>
+						<div class="amPm"><select id="timeCombo" name="time_combo">
+								<option value="am">AM</option>
+								<option value="pm">PM</option>
+							</select></div>
+					</div>
+				</div>
+				<div class="pickup_bottom">
+					<div class="or_icon">OR</div>
+					<div class="calling_text">Call</div>
+					<div class="calling_icon">
+						<div class="call_icon_image"></div>
+						<div class="call_icon_text">+4407843555666</div>
+					</div>
+					<div class="proceed" id="pickupPopupProceed">Proceed</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="problemPopupContainer" id="problemPopupContainer">
+		<div class="problemPopupRelative">
+			<div class="problemPopupTransp"></div>
+			<div class="problemPopupMiddle">
+				<div class="headingAndClose">
+					<div class="SendNoteHeading">Send a note to BnB</div>
+					<div class="problemPopupClose"></div>
+				</div>
+				<div class="textAreaBox">
+					<div class="problemTextareaMiddle"><textarea id="prob_textarea" class="problemTextareaMiddle">Please
+							state your problem</textarea></div>
+				</div>
+				<div class="problembottom">
+					<div class="send_icon" id="send_note_to_bnb">Send</div>
+					<div class="or_text">or</div>
+					<div class="calling_text">Call</div>
+					<div class="calling_icon">
+						<div class="call_icon_image"></div>
+						<div class="call_icon_text">+4407843555666</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$("#timeCombo").selectbox();
+		$(".startProcess,.problem_order").tooltip({
+			track: true,
+			delay: "0",
+			showBody: "-",
+			extraClass: "pretty fancy"
+		});
+		$("#pickupPopup").dialog({
+			autoOpen: false,
+			width: 445,
+			height: 308,
+			modal: true
+		});
+
+		$("#problemPopupContainer").dialog({
+			autoOpen: false,
+			width: 583,
+			height: 292,
+			modal: true
+		});
+		$('.readyShipping').unbind('click');
+		$(".readyShipping").click(function () {
+
+			$("#pickupPopup").dialog('open');
+		});
+		$('#pickup_close').unbind('click');
+		$("#pickup_close").click(function () {
+
+			$("#pickupPopup").dialog('close');
+		});
+		$('.problem_popup').unbind('click');
+		$(".problem_popup").click(function () {
+			$("#problemPopupContainer").dialog('open');
+
+
+		});
+		$('.problemPopupClose').unbind('click');
+		$(".problemPopupClose").click(function () {
+			$("#problemPopupContainer").dialog('close');
+		});
+
+		$("input[type='checkbox']").click(function () {
+			var baseurl = $('#baseurl').val();
+			var quantity = -1;
+			var p_id = $(this).val();
+
+			if ($(this).is(':checked') == true) {
+				status = 0;
+			}
+			else {
+				status = 1;
+				if (document.getElementById("quantity_" + p_id) != null) {
+					quantity = document.getElementById("quantity_" + p_id).value;
+				}
+			}
+			$.ajax({
+				url: baseurl + 'index.php/dashboard/changeStatus/' + p_id + '/' + status + '/' + quantity + '',
+				success: function (data) {
+					if (quantity != -1) {
+						document.getElementById("quantityDIv1_" + p_id).style.display = 'none';
+						document.getElementById("quantityDIv2_" + p_id).style.display = 'block';
+						$("#amount_" + p_id).html(quantity);
+					}
+
+				}
+			});
+		});
+
+	</script>
+	<script type="text/javascript"
+	        src="<?php echo $base_url;?>assets/js/products.js"></script> <?php function truncateOptionVal($text, $limit)
+{
+	if (strlen($text) > $limit) {
+		$text = substr($text, 0, $limit) . '...';
+	}
+	return $text;
+} ?>

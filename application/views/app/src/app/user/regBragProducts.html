@@ -1,0 +1,68 @@
+<!-- add class 'fluidHomePage' and 'container-fluid' -->
+<div id="midSection" class="postRegPage regBragProducts container-fluid" brag-products>
+
+    <!--<div class="processStageContainer text-center relative">-->
+    <!--<div class="currentStage">-->
+    <!--<div class="stageContentBg first">1</div>-->
+    <!--<div class="stageContent active">Select Stores</div>-->
+    <!--</div>-->
+
+    <!--<div class="currentStage">-->
+    <!--<div class="stageContentBg middle">2</div>-->
+    <!--<span class="stageContent ">Follow people</span>-->
+    <!--</div>-->
+
+    <!--<div class="currentStage ">-->
+    <!--<div class="stageContentBg last">3</div>-->
+    <!--<span class="stageContent ">Fancy products</span>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <div class="storeSelectContainer container">
+
+        <div id="msgBanner" class="msgBanner">
+            <span class="bannerText hide"><b>Step 2/3 --- </b>Pick the things you like & add them to your brag list.</span>
+            <p class="subHeading hide">Brag 3 things you like.</p>
+            <img class="visible-desktop" src="/application/views/dist/images/registerationBanners/reg_step_2.png" alt="Banner desktop"/>
+            <img class="visible-tablet" src="/application/views/dist/images/registerationBanners/reg_step_ipad_2.jpg" alt="Banner iPad"/>
+            <a href="" class="backBtn" ng-click="goBack(2)"></a>
+            <button class="btn pull-right {{(productsFancied > 2) && 'btn-green' || ''}}" ng-click="switchView()"></button>
+            <button class="shuffleBtn hidden-phone" ng-click="loadNext()"></button>
+        </div>
+
+        <div class="fanciedProductsContainer">
+
+            <div class="imageRepetition" ng-repeat="product in productsToFancy">
+                <ul class="fancyProductMediumContainer">
+                    <li class="span3 fancyItem shadedBackground {{ ($index%4==0) && 'leftMar0' || '' }}">
+                        <div class="fancyImageBG">
+                            <div class="fancyItemImageContainer">
+                                <img class="fancyItemImage" ng-src="{{s3baseUrl}}{{product.storeID}}/{{product.productID}}/img1_240x200.jpg" alt="{{product.productName}}">
+                                <span class="imgHoverState hidden-iphone-portrait"></span>
+                            </div>
+
+                            <brag-this class="hidden-iphone-portrait" sid="{{product.storeID}}" pname="{{product.productName}}" uname="{{userDetails.fullName}}" pid="{{product.productID}}"></brag-this>
+
+                            <!--<div class="fancyItemHiddenContainer invisible cssTransition">-->
+                            <!--<div class="productCtaContainer">-->
+                            <!--<button class="fancyItemBtn btn btn-red" brag-this sid="{{product.storeID}}" pname="{{product.productName}}" uname="userDetails.fullName" pid="{{product.productID}}"><span class="btnText"><span class="fancyIconWhite"></span>{{fancyText}}</span></button>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                        </div>
+                    </li>
+
+                    <brag-this url="/application/views/app/src/app/user/bragBtnMobile.html" sid="{{product.storeID}}" pname="{{product.productName}}" uname="{{userDetails.fullName}}" pid="{{product.productID}}"></brag-this>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--<script type="text/javascript">-->
+<!--stickyElem(document.getElementById('msgBanner'), document.querySelector('.fanciedProductsContainer'), 0, 56);-->
+<!--</script>-->

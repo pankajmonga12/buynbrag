@@ -1,0 +1,1030 @@
+@charset "utf-8";
+.banner {
+    background-repeat: repeat !important;
+    height: 234px !important;
+}
+
+.slide {
+    height: 237px !important;
+}
+
+.iconFancyActive {
+    background-image: url(../images/fancy/fancy_click1.png);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 38px;
+    margin-left: 8px;
+    margin-top: -5px;
+}
+
+.roundFancy_active {
+    background-image: url(../images/fancy/fancy_click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.fancyLinkActive {
+    color: #ec2958;
+    font-size: 18px;
+    float: left;
+    font-family: gill;
+    text-shadow: 0 1px 0 #FFF;
+    padding-right: 6px;
+}
+
+.fancyLinksContainer {
+    padding: 17px 0 17px 27px;
+}
+
+.fancyBox {
+    background-color: #666;
+    color: #fff;
+    font-family: gill_bold;
+    font-size: 14px;
+    padding: 1px 5px;
+    float: left;
+}
+
+.fancyLink {
+    color: #666;
+    font-size: 18px;
+    float: left;
+    font-family: gill;
+    text-shadow: 0 1px 0 #FFF;
+    padding-right: 6px;
+}
+
+.fancySeperator {
+    width: 0;
+    height: 19px;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #b4b4b4;
+    float: left;
+    margin: 1px 15px 0 8px;
+}
+
+.fancyProductBigBg {
+    width: 1024px;
+    height: auto;
+    background-color: #fff;
+    clear: both;
+    margin-top: 22px;
+    position: relative;
+    padding-top: 5px;
+}
+
+.fancyProductBig {
+    width: 1013px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    background: url("../images/fancy/img_bg3.png") repeat scroll 0 0 transparent;
+}
+
+.fancyProductInfo {
+    position: absolute;
+    left: 12px;
+    bottom: 68px;
+}
+
+.fancyProductMedBg {
+    float: left;
+    background-color: #fff;
+    width: 499px;
+    height: auto;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-right: 16px;
+    padding-bottom: 55px;
+    box-shadow: 0 0 2px #555;
+
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.fancyProductMedBg:hover {
+    box-shadow: 0 0 10px #999;
+}
+
+.fancyProductMedContainer {
+    clear: both;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+.fancyProductMed {
+    width: 494px;
+    height: auto;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    background: url("../images/fancy/img_bg3.png") repeat scroll 0 0 transparent;
+}
+
+.fancyProductSmallContainer {
+    clear: both;
+    padding-top: 20px !important;
+    display: inline-block;
+}
+
+.fancyProductSmallBg {
+    width: 329px;
+    height: auto;
+    background-color: #fff;
+    float: left;
+    margin-right: 11px;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 55px;
+    box-shadow: 0 0 2px #555;
+
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.fancyProductSmallBg:hover {
+    box-shadow: 0 0 10px #999;
+}
+
+.fancyProductSmall {
+    width: 323px;
+    height: auto;
+    text-align: center;
+    background: url("../images/fancy/img_bg3.png") repeat scroll 0 0 transparent;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.leftPanelCategory {
+    padding-bottom: 2px;
+}
+
+.leftPanelSeperator {
+    border-top: 1px solid #c3bfbe;
+    border-bottom: 1px solid #f0f0ef;
+    width: 230px;
+    height: 0;
+    margin: 5px 0;
+}
+
+.leftPanelBanners {
+    width: 230px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.addList {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #749d5e;
+    background: -moz-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -webkit-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -o-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -ms-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    -pie-background: linear-gradient(bottom, #619049 50%, #749d5e 0);
+    border-color: -moz-use-text-color -moz-use-text-color #E8E8E8;
+    border-image: none;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    box-shadow: 0 5px 0 #B3C5AA;
+    color: #FFF;
+    cursor: pointer;
+    float: right;
+    font-family: gill_bold;
+    font-size: 18px;
+    margin-right: 8px;
+    text-align: center;
+    padding: 6px 10px;
+    margin-top: -9px;
+}
+
+.addList:hover {
+    background: #8ec273;
+    background: -moz-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -webkit-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -o-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -ms-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    -pie-background: linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+}
+
+.addList:active {
+    background: #537541;
+}
+
+.listBg {
+    width: 1008px;
+    height: 134px;
+    padding: 8px;
+    background-color: #fff;
+    margin-top: 12px;
+    clear: both;
+    position: relative;
+}
+
+.listImagesStatic1 {
+    background-image: url(../images/fancy/14e_homedecor_normal.png);
+    background-repeat: no-repeat;
+    width: 163px;
+    height: 134px;
+    margin-right: 7px;
+    float: left;
+    cursor: pointer;
+}
+
+.listImagesStatic2 {
+    background-image: url(../images/fancy/14e_sports_normal.png);
+    background-repeat: no-repeat;
+    width: 163px;
+    height: 134px;
+    margin-right: 7px;
+    float: left;
+    cursor: pointer;
+}
+
+.listImagesStatic3 {
+    background-image: url(../images/fancy/14e_fashion_normal.png);
+    background-repeat: no-repeat;
+    width: 163px;
+    height: 134px;
+    margin-right: 7px;
+    float: left;
+    cursor: pointer;
+}
+
+.listImagesStatic4 {
+    background-image: url(../images/fancy/14e_shoes_normal.png);
+    background-repeat: no-repeat;
+    width: 163px;
+    height: 134px;
+    margin-right: 7px;
+    float: left;
+    cursor: pointer;
+}
+
+.listImagesStatic5 {
+    background-image: url(../images/fancy/14e_travel_normal.png);
+    background-repeat: no-repeat;
+    width: 163px;
+    height: 134px;
+    margin-right: 7px;
+    float: left;
+    cursor: pointer;
+}
+
+.listImagesStatic6 {
+    background-image: url(../images/fancy/14e_homedecor_normal.png);
+    background-repeat: no-repeat;
+    width: 163px;
+    height: 134px;
+    margin-right: 7px;
+    float: left;
+    cursor: pointer;
+}
+
+.listImagesStatic7 {
+    background-image: url(../images/fancy/14e_sports_normal.png);
+    background-repeat: no-repeat;
+    width: 163px;
+    height: 134px;
+    margin-right: 7px;
+    float: left;
+    cursor: pointer;
+}
+
+.listImagesStatic8 {
+    background-image: url(../images/fancy/14e_fashion_normal.png);
+    background-repeat: no-repeat;
+    width: 163px;
+    height: 134px;
+    margin-right: 7px;
+    float: left;
+    cursor: pointer;
+}
+
+.listImagesStatic9 {
+    background-image: url(../images/fancy/14e_shoes_normal.png);
+    background-repeat: no-repeat;
+    width: 163px;
+    height: 134px;
+    margin-right: 7px;
+    float: left;
+    cursor: pointer;
+}
+
+.listImages {
+    width: 161px;
+    height: 134px;
+    padding-right: 8px;
+    float: left;
+}
+
+.listImages img{
+    height: 134px;
+    width: 145px;
+}
+
+.deleteListContainer {
+    background-image: url(../images/smallimage_hover_pattern.png);
+    background-repeat: repeat;
+    position: absolute;
+    width: 1024px;
+    height: 150px;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.listName {
+    font-family: gill;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 10px 2px 10px;
+    height: 42px;
+}
+
+.noOfListItems {
+    font-family: gill;
+    font-size: 24px;
+    color: #fff;
+    padding: 0 10px 18px 10px;
+}
+
+.itemSpan {
+    font-size: 16px;
+}
+
+.viewListIcon {
+    background-image: url(../images/fancy/view_normal.png);
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 25px;
+    float: left;
+    margin: 0 10px;
+}
+
+.lockListIcon {
+    background-image: url(../images/fancy/homedecor_icon_normal.png);
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 26px;
+    float: left;
+    margin-top: -2px;
+}
+
+.deleteListIcon {
+    background-image: url(../images/fancy/delet_normal.png);
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    float: right;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.listImagesStatic:hover .viewListIcon {
+    background-image: url(../images/fancy/view_hover.png);
+}
+
+.listImagesStatic:hover .lockListIcon {
+    background-image: url(../images/fancy/homedecor_icon_hover.png);
+}
+
+.listImagesStatic:hover .deleteListIcon {
+    background-image: url(../images/fancy/delet_hover.png);
+}
+
+.deleteListHeading {
+    font-family: gill;
+    font-size: 25px;
+    padding: 20px 20px 5px 30px;
+    color: #ccc;
+}
+
+.spanListName {
+    color: #fefefe;
+}
+
+.deleteListInfo {
+    color: #666;
+    font-family: gill;
+    font-size: 16px;
+    padding: 0 20px 20px 30px;
+}
+
+.deleteListButton {
+    background: #eb3762;
+    background: -moz-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -webkit-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -o-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -ms-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    -pie-background: linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    width: 80px;
+    height: 35px;
+    float: left;
+    margin: 0 0 0 30px;
+    cursor: pointer;
+    font-family: gill_bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.deleteListButton:hover {
+    background: #f25178;
+    background: -moz-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -webkit-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -o-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -ms-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    -pie-background: linear-gradient(bottom, #f03c67 50%, #f25178 0);
+}
+
+.deleteListButton:active {
+    background: #cb3055;
+    background: -moz-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -webkit-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -o-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -ms-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    -pie-background: linear-gradient(bottom, #c51640 50%, #cb3055 0);
+}
+
+.cancelListButton {
+    background: #767676;
+    background: -moz-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -webkit-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -o-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -ms-linear-gradient(bottom, #666 50%, #767676 0);
+    -pie-background: linear-gradient(bottom, #666 50%, #767676 0);
+    width: 80px;
+    height: 35px;
+    float: left;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+    font-family: gill_bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.cancelListButton:hover {
+    background: #969595;
+    background: -moz-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -webkit-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -o-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -ms-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    -pie-background: linear-gradient(bottom, #8b8989 50%, #969595 0);
+}
+
+.cancelListButton:active {
+    background: #535353;
+    background: -moz-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -webkit-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -o-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -ms-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    -pie-background: linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+}
+
+.leftPanelList {
+    width: 230px;
+    height: 87px;
+    clear: both;
+    position: relative;
+}
+
+.listNormal {
+    background-repeat: no-repeat;
+    width: 208px;
+    height: 82px;
+    cursor: pointer;
+}
+
+.listNormal_1 {
+    background-image: url(../images/fancy/14h_homedecor_normal.png);
+}
+
+.listNormal_2 {
+    background-image: url(../images/fancy/14h_sports&outdoor_normal.png);
+}
+
+.listNormal_3 {
+    background-image: url(../images/fancy/14h_media_normal.png);
+}
+
+.listNormal_4 {
+    background-image: url(../images/fancy/14h_shoes_normal.png);
+}
+
+.listNormal_5 {
+    background-image: url(../images/fancy/14h_travel_normal.png);
+}
+
+.detailListName {
+    color: #fff;
+    font-family: gill;
+    font-size: 20px;
+    padding: 10px 14px;
+    height: 34px;
+    width: 150px;
+}
+
+.itemsQuantity {
+    color: #fff;
+    font-family: gill;
+    font-size: 18px;
+    padding: 0 14px 10px;
+    float: left;
+}
+
+.deleteDetailList {
+    background-image: url(../images/fancy/delet2.png);
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    float: right;
+    margin: 4px 54px 0 0;
+}
+
+.listHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    width: 255px;
+    height: 82px;
+    display: none;
+    cursor: pointer;
+}
+
+.listHover_1 {
+    background-image: url(../images/fancy/14h_homedecor_hover.png);
+}
+
+.listHover_2 {
+    background-image: url(../images/fancy/14h_sports&outdoor_hover.png);
+}
+
+.listHover_3 {
+    background-image: url(../images/fancy/14h_media_hover.png);
+}
+
+.listHover_4 {
+    background-image: url(../images/fancy/14h_shoes_hover.png);
+}
+
+.listHover_5 {
+    background-image: url(../images/fancy/14h_travel_hover.png);
+}
+
+.leftPanelList:hover .listHover {
+    display: block;
+}
+
+.delete_popUp {
+    border-top: 1px solid #FFF;
+    display: none;
+    height: 194px;
+    position: relative;
+    width: 648px;
+}
+
+.delete_popUpTransp {
+    background: none repeat scroll 0 0 #FFF;
+    height: 194px;
+    opacity: .88;
+    width: 100%;
+}
+
+.delete_popUpActual {
+    box-shadow: 0 11px 5px #000;
+    height: 184px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    width: 638px;
+}
+
+.deleteDetailHeading {
+    color: #333;
+    font-family: gill;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    padding-top: 24px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.otherColor {
+    color: #ec2958;
+}
+
+.deleteDetailInfo {
+    color: #666;
+    font-family: gill;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 100%;
+    text-align: center;
+    padding: 7px 0 30px;
+}
+
+.deleteDetailButton {
+    background: #eb3762;
+    background: -moz-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -webkit-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -o-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -ms-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    -pie-background: linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    width: 120px;
+    height: 45px;
+    float: left;
+    margin: 0 0 0 30px;
+    cursor: pointer;
+    font-family: gill_bold;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    -moz-box-shadow: 0 5px 0 #e58da2;
+    -webkit-box-shadow: 0 5px 0 #e58da2;
+    -khtml-box-shadow: 0 5px 0 #e58da2;
+    -pie-box-shadow: 0 5px 0 #e58da2;
+    box-shadow: 0 5px 0 #e58da2;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.deleteDetailButton:hover {
+    background: #f25178;
+    background: -moz-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -webkit-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -o-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -ms-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    -pie-background: linear-gradient(bottom, #f03c67 50%, #f25178 0);
+}
+
+.deleteDetailButton:active {
+    background: #cb3055;
+    background: -moz-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -webkit-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -o-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -ms-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    -pie-background: linear-gradient(bottom, #c51640 50%, #cb3055 0);
+}
+
+.cancelDetailButton {
+    background: #767676;
+    background: -moz-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -webkit-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -o-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -ms-linear-gradient(bottom, #666 50%, #767676 0);
+    -pie-background: linear-gradient(bottom, #666 50%, #767676 0);
+    box-shadow: 0 5px 0 #b2b2b2;
+    -moz-box-shadow: 0 5px 0 #b2b2b2;
+    -webkit-box-shadow: 0 5px 0 #b2b2b2;
+    -khtml-box-shadow: 0 5px 0 #b2b2b2;
+    -pie-box-shadow: 0 5px 0 #b2b2b2;
+    width: 120px;
+    height: 45px;
+    float: left;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+    font-family: gill_bold;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.cancelDetailButton:hover {
+    background: #969595;
+    background: -moz-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -webkit-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -o-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -ms-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    -pie-background: linear-gradient(bottom, #8b8989 50%, #969595 0);
+}
+
+.cancelDetailButton:active {
+    background: #535353;
+    background: -moz-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -webkit-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -o-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -ms-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    -pie-background: linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+}
+
+.detailButtonPane {
+    width: 275px;
+    margin: 0 auto;
+}
+
+.AddPopupContainer {
+    display: none;
+    height: 482px;
+    width: 381px;
+}
+
+.AddPopupWrapper {
+    width: 100%;
+    position: relative;
+    height: 481px;
+    border-top: 1px solid #fff;
+}
+
+.AddPopupTransp {
+    background: none repeat scroll 0 0 #FFF;
+    height: 470px;
+    opacity: .88;
+    width: 100%;
+}
+
+.AddPopupActual {
+    box-shadow: 0 10px 7px #000;
+    -moz-box-shadow: 0 10px 7px #000;
+    -webkit-box-shadow: 0 10px 7px #000;
+    -khtml-box-shadow: 0 10px 7px #000;
+    -pie-box-shadow: 0 10px 7px #000;
+    height: 470px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.headingAndClose {
+    height: 55px;
+    padding: 8px 0 0 20px;
+}
+
+.Addtotext {
+    color: #333;
+    float: left;
+    font-family: gill;
+    font-size: 39px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.AddClose {
+    float: right;
+    background-image: url(../images/problemwithorder_popup_close.png);
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 27px;
+    margin-top: 9px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.AddClose:hover {
+    background: url(../images/popup_close_click.png);
+}
+
+.scrollContents {
+    padding-left: 20px;
+    height: 330px;
+}
+
+.createaList {
+    height: 88px;
+    position: relative;
+}
+
+.createaList input[type="text"] {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    border-radius: 3px 3px 3px 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 32px;
+    padding-left: 38px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 302px;
+}
+
+.createaList input[type="text"]:focus {
+    background-color: #efefef;
+}
+
+.plusText {
+    font: 25px gill_bold;
+    position: absolute;
+    color: #666;
+    top: 4px;
+    left: 8px;
+    cursor: pointer;
+}
+
+.radioText {
+    float: left;
+    padding: 12px 0 0;
+}
+
+.radioText .radio1 {
+    float: left;
+    height: 30px;
+    width: 30px;
+    background: url("../images/radio-buttons.png") no-repeat;
+    background-repeat: no-repeat;
+    cursor: default;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.checkText {
+    font: 20px gill;
+    color: #666;
+    text-shadow: 0 1px 0 #fff, 0.5px 0 0 #000;
+    float: left;
+    padding-left: 15px;
+    width: 80px;
+    padding-top: 4px;
+}
+
+.rightPop2 {
+    background-color: #cbcbcb;
+    width: 330px;
+    padding-top: 4px !important;
+    padding-left: 10px;
+    height: 240px;
+    border-top: 1px solid #aaa;
+}
+
+.bottomButton {
+    height: 50px;
+    padding: 18px 0 0 20px;
+}
+
+.checkboxesHolder2 {
+    width: 330px;
+    height: 240px;
+    overflow: auto;
+}
+
+.checkBoxText {
+    margin-bottom: 6px;
+    clear: both;
+    width: 310px;
+    height: 30px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #aaa;
+}
+
+.checkbox {
+    background: url("../images/categories_checkbox.png") no-repeat scroll 0 0 transparent;
+    cursor: default;
+    float: left;
+    height: 19px;
+    text-align: left;
+    width: 20px;
+    margin: 5px;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkText2 {
+    font: 15px gill;
+    color: #666;
+    text-shadow: 0 1px 0 #fff, 0.5px 0 0 #000;
+    float: left;
+    padding: 6px;
+}
+
+.checkBoxText2 {
+    float: left;
+    padding: 8px 0 0 20px;
+}
+
+.add_button {
+    background: #e81c4d;
+    background: -moz-linear-gradient(bottom, #e81c4d 50%, #ea325e 0);
+    background: -webkit-linear-gradient(bottom, #e81c4d 50%, #ea325e 0);
+    background: -o-linear-gradient(bottom, #e81c4d 50%, #ea325e 0);
+    background: -ms-linear-gradient(bottom, #e81c4d 50%, #ea325e 0);
+    -pie-background: linear-gradient(bottom, #e81c4d 50%, #ea325e 0);
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    -moz-box-shadow: 0 5px 0 #dfa7a7;
+    -webkit-box-shadow: 0 5px 0 #dfa7a7;
+    -khtml-box-shadow: 0 5px 0 #dfa7a7;
+    -pie-box-shadow: 0 5px 0 #dfa7a7;
+    box-shadow: 0 5px 0 #dfa7a7;
+    width: 145px;
+    height: 45px;
+    float: left;
+    cursor: pointer;
+    font-family: gill_bold;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.add_button {
+    float: right !important;
+    height: 37px !important;
+    margin-right: 20px !important;
+    margin-top: 5px !important;
+    width: 65px !important;
+}
+
+.hoverHolder1 {
+    bottom: 85px;
+    display: none;
+    left: 428px;
+    position: absolute;
+}
+
+.hoverHolder2 {
+    bottom: 115px;
+    display: none;
+    left: 160px;
+    position: absolute;
+}
+
+.hoverHolder3 {
+    bottom: 120px;
+    display: none;
+    left: 75px;
+    position: absolute;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.fanciedByHolder {
+    position: absolute;
+    bottom: -1px;
+    font-family: gill;
+    font-size: 15px;
+    color: #5a5a5a;
+    min-width: 342px;
+    width: 98.5%;
+    border: 1px solid #ccc;
+    padding: 6px 1px 6px 7px;
+    left: -1px;
+}
+
+.fancyProductSmallBg .fanciedByHolder {
+    padding: 6px 3px 6px 7px;
+}
+
+.fancyProductSmallBg .fanciedByHolder {
+    width: 324px;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.fanciedByHolder a {
+    color: #5a5a5a;
+    white-space: nowrap;
+}
+
+.fanciedByHolder img {
+    box-shadow: 0 0 5px #666;
+    margin-right: 15px;
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+.fanciedByName {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 150px;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+
+.fancyProductSmallBg .fanciedByName {
+    width: 125px;
+}
+
+.fanciedRankHolder {
+    margin-top: 5px;
+}
+
+.fanciedRank {
+    font-weight: 600;
+    color: #e81c4d;
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="landingApp" ng-controller="AppController">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="robots" content="index, follow">
+
+    <title>BuynBrag | Your single destination for contemporary, quirky lifestyle.</title>
+
+    <meta name="description" content="BuynBrag is your destination for discovery. From new products by brands you already love, to beautiful products by brands that we know you'll love.">
+    <meta name="keywords" content="buy, and, brag, buyandbrag, buynbrag, buy and brag,  social, shopping, outfits, trends, fashion, style, advice, tips, fashion">
+    <meta name="author" content="BuynBrag">
+
+    <meta property="og:site_name" content="BuynBrag.com">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BuynBrag | Your destination for discovery and indulgence and all things luxury you will love.">
+    <meta property="og:description" content="BuynBrag is your destination for discovery. From new products by brands you already love, to beautiful products by brands that we know you'll love.">
+
+    <meta property="og:image" content="http://buynbrag.com/application/views/dist/images/branding/bnb_logo_200.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="200" />
+
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
+
+    <link ng-repeat="stylesheet in stylesheets" ng-href="{{stylesheet.href}}" type='text/css' rel="stylesheet">
+
+    <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png">
+    <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="/apple-touch-icon-precomposed.png">
+    <!-- Fallback for all browsers -->
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/apple-touch-icon.png" />
+
+    <!--<script type="text/javascript">-->
+        <!--if (navigator.userAgent.search("Firefox") >= 0){-->
+            <!--document.documentElement.className += " -moz-";-->
+        <!--}-->
+
+        <!--//      test for touch events support and if not supported, attach .no-touch class to the HTML tag.-->
+        <!--if (!("ontouchstart" in document.documentElement)) {-->
+            <!--document.documentElement.className += " non-touch";-->
+        <!--} else document.documentElement.className += " touch";-->
+    <!--</script>-->
+
+</head>
+
+<body>
+
+<div class="dottedOverlay"></div>
+<div class="landingBlockade container-fluid">
+    <header><h1 class="logoHeading"><a class="logo pull-left" href="/web/20131018045906/http://buynbrag.com/"><img
+            class="logoImg"
+            src="/application/views/dist/images/404_logo_200.png"
+            alt="BuynBrag"></a></h1></header>
+    <div class="msgContainer row-fluid {{firstStepClass}}" user="">
+        <div class="introMsg span5 offset1"><h2>Discover. Fancy. Curate.</h2>
+
+            <p>BuynBrag is your destination for discovery. From new products by brands you already love, to beautiful
+                products by brands that we know you'll love.</p>
+
+            <p>Start discovering trending styles from 125+ stores personalized for you.</p></div>
+        <div class="registerFrom span6" ng-hide="showFinalForm"><h2>Start discovering now</h2>
+
+            <div class="relative stepsContainer {{firstStepClass}}">
+                <div class="firstStep"><a id="mx-fbLoginTrack"
+                                          href="/web/20131018045906/http://buynbrag.com/fbLogin/index"
+                                          class="btn btn-blue fbBtn relative text-center block"><i
+                        class="fbIcon icon-facebook pull-left"></i> Discover with <b>Facebook</b></a>
+
+                    <div class="loginTxt">Want to use email instead?&nbsp;<span class="bnbRedFont goToSecond"
+                                                                                ng-click="changeClass('active')">Start here</span>
+                    </div>
+                </div>
+                <div class="secondStep"><i class="icon-fontawesome-webfont backIcon" ng-click="changeClass()"><span
+                        class="tooltips top invisible cssTransition">Go back</span></i>
+
+                    <form name="signin_form" novalidate="" ng-submit="signInLocal()">
+                        <div class="emailInputWrapper relative"><input class="block" type="email"
+                                                                       placeholder="Email address" name="email"
+                                                                       ng-model="login.email" ng-minlength="3"
+                                                                       ng-maxlength="50" ng-blur="" required=""
+                                                                       autofocus="" autocomplete=""
+                                                                       style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
+
+                            <div class="formError tooltips"
+                                 ng-show="signin_form.email.$dirty &amp;&amp; signin_form.email.$invalid &amp;&amp; signin_form.email.$blurred">
+                                <small ng-show="signin_form.email.$error.required">Enter your email.</small>
+                                <small ng-show="signin_form.email.$error.minlength">Should be at least 3 characters.
+                                </small>
+                                <small ng-show="signin_form.email.$error.email">Please enter a valid email.</small>
+                                <small ng-show="signin_form.email.$error.maxlength">Cannot be more than 50 characters.
+                                </small>
+                            </div>
+                            <div class="formError tooltips"
+                                 ng-show="signin_form.email.$pristine &amp;&amp; signin_form.email.$invalid &amp;&amp; signin_form.submitted">
+                                <small ng-show="signin_form.email.$error.required">Enter your email.</small>
+                            </div>
+                        </div>
+                        <div class="passwordInputWrapper relative"><input class="block" type="password"
+                                                                          placeholder="Password" name="password"
+                                                                          ng-model="login.password" ng-blur=""
+                                                                          required=""
+                                                                          style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
+
+                            <div class="formError"
+                                 ng-show="(signin_form.password.$dirty &amp;&amp; signin_form.password.$invalid &amp;&amp; signin_form.password.$blurred) || (signin_form.password.$pristine &amp;&amp; signin_form.password.$invalid &amp;&amp; signin_form.submitted)">
+                                <small ng-show="signin_form.password.$error.required">Enter your password.</small>
+                            </div>
+                        </div>
+                        <button xhr-spinner="" type="submit" class="btn btn-blue getStartedBtn"><span>Get started</span>
+                        </button>
+                        <div class="forgotPwd">Forgot your password?&nbsp;<a class="bnbRedFont"
+                                                                             href="/web/20131018045906/http://buynbrag.com/#">Reset
+                            password</a></div>
+                    </form>
+                </div>
+                <div class="passwordResetStep"><i class="icon-fontawesome-webfont backIcon"
+                                                  ng-click="changeClass()"><span
+                        class="tooltips top invisible cssTransition">Go back</span></i>
+
+                    <form action=""><input class="block" type="email" placeholder="Email address" name="email"
+                                           ng-model="login.email" ng-minlength="3" ng-maxlength="50" ng-blur=""
+                                           required="" autofocus="" autocomplete="">
+                        <button type="submit" class="btn btn-blue getStartedBtn">Reset password</button>
+                    </form>
+                    <div class="successMsg">Password reset instructions sent to your email.</div>
+                </div>
+            </div>
+        </div>
+        <div class="registerFrom span6" style="display:none" ng-show="showFinalForm"><h2>Almost finished...</h2>
+
+            <div class="relative finalStepsContainer {{secondStepClass}}">
+                <div class="secondStep">
+                    <form name="register_form" novalidate="" ng-submit="registerLocal()">
+                        <div class="nameInputWrapper relative"><input class="block" type="text"
+                                                                      placeholder="Your Full Name" name="name"
+                                                                      ng-model="register.fullName" ng-minlength="3"
+                                                                      ng-maxlength="50" ng-blur="" required="">
+
+                            <div class="formError"
+                                 ng-show="register_form.name.$dirty &amp;&amp; register_form.name.$invalid &amp;&amp; register_form.name.$blurred">
+                                <small ng-show="register_form.name.$error.required">Enter your name here.</small>
+                                <small ng-show="register_form.name.$error.minlength">Your name should be at least 3
+                                    characters long.
+                                </small>
+                                <small ng-show="register_form.name.$error.maxlength">Your name should not be greater
+                                    than 50 characters.
+                                </small>
+                            </div>
+                            <div class="formError"
+                                 ng-show="register_form.name.$pristine &amp;&amp; register_form.name.$invalid &amp;&amp; register_form.submitted">
+                                <small ng-show="register_form.name.$error.required">Enter your name here.</small>
+                            </div>
+                        </div>
+                        <div class="dobInputWrapper relative">
+                            <div class="dobSelectContainer"><select class="block" name="year"
+                                                                    ng-model="register.dobYear"
+                                                                    ng-options="val for val in years" required="">
+                                <option value="">Year</option>
+                            </select><select name="month" ng-model="register.dobMonth" required="">
+                                <option value="">Month</option>
+                                <option value="1">Jan</option>
+                                <option value="2">Feb</option>
+                                <option value="3">Mar</option>
+                                <option value="4">Apr</option>
+                                <option value="5">May</option>
+                                <option value="6">Jun</option>
+                                <option value="7">Jul</option>
+                                <option value="8">Aug</option>
+                                <option value="9">Sep</option>
+                                <option value="10">Oct</option>
+                                <option value="11">Nov</option>
+                                <option value="12">Dec</option>
+                            </select><select name="date" ng-model="register.dobDate" required="">
+                                <option value="">Date</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option ng-show="register.dobMonth != 2 || !(register.dobYear % 4)">29</option>
+                                <option ng-show="register.dobMonth != 2">30</option>
+                                <option ng-show="register.dobMonth == 1 || register.dobMonth == 3 || register.dobMonth == 5 || register.dobMonth == 7 || register.dobMonth == 8 || register.dobMonth == 10 || register.dobMonth == 12">
+                                    31
+                                </option>
+                            </select></div>
+                            <div class="formError"
+                                 ng-show="((register_form.year.$pristine || register_form.month.$pristine || register_form.date.$pristine) &amp;&amp; register_form.submitted &amp;&amp; (register_form.year.$invalid || register_form.month.$invalid || register_form.date.$invalid)) || ((register_form.year.$dirty &amp;&amp; register_form.year.$invalid) || (register_form.month.$dirty &amp;&amp; register_form.month.$invalid) || (register_form.date.$dirty &amp;&amp; register_form.date.$invalid) )">
+                                <small ng-show="register_form.year.$error.required || register_form.month.$error.required || register_form.date.$error.required">
+                                    Please select your birth fields.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="cityInputWrapper relative"><input class="block" type="text" placeholder="City"
+                                                                      name="city" ng-model="register.state"
+                                                                      ng-minlength="3" ng-maxlength="50" ng-blur=""
+                                                                      required="">
+
+                            <div class="formError"
+                                 ng-show="register_form.city.$dirty &amp;&amp; register_form.city.$invalid &amp;&amp; register_form.city.$blurred">
+                                <small ng-show="register_form.city.$error.required">Enter your city here.</small>
+                                <small ng-show="register_form.city.$error.minlength || register_form.name.$error.maxlength">
+                                    Please enter a valid city name.
+                                </small>
+                            </div>
+                            <div class="formError"
+                                 ng-show="register_form.city.$pristine &amp;&amp; register_form.city.$invalid &amp;&amp; register_form.submitted">
+                                <small ng-show="register_form.city.$error.required">Enter your city here.</small>
+                            </div>
+                        </div>
+                        <select class="block" name="country" ng-model="register.country"
+                                ng-options="val.name for val in countries" required=""></select>
+
+                        <div class="genderInputWrapper relative">
+                            <div class="radioBtnContainer"><label class="inlineBlock">Male<input class="inlineBlock"
+                                                                                                 name="gender"
+                                                                                                 ng-model="register.gender"
+                                                                                                 value="male"
+                                                                                                 type="radio"
+                                                                                                 required=""></label><label
+                                    class="inlineBlock">Female<input class="inlineBlock" name="gender"
+                                                                     ng-model="register.gender" value="female"
+                                                                     type="radio" required=""></label></div>
+                            <div class="formError"
+                                 ng-show="(register_form.gender.$dirty &amp;&amp; register_form.gender.$invalid) || (register_form.gender.$pristine &amp;&amp; register_form.gender.$invalid &amp;&amp; register_form.submitted)">
+                                <small ng-show="register_form.gender.$error.required">Please select your gender.</small>
+                            </div>
+                        </div>
+                        <button xhr-spinner="" class="btn btn-blue getStartedBtn"><span>I'm all set</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="copyrightInfo">Copyright © 2012-2013 Social Scientists e-commerce Pvt. Ltd. All Rights Reserved.</div>
+</footer>
+
+<!--<footer>-->
+        <!--<div class="copyrightInfo">-->
+            <!--Copyright &copy; 2012-2013 Social Scientists e-commerce Pvt. Ltd. All Rights Reserved.-->
+        <!--</div>-->
+        <!--<a class="mixPanelLink pull-right" href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>-->
+    <!--</footer>-->
+
+    <script src="scripts/analyticsTracking.js"></script>
+
+    <!--Use of CDN's for faster loading-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-cookies.min.js"></script>
+
+    <!-- build:js scripts/landing.js -->
+    <script src="src/landing/dmClick.js"></script>
+    <script src="src/landing/regBragProducts.js"></script>
+     <script src="src/landing/regFollowPeople.js"></script>
+    <script src="src/landing/loginRegister.js"></script>
+    <script src="src/landing/landing.js"></script>
+    <script src="src/landing/api.js"></script>    
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+
+        // Sticky elements on scroll
+        var stickyElem = function(msgBanner, bodyElem, offset, bodyElemProp) {
+
+//        var msgBanner = document.getElementById('msgBanner');
+//        var bodyElem = document.querySelector('.fanciedProductsContainer');
+
+//        var stop = (msgBanner.offsetTop + 57);
+            var stop = (msgBanner.offsetTop + offset);
+            console.log('offset is ' + offset + ' and stop value is ' + stop);
+
+            window.onscroll = function(e) {
+                var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+//        console.log(scrollTop, navBreadcrumbs.offsetTop);
+
+                if (scrollTop >= stop) {
+                    msgBanner.className = 'stick';
+                    bodyElem.style.marginTop = bodyElemProp + 'px';
+                } else {
+                    msgBanner.className = '';
+                    bodyElem.style.marginTop = '';
+                }
+            }
+        };
+        // End sticky elements on scroll
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1159 @@
+<html  xmlns:fb="https://www.facebook.com/2008/fbml">
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <META HTTP-EQUIV="REFRESH" CONTENT="200000">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/landing_page.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/homepage.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/fancy_product.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/fancy_unfancy.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/jquery.jscrollpane.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url?>/assets/css/footer_links.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/alt2.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/style.css" />
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/newview.js?auto"></script>
+    <style type="text/css">
+	.middleBackground {
+            background: url("<?php echo $base_url; ?>assets/images/top_banner_background.png") repeat scroll 0 0 transparent;
+	}
+
+    </style>
+</head>
+<body>
+<?php if($user_id == 0): ?>
+<div id="fb-root"></div>
+<script>
+            var button;
+            var button1;
+            var userInfo;
+ 
+            window.fbAsyncInit = function() {
+                FB.init({ 
+                    appId: '<?php echo $app_id; ?>',
+                    channelUrl : '<?php echo urlencode($base_url.'assets/channel.html'); ?>', // Channel File
+                    status: true,
+                    cookie: true,
+                    xfbml: true,
+                    oauth: true,
+                    frictionlessRequests : true
+                });
+ 
+               showLoader(false);
+               showLoader2(false);
+			   showLoader3(false);
+ 
+               function updateButton(response) {
+                button       =   document.getElementById('fb-auth');
+				button2	  =   document.getElementById('fb-auth2');
+				button3	  =   document.getElementById('fb-auth3');
+                //userInfo     =   document.getElementById('user-info');
+ 
+                    /* if (response.authResponse) {
+                        //user is already logged in and connected
+                        window.location="<?php //echo $base_url.'user/facebook/'.$controller.'/'.$function.'/'.$param1.'/'.$param2; ?>";
+                        FB.api('/me', function(info) {
+                            login(response, info);
+                        });
+                    }  */
+					//else {
+                        //user is not connected to your app or logged out
+                        button.onclick = function() {
+                            showLoader(true);
+                            FB.login(function(response) {
+                                if (response.authResponse) {
+                                    window.location="<?php if(!empty($controller))
+                                            echo $base_url.'user/facebook/'.$controller.'/'.$function.'/'.$param1.'/'.$param2; 
+                                                            else
+                                            echo $base_url.'user/facebook';?>";
+                                    FB.api('/me', function(info) {
+                                        showLoader(true);
+                                        login(response, info);
+                                    });
+                                } else {
+                                    //user cancelled login or did not grant authorization
+                                    showLoader(false);
+                                }
+                            }, {scope:'email,user_birthday,user_about_me,publish_stream'});
+                        }
+						
+						button2.onclick = function() {
+                            showLoader2(true);
+                            FB.login(function(response) {
+                                if (response.authResponse) {
+                                    window.location="<?php if(!empty($controller))
+                                            echo $base_url.'user/facebook/'.$controller.'/'.$function.'/'.$param1.'/'.$param2; 
+                                                            else
+                                            echo $base_url.'user/facebook';?>";
+                                    FB.api('/me', function(info) {
+                                        showLoader2(true);
+                                        login(response, info);
+                                    });
+                                } else {
+                                    //user cancelled login or did not grant authorization
+                                    showLoader2(false);
+                                }
+                            }, {scope:'email,user_birthday,user_about_me,publish_stream'});
+                        }
+						
+						button3.onclick = function() {
+                            showLoader3(true);
+                            FB.login(function(response) {
+                                if (response.authResponse) {
+                                    window.location="<?php echo $base_url.'user/facebook/'.$controller.'/'.$function.'/'.$param1.'/'.$param2; ?>";
+                                    FB.api('/me', function(info) {
+                                        showLoader3(true);
+                                        login(response, info);
+                                    });
+                                } else {
+                                    //user cancelled login or did not grant authorization
+                                    showLoader3(false);
+                                }
+                            }, {scope:'email,user_birthday,user_about_me,publish_stream'});
+                        }
+                    //}
+                }
+ 
+                // run once with current status and whenever the status changes
+                FB.getLoginStatus(updateButton);
+                FB.Event.subscribe('auth.statusChange', updateButton);
+            };
+            (function() {
+                var e = document.createElement('script'); e.async = true;
+                e.src = document.location.protocol
+                    + '//connect.facebook.net/en_US/all.js';
+                document.getElementById('fb-root').appendChild(e);
+            }());
+ 
+            function login(response, info){
+                if (response.authResponse) {
+                    var accessToken  =  response.authResponse.accessToken;
+                    showLoader(false);
+                }
+            }
+            
+            function showLoader(status){
+                if (status)
+                    document.getElementById('loader').style.display = 'block';
+                else
+                    document.getElementById('loader').style.display = 'none';
+            }
+			
+            function showLoader2(status){
+                if (status)
+                    document.getElementById('loader2').style.display = 'block';
+                else
+                    document.getElementById('loader2').style.display = 'none';
+            }
+			
+			function showLoader3(status){
+                if (status)
+                    document.getElementById('loader3').style.display = 'block';
+                else
+                    document.getElementById('loader3').style.display = 'none';
+            }
+</script>
+<?php endif; ?>
+    <section class="wrapper">
+        <article class="banner2">
+            <div class="bannerTop">
+            	<div id="tabsSlider">
+                        <div id="tt1"><img src="<?php echo $base_url; ?>assets/images/photos/1.jpg" width="1024" height="223" /></div>
+                        <div id="tt2"><img src="<?php echo $base_url; ?>assets/images/photos/2.jpg" width="1024" height="223" /></div>
+                        <div id="tt3"><img src="<?php echo $base_url; ?>assets/images/photos/3.jpg" width="1024" height="223" /></div>
+                        <div id="tt4"><img src="<?php echo $base_url; ?>assets/images/photos/4.jpg" width="1024" height="223" /></div>
+                        <ul>
+                            <li><a href="#tt1"></a></li>
+                            <li><a href="#tt2"></a></li>
+                            <li><a href="#tt3"></a></li>
+                            <li><a href="#tt4"></a></li>
+                        </ul>
+                </div>
+            </div>
+        </article>
+        <section class="middleBackground clear_both">
+            <div class="middleBackgroundie8">
+        	<div class="middleContainer">
+                <?php 
+                if (count($fprod) > 5) {
+                    $loop = floor(count($fprod)/5).'<br>';
+                    $imgloop = count($fprod) % 5 .'<br>';
+                }
+                else {
+                    $imgloop = count($fprod) % 5 .'<br>';
+                }
+                $p = 0;
+                ?>
+                
+                <?php 
+                if (isset($loop))
+                for($i=0 ; $i < $loop ; $i++ ): ?>
+                <?php
+                $numbers = range(2, 3);
+                shuffle($numbers);
+                ?>
+                <?php include "hflayout".$numbers[0].".php"; ?>
+                <?php include "hflayout".$numbers[1].".php"; ?>
+                <?php endfor ; ?>
+                
+                <?php if($imgloop == 4 ): ?>
+                <?php include 'hflayout2.php'; ?>
+                <?php include 'hflayout2.php'; ?>
+                
+                
+                <?php elseif($imgloop == 3 ): ?>
+                <?php include 'hflayout3.php'; ?>
+               
+                <?php elseif($imgloop == 2 ): ?>
+                <?php include 'hflayout2.php'; ?>
+
+                
+                <?php endif; ?>
+                    <input type="hidden" value="10" class="lazyid"/>
+             </div>
+            
+					<?php if(count($fprod)>0) : ?>			
+                           <div class="slideNormal" id="slideNormal_1"></div> 
+	
+			  <?php endif; ?> 
+             <div class="takeTourpopUp" id="takeTourPopup">
+                <div class="takeTourpopUpTransp"></div>
+                <div class="takeTourpopUpActual">
+                   <div class="forRightPanelPadding" style="padding-left: 17px;">
+                        	<div class="rightPanelHeadingpopup">TAKE THE TOUR</div>
+                            <div class="pickup_close" style="margin: 16px 28px 0 0;" id="close"></div>
+                            <div class="myTakeATour clearBoth">
+                            	<div style="padding:10px;display:inline-block;border-bottom:2px dashed #CCCCCC">
+                                	<div class="paraG" style="border-right:2px dashed #CCCCCC">
+                                    	<div class="tourNumber">1</div>
+                                        <div class="tourHeadName">DISCOVER</div>
+                                        <div class="tourDesText">We've taken great pains to ensure we put together interesting bric-a-brac from across the country - from statement pieces to quiet accents to harmonise with your existing treasures. To navigate your way around, use the top category pane. It's your best friend</div>
+                                    </div>
+                                    <div class="paraG">
+                                    	<div class="tourNumber">2</div>
+                                        <div class="tourHeadName">FANCY</div>
+                                        <div class="tourDesText">See something you love? Hit 'Fancy' and add it to your list of loves and you can revisit it anytime you want. Beyonce said it right - If you like it then you should put a 'crown' on it!!</div>
+                                    </div>
+                                    
+                                    <div class="paraG" style="clear:both;border-right:2px dashed #CCCCCC;border-top:2px dashed #CCCCCC">
+                                    	<div class="tourNumber">3</div>
+                                        <div class="tourHeadName">POLL</div>
+                                        <div class="tourDesText">Money is finite, fascination isn't. So when you're torn between two awesome things to buy, create a poll and get your friends to vote! Your best friend wouldn't lie, so count on her!</div>
+                                    </div>
+                                    
+                                    <div class="paraG">
+                                    	<div class="tourNumber">4</div>
+                                        <div class="tourHeadName">SHOP</div>
+                                        <div class="tourDesText">Be it a shaded maxi dress or a graphic-printed cushion, part with your money only when you're well and truly in love. Cuz that's the only good reason to do anything.</div>
+                                    </div>
+                                </div>
+                                <div style="padding-bottom:10px;height:66px">
+                                    <div class="abtMyBottomIcons" style="padding-left:35px;padding-top:10px">
+                                        <a href="#"><div class="abtMyIconStyleboard">&nbsp;</div></a>
+                                        <a href="#"><div class="abtMyIconBlog">&nbsp;</div></a>
+                                        <a href="#"><div class="abtMyIconFancy">&nbsp;</div></a>
+                                        <a href="#"><div class="abtMyIconPoll">&nbsp;</div></a>
+                                     </div>
+                                </div>
+                                <div style="float:right;padding-right:32px;margin-top:-51px">
+                                    <a href="<?php echo $base_url; ?>user_info/homepage_afterlogin"><img src="<?php echo $base_url?>/assets/images/gotourbttn.png"/></a>
+                                </div>
+                                Best Viewed in Firefox , Chrome , Safari with Resolution 1024 x 768 or Higher
+                            </div>
+                            
+                            
+                        </div>
+                </div>
+            </div>
+            
+            <!-- Start Home page pop-up -->
+            <?php // if($user_id == 0): ?>
+           <!-- <script type="text/javascript" src="<?php //echo $base_url; ?>assets/js/jquery.ui.dialog.min.homePage.js"></script>
+			<div class="homePagePopup" id="homePagePopup">
+				<div class="home_popUpTransp"></div>
+				<div class="home_popUpActual">
+		            <div class="image_background">
+						<a href="javascript:void(0)">
+						    <img src="<?php //echo $base_url; ?>assets/images/imageSample.png" />
+						</a>							
+                        <div class="fancyPoll">
+							<div class="fancyBackground">
+								<div class="fancyIcon"></div>
+								<div class="fancyIconText">See something you love ? Hit <span style="color:#f03562;">'Fancy'</span></div>
+							</div>
+							<div class="pollBackground">
+								<div class="pollIcon"></div>
+								<div class="fancyIconText">Torn between two great things? <span style="color:#f03562;">'Poll'</span> it</div>
+							</div>
+						</div>
+		            </div>
+					<div class="verticaldot"></div>
+					<div class="rightContentsHolderLogin">
+                                              
+                                                <div class=""></div>
+						<div class="soulCharacterHeadingNew">SOUL, CHARACTER</div>
+						<div class="hardtofindtTextNew">AND OTHER THINGS HARD-TO-FIND.</div>
+						<div class="destinationTextNew">your single destination for contemporary, luxury lifestyle</div>
+						<div id="fb-auth" class="signupfromfacebookHolder" style="cursor: pointer;">
+									<div class="facebook_icon_holder">
+										<div class="facebook_icon"></div>
+									</div>
+									
+                                                                             <div class="signup_facebook_text">Login with Facebook</div>
+                                                                     
+						</div><br>
+
+                                                <div id="loader" style="float: left; text-align: center; margin-left: 220px;">
+                                                    <img src="<?php// echo $base_url.'assets/images/loader.gif' ?>" width="25" height="25"/>
+                                                </div>
+					</div>
+                                </div>
+                  </div>-->
+            <?php // endif; ?>
+            <?php  if($user_id == 0): ?>
+			<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.ui.dialog.min.homePage.js"></script>
+                <div class="homePagePopup" id="homePagePopup">
+				  <div class="home_popUpTransp"></div>
+				  <div class="home_popUpActual">
+					<div class="popupWhiteContainer">
+                    	<div class="floatContent">
+                            <div class="signIn_Text">SIGN IN</div>
+                            <div class="closeNew" id="closeSignup"></div>
+                        </div> 
+				        <div class="fbLoaderHolder">   
+                            <div class="fbButton" id="fb-auth"></div>
+                            <div id="loader" class="popupLoader">
+                               <img src="<?php echo $base_url.'assets/images/loader.gif' ?>" width="25" height="25"/>
+                            </div>
+                        </div>
+                        <div class="orTextHolder">
+                        	<div class="popupHorizontal"></div>
+                            <div class="orText">or</div>
+                            <div class="popupHorizontal"></div>
+                        </div>
+                        <div class="signIn_Text_address_text">Sign In with your email address</div>
+                       <form action="JavaScript:void(0);" method = "post">
+                        <div class="text_Field"><input type="text" class="emailTextPopup" placeholder="Email Address" id ="signin_email" /></div>
+                         <div class="text_Field" style="height:63px;">
+                           <p>
+                             <input type="password" class="emailTextPopup" placeholder="Password" id="signin_pw" />
+                           </p>
+                           <p id="ajax_login" align="center" style="color:#F00;font-size:14px;padding-top:6px;font-style:oblique;"></p>
+                         </div>
+                      <div class="checkBoxTextfl">
+                                <div style="color:#903;width:300px !important;cursor:pointer;" class="checkboxTextLeft" id="openNewPopup">Create/Change Password</div>
+                         </div>
+                      <button type="submit" class="getStarted" name="btn_signin" onClick="ajax_login()">GET STARTED</button>
+                        </form>
+                    </div>
+                    <div class="bottomSignupText">Don't have an account? <span id="openSignup" style="color:#ec184d;cursor:pointer;">Click here to Sign Up</span></div>
+                  </div>
+                </div>
+				<?php endif; ?>
+            </div>
+        </section>
+    </section>
+    <div class="createAccountPopup" id="createAccountPopup">
+		<div class="createAccountTransp"></div>
+				  <div class="createAccountActual">
+					<div class="createAccountWhiteContainer">
+                    	<div class="floatContentAccount">
+                            <div class="signIn_Text">CREATE AN ACCOUNT</div>
+                            <div class="closeNew" id="closeAccount"></div>
+                        </div> 
+                        <div class="fbTextSeparator"></div>
+                        <div class="signIn_Text_address_text more_padding_popup">One Click Sign-up Connect with</div>
+				        <div class="fbLoaderHolder">   
+                            <div class="fbButtonAccount" id="fb-auth2"></div>
+                            <div id="loader2" class="popupLoader">
+                               <img src="<?php echo $base_url.'assets/images/loader.gif' ?>" width="25" height="25"/>
+                            </div>
+                        </div>
+                        <div class="orTextHolder">
+                        	<div class="popupHorizontal"></div>
+                            <div class="orText">or</div>
+                            <div class="popupHorizontal"></div>
+                        </div>
+                        <form action="javaScript:void(0);" method="post">
+                        <div class="signIn_Text_address_text">Don't have Facebook? Create an account with Buynbrag</div>
+                        <div class="text_Field"><input type="text" name="signup_fname" class="emailTextPopup" placeholder="First Name" id="fName" /></div>
+                         <div class="text_Field">
+                             <input type="text" name="signup_lname" class="emailTextPopup" placeholder="Last Name" id="lName" />
+                         </div>
+                         <div class="text_Field">
+                             <input type="email" name="signup_email" class="emailTextPopup" placeholder="Email Address" id="eMail" />
+                         </div>
+                         <div class="text_Field more_popup_styl">
+                             <input name="signup_pw1" type="password" class="emailTextPopup new_popup_styles" placeholder="Password" id="pWd" />
+                             <input name="signup_pw2" type="password" class="emailTextPopup new_popup_styles" style="margin-left:13px;" placeholder="Confirm Password" id="cPwd" />
+                             <div style="color:#903;width:300px !important;cursor:pointer;" class="checkboxTextLeft" id="openNewPopup2">Create/Change Password</div>
+            				 <div class="errorMessage" id="errorId"></div>
+                         </div>
+                      <button class="getStarted extra_style_class" onClick="return validate();">GET STARTED</button>
+                    </form></div>
+                    <div class="bottomSignupText">Already have an account? <span id="openSignin" style="color:#ec184d;cursor:pointer;">Click here to Sign in</span></div>
+                  </div>
+      </div>
+      <div class="homePagePopup2" id="homePagePopupNew">
+				  <div class="home_popUpTransp2"></div>
+				  <div class="home_popUpActual2">
+					<div class="popupWhiteContainer2">
+                    	<div class="floatContent">
+                            <div class="signIn_Text">SIGN IN</div>
+                            <div class="closeNew" id="closeSignupNew"></div>
+                        </div> 
+				        <div class="fbLoaderHolder">   
+                            <div class="fbButton" id="fb-auth3"></div>
+                            <div id="loader3" class="popupLoader">
+                               <img src="<?php echo $base_url.'assets/images/loader.gif' ?>" width="25" height="25"/>
+                            </div>
+                        </div>
+                        <div class="orTextHolder">
+                        	<div class="popupHorizontal"></div>
+                            <div class="orText">or</div>
+                            <div class="popupHorizontal"></div>
+                        </div>
+                        <div id="form_content_holder">
+                            <div class="signIn_Text_address_text">Reset password with your email address</div>
+                           <form action="JavaScript:void(0);" method = "post">
+                            <div class="text_Field"><input id="rp_email" type="text" class="emailTextPopup" placeholder="Email Address" /></div>
+                          <button type="submit" class="getStarted" id="checkStatus">REQUEST NEW PASSWORD</button>
+                            </form>
+                        </div>
+						<form action="JavaScript:void(0);" method="post">
+                        <div class="signIn_Text_address_text" style="display:none;color:#ec184d;" id="check_mail">An activation key has been sent to the Email ID. <br> Paste activation key and enter new password!
+                            <div class="text_FieldNew">
+                                <div class="textbox_containr1">
+                                 <div class="txt">Paste Activation Key</div><input id="act_key" type="text" class="emailTextPopup new_popup_styles" placeholder="Activation Key" /> </div>
+                                 <div class="textbox_containr">
+                                 <input type="password" class="emailTextPopup new_popup_styles" placeholder="Password" id="epass" value="" />
+                                 <input type="password" class="emailTextPopup new_popup_styles" style="margin-left:13px;" placeholder="Confirm Password" id="ecpass" value=""  />
+                                 </div>
+                                 <div class="prod_continue reset_btn" onClick="return check_pass();">Reset</div>
+                                 <div class="errorMessage" id="error_Id"></div>
+                             </div>
+                        </div>
+						</form>
+                    </div>
+                    <div class="bottomSignupText">Don't have an account? <span id="openSignup2" style="color:#ec184d;cursor:pointer;">Click here to Sign Up</span></div>
+                  </div>
+      </div>		  
+	 <div class="poll_popUp" id="pollPopup">
+         <div class="poll_popUpTransp"></div>
+         <div class="poll_popUpActual">
+         <div class="fancy_text">Product has been added to your poll list</div>
+         <div class="button_style"><button type="button" id="pollclose" class="prod_continue width_style_fancy">OK</button></div>
+        </div>
+    </div>
+    <div class="poll_popUp" id="alertPopup">
+         <div class="poll_popUpTransp"></div>
+         <div class="poll_popUpActual">
+         <div id="alert_text" class="fancy_text"></div>
+         <div class="button_styleNoPadding"><button type="button" id="alertclose" class="prod_continue width_style_fancy">OK</button></div>
+        </div>
+    </div>
+    <input id="sess_id" type="hidden" value="<?php echo $user_id; ?>">
+    <?php include "fancy_unfancy_fprodU.php" ?>
+    <?php include "footer.php" ?> 
+</body>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/homepage.js?timestamp=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.custom_radio_checkbox.js"></script>
+<script>
+function validate(){
+	
+	//return alert('validation called');
+	var regExpression = /^[A-Za-z\s]+$/ ;
+	var regExpression2 = /^[A-Za-z.\s]+$/ ;
+	
+	if(!($("#fName").val().match(regExpression)) || $("#fName").val().charAt(0) == ' ' )
+					{
+						$("#fName").addClass("red_border");
+					$("#fName").focus();
+					$("#errorId").text('Enter First Name');
+					$("#errorId").show();
+						return false;
+					}
+	else
+			{
+				$("#fName").removeClass("red_border");
+				$("#errorId").hide();
+				
+			}
+	if(!($("#lName").val().match(regExpression2)) || $("#lName").val().charAt(0) == ' ' )
+					{
+						$("#lName").addClass("red_border");
+					$("#lName").focus();
+					$("#errorId").text('Enter Last Name');
+					$("#errorId").show();
+						return false;
+					}
+	else
+			{
+				$("#lName").removeClass("red_border");
+				$("#errorId").hide();
+				
+			}
+			
+			var ePattern=/^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,4}$/;
+			if ($("#eMail").val()=='' || $("#eMail").val().charAt(0) == ' '||!ePattern.test($("#eMail").val())) 
+							{
+							$("#eMail").addClass("red_border");
+							$("#eMail").focus();
+					$("#errorId").text('Enter Email in proper format');
+							$("#errorId").show();
+							return false;
+							}
+			else
+					{
+						$("#eMail").removeClass("red_border");
+						$("#errorId").hide();
+						
+					}
+	
+			
+			if($("#pWd").val()=='' || $("#pWd").val().charAt(0) == ' ' )
+					{
+						$("#pWd").addClass("red_border");
+					$("#pWd").focus();
+					$("#errorId").text('Enter Password');
+					$("#errorId").show();
+						return false;
+					}
+	else
+			{
+				$("#pWd").removeClass("red_border");
+				$("#errorId").hide();
+				
+			}
+			
+			if($("#cPwd").val()=='' || $("#cPwd").val().charAt(0) == ' ' )
+					{
+						$("#cPwd").addClass("red_border");
+					$("#cPwd").focus();
+					$("#errorId").text('Enter Confirm Password');
+					$("#errorId").show();
+						return false;
+					}
+	else
+			{
+				$("#cPwd").removeClass("red_border");
+				$("#errorId").hide();
+				
+			}
+			
+			if($("#pWd").val()!= $("#cPwd").val())
+					{
+						$("#cPwd").addClass("red_border");
+					$("#cPwd").focus();
+					$("#errorId").text('Passwords Must match');
+					$("#errorId").show();
+						return false;
+					}
+	else
+			{
+				$("#cPwd").removeClass("red_border");
+				$("#errorId").hide();
+				
+			}
+			return ajax_signup();	
+}
+
+function check_pass(){
+	if($("#epass").val()=='' || $("#epass").val().charAt(0) == ' ' )
+					{
+						$("#epass").addClass("red_border");
+					$("#epass").focus();
+					$("#error_Id").text('Enter Password');
+					$("#error_Id").show();
+						return false;
+					}
+	else
+			{
+				$("#epass").removeClass("red_border");
+				$("#error_Id").hide();
+				
+			}
+			
+			if($("#epass").val()!= $("#ecpass").val())
+					{
+						$("#ecpass").addClass("red_border");
+					$("#ecpass").focus();
+					$("#error_Id").text('Passwords Must match');
+					$("#error_Id").show();
+						return false;
+					}
+	else
+			{
+				$("#ecpass").removeClass("red_border");
+				$("#error_Id").hide();
+				var baseUrl ='<?php echo $base_url; ?>';
+				var act_key = $('#act_key').val();
+				var pw1 = $('#epass').val();
+				var pw2 = $('#ecpass').val();
+				document.getElementById('loader3').style.display = 'block';
+				$.ajax({
+				type: "POST",
+            	url: baseUrl+'index.php/ajax/activate_password',
+            	data: {activation_key: act_key,reset_pw1: pw1,reset_pw2: pw2},
+				
+				success: function(data)
+				{
+				document.getElementById('loader3').style.display = 'none';
+					if (data=='success')
+					{
+					$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('Your password was successfully changed!');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					window.location.reload();
+					}
+					else if (data=='invalid')
+					{$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('You entered an invalid activation key!');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+					else if (data=='pw_blank')
+					{$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('Passwords cannot be blank!');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+					else if (data=='pw_mismatch')
+					{$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('The 2 passwords you entered, do not match!');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+					else 
+					{$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('Some error occured! Refresh the page and try again!');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+					
+				}
+	});	
+				
+			}
+}
+
+$(function(){
+	
+	$(".smallTrunc").each(function(){
+											
+			var len = 28;
+			var trunc=$(this).text();
+		if($(this).text().length>len)
+		{
+				/* Truncate the content of the P, then go back to the end of the
+				   previous word to ensure that we don't truncate in the middle of
+				   a word */
+				$(this).attr("title",trunc);
+			
+				$(this).addClass("showtooltip2");   
+				   
+				trunc = trunc.substring(0, len);
+				trunc = trunc.replace(/\w+$/, '');
+				
+				trunc += '..';
+				  
+				$(this).html(trunc);		
+		}
+	});
+	
+	$(".medTrunc").each(function(){
+											
+			var len = 55;
+			var trunc=$(this).text();
+		if($(this).text().length>len)
+		{
+				/* Truncate the content of the P, then go back to the end of the
+				   previous word to ensure that we don't truncate in the middle of
+				   a word */
+				$(this).attr("title",trunc);
+			
+				$(this).addClass("showtooltip2");   
+				   
+				trunc = trunc.substring(0, len);
+				trunc = trunc.replace(/\w+$/, '');
+				
+				trunc += '..';
+				  
+				$(this).html(trunc);		
+		}
+	});
+	
+		$(".bigTrunc").each(function(){
+											
+			var len = 83;
+			var trunc=$(this).text();
+		if($(this).text().length>len)
+		{
+				/* Truncate the content of the P, then go back to the end of the
+				   previous word to ensure that we don't truncate in the middle of
+				   a word */
+				$(this).attr("title",trunc);
+			
+				$(this).addClass("showtooltip2");   
+				   
+				trunc = trunc.substring(0, len);
+				trunc = trunc.replace(/\w+$/, '');
+				
+				trunc += '..';
+				  
+				$(this).html(trunc);		
+		}
+	});
+	
+    tooltip2();
+	$("#openNewPopup").click(function(){
+		$("#homePagePopup").dialog('close');
+		$("#form_content_holder").show();
+			$("#check_mail").hide();
+		$("#homePagePopupNew").dialog({
+               width:439,
+               height:379,
+               modal:true
+        });								  
+	});	
+	$("#openNewPopup2").click(function(){
+		$("#createAccountPopup").dialog('close');
+		$("#form_content_holder").show();
+			$("#check_mail").hide();
+		$("#homePagePopupNew").dialog({
+               width:439,
+               height:379,
+               modal:true
+        });								  
+	});
+	$("#closeSignupNew").click(function(){
+			$("#homePagePopupNew").dialog('close');								
+	   });
+	
+	$("#checkStatus").click(function(){
+			var baseUrl ='<?php echo $base_url; ?>';
+			var email = $('#rp_email').val();
+			document.getElementById('loader3').style.display = 'block';
+				$.ajax({
+				type: "POST",
+            	url: baseUrl+'index.php/ajax/password',
+            	data: {fp_email: email},
+				
+				success: function(data)
+				{
+				document.getElementById('loader3').style.display = 'none';
+					if (data=='success')
+					{$("#form_content_holder").hide();
+					$("#check_mail").show();}
+					else if (data=='no_account')
+					{$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('The Email ID you entered is not associated with any user!');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+					else
+                    {$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('Some error occured! Please refresh the page and retry again!');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+				}
+	});	
+			
+	});
+	$("#createAccountPopup").dialog('close');
+			$("#homePagePopupNew").dialog('close');	
+			  $("#homePagePopup").dialog({
+               width:439,
+               height:439,
+               modal:true
+             });
+		   $(".checkbox").dgStyl();	  
+	   
+	    $("#openSignup,#openSignup2").click(function(){
+			$("#homePagePopup").dialog('close');
+			$("#homePagePopupNew").dialog('close');	
+			 $("#createAccountPopup").dialog({
+               width:439,
+               height:539,
+               modal:true
+             });							
+	   }); 
+         
+		  $("#openSignin").click(function(){
+			$("#createAccountPopup").dialog('close');
+			  $("#homePagePopup").dialog({
+               width:439,
+               height:439,
+               modal:true
+             });						
+	   });
+		 
+		$("#signInAccount").click(function(){
+			 $("#homePagePopup").dialog({
+               width:439,
+               height:439,
+               modal:true
+             });							
+	   });
+	   
+	   $("#closeSignup").click(function(){
+			$("#homePagePopup").dialog('close');								
+	   });
+	   
+	   $("#createAccount").click(function(){
+			 $("#createAccountPopup").dialog({
+               width:439,
+               height:539,
+               modal:true
+             });							
+	   });
+	   
+	    $("#closeAccount").click(function(){
+			$("#createAccountPopup").dialog('close');								
+	   });
+	   
+});
+</script>
+<script> 
+    $(document).ready(function(){
+   function last_products_funtion() 
+        { 
+            //var i=10;
+            var ID=$(".lazyid").val();
+            //var baseUrl=$("#baseurl").val();
+            $('div#slideNormal_1').css('background','url(<?php echo $base_url; ?>assets/images/loader.gif)');
+            $('div#slideNormal_1').height('32px');
+            $('div#slideNormal_1').width('32px');
+            $.ajax({
+                url: "<?php echo $base_url; ?>"+'index.php/ajax/homepage_afterlogin_lazyloading/'+ID,
+                success: function(data){
+                    if (data != "") { 
+                       var ID=parseInt($(".lazyid").val())+5;
+                        $(".lazyid").val(ID);
+                        $(".middleContainer:last").after(data);
+                        killScroll = false; 
+                    }
+                $('div#slideNormal_1').css('background','none');
+                }
+    });
+    
+        }
+    
+       var killScroll = false; 
+        $(window).scroll(function(){
+            if  ($(window).scrollTop() + 500 >= $(document).height() - $(window).height() ){
+            if (killScroll == false) { // IMPORTANT - Keeps the loader from fetching more than once.
+               killScroll = true;
+               last_products_funtion();
+               }
+            }
+        });
+    });
+function AddPoll(pid)
+{
+var sess_id = $('#sess_id').val();
+if (sess_id==0)
+{
+	$("#createAccountPopup").dialog('close');
+			  $("#homePagePopup").dialog({
+               width:439,
+               height:439,
+               modal:true
+             });	
+}
+else
+{
+$.ajax({
+		url:"<?php echo $base_url; ?>index.php/ajax_poll/add_to_poll/"+pid,
+		success:function(data){
+					}
+					
+	});	
+        
+$('#poll_'+pid).html('<div class="hoverPoll" style="background-image: url(<?php echo $base_url;?>assets/images/polled.png);"></div><div class="hoverText">POLLED</div>');
+
+$("#pollPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$("#pollclose").click(function(){
+					$("#pollPopup").dialog('close');
+				});
+				$("#alertclose").click(function(){
+					$("#pollPopup").dialog('close');
+				});	
+}
+}
+function ajax_login()
+{
+	var baseUrl ='<?php echo $base_url; ?>';
+	var email = $('#signin_email').val();
+	var password = $('#signin_pw').val();
+	$.ajax({
+				type: "POST",
+            	url: baseUrl+'index.php/ajax/login',
+            	data: {signin_email: email,signin_pw: password},
+				
+				success: function(data)
+				{
+					if (data=='logged_in')
+					window.location.reload();
+					else if (data=='Invalid E-Mail ID')
+					$('#ajax_login').html(data);
+					else if (data=='You entered incorrect password!')
+					$('#ajax_login').html(data);
+					else
+					{$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('Some error occured! Please retry again');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+                    
+				}
+	});
+}
+function ajax_signup()
+{
+	var baseUrl ='<?php echo $base_url; ?>';
+	var email = $('input[name="signup_email"]').val();
+	var fname = $('input[name="signup_fname"]').val();
+	var lname = $('input[name="signup_lname"]').val();
+	var password1 = $('input[name="signup_pw1"]').val();
+	var password2 = $('input[name="signup_pw2"]').val();
+	$.ajax({
+				type: "POST",
+            	url: baseUrl+'index.php/ajax/signup',
+            	data: {signup_email: email,
+					signup_fname: fname,
+					signup_lname: lname,
+					signup_pw1: password1,
+					signup_pw2: password2},
+				
+				success: function(data)
+				{
+					if (data=='sign_up_success')
+					window.location.reload();
+					else if (data=='validation_error')
+					{$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('You entered invalid data! Please try again!');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+					else if (data=='existing_facebook_user')
+					{$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('You are an existing Facebook user! Please click Create/Forgot Password to create/reset your password!');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+					else if (data=='existing_signup_user')
+					{$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('You have already signed-up! Please click Forgot your password to reset your password!');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+					else
+					{$("#alertPopup").dialog({
+					width:605,
+					height:293,
+					modal:true
+				});
+				$('#alert_text').html('Some error occured! Please refresh the page and retry again');
+				$("#alertclose").click(function(){
+					$("#alertPopup").dialog('close');
+				});
+					}
+                    
+				}
+	});
+}
+$(".fancyHolder").each(function(){
+				   					
+				var r=$(this).children(".hiddenFieldDiv1").val();
+				var store_id = $(this).children(".hiddenFieldStoreid").val();
+				var product_id = $(this).children(".hiddenFieldProductid").val();
+				var sess_id = $('#sess_id').val();
+				$(this).click(function(){
+				if (sess_id==0)
+				{
+	$("#createAccountPopup").dialog('close');
+			  $("#homePagePopup").dialog({
+               width:439,
+               height:439,
+               modal:true
+             });	
+}
+				else
+				{
+				var z=$(this).children(".hiddenFieldDiv1").val();
+					if($(this).children(".hoverText").html()=='FANCY')
+						{
+							$("#FancyPopupContainer").dialog({
+								width:738,
+								height:510,
+								modal:true
+							});
+				$.ajax({
+				  url: "<?php echo $base_url; ?>"+'index.php/ajax/fancy_product_fetchpop1?store_id='+store_id+'&product_id='+product_id,
+				  success: function(data){
+				    $('#sid').val(store_id);
+					$('#pid').val(product_id);
+					
+					var myPname = $('#productNameD_'+product_id).html();
+					$('.myProductName').html(myPname);
+					
+					var mySname = $('#storeNameD_'+store_id).html();
+					$('.myStoreName').html(mySname);
+					
+					$("#f_img").attr('src','<?php echo $store_url; ?>assets/images/stores/'+store_id+'/'+product_id+'/img1_product.jpg');
+                    <?php /*?>document["f_img"].src='<?php echo $store_url; ?>assets/images/stores/'+store_id+'/'+product_id+'/img1_product.jpg';<?php */?>
+					$('#popup_category').html(data);
+					}
+				});
+							$('#checkboxesHolder1').jScrollPane({
+								showArrows: false,
+								animateScroll: true,
+								maintainPosition: false
+								});
+						}
+					else if($(this).children(".hoverText").html()=='EDIT')
+						{
+							$("#EditPopupContainer").dialog({
+								width:738,
+								height:510,
+								modal:true
+							});
+					$.ajax({
+					  url: "<?php echo $base_url; ?>"+'index.php/ajax/fancy_product_fetchpop2?store_id='+store_id+'&product_id='+product_id,
+					  success: function(data){
+						$('#sid').val(store_id);
+						$('#pid').val(product_id);
+					
+						var myPname = $('#productNameD_'+product_id).html();
+						$('.myProductName').html(myPname);
+						
+						var mySname = $('#storeNameD_'+store_id).html();
+						$('.myStoreName').html(mySname);
+						
+						$("#uf_img").attr('src','<?php echo $store_url; ?>assets/images/stores/'+store_id+'/'+product_id+'/img1_product.jpg');
+						<?php /*?>document["uf_img"].src='<?php echo $store_url; ?>assets/images/stores/'+store_id+'/'+product_id+'/img1_product.jpg';<?php */?>
+						$('#popup_category1').html(data);
+							}
+					});
+							$('#checkboxesHolder2').jScrollPane({
+								showArrows: false,
+								animateScroll: true
+								});
+							
+						}
+					$("#addtolist").click(function(){
+						
+						$("#FancyPopupContainer").dialog('close');
+							//window.location.reload();
+					});
+					
+					$("#unfancy").click(function(){
+							
+						$("#EditPopupContainer").dialog('close');
+							//window.location.reload();
+			
+					});
+					}
+				});
+				$(this).hover(function(){
+						
+							if($(this).children("#hoverText"+r).html()=='FANCIED')	
+							{
+								$(this).children("#hoverText"+r).html("EDIT");
+								$(this).children("#hoverFancy"+r).removeClass('hoverFancyNext');
+								$(this).children("#hoverFancy"+r).addClass('editFancynext');
+							}
+						
+					},function(){
+						if($(this).children("#hoverText"+r).html()=='EDIT')
+							{
+								$(this).children(".hoverText").html("FANCIED");
+								$(this).children("#hoverFancy"+r).removeClass('editFancynext');
+								$(this).children("#hoverFancy"+r).addClass('hoverFancyNext');
+							}
+								});
+	});
+
+</script>
+<?php ///if(isset($newuser)): ?>
+<!--<script>
+$(function(){
+	$("#takeTourPopup").dialog({
+					width:788,
+					height:817,
+					modal:true
+				});
+	$("#close").click(function(){
+					$("#takeTourPopup").dialog('close');
+				});				
+});
+</script>-->
+<?php //endif; ?>
+</html>

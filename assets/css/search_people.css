@@ -1,0 +1,73 @@
+@charset "utf-8";
+.peopleRow {
+    width: 48%;
+    background: #fff;
+    margin: 0px 15px 15px 0;
+    float: left;
+    min-height: 115px;
+}
+.side_img {
+    width: 75%;
+    display: none;
+}
+.side_img img {
+    margin: 5px 0 5px 10px;
+    width: 20%;
+    box-shadow: 0 0 1px #333;
+}
+.peopleDiv {
+    background-color: #fff;
+    width: 100%;
+}
+
+.peopleImg {
+    margin: 00px 20px 10px 10px;
+    max-width: 100px;
+    height: 0;
+    position: relative;
+    top: 7px;
+}
+
+.peopleImg img{
+    width: 100px;
+}
+
+.peopleInfo {
+    display: inline-block;
+}
+
+.peopleName {
+    font-family: gill;
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.peopleRank, .peopleSocialRow, .peopleFollowers, .peopleFriends {
+    font-size: 15px;
+    font-family: gill_italic;
+    color: #999;
+    padding-bottom: 5px;
+}
+
+.peopleFollowers, .peopleFriends{
+    display: inline-block;
+}
+
+.followw {
+    margin: 15px;
+    display: inline-block;
+    float: right;
+}
+
+.noOfFollowers {
+    font-family: gill;
+    color: #666;
+    font-size: 5px;
+}
+
+.peopleStoreName {
+    font-family: gill;
+    color: #666;
+    font-size: 16px;
+}

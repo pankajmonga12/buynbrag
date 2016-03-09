@@ -1,0 +1,488 @@
+<div itemscope itemtype="http://schema.org/Product" id="midSection" class="container productPage relative" product-page-handler>
+
+    <div class="loadingOverlay" ng-hide="hideSpinner">
+        <ul class="spinner">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <img ng-src="http://sandbox.celebvox.com/t2.php?orderid=productpage&offercode=3c2QA86&productID={{productID}}&productName={{productName}}&amount={{discountedPrice}}&type=LEAD" width='1' height='1' />
+
+    <div class="productNameWrapper">
+        <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='6797024'></div>
+        <h1 itemprop="name" class="productName">{{productName}}</h1>
+        <!--<h3 class="productStoreName">by&nbsp;<span>{{storeName}}</span></h3>-->
+        <h3 class="productStoreName">by&nbsp;<a ng-href="store/{{storeName | beautify}}/{{storeID}}">{{storeName}}</a></h3>
+
+        <!--<div class="productStats hidden-phone pull-right">-->
+            <!--<div class="bragIconLarge inlineBlock">-->
+                <!--<span class="bragCount bnbRedFont ng-binding">{{bragCount}}</span>-->
+                <!--<span class="statsText block">People bragged it</span>-->
+            <!--</div>-->
+            <!--<div class="fancyIconLarge inlineBlock">-->
+                <!--<span class="fancyCount bnbRedFont ng-binding">{{fancyCount}}</span>-->
+                <!--<span class="statsText block">People fancied it</span>-->
+            <!--</div>-->
+            <!--<div class="viewIconLarge inlineBlock">-->
+                <!--<span class="viewCount bnbRedFont ng-binding">{{viewCount}}</span>-->
+                <!--<span class="statsText block">People viewed this</span>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    </div>
+
+    <div class="productInfoWrapper">
+
+        <div class="span6 fancyItem">
+            <div class="fancyImageBG">
+                <div class="fancyItemImageContainer">
+                    <a class="hidden-phone" href="" title="" olink="productZoomModal" ng-click="showLargerImages()">View larger</a>
+                    <img itemprop="image" check-load="loadRemainingData()" reset-image class="fancyItemImage" ng-src="{{productImage}}" alt="{{productName}}">
+
+                    <!--<div class="fancyItemHiddenContainer invisible cssTransitionSlow">-->
+                        <!--<div class="productCtaContainer">-->
+                            <!--<button btn-fancy sid="{{storeID}}" pid="{{productID}}" uname="{{user.userdata.name}}" pname="{{productName}}" has-fancied="{{hasFancied}}" ng-click="triggerFancy()" class="fancyItemBtn btn btn-red"><span class="btnText"><span class="fancyIconWhite"></span>{{fancytext}}</span></button>-->
+                            <!--&lt;!&ndash;&lt;!&ndash;<button btn-brag pid="{{productID}}" sid="{{storeID}}" user-name="{{user.userdata.name}}" product-name="{{productName}}" has-bragged="{{hasBragged}}" ng-click="triggerBrag()" class="bragItemBtn btn btn-red"><span class="btnText"><span class="bragIconWhite"></span>Brag</span></button>&ndash;&gt;&ndash;&gt;-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="productImageThumbsContainer span1">
+            <img ng-repeat="thumb in imageThumbs" class="bottom_image" ng-src="{{thumb.imageURL}}img{{thumb.num}}_40x40.jpg" ng-mouseenter="changeProductImage(thumb.num)" alt="{{productName}}" />
+        </div>
+
+        <!--<div class="productStats hidden-phone pull-right">-->
+            <!--<div class="bragIconLarge inlineBlock">-->
+                <!--<span class="bragCount bnbRedFont ng-binding">{{bragCount}}</span>-->
+                <!--<span class="statsText block">Brag it!</span>-->
+            <!--</div>-->
+            <!--<div class="fancyIconLarge inlineBlock">-->
+                <!--<span class="fancyCount bnbRedFont ng-binding">{{fancyCount}}</span>-->
+                <!--<span class="statsText block">Fancy it!</span>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<div class="viewIconLarge inlineBlock">&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class="viewCount bnbRedFont ng-binding">{{viewCount}}</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class="statsText block">Views</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+
+        <div class="productStats recentlyFanciedContainer hidden-phone pull-right">
+            <div class="braggedByImgContainer">
+
+                <!--<btn-fancy class="prodPageBtnFancy" sid="{{storeID}}" pid="{{productID}}" uname="{{user.userdata.name}}" pname="{{productName}}" has-fancied="{{hasFancied}}"></btn-fancy>-->
+
+                <span ng-repeat="user in usersWhoFancied | limitTo:4">
+                    <a data-dismiss="modal" ng-href="profile/fancy/{{user.userID}}"><img ng-src="{{user.imageURL}}"></a>
+                </span>
+                <span class="fancyBtn statWrapper text-center" ng-click="openModal('prodBraggedUserModal', {pid: productID})" ng-show="+fancyCount > 4">
+                    <span class="fancyStat bnbRedFont">+ {{+fancyCount - 4}}</span>
+                    <span class="statsText block">Bragged</span>
+                </span>
+            </div>
+        </div>
+
+        <!--<div class="productStats recentlyBraggedByContainer hidden-phone pull-right">-->
+            <!--<div class="braggedByImgContainer">-->
+
+                <!--&lt;!&ndash;<btn-tag class="prodPageBtnFancy">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="bragBtn text-center">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<i class="newTagBtn"></i>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="statsText block">Tag</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</btn-tag>&ndash;&gt;-->
+
+                <!--<span >-->
+                    <!--<a data-dismiss="modal" href="//"><img src="https://graph.facebook.com/707544199/picture?width=75&amp;height=75"></a>-->
+                <!--</span>-->
+                <!---->
+                <!--<span class="fancyBtn statWrapper text-center ng-show=" ng-show="+bragCount > 4">-->
+                    <!--<span class="bragStat bnbRedFont">+ {{+bragCount - 4}}</span>-->
+                    <!--<span class="statsText block">Tagged</span>-->
+                <!--</span>-->
+
+                <!--&lt;!&ndash;<span class="noBragError">Be the first one to Brag It!</span>&ndash;&gt;-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="ctaContainer text-center">
+
+            <btn-fancy class="prodPageBtnFancy" url="/application/views/app/src/app/exhaustiveFeatures/callToActions/brag/bragBtnProduct.html" sid="{{storeID}}" pid="{{productID}}" uname="{{user.userdata.name}}" pname="{{productName}}" has-fancied="{{hasFancied}}"></btn-fancy>
+
+            <btn-cart class="prodPageBtnFancy" url="/application/views/app/src/app/exhaustiveFeatures/callToActions/cart/cartBtn.html" quantity="{{totalQuantity}}" pid="{{productID}}" sid="{{storeID}}" sp="{{discountedPrice}}" pname="{{productName}}" color="{{selectedColorVariant.color}}" size="{{selectedSizeVariant.size}}" selectedquantity="{{selectedQuantity.num}}"></btn-cart>
+
+        </div>
+
+        <div class="productStats recentlyBraggedByContainer hidden-phone pull-right">
+            <div class="braggedByImgContainer">
+
+                <!--<btn-buy class="prodPageBtnFancy">-->
+                    <!--<span class="bragBtn text-center">-->
+                        <!--<i class="newCartBtn"></i>-->
+                        <!--<span class="statsText block">Buy now</span>-->
+                    <!--</span>-->
+                <!--</btn-buy>-->
+
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="productCostContainer">
+                    <div class="{{ (discountAvailable == 1) && 'productOriPrice strike hidden-phone' || 'productOriPrice hide hidden-phone' }}"><i class="icon-fontawesome-webfont-5"></i>{{originalPrice}}</div>
+                    <div itemprop="price" class="productDiscountedPrice"><i class="icon-fontawesome-webfont-5"></i>{{discountedPrice}}
+                        <!--<div class="priceDisclaimer">[Inclusive of all taxes]</div>-->
+                    </div>
+                </div>
+
+                <!--<div class="priceDisclaimer">Dispatched by {{deliveryDate | date:'mediumDate'}} ({{processingTime}} days)</div>-->
+
+            </div>
+        </div>
+
+        <!--<div class="productCartContainer span4 pull-right">-->
+            <!--<div class="variantsContainer">-->
+                <!--<form>-->
+                    <!--&lt;!&ndash;<label class="{{ !(colorVariants) && 'hide' }}">Color:&ndash;&gt;-->
+                        <!--&lt;!&ndash;<select ng-model="selectedColorVariant" ng-options="variant.color for variant in colorVariants"></select>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</label>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<label class="{{ (!sizeVariants) && 'hide' }}"><span class="block">Size:</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<select ng-model="selectedSizeVariant" ng-options="variant.size for variant in sizeVariants"></select>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</label>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<label>Quantity:&ndash;&gt;-->
+                        <!--&lt;!&ndash;<select ng-disabled="disableButton" ng-model="selectedQuantity" ng-options="quantity.num for quantity in productQuantity"></select>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</label>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<button class="addToCart btn btn-red" ng-disabled="quantity < 1 || disableButton" xhr-spinner btn-cart quantity="{{totalQuantity}}" pid="{{productID}}" sid="{{storeID}}" sp="{{discountedPrice}}" pname="{{productName}}" color="{{selectedColorVariant.color}}" size="{{selectedSizeVariant.size}}" selectedquantity="{{selectedQuantity.num}}" ng-hide="showCheckout"><span class="btnText"><span class="cartIconWhite"></span>{{cartText}}</span></button>&ndash;&gt;-->
+                    <!--<button class="addToCart btn {{ disableButton && 'btn-green' || 'btn-red'}}" ng-disabled="quantity < 1 || disableButton" xhr-spinner btn-cart quantity="{{totalQuantity}}" pid="{{productID}}" sid="{{storeID}}" sp="{{discountedPrice}}" pname="{{productName}}" color="{{selectedColorVariant.color}}" size="{{selectedSizeVariant.size}}" selectedquantity="{{selectedQuantity.num}}" ng-hide="showCheckout">{{cartText}}</button>-->
+                    <!--&lt;!&ndash;<a class="btn btn-blue checkoutBtn" href="/cart/shopping_cart" ng-show="showCheckout"><span class="btnText">Checkout now</span></a>&ndash;&gt;-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="productDetailsContainer pull-right">
+            <h5>Detailed description</h5>
+            <div itemprop="description" class="descriptionText" ng-bind-html="productDescription"></div>
+        </div>
+
+        <!--<div class="productDeliveryBadges span4 pull-right">-->
+            <!--<p>Free shipping!!!</p>-->
+            <!--<p>Dispatched by {{deliveryDate | date:'mediumDate'}} ({{processingTime}} days)</p>-->
+            <!--<img ng-show="isCOD == 1" src="/assets/images/badges/stores/cod.png" alt="cod badge">-->
+            <!--<img ng-show="isHappyReturn == 1" src="/assets/images/badges/stores/happyreturn.png" alt="return badge">-->
+            <!--<img ng-show="isEMI == 1" src="/assets/images/badges/stores/emi.png" alt="emi badge">-->
+        <!--</div>-->
+
+        <!--<div class="reviewsContainer span4 pull-right">-->
+
+            <!--<div class="reviewTextContainer">-->
+                <!--<h3 class="inlineBlock">Reviews</h3>-->
+                <!--<a href="">Write review</a>-->
+            <!--</div>-->
+
+            <!--<div class="reviews">-->
+                <!--<div class="review">-->
+                    <!--<a href="" class="reviewerImg pull-left">-->
+                        <!--<img src="https://graph.facebook.com/564990357/picture?width=40&height=40">-->
+                    <!--</a>-->
+                    <!--<div class="reviewContent inlineBlock">-->
+                        <!--<h4 class="reviewerName inlineBlock"><a href="">Vishal Punjabi</a></h4>-->
+                        <!--<div class="reviewStarsContainer pull-right">-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                        <!--</div>-->
+                        <!--<p class="reviewText">Love the color! Very classy and beautiful!</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="review">-->
+                    <!--<a href="" class="reviewerImg pull-left">-->
+                        <!--<img src="https://graph.facebook.com/598127905/picture?width=40&height=40">-->
+                    <!--</a>-->
+                    <!--<div class="reviewContent inlineBlock">-->
+                        <!--<h4 class="reviewerName inlineBlock"><a href="">Chintal Sanjaya</a></h4>-->
+                        <!--<div class="reviewStarsContainer pull-right">-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont-2"></span>-->
+                        <!--</div>-->
+                        <!--<p>Very beautiful cow. Love it. I ought to have one :)</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="review">-->
+                    <!--<a href="" class="reviewerImg pull-left">-->
+                        <!--<img src="/assets/images/default/male.png">-->
+                    <!--</a>-->
+                    <!--<div class="reviewContent inlineBlock">-->
+                        <!--<h4 class="reviewerName inlineBlock"><a href="">Manish Kumar</a></h4>-->
+                        <!--<div class="reviewStarsContainer pull-right">-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont"></span>-->
+                            <!--<span class="icon-fontawesome-webfont-1"></span>-->
+                            <!--<span class="icon-fontawesome-webfont-2"></span>-->
+                        <!--</div>-->
+                        <!--<p>Classic cow!</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</div>-->
+
+
+        <div class="commentsContainer span6">
+
+            <div class="storeProdHeading">Comments</div>
+
+            <div class="commentForm">
+                <span class="imgWrapper pull-left" ng-show="user.userdata.loggedin">
+                    <img ng-src="{{user.userdata.fbsrc}}" alt="{{user.userdata.name}}">
+                </span>
+                <form class="inlineBlock" accept-charset="UTF-8" action="">
+                    <div class="input-append">
+                        <input type="text" maxlength="150" ng-click="checkLogin($event)" ng-keyup="saveComment($event)" placeholder="What's on your mind?" ng-model="userComment">
+                        <!--<button class="btn btn-blue" ng-click="saveComment()">Comment</button>-->
+                    </div>
+                </form>
+            </div>
+
+            <div class="comments">
+                <div class="comment relative" ng-repeat="comment in productComments | orderBy: 'commentTime'">
+                    <a href="" ng-click="openModal('personModal', {uid: comment.userID})" class="commenterImg pull-left">
+                        <img ng-src="{{userImg({id: comment.userFBID, dimension: 40, gender: comment.userGender})}}" alt="{{comment.userFullName}}">
+                    </a>
+                    <div class="commentContent inlineBlock">
+                        <h4 class="commenterName">
+                            <a href="" ng-click="openModal('personModal', {uid: comment.userID})">{{comment.userFullName}}</a>
+                            <span class="timeStamp">{{comment.commentedTime}}</span>
+                        </h4>
+                        <p>
+                            <span class="usrComment" ng-show="!comment.toggle">{{comment.userComments}}</span>
+                            <input class="editCommentInput" type="text" value="{{comment.userComments}}" ng-model="comment.userComments" ng-keyup="editComment(comment, $event)" ng-show="comment.toggle"/>
+                        </p>
+                    </div>
+                    <div ng-show="user.userid == comment.userID">
+                        <button class="editBtn close" ng-click="comment.toggle = true;" ng-init="comment.toggle = false;"><i class="icon-pencil"></i></button>
+                        <button class="delBtn close" ng-click="deleteComment(comment.commentID, comment.userID)">&times;</button>    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div image-slider class="storeProductsContainer relative">
+        <div class="storeProdHeading">More products from <b><em>{{storeName}}</em></b></div>
+
+        <div class="imageContainersWrapper">
+
+            <div class="relative">
+
+                <div class="imageRepetition" ng-repeat="product in moreProducts">
+
+                    <ul class="fancyProductMediumContainer">
+                        <!--<li class="span4 fancyItem" style="margin-left: 0;">-->
+                        <li ng-click class="span2 fancyItem shadedBackground">
+                            <a ng-href="product/{{product.productName | beautify}}/{{product.productID}}">
+                                <img class="fancyItemImage" ng-src="{{s3baseUrl}}{{product.storeID}}/{{product.productID}}/img1_240x200.jpg" alt="{{product.productName}}">
+                                <span class="imgHoverState hidden-iphone-portrait"></span>
+                            </a>
+
+                            <!--<div class="fancyItemDetails">-->
+
+                            <!--<a ng-href="/product/{{product.productName | beautify}}/{{product.productID}}"><h5 class="fancyItemName">{{product.productName}}</h5></a>-->
+
+                            <!--<div class="productPriceContainer pull-right">-->
+                            <!--<div class="{{ (product.is_on_discount == 1) && 'productOriPrice hidden-phone strike' || 'productOriPrice hidden-phone hide' }}"><i class="icon-fontawesome-webfont-5"></i>{{product.selling_price}}</div>-->
+                            <!--<div class="productDiscountedPrice bnbRedFont"><i class="icon-fontawesome-webfont-5"></i>{{product.selling_price - product.discount}}</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="fancyItemStats">-->
+                            <!--<div class="fancyIcon block">-->
+                            <!--<span class="fancyCount bnbRedFont">{{product.fancyCounter}}</span>-->
+                            <!--</div>-->
+                            <!--<div class="viewIcon block">-->
+                            <!--<span class="viewCount bnbRedFont">{{product.visitCounter}}</span>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <!--</div>-->
+                            <btn-fancy class="hidden-iphone-portrait" pid="{{img.productID}}" sid="{{img.storeID}}" pname="{{img.productName}}" uname="{{user.userdata.name}}" has-fancied="{{img.hasFancied}}"></btn-fancy>
+
+                            <btn-tag class="hidden-iphone-portrait" pid="{{img.productID}}" sid="{{img.storeID}}" pname="{{img.productName}}" uname="{{user.userdata.name}}"></btn-tag>
+
+                            <share-btns class="hidden-iphone-portrait" urltoshare="https://buynbrag.com/product/{{img.productName | beautify}}/{{img.productID}}" productname="{{img.productName}}"></share-btns>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--<i class="leftArrow icon-left-open-big" ng-click="getPrevious()" ng-show="showPrevious"></i>-->
+        <!--<i class="rightArrow icon-right-open-big" ng-click="getNext()" ng-show="showNext"></i>-->
+
+    </div>
+
+    <div image-slider class="similarProductsContainer relative">
+        <div class="similarProdHeading">Users who bragged this also bragged these</div>
+
+        <div class="imageContainersWrapper" infinite-scroll="loadSimilarFanciedProducts()" infinite-scroll-distance="1">
+
+            <div class="relative">
+
+                <div class="imageRepetition" ng-repeat="product in similarProducts">
+
+                    <ul class="fancyProductMediumContainer">
+                        <!--<li class="span4 fancyItem" style="margin-left: 0;">-->
+                        <li ng-click class="span2 fancyItem shadedBackground">
+                            <a ng-href="product/{{product.productName | beautify}}/{{product.productID}}">
+                                <img class="fancyItemImage" ng-src="{{s3baseUrl}}{{product.storeID}}/{{product.productID}}/img1_240x200.jpg" alt="{{product.productName}}">
+                            </a>
+
+                            <i class="bragBtnMini newBragBtn homeProdBrag {{fanciedClass}}" btn-fancy pid="{{img.productID}}" sid="{{img.storeID}}" pname="{{img.productName}}" uname="{{user.userdata.name}}" has-fancied="{{img.hasFancied}}" ng-click="triggerFancy()"></i>
+
+                            <!--<div class="fancyItemDetails">-->
+
+                                <!--<a ng-href="/product/{{product.product_name | beautify}}/{{product.product_id}}"><h5 class="fancyItemName">{{product.product_name}}</h5></a>-->
+
+                                <!--<div class="productPriceContainer pull-right">-->
+                                    <!--<div class="{{ (product.is_on_discount == 1) && 'productOriPrice hidden-phone strike' || 'productOriPrice hidden-phone hide' }}"><i class="icon-fontawesome-webfont-5"></i>{{product.selling_price}}</div>-->
+                                    <!--<div class="productDiscountedPrice bnbRedFont"><i class="icon-fontawesome-webfont-5"></i>{{product.selling_price - product.discount}}</div>-->
+                                <!--</div>-->
+
+                                <!--<div class="fancyItemStats">-->
+                                    <!--<div class="fancyIcon block">-->
+                                        <!--<span class="fancyCount bnbRedFont">{{product.fancyCounter}}</span>-->
+                                    <!--</div>-->
+                                    <!--<div class="viewIcon block">-->
+                                        <!--<span class="viewCount bnbRedFont">{{product.visitCounter}}</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+
+                            <!--</div>-->
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--<i class="leftArrow icon-left-open-big" ng-click="getPrevious()" ng-show="showPrevious"></i>-->
+        <!--<i class="rightArrow icon-right-open-big" ng-click="getNext()" ng-show="showNext"></i>-->
+
+    </div>
+
+    <!--<div image-slider class="similarProductsContainer relative">-->
+        <!--<div class="similarProdHeading">Similar <b>Products</b></div>-->
+
+        <!--<div class="imageContainersWrapper">-->
+
+            <!--<div class="imageContainers relative cssTransitionSlow">-->
+
+
+                <!--<div class="imageRepetition" ng-repeat="product in similarProducts">-->
+
+                    <!--<ul class="fancyProductMediumContainer">-->
+                        <!--&lt;!&ndash;<li class="span4 fancyItem" style="margin-left: 0;">&ndash;&gt;-->
+                        <!--<li class="span2 fancyItem shadedBackground">-->
+                            <!--<a ng-href="/product/{{product.product_name | beautify}}/{{product.product_id}}">-->
+                                <!--<img class="fancyItemImage" ng-src="{{s3baseUrl}}{{product.store_id}}/{{product.product_id}}/img1_240x200.jpg" alt="{{product.product_name}} picture">-->
+                            <!--</a>-->
+                            <!--&lt;!&ndash;<div class="fancyItemDetails">&ndash;&gt;-->
+
+                                <!--&lt;!&ndash;<a ng-href="/product/{{product.product_name | beautify}}/{{product.product_id}}"><h5 class="fancyItemName">{{product.product_name}}</h5></a>&ndash;&gt;-->
+
+                                <!--&lt;!&ndash;<div class="productPriceContainer pull-right">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="{{ (product.is_on_discount == 1) && 'productOriPrice hidden-phone strike' || 'productOriPrice hidden-phone hide' }}"><i class="icon-fontawesome-webfont-5"></i>{{product.selling_price}}</div>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="productDiscountedPrice bnbRedFont"><i class="icon-fontawesome-webfont-5"></i>{{product.selling_price - product.discount}}</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                                <!--&lt;!&ndash;<div class="fancyItemStats">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="fancyIcon block">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<span class="fancyCount bnbRedFont">{{product.fancyCounter}}</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="viewIcon block">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<span class="viewCount bnbRedFont">{{product.visitCounter}}</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--</li>-->
+
+                    <!--</ul>-->
+                <!--</div>-->
+
+            <!--</div>-->
+
+        <!--</div>-->
+
+        <!--<i class="leftArrow icon-left-open-big" ng-click="getPrevious()" ng-show="showPrevious"></i>-->
+        <!--<i class="rightArrow icon-right-open-big" ng-click="getNext()" ng-show="showNext"></i>-->
+
+    <!--</div>-->
+
+    <!-- Product Description Modal -->
+    <!--<div id="descriptionModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+
+        <!--<div class="modal-header">-->
+            <!--&lt;!&ndash;visible on product page&ndash;&gt;-->
+            <!--<button class="close" role="button" data-toggle="modal" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+
+            <!--<h5>Detailed description of {{productName}}.</h5>-->
+        <!--</div>-->
+
+        <!--<div class="modal-body">-->
+            <!--<div class="detailedDescription" ng-bind-html-unsafe="productDescription">-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="modal-footer">-->
+            <!--&lt;!&ndash;visible on product page&ndash;&gt;-->
+            <!--<button class="btn btn-flat" role="button" data-dismiss="modal">Close</button>-->
+        <!--</div>-->
+
+    <!--</div>-->
+
+</div>
+
+<div id="productZoomModal" class="overlayModal" sexy-overlay>
+
+    <div product-image-zoom>
+        <div class="overlay-header">
+            <h5 style='display: inline;'>{{productName}}</h5>
+            <button class="close" role="button">×</button>
+        </div>
+
+        <div class="overlay-body">
+            <div class="zoomImagesContainer">
+                <div class="zoomProductImageThumbsContainer">
+                    <span class="zoomProductImageThumbs" ng-repeat="thumb in productImageThumbs">
+                        <img class="bottom_image" ng-src="{{thumb.imageURL}}img{{thumb.num}}_40x40.jpg" ng-click="changeProductImage(thumb.num)" alt="" />
+                    </span>
+                </div>
+
+        <div class="imagePreviewWrapper">
+            <img itemprop="image" class="zoomProductImage" ng-src="{{productImage}}" alt="{{productName}}">    
+        </div>
+
+            </div>
+        </div>
+
+        <div class="overlay-footer">
+            
+        </div>
+    </div>
+
+</div>

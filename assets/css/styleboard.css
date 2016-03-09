@@ -1,0 +1,225 @@
+@charset "utf-8";
+.categoriesContainerFancy {
+    height: 82px;
+    margin: 0 auto;
+    padding-top: 18px;
+    width: 1024px;
+}
+
+.roundStyleboard {
+    background-image: url(../images/fancy/styleboard_normal.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.roundStyleboard:hover {
+    background-image: url(../images/fancy/styleboard_hover.png);
+}
+
+.roundStyleboard:active {
+    background-image: url(../images/fancy/styleboard_click.png);
+}
+
+.roundBlog {
+    background-image: url(../images/fancy/bolg_normal.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.roundBlog:hover {
+    background-image: url(../images/fancy/bolg_hover.png);
+}
+
+.roundBlog:active {
+    background-image: url(../images/fancy/blog-click.png);
+}
+
+.roundFancy {
+    background-image: url(../images/fancy/fancy_normal.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.roundFancy:hover {
+    background-image: url(../images/fancy/fancy_hover.png);
+}
+
+.roundFancy:active {
+    background-image: url(../images/fancy/fancy_click.png);
+}
+
+.roundPoll {
+    background-image: url(../images/fancy/poll_normal.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.roundPoll:hover {
+    background-image: url(../images/fancy/poll_hover.png);
+}
+
+.roundPoll:active {
+    background-image: url(../images/fancy/poll_click.png);
+}
+
+.roundStyleboard_active {
+    background-image: url(../images/fancy/styleboard_click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.iconStyleboardActive {
+    background-image: url(../images/fancy/styleboard_click1.png);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 36px;
+    margin-left: 19px;
+    margin-top: -3px;
+}
+
+.logoBoxActive {
+    background-color: #fff;
+    float: left;
+    border: 1px solid #D7D0D6;
+    padding: 12px 13px;
+    margin-top: -12px;
+}
+
+.banner {
+    background-repeat: repeat !important;
+    height: 234px !important;
+}
+
+.slide {
+    height: 237px !important;
+}
+
+.styleboardMainContainer {
+    width: 1024px;
+    margin: 0 auto;
+    height: 550px;
+    padding-top: 25px;
+}
+
+.formLeft {
+    float: left;
+    width: 509px;
+}
+
+.field1 {
+    padding-top: 5px;
+    height: 24px;
+}
+
+.field2 {
+    clear: both;
+    height: 24px;
+}
+
+.darkFont1 {
+    color: #333;
+    font-family: gill_bold;
+    font-size: 20px;
+}
+
+.field3 {
+    padding-top: 30px;
+}
+
+.textTitle {
+    color: #666;
+    font: 20px gill;
+    text-shadow: 0 1px 0 #FFF, -0.5px 0 0 #000;
+    padding-bottom: 15px;
+}
+
+.styleboardMainContainer input[type="text"], .styleboardMainContainer input[type="email"] {
+    background: none repeat scroll 0 0 #E1E1E1;
+    color: #333;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    font-family: gill_italic;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 15px;
+    height: 40px;
+    padding-left: 11px;
+    width: 469px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.styleboardMainContainer input[type="text"]:focus {
+    background: #efefef;
+}
+
+.styleboardMainContainer input[type="email"]:focus {
+    background: #efefef;
+}
+
+.styleboardMainContainer textarea {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 15px;
+    height: 50px;
+    padding: 10px;
+    resize: none;
+    width: 460px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.styleboardMainContainer textarea:focus {
+    background: #efefef;
+}
+
+.leftRightSeparator {
+    float: left;
+    background: none repeat scroll 0 0 #D8D9D7;
+    border: 1px solid #B4B4B4;
+    width: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    height: 515px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.formRight {
+    float: right;
+}
+
+.category1 .sbHolder {
+    width: 469px !important;
+}
+
+.category1 .sbSelector {
+    width: 469px !important;
+}
+
+.category1 .sbOptions {
+    width: 479px !important;
+}

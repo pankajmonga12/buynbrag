@@ -1,0 +1,469 @@
+@charset "utf-8";
+.banner {
+    background-repeat: repeat !important;
+    height: 234px !important;
+}
+
+.slide {
+    height: 237px !important;
+}
+
+.linkWidth {
+    width: 155px !important;
+}
+
+.messageLogo {
+    background: url("../images/message/message_click.png") no-repeat scroll 0 0 transparent !important;
+}
+
+.InboxIconActive {
+    background-image: url("../images/message/inbox_click.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    width: 65px;
+}
+
+.NotificationIcon {
+    background-image: url("../images/message/notification_normal.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.NotificationIcon:hover {
+    background-image: url("../images/message/notification_hover.png");
+}
+
+.NotificationIcon:active {
+    background-image: url("../images/message/notification_click.png");
+}
+
+.messageContainer {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.messageRow {
+    position: relative;
+    border-top: 1px solid #fff;
+}
+
+.messageRowTransparent {
+    background: none repeat scroll 0 0 #EFEEED;
+    height: 89px;
+    opacity: .5;
+    width: 100%;
+}
+
+.messageRowActual {
+    height: 68px;
+    position: absolute;
+    border-bottom: 1px solid #a7a8a8;
+    top: 0;
+    width: 1004px;
+    padding: 10px;
+}
+
+.thickLine {
+    height: 4px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #a7a8a8;
+    width: 100%;
+}
+
+.pupplestore_icon {
+    background: url("../images/pupplestore_icon.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    margin: 20px;
+    width: 37px;
+}
+
+.pupplestore_icon:hover {
+    background: url("../images/editing_hover.png") repeat scroll 0 0 transparent;
+}
+
+.pupplestore_icon:active {
+    background: url("../images/editing_click.png") repeat scroll 0 0 transparent;
+}
+
+.pupplestore_close {
+    background: url("../images/pupplestore_close.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 26px;
+    margin: 22px;
+    width: 26px;
+}
+
+.pupplestore_close:hover {
+    background: url("../images/close_hover.png") repeat scroll 0 0 transparent !important;
+}
+
+.pupplestore_close:active {
+    background: url("../images/close_click.png") repeat scroll 0 0 transparent;
+}
+
+.communicationImage {
+    background-image: url("../images/communication_normal.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 36px;
+    margin: 20px;
+    width: 36px;
+    float: left;
+}
+
+.communicationImage:hover {
+    background-image: url("../images/communication_hover.png") !important;
+}
+
+.communicationImage:active {
+    background-image: url("../images/communication_click.png");
+}
+
+.communicationImage:active .communicationNumber {
+    color: #fff;
+}
+
+.communicationNumber {
+    color: #666;
+    font-family: gill_bold;
+    font-size: 14px;
+    padding-left: 23px;
+}
+
+.height68 {
+    height: 68px;
+}
+
+.profBg {
+    background-color: #fff;
+    width: 65px;
+    height: 65px;
+    padding: 3px;
+    float: left;
+}
+
+.img_details {
+    float: left;
+    font-family: Trebuchet MS;
+    padding-left: 12px;
+    padding-top: 2px;
+}
+
+.names {
+    color: #666;
+    font-family: gill;
+    font-size: 16px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.timing {
+    color: #666;
+    font-family: "Trebuchet MS";
+    font-size: 11px;
+    font-style: italic;
+    padding-left: 5px;
+}
+
+.img_about {
+    color: #6C6C6C;
+    font-family: "Trebuchet MS";
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.communicationHideWrapper {
+    position: relative;
+    display: none;
+}
+
+.search_text {
+    float: left;
+    padding-left: 15px;
+    padding-top: 14px;
+}
+
+.search_text input[type="text"] {
+    background: none repeat scroll 0 0 #FFF;
+    border-top: 1px solid #ccc;
+    border: 1px solid #e0e0e0;
+    color: #333;
+    font: 15px gill;
+    height: 46px;
+    padding-left: 10px;
+    width: 800px;
+}
+
+.searching_icon {
+    background: url("../images/communication_textfiled_icon.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 36px;
+    margin-left: 15px;
+    margin-top: 20px;
+    width: 39px;
+}
+
+.delete_small {
+    background: url("../images/message/deletsmall_normal.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: right;
+    height: 12px;
+    margin-left: 18px;
+    margin-top: 32px;
+    width: 12px;
+}
+
+.delete_small:hover {
+    background: url("../images/message/deletsmall_hover.png") repeat scroll 0 0 transparent;
+}
+
+.delete_small:active {
+    background: url("../images/message/deletsmall_delet.png") repeat scroll 0 0 transparent;
+}
+
+.messageBigRow {
+    padding-top: 30px;
+}
+
+.commentsHide {
+    display: none;
+}
+
+.composeMessage {
+    background: #749d5e;
+    background: -moz-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -webkit-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -o-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -ms-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    -pie-background: linear-gradient(bottom, #619049 50%, #749d5e 0);
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    -moz-box-shadow: 0 5px 0 #b3c5aa;
+    -webkit-box-shadow: 0 5px 0 #b3c5aa;
+    -khtml-box-shadow: 0 5px 0 #b3c5aa;
+    -pie-box-shadow: 0 5px 0 #b3c5aa;
+    box-shadow: 0 5px 0 #b3c5aa;
+    font-family: gill_bold;
+    font-size: 33px;
+    color: #fff;
+    text-align: center;
+    width: 247px;
+    height: 58px;
+    cursor: pointer;
+    float: right;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.composeMessage:hover {
+    background: #8ec273;
+    background: -moz-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -webkit-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -o-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -ms-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    -pie-background: linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+}
+
+.composeMessage:active {
+    background: #537541;
+}
+
+.comp_message {
+    background: url("../images/message/compose.png") repeat scroll 0 0 transparent;
+    float: left;
+    height: 24px;
+    width: 32px;
+    margin: 8px 0 0 8px;
+}
+
+.upload_popup {
+    display: none;
+    height: 520px;
+    width: 600px;
+}
+
+.uploadPopupmain {
+    border-top: 1px solid #FFF;
+    height: 519px;
+    position: relative;
+    width: 100%;
+}
+
+.uploadPopupTransp {
+    background: none repeat scroll 0 0 #FFF;
+    height: 510px;
+    opacity: .88;
+    width: 100%;
+}
+
+.upload_mid {
+    box-shadow: 0 11px 20px #000;
+    -moz-box-shadow: 0 11px 20px #000;
+    -webkit-box-shadow: 0 11px 20px #000;
+    -khtml-box-shadow: 0 11px 20px #000;
+    -pie-box-shadow: 0 11px 20px #000;
+    height: 510px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.message_header {
+    height: 38px;
+    padding: 30px 0 0 30px;
+}
+
+.comp_msgIcon {
+    background: url("../images/message/compose_hover.png") repeat scroll 0 0 transparent;
+    float: left;
+    height: 24px;
+    width: 32px;
+    margin: 12px 0 0 0;
+}
+
+.composeMessageText {
+    color: #333;
+    float: left;
+    font-family: gill;
+    font-size: 39px;
+    padding-left: 15px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.pop_close {
+    background: url("../images/popup_close.png") repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: right;
+    height: 27px;
+    margin-right: 20px;
+    margin-top: 12px;
+    width: 26px;
+}
+
+.threedots {
+    background: url("../images/message/recipients_popup.png") repeat scroll 0 0 transparent;
+    position: absolute;
+    height: 10px;
+    right: 40px;
+    top: 35px;
+    width: 34px;
+}
+
+.upload_form {
+    padding: 45px 0 0 30px;
+}
+
+.upLabel {
+    color: #666;
+    font: 20px gill;
+    padding: 0 0 12px;
+    text-shadow: 0 1px 0 #FFF, 0.5px 0 0 #000;
+}
+
+.inviteText {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    float: left;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 46px;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 523px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.textfieldDiv {
+    height: 70px;
+    position: relative;
+}
+
+.messageField {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 60px;
+    padding: 12px;
+    resize: none;
+    text-shadow: 0 1px 0 #FFF;
+    width: 511px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.inviteText:focus, .messageField:focus {
+    background-color: #efefef;
+}
+
+.textAreaDiv {
+    height: 100px;
+}
+
+.fileInput input {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    float: left;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 46px;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 390px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.fileInput {
+    height: 70px;
+    position: relative;
+}
+
+.fileInput input:focus {
+    background-color: #efefef;
+}
+
+.fileButton {
+    -moz-box-shadow: 0 5px 0 #acbdcd;
+    -webkit-box-shadow: 0 5px 0 #acbdcd;
+    -khtml-box-shadow: 0 5px 0 #acbdcd;
+    -pie-box-shadow: 0 5px 0 #acbdcd;
+    box-shadow: 0 5px 0 #acbdcd;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.fileButton:hover {
+    background-color: #7aaadf !important;
+}
+
+.fileButton:active {
+    background-color: #5186c2 !important;
+}
+
+.white_upload {
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    font: 25px gill_bold;
+    color: #fff;
+}

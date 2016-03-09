@@ -1,0 +1,74 @@
+<div id="midSection" class="container inviteStatusPage cssTransitionSlow" ng-controller="InviteStatusController">
+
+    <div class="inviteStatusContainer">
+        Track the status of your invited friends here.
+
+        <table class="table table-bordered table-hover">
+            <thead class="dark">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Last Invited</th>
+                <th>Status</th>
+                <th>BB$$ earned</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr class="success" ng-repeat="friend in invitedFriends">
+                <td>Manish</td>
+                <td>{{friend.inviteeRefID}}</td>
+                <td>{{(friend.sentDate)*1000 | date:'mediumDate'}}</td>
+                <td>{{inviteStatus[friend.invitationStatus]}}</td>
+                <td>500</td>
+                <td>---</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="badgesBucksStatusContainer">
+        Brag bucks earned for every badge unlocked.
+
+        <table class="table table-bordered table-hover">
+            <thead class="dark">
+            <tr>
+                <th>Badge unlocked</th>
+                <th>Level reached</th>
+                <th>Unlocked on</th>
+                <th>BB$$ earned</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td class="tableBadgeContainer"><img src="\assets\images\badges\fprod\4.png" alt="badge"></td>
+                <td>Level 3 - Eye for beauty</td>
+                <td>15/03/2013</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td class="tableBadgeContainer"><img src="\assets\images\badges\fprod\5.png" alt="badge"></td>
+                <td>Level 0 - The Aficionado</td>
+                <td>20/04/2013</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td class="tableBadgeContainer"><img src="\assets\images\badges\fprod\6.png" alt="badge"></td>
+                <td>Level 1 - The Aficionado</td>
+                <td>25/05/2013</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td class="tableBadgeContainer"><img src="\assets\images\badges\fprod\7.png" alt="badge"></td>
+                <td>Level 2 - The Aficionado</td>
+                <td>11/06/2013</td>
+                <td>400</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

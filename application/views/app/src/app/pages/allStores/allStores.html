@@ -1,0 +1,139 @@
+<div id="midSection" class="container allStoresPage cssTransitionSlow" ng-controller="StoreController">
+
+    <div id="storeBanner">
+        <img class="hidden-phone" src="/assets/images/storePageBanners/storeMain.jpg">
+
+        <div class="bannerTextShadedContainer hidden-phone">
+            <h2>Discover Stores</h2>
+            <div class="bannerStats">
+                125+ Stores | 12000+ Products
+            </div>
+        </div>
+    </div>
+
+    <div class="storesContainer container">
+
+        <div class="dropdown inlineBlock">
+            <a href="" class="btn btn-flat dropdown-toggle" data-toggle="dropdown">{{category}}
+                <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="allStores">All</a></li>
+                <li ng-repeat="category in storesByCategories"><a tabindex="-1" href="allStores/{{category.catName}}/{{category.catID}}">{{category.catName}}({{category.totalProducts}})</a></li>
+            </ul>
+        </div>
+
+        <div class="resultStatsContainer">
+        <ul class="unstyled inline">
+            <li class="{{ (filter == filters.newStores) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.newStores) || filterProducts(filters.newStores)">
+                    <span>
+                        New Stores
+                    </span>
+                </a>
+            </li>
+            <li class="{{ (filter == filters.popularStores) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.popularStores) || filterProducts(filters.popularStores)">
+                    <span>
+                        Most popular stores
+                    </span>
+                </a>
+            </li>
+            <li class="{{ (filter == filters.allStores) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.allStores) || filterProducts(filters.allStores)">
+                    <span>
+                        All stores
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+        <div class="featuredStoresContainer" infinite-scroll="getStores()" infinite-scroll-distance='1'>
+
+            <div ng-repeat="store in stores" class='inlineBlock wrapper'>
+                <ul class="{{ ($index%3==0) && 'span4 leftMar0' || 'span4' }}">
+                    <li class="storeDetailContainer">
+                        <div class="storeBrandingContainer shadedBackground">
+                            <!--<a class="storeBannerImgContainer" ng-href="#/store/{{store.storeDetails.store_name | beautify}}/{{store.storeDetails.store_id}}">-->
+                            <!--<img ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/{{store.storeDetails.store_id}}/top_banner.jpg" alt="Store branding banner">-->
+                            <!--</a>-->
+                            <a class="storeBannerName inlineBlock" ng-href="store/{{store.storeDetails.store_name | beautify}}/{{store.storeDetails.store_id}}">{{store.storeDetails.store_name}}</a>
+                            <a class="storeBannerButton btn btn-red btn-mini" ng-href="store/{{store.storeDetails.store_name | beautify}}/{{store.storeDetails.store_id}}">Enter Store</a>
+                        </div>
+                        <div class="storeProductsPreviewContainer">
+                            <a ng-repeat="item in store.storeProducts" ng-href="product/{{item.product_name | beautify}}/{{item.product_id}}">
+                                <img ng-src="{{s3baseUrl}}{{store.storeDetails.store_id}}/{{item.product_id}}/img1_171x171.jpg" alt="Store Item">
+                            </a>
+                        </div>
+                        <div class="storeStatsContainer shadedBackground">
+                            <div class="pull-left">
+                                <div>
+                                    <span class="fancyCount bnbRedFont">{{store.storeDetails.fancy_counter}}</span> followers
+                                </div>
+                                <div>
+                                    <span class="viewCount bnbRedFont">{{store.storeDetails.totalFancied}}</span> product brags
+                                </div>
+                            </div>
+                            <div class="pull-right">
+                                <div>
+                                    <span class="viewCount bnbRedFont">{{store.storeDetails.totalProducts}}</span> products
+                                </div>
+                                <div>
+                                    <span class="viewCount bnbRedFont">{{store.storeDetails.storeVisitCounter}}</span> views
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--<div class="featuredStoresContainer">-->
+
+            <!--<div class="featuredBanner row"><span class="span12">FEATURED STORES</span></div>-->
+            <!--<div ng-repeat="store in featuredstores" class='inlineBlock wrapper'>-->
+                <!--<ul class="{{ ($index%3==0) && 'span4 leftMar0' || 'span4' }}">-->
+                    <!--<li class="storeDetailContainer">-->
+                        <!--<div class="storeBrandingContainer shadedBackground">-->
+                            <!--&lt;!&ndash;<a class="storeBannerImgContainer" ng-href="#/store/{{store.storeDetails.store_name | beautify}}/{{store.storeDetails.store_id}}"><img ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/{{store.storeDetails.store_id}}/top_banner.png" alt="Store branding banner"></a>&ndash;&gt;-->
+                            <!--<a class="storeBannerName inlineBlock" ng-href="#/store/{{store.storeDetails.store_name | beautify}}/{{store.storeDetails.store_id}}">{{store.storeDetails.store_name}}</a>-->
+                            <!--<a class="storeBannerButton btn btn-blue btn-mini" ng-href="#/store/{{store.storeDetails.store_name | beautify}}/{{store.storeDetails.store_id}}">Enter Store</a>-->
+                        <!--</div>-->
+                        <!--<div class="storeProductsPreviewContainer">-->
+                            <!--<a ng-repeat="item in store.storeProducts" ng-href="#/product/{{item.product_name | beautify}}/{{item.product_id}}">-->
+                                <!--<img ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/{{store.storeDetails.store_id}}/{{item.product_id}}/img1_171x171.jpg" alt="Store Item">-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="storeStatsContainer shadedBackground">-->
+                            <!--<div class="fancyIcon">-->
+                                <!--<span class="fancyCount bnbRedFont">{{store.storeDetails.fancy_counter}}</span> followers-->
+                            <!--</div>-->
+                            <!--<div class="viewIcon">-->
+                                <!--<span class="viewCount bnbRedFont">{{store.storeDetails.totalFancied}}</span> fancies-->
+                            <!--</div>-->
+                            <!--<div class="viewIcon">-->
+                                <!--<span class="viewCount bnbRedFont">{{store.storeDetails.storeVisitCounter}}</span> viewed-->
+                            <!--</div>-->
+                            <!--<div class="viewIcon">-->
+                                <!--<span class="viewCount bnbRedFont">{{store.storeDetails.totalProducts}}</span> Products-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+    </div>
+
+    <ul class="spinner" ng-hide="hideSpinner">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</div>

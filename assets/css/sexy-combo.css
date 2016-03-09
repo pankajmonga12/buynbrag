@@ -1,0 +1,677 @@
+/* SEXY-COMBO.CSS */
+
+.discoverDrop div.combo {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+/*text input*/
+.discoverDrop .combo input {
+    position: absolute;
+}
+
+/*icon*/
+.discoverDrop .combo div.icon {
+    position: absolute;
+}
+
+/*list wrapper*/
+.discoverDrop .combo div.list-wrapper {
+    position: absolute;
+    overflow: hidden;
+    /*we should set height and max-height explicitly*/
+    height: 170px !important;
+    max-height: 200px;
+    /*should be always at the top*/
+    z-index: 99999;
+    -moz-box-shadow: 0 4px 6px #262626;
+    -webkit-box-shadow: 0 4px 6px #262626;
+    -khtml-box-shadow: 0 4px 6px #262626;
+    -pie-box-shadow: 0 4px 6px #262626;
+    box-shadow: 0 4px 6px #262626;
+    behavior: url(PIE.htc);
+}
+
+/*"drop-up" list wrapper*/
+.discoverDrop .combo div.list-wrapper-up {
+}
+
+/*dropdown list*/
+.discoverDrop .combo ul {
+}
+
+/*dropdown list item*/
+.discoverDrop .combo  li {
+    height: 32px;
+}
+
+/*active (hovered) list item*/
+.discoverDrop .combo li.active {
+}
+
+.discoverDrop .combo .visible {
+    display: block;
+}
+
+.discoverDrop .combo .invisible {
+    display: none;
+}
+
+/*used when emptyText config opt is set. Applied to text input*/
+.discoverDrop .combo input.empty {
+}
+
+/* SEXY.CSS */
+
+.discoverDrop div.sexy {
+    white-space: nowrap;
+    height: 21px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 136px;
+}
+
+.discoverDrop div.sexy input {
+    margin: 0 0 0 0;
+    font: 14px handSean;
+    color: #6B6B6B;
+    background: #272727;
+    background: -moz-linear-gradient(bottom, #272727 50%, #343434 0%);
+    background: -webkit-linear-gradient(bottom, #272727 50%, #343434 0%);
+    background: -o-linear-gradient(bottom, #272727 50%, #343434 0%);
+    background: -ms-linear-gradient(bottom, #272727 50%, #343434 0%);
+    -pie-background: linear-gradient(bottom, #272727 50%, #343434 0%);
+    height: 30px;
+    border-bottom: 1px solid #1C1C1C;
+    line-height: 18px;
+    vertical-align: middle;
+    border: none;
+    padding-left: 7px;
+    text-shadow: 0 -1px 0 #000;
+    width: 129px;
+    behavior: url(PIE.htc);
+}
+
+.discoverDrop div.sexy div.icon {
+    width: 16px;
+    height: 12px;
+    border: 0;
+    background: transparent url(../images/discover_arrow.png) no-repeat 0px 0px;
+    cursor: pointer;
+    top: 11px;
+    right: 9px;
+
+}
+
+.discoverDrop div.sexy div.icon:hover {
+    background: transparent url(../images/arrow_hover.png) no-repeat 0 0;
+    top: 12px;
+}
+
+.discoverDrop div.sexy div.list-wrapper {
+    left: -18px;
+    top: 1px;
+    border: 1px solid #D9D9D9;
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    bottom: auto;
+}
+
+.discoverDrop div.sexy div.list-wrapper-up {
+    top: auto;
+    bottom: 21px;
+}
+
+.discoverDrop div.sexy ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 160px;
+}
+
+.discoverDrop div.sexy  li {
+    padding: 4px 5px;
+    height: 24px;
+    font: 15px handSean;
+    background: url(../images/banner_background.png) repeat;
+    border-bottom: 1px solid #d0d0d0;
+    border-top: 1px solid #f7f7f7;
+    cursor: pointer;
+    margin: 0;
+    color: #666;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.discoverDrop div.sexy li.active {
+    background-image: none;
+    background-color: #E9E9E9 !important;
+}
+
+.discoverDrop div.sexy li.active:active {
+    background-image: none;
+    background-color: #f7f7f7 !important;
+    color: #e81c4d;
+}
+
+/*for IE*/
+.discoverDrop div.sexy a, div.sexy a:visited, div.sexy a:active {
+    display: block;
+    width: 100%;
+    width: 146px;
+    text-decoration: none;
+    font: normal 14px handSean;
+    color: #000000;
+    cursor: pointer;
+    margin: 0;
+    height: 20px;
+}
+
+.discoverDrop div.sexy input.empty {
+    color: gray;
+}
+
+.discoverDrop a.to-highlight:hover {
+    background-color: rgb(223, 232, 246);
+}
+
+/* SEXY-COMBO.CSS */
+
+.searchBox div.combo {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+/*text input*/
+.searchBox .combo input {
+    position: absolute;
+}
+
+/*icon*/
+.searchBox .combo div.icon {
+    position: absolute;
+}
+
+/*list wrapper*/
+.searchBox .combo div.list-wrapper {
+    position: absolute;
+    overflow: hidden;
+    height: auto;
+    z-index: 99999;
+    -moz-box-shadow: 0 4px 6px #262626;
+    -webkit-box-shadow: 0 4px 6px #262626;
+    -khtml-box-shadow: 0 4px 6px #262626;
+    -pie-box-shadow: 0 4px 6px #262626;
+    box-shadow: 0 4px 6px #262626;
+    behavior: url(PIE.htc);
+}
+
+/*"drop-up" list wrapper*/
+.searchBox .combo div.list-wrapper-up {
+}
+
+/*dropdown list*/
+.searchBox .combo ul {
+}
+
+/*dropdown list item*/
+.searchBox .combo  li {
+    height: 32px;
+}
+
+/*active (hovered) list item*/
+.searchBox .combo li.active {
+}
+
+.searchBox .combo .visible {
+    display: block;
+}
+
+.searchBox .combo .invisible {
+    display: none;
+}
+
+/*used when emptyText config opt is set. Applied to text input*/
+.searchBox .combo input.empty {
+}
+
+/* SEXY.CSS */
+
+.searchBox div.sexy {
+    white-space: nowrap;
+    height: 21px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 146px;
+}
+
+.searchBox div.sexy input {
+    margin: 0 0 0 0;
+    font: 14px rockwell_italic;
+    color: #6B6B6B;
+    background: #eee;
+    height: 26px;
+    padding-top: 3px;
+    line-height: 18px;
+    vertical-align: middle;
+    border: none;
+    padding-left: 7px;
+    width: 100px;
+    margin: 4px 0 0 0;
+}
+
+.searchBox div.sexy div.icon {
+    width: 34px;
+    height: 30px;
+    border: 0;
+    background: transparent url(../images/searchArrow.png) no-repeat 0 0;
+    cursor: pointer;
+    top: 3px;
+    left: 155px;
+}
+
+.searchBox div.sexy div.icon:hover {
+    width: 34px;
+    height: 30px;
+    border: 0;
+    background: transparent url(../images/searchHover.png) no-repeat 0 0;
+    cursor: pointer;
+    top: 3px;
+    left: 155px;
+
+}
+
+.searchBox div.sexy div.list-wrapper:hover .searchBox div.sexy div.icon {
+    background: transparent url(../images/searchHover.png);
+}
+
+.searchBox div.sexy div.list-wrapper {
+    left: 47px;
+    top: 31px;
+    border: 1px solid #D9D9D9;
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    width: 140px;
+    bottom: auto;
+}
+
+.searchBox div.sexy div.list-wrapper-up {
+    top: auto;
+    bottom: 21px;
+}
+
+.searchBox div.sexy ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 160px;
+}
+
+.searchBox div.sexy  li {
+    padding: 6px 5px;
+    height: 20px;
+    font: normal 16px rockwell;
+    color: #666;
+    background: url(../images/banner_background.png) repeat;
+    border-bottom: 1px solid #d0d0d0;
+    border-top: 1px solid #f7f7f7;
+    cursor: pointer;
+    margin: 0;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.searchBox div.sexy li.active {
+    background-image: none;
+    background-color: #E9E9E9 !important;
+}
+
+.searchBox div.sexy li.active:active {
+    background-image: none;
+    background-color: #f7f7f7 !important;
+    color: #e81c4d;
+}
+
+/*for IE*/
+.searchBox div.sexy a, div.sexy a:visited, div.sexy a:active {
+    display: block;
+    width: 100%;
+    width: 146px;
+    text-decoration: none;
+    font: normal 16px rockwell;
+    color: #666;
+    cursor: pointer;
+    margin: 0;
+    height: 20px;
+}
+
+.searchBox div.sexy input.empty {
+    color: gray;
+}
+
+.searchBox a.to-highlight:hover {
+    background-color: rgb(223, 232, 246);
+}
+
+/* SEXY-COMBO.CSS */
+
+.moveDrop div.combo {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+/*text input*/
+.moveDrop .combo input {
+    position: absolute;
+}
+
+/*icon*/
+.moveDrop .combo div.icon {
+    position: absolute;
+}
+
+/*list wrapper*/
+.moveDrop .combo div.list-wrapper {
+    position: absolute;
+    overflow: hidden;
+    height: auto;
+    z-index: 99999;
+    -moz-box-shadow: 0 3px 3px #626262;
+    -webkit-box-shadow: 0 3px 3px #626262;
+    -khtml-box-shadow: 0 3px 3px #626262;
+    -pie-box-shadow: 0px 3px 3px #626262;
+    box-shadow: 0 3px 3px #626262;
+    behavior: url(PIE.htc);
+}
+
+/*"drop-up" list wrapper*/
+.moveDrop .combo div.list-wrapper-up {
+}
+
+/*dropdown list*/
+.moveDrop .combo ul {
+}
+
+/*dropdown list item*/
+.moveDrop .combo  li {
+    height: 32px;
+}
+
+/*active (hovered) list item*/
+.moveDrop .combo li.active {
+}
+
+.moveDrop .combo .visible {
+    display: block;
+}
+
+.moveDrop .combo .invisible {
+    display: none;
+}
+
+/*used when emptyText config opt is set. Applied to text input*/
+.moveDrop .combo input.empty {
+}
+
+/* SEXY.CSS */
+
+.moveDrop div.sexy {
+    white-space: nowrap;
+    height: 35px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 93px;
+}
+
+.moveDrop div.sexy input {
+    background: #619049;
+    background: -moz-linear-gradient(bottom, #619049 50%, #749d5e 0%);
+    background: -webkit-linear-gradient(bottom, #619049 50%, #749d5e 0%);
+    background: -o-linear-gradient(bottom, #619049 50%, #749d5e 0%);
+    background: -ms-linear-gradient(bottom, #619049 50%, #749d5e 0%);
+    -pie-background: linear-gradient(bottom, #619049 50%, #749d5e 0%);
+    font-family: rockwell_bold;
+    font-size: 18px;
+    color: #fff;
+    width: 84px;
+    height: 35px;
+    right: 12px;
+    top: -10px;
+    float: right;
+    padding-left: 8px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    behavior: url(PIE.htc);
+}
+
+.moveDrop div.sexy div.icon {
+    background-image: url(../images/move_icon.png);
+    width: 16px;
+    height: 12px;
+    cursor: pointer;
+    top: 3px;
+    right: 20px;
+}
+
+.moveDrop div.sexy div.icon:hover {
+    background-image: url(../images/move_icon.png);
+}
+
+.moveDrop div.sexy div.list-wrapper:hover .moveDrop div.sexy div.icon {
+    background: transparent url(../images/searchHover.png);
+}
+
+.moveDrop div.sexy div.list-wrapper {
+    left: -61px;
+    top: -10px;
+    border: 1px solid #D9D9D9;
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    width: 140px;
+    bottom: auto;
+}
+
+.moveDrop div.sexy div.list-wrapper-up {
+    top: auto;
+    bottom: 21px;
+}
+
+.moveDrop div.sexy ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.moveDrop div.sexy  li {
+    padding: 6px 5px;
+    height: 20px;
+    font: normal 20px rockwell;
+    color: #666;
+    background: url(../images/banner_background.png) repeat;
+    border-bottom: 1px solid #d0d0d0;
+    border-top: 1px solid #f7f7f7;
+    cursor: pointer;
+    margin: 0;
+}
+
+.moveDrop div.sexy li.active {
+    background-image: none;
+    background-color: #f7f7f7 !important;
+}
+
+/*for IE*/
+.moveDrop div.sexy a, div.sexy a:visited, div.sexy a:active {
+    display: block;
+    width: 100%;
+    width: 146px;
+    text-decoration: none;
+    font: normal 20px rockwell;
+    color: #666;
+    cursor: pointer;
+    margin: 0;
+    height: 20px;
+}
+
+.moveDrop div.sexy input.empty {
+    color: gray;
+}
+
+.moveDrop a.to-highlight:hover {
+    background-color: rgb(223, 232, 246);
+}
+
+/*SIZES*/
+.firstDropdown div.combo {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+/*text input*/
+.firstDropdown .combo input {
+    position: absolute;
+}
+
+/*icon*/
+.firstDropdown .combo div.icon {
+    position: absolute;
+}
+
+/*list wrapper*/
+.firstDropdown .combo div.list-wrapper {
+    position: absolute;
+    overflow: hidden;
+    max-height: 200px;
+    z-index: 99999;
+}
+
+/*"drop-up" list wrapper*/
+.firstDropdown .combo div.list-wrapper-up {
+}
+
+/*dropdown list*/
+.firstDropdown .combo ul {
+}
+
+/*dropdown list item*/
+.firstDropdown .combo  li {
+    height: 32px;
+}
+
+/*active (hovered) list item*/
+.firstDropdown .combo li.active {
+}
+
+.firstDropdown .combo .visible {
+    display: block;
+}
+
+.firstDropdown .combo .invisible {
+    display: none;
+}
+
+/*used when emptyText config opt is set. Applied to text input*/
+.firstDropdown .combo input.empty {
+}
+
+/* SEXY.CSS */
+
+.firstDropdown div.sexy {
+    white-space: nowrap;
+    height: 37px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 146px;
+}
+
+.firstDropdown div.sexy input {
+    margin: 0 0 0 0;
+    font: normal 14px rockwell;
+    color: #666666;
+    background: #fff;
+    height: 35px;
+    line-height: 18px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    padding-left: 7px;
+    width: 165px;
+    cursor: pointer;
+}
+
+.firstDropdown div.sexy div.icon {
+    width: 16px;
+    height: 12px;
+    border: 0;
+    background: transparent url(../images/droparrow.png) no-repeat 0px 0px;
+    cursor: pointer;
+    top: 13px;
+    right: -19px;
+
+}
+
+.firstDropdown div.sexy div.list-wrapper {
+    top: 36px;
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    width: 174px;
+    bottom: auto;
+}
+
+.firstDropdown div.sexy ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 160px;
+}
+
+.firstDropdown div.sexy  li {
+    padding: 4px 5px;
+    height: 22px;
+    font: normal 14px rockwell;
+    background: url(../images/home_page_discover_dropdown_white.png) repeat;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff;
+    cursor: pointer;
+    margin: 0;
+    color: #666;
+}
+
+.firstDropdown div.sexy li.active {
+    background-image: none;
+    background-color: #fff !important;
+}
+
+/*for IE*/
+.firstDropdown div.sexy a, div.sexy a:visited, div.sexy a:active {
+    display: block;
+    width: 100%;
+    width: 146px;
+    text-decoration: none;
+    font: normal 14px handSean;
+    color: #000000;
+    cursor: pointer;
+    margin: 0;
+    height: 20px;
+    background-color: #fff;
+}
+
+.firstDropdown div.sexy input.empty {
+    color: gray;
+}
+
+.firstDropdown a.to-highlight:hover {
+    background-color: rgb(223, 232, 246);
+}

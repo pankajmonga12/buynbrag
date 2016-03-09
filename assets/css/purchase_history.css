@@ -1,0 +1,221 @@
+@charset "utf-8";
+.slide {
+    height: 237px !important;
+}
+
+.banner {
+    background-repeat: repeat !important;
+    height: 234px !important;
+}
+
+.purchasehistoryLink {
+    background: url("../images/middle_background.png") repeat scroll 0 0 transparent;
+    border-top: 1px solid #A0A0A0;
+    float: right;
+    height: 46px;
+    width: 220px;
+}
+
+.datesDropdown {
+    float: left;
+    margin-right: 5px;
+}
+
+.dropdownHolder {
+    float: right;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+.viewpurchase {
+    color: #999;
+    float: left;
+    font-family: gill;
+    font-size: 14px;
+    padding: 10px 10px 0;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.search_logo {
+    background-image: url("../images/search.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 24px;
+    width: 18px;
+    float: left;
+    margin: 5px 0 0 8px;
+}
+
+.search_logo:hover {
+    background-image: url("../images/search_hover.png");
+}
+
+.search_logo:active {
+    background-image: url("../images/search_click.png");
+}
+
+.communicationHolderRelative {
+    display: none;
+}
+
+.icon_bg1 {
+    background: none repeat scroll 0 0 #FFF;
+    float: left;
+    height: 40px;
+    margin-left: 12px;
+    margin-top: 15px;
+    width: 40px;
+    padding: 3px;
+}
+
+.pupplestore_close:hover {
+    background: url("../images/close_hover.png") repeat scroll 0 0 transparent;
+}
+
+.pupplestore_close:active {
+    background: url("../images/close_click.png") repeat scroll 0 0 transparent;
+}
+
+.pupplestore_icon:hover {
+    background: url("../images/editing_hover.png") repeat scroll 0 0 transparent !important;
+}
+
+.pupplestore_icon:active {
+    background: url("../images/editing_click.png") repeat scroll 0 0 transparent;
+}
+
+.height289 {
+    height: 289px !important;
+}
+
+.topDotSeparator {
+    position: relative !important;
+    top: -2px !important;
+    z-index: -1 !important;
+}
+
+.statusText {
+    font: 20px gill;
+    color: #adadad;
+    text-shadow: 0 1px 0 #fff;
+    text-align: center;
+}
+
+.pendingIcon {
+    background: url(../images/pending.png);
+    width: 34px;
+    height: 34px;
+    margin: 0 auto;
+}
+
+.newPaddings {
+    padding-top: 22px;
+    height: 82px !important;
+}
+
+.cancelledIcon {
+    background: url(../images/cancelled_1.png);
+    width: 34px;
+    height: 34px;
+    margin: 0 auto;
+}
+
+.shippedIcon {
+    background: url(../images/shipped.png);
+    width: 34px;
+    height: 34px;
+    float: left;
+    margin: 0 auto 0 37px;
+}
+
+.shippedText {
+    color: #adadad;
+    text-shadow: 0 1px 0 #fff;
+    padding-top: 5px;
+    font: 21px gill;
+    text-align: center;
+}
+
+.shippeddiv {
+    margin: 0 auto;
+    width: 115px;
+    padding-top: 18px;
+}
+
+.TrackText {
+    font: 14px gill;
+    color: #adadad;
+    text-shadow: 0 1px 0 #fff;
+    padding: 4px 0 0 18px;
+}
+
+.trackID {
+    font: 14px gill;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+    padding: 4px 0 0 18px;
+}
+
+.stableglassImage1 {
+    float: left;
+    height: 78px;
+    padding-left: 15px;
+    padding-top: 15px;
+    width: 93px;
+}
+
+.stableglassImage1 img {
+    border: 1px solid #BDBBBD;
+}
+
+.purchaseIcon {
+    background: url(../images/purchase_icon.png);
+    width: 33px;
+    height: 33px;
+    margin: 8px auto 0;
+    margin-top: 33px;
+}
+
+.communicationImage {
+    margin: 8px auto 0 !important;
+}
+
+.purchaseHistoryLogo {
+    background: url("../images/purchasehistory_click.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 27px;
+    margin: 8px 5px 0 13px;
+    width: 32px;
+}
+
+.purchaseHistoryIcon {
+    background-image: url("../images/purchasehistory_icon.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: left;
+    height: 66px;
+    width: 66px;
+}
+
+.searchMain {
+    position: relative;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #d2d0d5;
+    display: none;
+}
+
+.searchTransparent {
+    background: none repeat scroll 0 0 #EFEEED;
+    height: 77px;
+    opacity: .7;
+    width: 100%;
+}
+
+.searchActual {
+    position: absolute;
+    top: 0;
+}
+
+.searching_icon {
+    margin: 16px 0 0 15px !important;
+}

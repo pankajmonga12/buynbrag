@@ -1,0 +1,80 @@
+@charset "utf-8";
+.shoppingCartIconHolder {
+    height: 84px;
+    margin: 0 auto;
+    padding-top: 18px;
+    width: 1024px;
+}
+
+.shoppingCartIcon {
+    background-image: url("../images/shoppingcart_hover.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    width: 65px;
+}
+
+.shoppingCartText {
+    color: #333;
+    float: left;
+    font-family: gill;
+    font-size: 40px;
+    padding-left: 15px;
+    padding-top: 8px;
+}
+
+.shoppingContentsContainer {
+    height: 328px;
+    margin: 0 auto;
+    padding-top: 42px;
+    padding-left: 20px;
+    width: 1004px;
+}
+
+.empty_cart_contents {
+    width: 370px;
+    height: 160px;
+    padding-left: 50px;
+    padding-top: 8px;
+    float: left;
+}
+
+.top0 {
+    top: auto;
+}
+
+.recently_text {
+    color: #F03562;
+    font-family: gill_bold;
+    font-size: 20px;
+    padding-bottom: 35px;
+    padding-left: 18px;
+    width: 250px;
+}
+
+.middleBackground {
+    min-height: 0 !important;
+}
+
+.empty_cart_image {
+    background-image: url(../images/emptycart.png);
+    background-repeat: no-repeat;
+    width: 179px;
+    height: 172px;
+    float: left;
+}
+
+.your_cart_text {
+    color: #666;
+    font-family: gill_bold;
+    font-size: 35px;
+    text-shadow: 0 1px 0 #fff;
+    padding-bottom: 35px;
+}
+
+.browse_text {
+    color: #f36;
+    font-family: gill;
+    font-size: 16px;
+    padding-bottom: 8px;
+}

@@ -1,0 +1,280 @@
+@charset "utf-8";
+.middleBackground {
+    min-height: 600px !important;
+}
+
+.billLogoHover {
+    background-image: url("../images/bill_hover.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 26px;
+    margin-left: 13px;
+    margin-top: 9px;
+    width: 24px;
+}
+
+.currentlyTextHolder {
+    height: 30px;
+    float: right;
+    font-family: gill;
+    font-size: 18px;
+    color: #999;
+    text-shadow: 0 1px 0 #fff;
+    padding-right: 10px;
+}
+
+.productsLink1 {
+    float: left;
+    height: 47px;
+    cursor: pointer;
+    border-top: 1px solid #a0a0a0;
+    background: url("../images/middle_background.png") repeat;
+    -moz-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -webkit-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -khtml-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -pie-box-shadow: 0 1px 0 #f8f9f8 inset;
+    box-shadow: 0 1px 0 #f8f9f8 inset;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.productsText1 {
+    font-family: gill;
+    font-size: 20px;
+    color: #da3c63;
+    padding: 10px 10px 0 7px;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+}
+
+.tabsLinksContainer {
+    border-top: 1px solid #fff;
+    width: 1024px;
+    height: 56px;
+    position: relative;
+}
+
+.tabsLinksContainerAbsolute {
+    position: absolute;
+    top: 0;
+    height: 55px;
+    width: 100%;
+}
+
+.tabsContainerRelative {
+    position: relative;
+    width: 100%;
+}
+
+.tabsLinksContainerTransparent {
+    background: #ccc;
+    border-bottom: 1px solid #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    filter: alpha(opacity = 25);
+    -moz-opacity: .25;
+    -khtml-opacity: .25;
+    opacity: .25;
+    width: 100%;
+    height: 56px;
+}
+
+.tabsContainerBill {
+    margin: 0 auto;
+    height: auto;
+    width: 1024px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.titleBackground {
+    height: 59px !important;
+}
+
+.addProductsBackgroundTransparent {
+    background: #fff;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity = 30);
+    -moz-opacity: .3;
+    -khtml-opacity: .3;
+    opacity: .3;
+    width: 100%;
+    height: 58px;
+}
+
+.stableGlassContainer1 {
+    width: 1024px !important;
+}
+
+.stableGlassContainerRelative {
+    height: 60px !important;
+}
+
+.stableGlassContainerTransp {
+    height: 60px !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity = 60);
+    -moz-opacity: .6;
+    -khtml-opacity: .6;
+    opacity: .6;
+}
+
+.stableGlassRelative {
+    height: 58px !important;
+}
+
+.invoiceNumberHolder {
+    border-right: 1px solid #d3d4d7;
+    float: left;
+    height: 40px;
+    width: 158px;
+    font-family: gill;
+    font-size: 18px;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+    text-align: center;
+    padding-top: 18px;
+}
+
+.transactionHolder {
+    width: 125px !important;
+    border-left: 1px solid #fff;
+}
+
+.bnbCommission {
+    width: 153px !important;
+    border-left: 1px solid #fff;
+}
+
+.logisticsHolder {
+    width: 133px !important;
+    border-left: 1px solid #fff;
+}
+
+.billAmountHolder {
+    width: 129px !important;
+    border-left: 1px solid #fff;
+}
+
+.closingBalanceHolder {
+    width: 161px !important;
+    border-left: 1px solid #fff;
+}
+
+.disputeBillHolder {
+    width: 112px !important;
+    border-left: 1px solid #fff;
+}
+
+.pdfHolder {
+    float: left;
+    height: 40px;
+    width: 38px;
+    border-left: 1px solid #fff;
+}
+
+.invoiceNumberdetail {
+    border-right: 1px solid #d3d4d7;
+    float: left;
+    height: 47px;
+    width: 145px;
+    font-family: gill;
+    font-size: 18px;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+    padding-left: 13px;
+    padding-top: 11px;
+}
+
+.dateTextHolder {
+    padding-top: 5px;
+}
+
+.dateText {
+    font-family: gill_italic;
+    font-size: 14px;
+    color: #999;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+    padding-right: 5px;
+}
+
+.dateNumber {
+    font-family: gill;
+    font-size: 14px;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+}
+
+.transactionNumber {
+    border-right: 1px solid #d3d4d7;
+    border-left: 1px solid #fff;
+    float: left;
+    height: 40px;
+    font-family: gill;
+    font-size: 18px;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+    padding-top: 18px;
+    padding-left: 15px;
+    width: 110px;
+}
+
+.transactionExtra {
+    width: 138px !important;
+    border-left: 1px solid #fff;
+}
+
+.rupee {
+    padding-right: 5px;
+}
+
+.logisticsExtra {
+    width: 118px !important;
+    border-left: 1px solid #fff;
+}
+
+.billAmountExtra {
+    width: 114px !important;
+    border-left: 1px solid #fff;
+}
+
+.closingBalanceExtra {
+    width: 146px !important;
+    border-left: 1px solid #fff;
+}
+
+.disputeBillIconHolder {
+    border-right: 1px solid #d3d4d7;
+    border-left: 1px solid #fff;
+    float: left;
+    height: 48px;
+    width: 97px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.disputeBillIcon {
+    background-image: url(../images/disputebill_normal.png);
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 38px;
+}
+
+.disputeBillIcon:hover {
+    background-image: url(../images/disputebill_hover.png);
+}
+
+.pdfIconHolder {
+    float: left;
+    height: 58px;
+    width: 38px;
+    border-left: 1px solid #fff;
+}
+
+.pdfIcon {
+    background-image: url(../images/pdf_icon.png);
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 27px;
+    margin: 15px auto;
+}

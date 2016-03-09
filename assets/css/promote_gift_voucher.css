@@ -1,0 +1,189 @@
+@charset "utf-8";
+.middleBackground {
+    min-height: 1140px !important;
+}
+
+.promote_giftvoucher_click {
+    background-image: url("../images/promote_giftvoucher_click.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    margin-left: 13px;
+    width: 66px;
+}
+
+.promote_discount_normal {
+    background-image: url("../images/promote_discount_normal.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 66px;
+    width: 66px;
+}
+
+.promote_discount_normal:hover {
+    background-image: url("../images/discount_hover.png");
+}
+
+.promote_discount_normal:active {
+    background-image: url("../images/promote_discount_click.png");
+}
+
+.promote_body_container {
+    height: auto;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+    width: 1024px;
+}
+
+.rightMain {
+    position: relative;
+    width: 424px;
+    height: 290px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #D3CFCD;
+}
+
+.rightTransparent {
+    background-color: #fff;
+    height: 290px;
+    filter: alpha(opacity = 55);
+    opacity: .55;
+    -khtml-opacity: .55;
+}
+
+.rigntContent {
+    position: absolute;
+    top: 0;
+    padding-left: 8px;
+}
+
+.faq_text {
+    font: 19px gill;
+    color: #999;
+    text-shadow: 0 1px 0 #fff;
+    padding: 12px 0 12px 20px;
+}
+
+.sep {
+    height: 0;
+    border-top: 1px solid #D3CFCD;
+    border-bottom: 1px solid #fff;
+    width: 411px;
+}
+
+.promote_left_panel {
+    float: left;
+    height: 1014px;
+    width: 570px;
+}
+
+.promote_panel_seperator {
+    width: 4px;
+    height: 895px;
+    border: 1px solid #d0cecd;
+    background-color: #d5d4d9;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    float: left;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.formRow input {
+    float: left;
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 46px;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 530px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.formRow input:focus {
+    background-color: #efefef;
+}
+
+.formRow textarea {
+    float: left;
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 92px;
+    resize: none;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 530px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.formRow textarea:focus {
+    background-color: #efefef;
+}
+
+.promote_right_panel {
+    float: left;
+    height: 900px;
+    padding-left: 22px;
+    width: 424px;
+}
+
+.promotionCodeText {
+    color: #666;
+    font-family: gill;
+    font-size: 20px;
+    text-shadow: 0 1px 0 #FFF;
+    padding-bottom: 15px;
+    padding-top: 32px;
+}
+
+.formRow {
+    height: 117px;
+}
+
+.theCodeText {
+    color: #999;
+    font-family: gill_italic;
+    font-size: 15px;
+    padding-top: 8px;
+}
+
+.loremIpsumText {
+    color: #6d6d6d;
+    font-family: gill_italic;
+    font-size: 13px;
+    padding-top: 8px;
+}
+
+.extraNewHeight {
+    height: 162px !important;
+}
+
+.inInr {
+    color: #999;
+    font-size: 15px;
+    padding-left: 8px;
+}
+
+.formRow input[name="amount"] {
+    width: 200px !important;
+}
+
+.buttonsContainer {
+    padding-top: 45px;
+}

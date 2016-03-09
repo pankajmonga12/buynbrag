@@ -1,0 +1,301 @@
+@charset "utf-8";
+.bannerIllustration2 {
+    background-image: url(../images/marketplace_graphic.png);
+    background-repeat: no-repeat;
+    width: 633px;
+    height: 136px;
+    position: absolute;
+    top: 0;
+    right: -80px;
+}
+
+.marketIcon2 {
+    background-image: url(../images/marketplace_click.png);
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-right: 0 !important;
+    cursor: auto !important;
+}
+
+.bannerIconwidth {
+    width: auto !important;
+}
+
+.sortContainer_mkt {
+    width: 773px !important;
+}
+
+.sortTextHolder {
+    width: auto !important;
+}
+
+.joinmarketplace {
+    width: 170px !important;
+    font-size: 18px !important;
+    height: 32px !important;
+}
+
+.joinImage {
+    width: 209px;
+    height: 174px;
+    background-color: #fff;
+    padding: 3px;
+}
+
+.leftTop {
+    padding-bottom: 20px;
+    height: 265px;
+}
+
+.imageText {
+    font: 20px gill_bold;
+    color: #666;
+    text-shadow: 0 1px 0 #fff, 0.5px 0 0 #000;
+    padding: 12px 0;
+    text-transform: capitalize;
+}
+
+.stores_text {
+    float: left;
+    font: 16px gill;
+    color: #5f5c5c;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+.textno {
+    color: #da3c63;
+}
+
+.topic_text {
+    float: left;
+    font: 16px gill;
+    color: #999;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.enter_arrow {
+    background-image: url(../images/enter_normal.png);
+    width: 24px;
+    height: 20px;
+    float: left;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.enter_arrow:hover {
+    background-image: url(../images/enter_hover.png);
+}
+
+.enter_arrow:active {
+    background-image: url(../images/enter_click.png);
+}
+
+.fullseparator {
+    border-left: 1px solid #cccbcd;
+    width: 0;
+    border-right: 1px solid #e3e2e3;
+    float: left;
+    height: 51px;
+}
+
+.market_row {
+    clear: both;
+    display: inline-block;
+    padding-bottom: 25px;
+}
+
+.whitebgimg {
+    width: 326px;
+    height: 319px;
+    background-color: #fff;
+    padding: 10px 5px 0;
+    float: left;
+    margin-right: 8px;
+    position: relative;
+}
+
+.marketproduct {
+    font: 15px gill;
+    color: #666;
+    float: left;
+    padding: 8px 0 0 18px;
+    text-transform: capitalize;
+}
+
+.two_icons {
+    float: right;
+}
+
+.st_tp {
+    font: 13px gill;
+    color: #666;
+    padding-left: 3px;
+}
+
+.stores_small {
+    background-image: url(../images/store_normal.png);
+    width: 16px;
+    height: 16px;
+    margin: 2px 5px 0 0;
+    float: left;
+    cursor: pointer;
+}
+
+.stores_small:hover {
+    background-image: url(../images/store_hover.png);
+}
+
+.stores_small:active {
+    background-image: url(../images/store_click.png);
+}
+
+.topics_small {
+    background-image: url(../images/topics_normal.png);
+    width: 16px;
+    height: 16px;
+    margin: 2px 5px 0 0;
+    float: left;
+    cursor: pointer;
+}
+
+.topics_small:hover {
+    background-image: url(../images/topics_hover.png);
+}
+
+.topics_small:active {
+    background-image: url(../images/topics_click.png);
+}
+
+.joinIt {
+    cursor: pointer;
+}
+
+.hoverPattern {
+    background: url(../images/smallimage_hover_pattern.png) repeat;
+    width: 326px;
+    height: 272px;
+    position: absolute;
+    top: 10px;
+    display: none;
+}
+
+.joinbutton {
+    background: #eb3762;
+    background: -moz-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -webkit-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -o-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -ms-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    -pie-background: linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    border: none;
+    width: 65px;
+    height: 31px;
+    cursor: pointer;
+    font-family: gill_bold;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    left: 132px;
+    top: 112px;
+    text-align: center;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.joinbutton:hover {
+    background: #f25178;
+    background: -moz-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -webkit-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -o-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -ms-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    -pie-background: linear-gradient(bottom, #f03c67 50%, #f25178 0);
+}
+
+.joinbutton:active {
+    background: #cb3055;
+    background: -moz-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -webkit-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -o-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -ms-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    -pie-background: linear-gradient(bottom, #c51640 50%, #cb3055 0);
+}
+
+.leavebutton {
+    background: #749d5e;
+    background: -moz-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -webkit-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -o-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -ms-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    -pie-background: linear-gradient(bottom, #619049 50%, #749d5e 0);
+    border: none;
+    font-family: gill_bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    width: 65px;
+    height: 31px;
+    position: absolute;
+    left: 132px;
+    top: 112px;
+    cursor: pointer;
+    display: none;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.leavebutton:hover {
+    background: #8ec273;
+    background: -moz-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -webkit-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -o-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -ms-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    -pie-background: linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+}
+
+.leavebutton:active {
+    background: #537541;
+}
+
+.leavemarketplace {
+    background: #749d5e;
+    background: -moz-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -webkit-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -o-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -ms-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    -pie-background: linear-gradient(bottom, #619049 50%, #749d5e 0);
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    -moz-box-shadow: 0 5px 0 #b3c5aa;
+    -webkit-box-shadow: 0 5px 0 #b3c5aa;
+    -khtml-box-shadow: 0 5px 0 #b3c5aa;
+    -pie-box-shadow: 0 5px 0 #b3c5aa;
+    box-shadow: 0 5px 0 #b3c5aa;
+    font-family: gill_bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    width: 137px;
+    height: 32px;
+    margin-right: 8px;
+    cursor: pointer;
+    display: none;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.leavemarketplace:hover {
+    background: #8ec273;
+    background: -moz-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -webkit-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -o-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -ms-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    -pie-background: linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+}
+
+.leavemarketplace:active {
+    background: #537541;
+}
+
+.slideBackground {
+    margin-top: 0 !important;
+}

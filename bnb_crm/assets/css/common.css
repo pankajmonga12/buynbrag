@@ -1,0 +1,306 @@
+@charset "utf-8";
+/* CSS Document */
+input[type="text"], textarea, select {
+  outline: none;
+}
+
+body {
+       font-size:14px;
+       margin:0px;
+       padding:0px;
+}
+
+* {
+       margin:0px;
+	   padding:0px;
+       outline:none;
+}
+input[type='button']
+{
+	cursor:pointer;
+}
+.wrapper {
+	width:1024px;
+	height:auto;
+	clear:both;
+	margin:0 auto;
+	padding-bottom: 40px;
+	width:1024px;
+}
+.bigLabel2
+{
+	font:24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	padding-left:30px;
+	cursor:pointer;
+	text-decoration:none;
+}
+.bigLabel
+{
+	font:24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	padding-top:30px;
+}
+.fl
+{
+	float:left;
+}
+
+.paddingRight0
+{
+	padding-right:0 !important;	
+}
+.firstdrop
+{
+	floatheight: 25px;
+    padding: 3px;
+    width: 250px;
+}
+.labeldetails
+{
+	padding-top:15px;
+	height:42px;
+	float:left;
+	padding-right: 8px;
+}
+.text_field
+{
+	height: 20px;
+    padding: 1px;
+    width: 242px;
+}
+.text_field2
+{
+	height: 15px;
+    padding: 3px;
+}
+.clear_both
+{
+	clear:both;
+}
+.hideit
+{
+	display:none;
+}
+.tabBg
+{
+	background:#999;
+	width:1024px;
+	height:30px;
+}
+.paddingLeft0
+{
+	padding-left:0;
+}
+.create_new_order
+{
+	display:none;
+}
+.table
+{
+	clear:both;
+	padding-top:20px;
+}
+.row
+{
+	width:1023px;
+	border-top:1px solid #000;
+	border-left:1px solid #000;
+	height:22px;
+	clear:left;
+}
+.column
+{
+	border-right:1px solid #000;
+	float:left;
+	height:22px;
+	width:145px;
+	text-align:center;
+}
+.sno
+{
+	border-right:1px solid #000;
+	float:left;
+	height:22px;
+	width:45px;
+	text-align:center;
+}
+.bn
+{
+	width:120px !important;
+}
+.mb
+{
+	width:70px !important;
+}
+.em
+{
+	width:100px !important;
+}
+.sa
+{
+	width:122px !important;
+}
+.ca
+{
+	width:115px !important;
+}
+.borderBottom
+{
+	border-bottom:1px solid #000;
+}
+.enterbtn
+{
+	float: left;
+    margin-left: 15px;
+    margin-top: 22px;
+}
+.modify_btn
+{
+	margin-top:45px;
+	cursor:pointer;
+	float:left;
+}
+.make_changes
+{
+	float:left;
+	margin:45px 25px 0 0;
+}
+
+.go_back
+{
+	margin-top:45px;
+	cursor:pointer;
+	float:left;
+	margin-left:25px;
+}
+.export
+{
+	display:none;
+}
+.red_border
+{
+	border:1px solid #F00;
+}
+.savechanges
+{
+	 margin: 32px 0 0 20px;
+	 float:left;
+}
+
+.sellerInfo
+{
+	display:none;
+}
+textarea
+{
+	width:500px;
+	height:130px;
+	padding: 3px;
+}
+.height76
+{
+	height: 156px;
+}
+.cod
+{
+	display:none;
+}
+.go
+{
+	margin: 16px 0 0 20px;
+    width: 70px;
+}
+input[type="radio"]
+{
+	margin: 4px 0 0 8px;
+}
+.label
+{
+	padding:2px 0 0 5px;
+	float:left;
+}
+.order
+{
+	display:none;
+}
+.row1
+{
+	width:3142px;
+	border-top:1px solid #000;
+	border-left:1px solid #000;
+	height:22px;
+	clear:left;
+}
+input[type="checkbox"]
+{
+	margin: 4px 0 0 35px;
+}
+.label2
+{
+	padding:2px 0 0 5px;
+	float:left;
+	display:none;
+}
+.checks:checked + .label2
+{
+	display:block;
+}
+.process_button
+{
+	float:right;
+	margin:10px 10px 0 0;
+}
+.approve
+{
+	float:right;
+	margin:20px 0 0 0;
+}
+.ht
+{
+	height:40px !important;
+}
+.fr
+{
+	width:175px !important;
+}
+a .bigLabel2
+{
+	text-decoration:none;
+	color:#000;
+}
+.width90
+{
+	width:90px;
+}
+.width112
+{
+	width:112px;
+}
+.width126
+{
+	width:126px;
+}
+.pop_radio
+{
+	margin-top: 39px !important;
+}
+.ok
+{
+	margin-right:10px;
+}
+.buttonDiv
+{
+	margin:12px auto;
+	width:120px;
+}
+.rows
+{
+	height:58px;
+}
+
+/* Added by Lee */
+.address_field
+{
+	width:502px;
+}

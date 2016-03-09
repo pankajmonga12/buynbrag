@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "bnblanding";
+  src:url("../fonts/bnblanding/fonts/bnblanding.eot");
+  src:url("../fonts/bnblanding/fonts/bnblanding.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/bnblanding/fonts/bnblanding.ttf") format("truetype"),
+  url("../fonts/bnblanding/fonts/bnblanding.svg#bnblanding") format("svg"),
+  url("../fonts/bnblanding/fonts/bnblanding.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "bnblanding" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "bnblanding" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-facebook:before {
+  content: "a";
+}
+
+.icon-twitter:before {
+  content: "b";
+}
+
+.icon-twitter-circle:before {
+  content: "c";
+}
+
+.icon-facebook-circle:before {
+  content: "d";
+}
+
+.icon-left:before {
+  content: "e";
+}
+
+.icon-fontawesome-webfont:before {
+  content: "f";
+}
+
+.icon-spin-alt:before {
+  content: "g";
+}
+

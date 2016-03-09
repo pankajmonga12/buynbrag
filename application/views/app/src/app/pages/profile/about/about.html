@@ -1,0 +1,101 @@
+<div class="aboutViewContainer container" ng-controller="ProfileAboutController">
+
+    <div class="tagsContainer span7 leftMar0">
+
+        <div class="bioWrapper">
+
+            <h3 class="tagHeader" ng-show="userID == user.userid">About me</h3>
+            <h3 class="tagHeader" ng-show="userID != user.userid">About {{userInfo.firstName}}</h3>
+
+            <div class="bioInputWrapper">
+
+                <div class="bioInfo" ng-show="userID != user.userid">{{userInfo.userAboutMe}}</div>
+
+                <textarea name="bioInfoInput" id="bioInfoInput" class="bioInfoInput" ng-focus="updateSaveBtnText()" ng-model="aboutMe" rows="1" cols="3" maxlength="290" placeholder="Tell something about yourself..." ng-show="userID == user.userid">{{aboutMe}}</textarea>
+
+            </div>
+
+            <button class="btn btn-small btn-green" ng-show="userID == user.userid" ng-click="updateAboutMe()">{{saveBtnText}}</button>
+
+        </div>
+
+        <div class="tagsInfoWrapper">
+
+            <h3 class="tagHeader">{{userInfo.firstName}}'s style tags</h3>
+
+            <div class="tagsWrapper" ng-show="user.userid == userID">
+
+                <span class="tagItem {{tag.added && 'active' || ''}}" ng-repeat="tag in allStyleTags">
+                    <a href="" class="tag" ng-click="toggleTag(tag)">#{{tag.style}}</a>
+                    <!-- <i class="deleteIcon hide icon-x-alt"></i> -->
+                </span>
+
+                <!-- <span class="addTagItem" ng-click="toggle = true;" ng-init="toggle = false;">
+                    <span class="addIcon icon-plus relative" ng-show="!toggle"></span>
+                    <input type="text" class="tagInput cssTransition" placeholder="#tag" ng-model="newTag" myng-keyup="addTagOnEnter($event)" myng-blur="addTag()" maxlength="50" ng-show="toggle">
+                </span> -->
+
+            </div>
+
+            <div class="tagsWrapper" ng-show="user.userid != userID">
+
+                <span class="tagItem active" ng-repeat="tag in userStyleTags" ng-show="user.userid != userID">
+                    <a href="" class="tag">#{{tag.style}}</a>
+                    <!-- <i class="deleteIcon hide icon-x-alt"></i> -->
+                </span>
+
+                <span ng-show="userStyleTags.length == 0">{{userInfo.firstName}} has not added any Style Tags yet!</span>
+
+                <!-- <span class="addTagItem" ng-click="toggle = true;" ng-init="toggle = false;">
+                    <span class="addIcon icon-plus relative" ng-show="!toggle"></span>
+                    <input type="text" class="tagInput cssTransition" placeholder="#tag" ng-model="newTag" myng-keyup="addTagOnEnter($event)" myng-blur="addTag()" maxlength="50" ng-show="toggle">
+                </span> -->
+
+            </div>            
+
+        </div>
+
+        <!--<div class="settingsContainer">-->
+            <!--<div class="saveSettingsContainer">-->
+                <!--<p>-->
+                    <!--<span class="bnbRedFont ng-binding"></span>-->
+                    <!--<button class="saveButton btn btn-blue pull-right" ng-click="updateProfile()">Save changes</button>-->
+                <!--</p>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    </div>
+
+    <div class="fbInviteContainer span5" ng-show="user.userid == userID" invite-facebook>
+        <h5 ng-show="!fbConnectClass">Discover with friends</h5>
+        <h5 ng-show="fbConnectClass">Shopping is more fun with friends.</h5>
+
+        <div class="comments">
+
+            <div class="comment" ng-show="fbConnectClass" ng-repeat="friend in fbFriendsToInvite">
+                <img ng-src="https://graph.facebook.com/{{friend.id}}/picture?width=75&amp;height=75">
+
+                <div class="commentContent inlineBlock">
+                    <h4 class="commenterName">{{friend.name}}</h4>
+                </div>
+
+                <!--<button class="btn inviteBtn pull-right" ng-click="inviteFriend(friend)">Invite</button>-->
+                <button class="btn inviteBtn pull-right" ng-click="inviteFriend(friend)">Invite</button>
+            </div>
+
+            <div class="comment" ng-show="!fbConnectClass">
+                <div class="commentContent text-center">
+                    <button class="btn fbBtn relative text-center block" ng-click="startRegistration()" sign-up>
+                        <i class="fbIcon icon-facebook-1 left"></i>
+                        Connect with <span class="fbName">Facebook</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="inviteMore text-center" ng-show="fbConnectClass" ng-click="inviteMultiple()">Invite more friends</div>
+
+    </div>
+
+</div>

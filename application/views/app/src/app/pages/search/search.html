@@ -1,0 +1,70 @@
+<div id="midSection" class="{{midSectionClass}}" ng-controller="SearchController">
+
+    <div typeahead min-chars="2" class="searchBoxWrapper">
+        <input ng-model="searchKey" placeholder="Search..." class="searchInput" type="text" value="vintage" spellcheck="false"/>
+        <!-- <button class="searchIcon icon-search btn btn-blue"></button> -->
+    </div>
+
+    <div class="resultStatsContainer">
+        <ul class="unstyled inline">
+            <li class="{{(subview == 'products') && 'active' || ''}}">
+                <a ng-href="search/products/{{searchKey}}">
+                    <span>
+                        <strong>{{resultsCount.products}}</strong>&nbsp;Products
+                    </span>
+                </a>
+            </li>
+            <li class="{{(subview == 'stores') && 'active' || ''}}">
+                <a ng-href="search/stores/{{searchKey}}">
+                    <span>
+                        <strong>{{resultsCount.stores}}</strong>&nbsp;Stores
+                    </span>
+                </a>                
+            </li>
+            <li class="{{(subview == 'people') && 'active' || ''}}">
+                <a ng-href="search/people/{{searchKey}}">
+                    <span>
+                        <strong>{{resultsCount.users}}</strong>&nbsp;People
+                    </span>
+                </a>                
+            </li>
+        </ul>
+    </div>
+
+    <!-- <div class="viewTabsContainer lightBG bottom container-fluid cssTransition">
+        <button class="removeStyle active">Trending now</button>
+        <button class="removeStyle">Most Popular</button>
+        <button class="removeStyle">Our Favourites</button>
+    </div> -->
+
+    <div class="" ng-show="noResults">
+        <h3>No results.</h3>
+    </div>
+
+    <!-- Include Body Content. -->
+    <div ng-switch="subview">
+        <div ng-switch-when="products">
+            <div ng-include=" '/application/views/app/src/app/pages/search/searchProducts.html' "></div>
+        </div>
+
+        <div ng-switch-when="stores">
+            <div ng-include=" '/application/views/app/src/app/pages/search/searchStores.html' "></div>
+        </div>
+
+        <div ng-switch-when="people">
+            <div ng-include=" '/application/views/app/src/app/pages/search/searchUsers.html' "></div>
+        </div>
+    </div>
+
+    <!--<div class="searchResultStats" ng-show="hideSpinner">Displaying&nbsp;<strong>{{range}}</strong>&nbsp;of&nbsp;<strong>{{results.length}}</strong>&nbsp;results.</div>-->
+
+    <!--<div class="pagination pagination-centered" ng-hide="noResults">-->
+      <!--<ul>-->
+        <!--<li ng-hide="hidePrevious"><a ng-href="/search/{{previousUrl}}">Prev</a></li>-->
+        <!--<li ng-class=" (num == page) && 'active' || '' " ng-repeat="num in currentPages"><a ng-href="/search/{{searchKey}}/{{num}}">{{num}}</a></li>       -->
+        <!--<li ng-hide="hideNext"><a ng-href="/search/{{nextUrl}}">Next</a></li>-->
+      <!--</ul>-->
+    <!--</div>-->
+
+
+</div>

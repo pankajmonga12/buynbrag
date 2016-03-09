@@ -1,0 +1,69 @@
+.profilePage{
+
+  .settingsContainer{
+
+    .savedText{
+      margin: 3px 7px 0 0;
+    }
+
+    .informationContainer, .locationContainer, .deactivateContainer, .saveSettingsContainer, .passwordChangeContainer {
+      border-top: 1px solid #efefef;
+      padding: 15px 20px;
+    }
+
+    .btn{
+      font-size: 11px;
+    }
+
+    .saveButton, .resetButton{
+      width: 14%;
+      margin-top: -3px;
+    }
+
+    .resetButton{
+      margin-right: 10px;
+    }
+
+    .informationSettings {
+      margin-top: 25px;
+    }
+
+    .privacyMsg {
+      margin: 15px 0;
+    }
+
+    .bnbUrl{
+      top: -2px;
+    }
+
+    h3{
+      border-bottom: 1px solid #efefef;
+      padding-bottom: 13px;
+    }
+
+    h5{
+      margin: 0 0 15px 0;
+    }
+
+    ul{
+      margin-left: 0;
+
+      li{
+        list-style: none;
+        display: inline-block;
+        line-height: 32px;
+      }
+    }
+
+    input, select{
+      border-radius: 1px;
+      box-shadow: none;
+      margin-right: 10px;
+    }
+
+    .passwordChangeForm{
+      margin: 0;
+    }
+  }
+
+}

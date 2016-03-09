@@ -1,0 +1,65 @@
+@charset "utf-8";
+.MainCategoryHeading {
+    font-family: gill;
+    font-size: 16px;
+    padding-bottom: 8px;
+    color: #333;
+    cursor: pointer;
+    clear: both;
+    text-shadow: 0 1px #fff;
+}
+
+.mainCategoryContent {
+    height: auto;
+    display: none;
+}
+
+.sortwidth {
+    width: auto !important;
+}
+
+.dealsIcon2 {
+    background-image: url(../images/deals_click.png);
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-right: 0 !important;
+    cursor: auto !important;
+}
+
+.imageHolderInner {
+    position: relative;
+    width: 372px;
+    height: 380px;
+}
+
+.badges {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.dealName {
+    font-family: gill;
+    font-size: 15px;
+    color: #666;
+    padding-top: 15px;
+    padding-left: 8px;
+    text-transform: capitalize;
+}
+
+.dealerName {
+    font-family: gill;
+    font-size: 12px;
+    color: #666;
+    padding-top: 2px;
+    padding-left: 8px;
+    text-transform: capitalize;
+}
+
+.bannerIllustration {
+    background-image: url(../images/fancy/deals_graphic.png) !important;
+    right: -47px !important;
+    width: 657px !important;
+}

@@ -1,0 +1,570 @@
+@charset "utf-8";
+.banner {
+    background-repeat: repeat !important;
+    height: 234px !important;
+}
+
+.slide {
+    height: 237px !important;
+}
+
+.contentsWrapper {
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+
+.middleContents {
+    display: inline-block;
+    padding-bottom: 35px;
+    width: 100%;
+}
+
+.leftPanel {
+    width: 60%;
+    height: auto;
+    padding-right: 22px;
+    overflow: hidden;
+    position: relative;
+}
+
+.paddingText {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.store_banner {
+    padding-top: 2px;
+}
+
+.scrollerContents {
+    overflow: hidden;
+    width: 302px;
+    height: auto !important;
+}
+
+.sliderParentDiv {
+    overflow: hidden;
+    height: auto !important;
+    width: auto !important;
+}
+
+.slider {
+    overflow: hidden;
+    width: 906px;
+    height: auto !important;
+}
+
+.rightPanel {
+    float: right;
+    padding-left: 31px;
+    width: 30%;
+}
+
+.panelSeperator {
+    float: left;
+    background: none repeat scroll 0 0 #D8D9D7;
+    border: 1px solid #B4B4B4;
+    width: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    height: 768px;
+    behavior: url(PIE.htc);
+}
+
+.sepWidth {
+    width: 1024px !important;
+}
+
+.bottomHolder {
+    padding-top: 30px;
+    display: inline-block;
+}
+
+.rightPanelRightScroller2 {
+    float: left;
+    height: 360px;
+    width: 264px;
+}
+
+.rightPanelImageContent2 {
+    float: left;
+    width: 264px;
+}
+
+.storeSectionText2 {
+    color: #666;
+    font-family: gill_bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    width: 200px;
+}
+
+.scrollerHolder5 {
+    float: left;
+    height: 318px;
+    position: relative;
+    width: 252px;
+}
+
+.scrollerContents5 {
+    height: 318px;
+    overflow: hidden;
+    width: 252px;
+}
+
+.sliderParentDiv5 {
+    height: 318px;
+    overflow: hidden;
+    width: 252px;
+}
+
+.slider5 {
+    height: 318px;
+    overflow: hidden;
+    width: 504px;
+}
+
+.store-list5 {
+    float: left;
+    height: 318px;
+    list-style: none outside none;
+    width: 252px;
+}
+
+.rightPanelImageHolderBottom5 {
+    background-color: #F4F5F5;
+    border-bottom: 1px solid #A9AAAA;
+    border-top: 1px solid #FFF;
+    height: 312px;
+    padding-left: 4px;
+    padding-top: 4px;
+    width: 244px;
+}
+
+.storeJeansText2 {
+    color: #333;
+    font-family: gill;
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    width: 200px;
+}
+
+.tiannaMeilingerText {
+    color: #666;
+    font-family: gill_italic;
+    font-size: 15px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    width: 150px;
+}
+
+.spanStyle {
+    color: #A5A4A4 !important;
+}
+
+.blogImage1 {
+    height: 185px;
+    padding-left: 8px;
+    padding-top: 3px;
+    width: 222px;
+}
+
+.renaissanceText {
+    color: #333;
+    font-family: gill;
+    font-size: 14px;
+    padding: 5px 0 2px 8px;
+    width: 225px;
+}
+
+.rightPanelRightScroller {
+    float: left;
+    height: 360px;
+    padding-left: 10px;
+    width: 232px;
+}
+
+.verticalSeparator {
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #FFF;
+    width: 0;
+    height: 360px;
+    float: left;
+}
+
+.rightPanelImageContent {
+    float: left;
+    height: 355px;
+    width: 250px;
+}
+
+.rightPanelFriendsTextHolder {
+    float: left;
+    width: 206px;
+}
+
+.scrollerHolder3 {
+    border: 1px solid #ECDEE6;
+    float: left;
+    height: 318px;
+    position: relative;
+    width: 220px;
+}
+
+.scroller_three_holder {
+    float: left;
+    height: 360px;
+    width: 504px;
+    padding-left: 10px;
+}
+
+.extra_style {
+    border-bottom: medium none;
+    padding-bottom: 15px;
+    padding-left: 17px;
+    width: 300px;
+}
+
+.scrollerHolder2 {
+    border: 1px solid #ECDEE6;
+    float: left;
+    height: 318px;
+    position: relative;
+    width: 504px;
+}
+
+.scrollerContents2 {
+    height: 318px;
+    overflow: hidden;
+    width: 504px;
+}
+
+.sliderParentDiv2 {
+    height: 318px;
+    overflow: hidden;
+    width: 504px;
+}
+
+.slider2 {
+    height: 318px;
+    overflow: hidden;
+    width: 1012px;
+}
+
+.store-list2 {
+    float: left;
+    height: 318px;
+    list-style: none outside none;
+    width: 506px;
+}
+
+.rightPanelImageHolderBottom2 {
+    background-color: #F4F5F5;
+    border-bottom: 1px solid #A9AAAA;
+    border-top: 1px solid #FFF;
+    height: 308px;
+    padding-top: 8px;
+    width: 503px;
+}
+
+.rightPanelScrollerFourHeading {
+    border-bottom: 1px solid #A9AAAA;
+    height: 37px;
+    width: 503px;
+}
+
+.storeJeansText {
+    color: #333;
+    font-family: gill;
+    font-size: 24px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    width: 280px;
+}
+
+.sunglassTextStyle {
+    float: left;
+    padding-left: 8px;
+    width: auto;
+}
+
+.pollIcon {
+    background-image: url("../images/poll_whichssunglass_icon.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: right;
+    height: 28px;
+    margin-right: 12px;
+    width: 25px;
+}
+
+.sunglassImagesContainer {
+    border-top: 1px solid #FFF;
+    height: 246px;
+    padding-left: 12px;
+    padding-top: 7px;
+    width: 491px;
+}
+
+.firstSunglassImageDiv {
+    background-color: #FFF;
+    float: left;
+    height: 238px;
+    margin-right: 3px;
+    padding: 8px;
+    width: 142px;
+}
+
+.firstSunGlassImage {
+    height: 118px;
+    width: 143px;
+}
+
+.homepodgeText {
+    color: #333;
+    font-family: gill;
+    font-size: 13px;
+    padding-top: 8px;
+    text-transform: capitalize;
+}
+
+.rupee_quantity_text {
+    color: #666;
+    font-family: gill_bold;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.fromItalicStyle {
+    color: #888;
+    font-family: gill_italic;
+    font-size: 12px;
+    padding-bottom: 17px;
+    padding-top: 3px;
+}
+
+.spanFont {
+    font-family: rockwell_bold !important;
+    font-style: italic !important;
+}
+
+.storeSectionText {
+    color: #666;
+    font-family: gill_bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+}
+
+.personalDetails {
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.personalDetailLogo {
+    background: url(../images/personaldetails_click.png);
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    margin-top: 4px;
+    float: left;
+}
+
+.personalText {
+    color: #333;
+    float: left;
+    font-family: gill;
+    font-size: 40px;
+    padding-left: 16px;
+    padding-top: 25px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.newtopDotSeparator2 {
+    width: 683px !important;
+}
+
+.commentRow {
+    display: inline-block;
+    border-bottom: 1px dotted #333;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 302px;
+}
+
+.formRow {
+    clear: both;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+.labelText {
+    width: 150px;
+    font: 20px gill;
+    color: #666;
+    text-shadow: 0 1px 0 #fff, 0.5px 0 0 #000;
+    float: left;
+    padding-top: 12px;
+}
+
+.ActualContents {
+    padding-top: 20px;
+}
+
+.formRow input[type="text"] {
+    float: left;
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    border-radius: 3px 3px 3px 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 46px;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 490px;
+}
+
+.formRow input[type="text"]:focus {
+    background-color: #efefef;
+}
+
+.formRow input[type="password"] {
+    float: left;
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    border-radius: 3px 3px 3px 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 46px;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 490px;
+}
+
+.formRow input[type="password"]:focus {
+    background-color: #efefef;
+}
+
+.formRow input[type="email"] {
+    float: left;
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    border-radius: 3px 3px 3px 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 46px;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 490px;
+}
+
+.formRow input[type="email"]:focus {
+    background-color: #efefef;
+}
+
+.birthday {
+    width: 236px !important;
+}
+
+.formRow textarea {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    border-radius: 3px 3px 3px 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 60px;
+    padding: 12px;
+    text-shadow: 0 1px 0 #FFF;
+    resize: none;
+    margin-bottom: 10px;
+    width: 478px;
+}
+
+.formRow textarea:focus {
+    background-color: #efefef;
+}
+
+.sideForm {
+    float: left;
+    width: 504px;
+}
+
+.addressWidth {
+    width: 232px !important;
+    margin-right: 11px;
+}
+
+.twoTextField {
+    padding-bottom: 10px;
+    height: 46px;
+}
+
+.countryCode {
+    width: 135px !important;
+    margin-right: 12px;
+}
+
+.mobileNo {
+    width: 328px !important;
+}
+
+.save_width {
+    width: 100px !important;
+}
+
+/*.checkbox input {*/
+    /*display: none;*/
+/*}*/
+
+.checkbox {
+    /*background: url("../images/categories_checkbox.png") no-repeat scroll 0 0 transparent;*/
+    cursor: default;
+    float: left;
+    height: 19px;
+    padding: 0 0 0 20px;
+    text-align: left;
+    width: 0;
+    margin: 2px 10px 0 0;
+}
+
+.checkText {
+    font: 18px gill;
+    color: #666;
+    text-shadow: 0 1px 0 #fff, 0.5px 0 0 #000;
+    float: left;
+    padding-left: 15px;
+    width: 122px;
+}
+
+.checkBoxText {
+    padding-bottom: 10px;
+    display: inline-block;
+    clear: both;
+}
+
+.radioText {
+    float: left;
+    padding: 5px 0 0 0;
+}
+
+.radioText .radio1 {
+    float: left;
+    /*height: 30px;*/
+    /*width: 30px;*/
+    /*background: url("../images/radio-buttons.png") no-repeat;*/
+    /*background-repeat: no-repeat;*/
+    /*cursor: default;*/
+}
+
+/*input[type="radio"] {*/
+    /*display: none;*/
+/*}*/

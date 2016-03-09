@@ -1,0 +1,57 @@
+.resetPasswordPage{
+
+  form{
+    margin: 25px 0 50px 0;
+  }
+
+  .add-on, input{
+    padding: 7px;
+  }
+
+  button{
+    width: 355px !important;
+    height: 42px !important;
+  }
+
+  .resetError{
+    font-size: 23px;
+  }
+
+}
+
+.forgotPasswordPage{
+  width: initial;
+
+  h3{
+    border-bottom: 1px solid #ddd;
+  }
+
+  form{
+    margin: 15px 0;
+
+    input{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 18px 10px;
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+  }
+
+  button{
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .resetError{
+    font-size: 17px;
+    margin: 10px 0 0 0;
+  }
+
+  .successMsgContainer{
+    h3{
+      border-bottom: none;
+    }
+  }
+
+}

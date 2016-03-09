@@ -1,0 +1,413 @@
+.friendsImagesContainer .scroll-pane {
+    width: 1024px;
+    height: 425px;
+    overflow: auto;
+}
+
+.friendsImagesContainer .jspContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.friendsImagesContainer .jspPane {
+    position: absolute;
+}
+
+.friendsImagesContainer .jspVerticalBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 100%;
+    background: transparent;
+}
+
+.friendsImagesContainer .jspVerticalBar *, .friendsImagesContainer .jspHorizontalBar * {
+    margin: 0;
+    padding: 0;
+}
+
+.friendsImagesContainer .jspCap {
+    display: none;
+}
+
+.friendsImagesContainer .jspHorizontalBar .jspCap {
+    float: left;
+}
+
+.friendsImagesContainer .jspTrack {
+    background: none;
+    position: relative;
+}
+
+.friendsImagesContainer .jspDrag {
+    background: #c7c7c7;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 8px;
+    border-radius: 3px;
+}
+
+.friendsImagesContainer .jspHorizontalBar .jspTrack, .friendsImagesContainer .jspHorizontalBar .jspDrag {
+    float: left;
+    height: 100%;
+}
+
+.topWrapper .jspContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.topWrapper .jspPane {
+    position: absolute;
+}
+
+.topWrapper .jspPane {
+    padding-left: 0 !important;
+}
+
+.topWrapper .jspVerticalBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 100%;
+}
+
+.scrollPaneContainer .jspVerticalBar *, .scrollPaneContainer .jspHorizontalBar * {
+    margin: 0;
+    padding: 0;
+}
+
+.scrollPaneContainer .jspDrag {
+    background: #c7c7c7;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 7px;
+    cursor: pointer;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.scrollPaneContainer .jspHorizontalBar .jspTrack, .scrollPaneContainer .jspHorizontalBar .jspDrag {
+    float: left;
+    height: 100%;
+}
+
+.commentHolder .jspContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.commentHolder .jspPane {
+    position: absolute;
+}
+
+.commentHolder .jspVerticalBar *, .commentHolder .jspHorizontalBar * {
+    margin: 0;
+    padding: 0;
+}
+
+.commentHolder .jspVerticalBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 100%;
+}
+
+.commentHolder .jspVerticalBar {
+    position: absolute;
+    height: 0 !important;
+}
+
+.commentHolder .jspTrack {
+    height: 0 !important;
+}
+
+.commentHolder .jspDrag {
+    background: none !important;
+    position: relative;
+    height: 0 !important;
+    width: 0 !important;
+}
+
+.commentHolder .jspHorizontalBar .jspTrack, .commentHolder .jspHorizontalBar .jspDrag {
+    float: left;
+    height: 100%;
+}
+
+.commentHolder .jspArrowUp {
+    background: url(../images/comments_slide_up.png);
+    width: 16px;
+    height: 10px;
+    text-indent: -20000px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: -40px;
+    top: 0;
+}
+
+.commentHolder .jspArrowUp .jspDisabled {
+    cursor: default;
+    background: url(../images/comments_slide_up.png);
+    width: 16px;
+    height: 10px;
+}
+
+.commentHolder .jspArrowDown {
+    background: url(../images/comments_slide_down.png);
+    width: 16px;
+    height: 10px;
+    text-indent: -20000px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
+
+.commentHolder .jspArrowDown .jspDisabled {
+    cursor: default;
+    background: url(../images/comments_slide_down.png);
+    width: 16px;
+    height: 10px;
+}
+
+.checkboxesHolder .scroll-pane {
+    width: 1024px;
+    height: 170px;
+    overflow: auto;
+}
+
+.checkboxesHolder .jspContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.checkboxesHolder .jspPane {
+    position: absolute;
+}
+
+.checkboxesHolder .jspVerticalBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 100%;
+    background: transparent;
+}
+
+.checkboxesHolder .jspVerticalBar *, .checkboxesHolder .jspHorizontalBar * {
+    margin: 0;
+    padding: 0;
+}
+
+.checkboxesHolder .jspCap {
+    display: none;
+}
+
+.checkboxesHolder .jspHorizontalBar .jspCap {
+    float: left;
+}
+
+.checkboxesHolder .jspTrack {
+    background: none;
+    position: relative;
+}
+
+.checkboxesHolder .jspDrag {
+    background: #666;
+    position: relative;
+    top: 0;
+    left: 2px;
+    cursor: pointer;
+    width: 8px;
+    border-radius: 3px;
+}
+
+.checkboxesHolder .jspHorizontalBar .jspTrack, .checkboxesHolder .jspHorizontalBar .jspDrag {
+    float: left;
+    height: 100%;
+}
+
+.checkboxesHolder2 .scroll-pane {
+    width: 1024px;
+    height: 170px;
+    overflow: auto;
+}
+
+.checkboxesHolder2 .jspContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.checkboxesHolder2 .jspPane {
+    position: absolute;
+}
+
+.checkboxesHolder2 .jspVerticalBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 100%;
+    background: transparent;
+}
+
+.checkboxesHolder2 .jspVerticalBar *, .checkboxesHolder2 .jspHorizontalBar * {
+    margin: 0;
+    padding: 0;
+}
+
+.checkboxesHolder2 .jspCap {
+    display: none;
+}
+
+.checkboxesHolder2 .jspHorizontalBar .jspCap {
+    float: left;
+}
+
+.checkboxesHolder2 .jspTrack {
+    background: none;
+    position: relative;
+}
+
+.checkboxesHolder2 .jspDrag {
+    background: #666;
+    position: relative;
+    top: 0;
+    left: 2px;
+    cursor: pointer;
+    width: 8px;
+    border-radius: 3px;
+    display: block !important;
+}
+
+.checkboxesHolder2 .jspHorizontalBar .jspTrack, .checkboxesHolder2 .jspHorizontalBar .jspDrag {
+    float: left;
+    height: 100%;
+}
+
+.priceContainer .scroll-pane {
+    width: 1024px;
+    height: 170px;
+    overflow: auto;
+}
+
+.priceContainer .jspContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.priceContainer .jspPane {
+    position: absolute;
+}
+
+.priceContainer .jspVerticalBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 100%;
+    background: transparent;
+}
+
+.priceContainer .jspVerticalBar *, .priceContainer .jspHorizontalBar * {
+    margin: 0;
+    padding: 0;
+}
+
+.priceContainer .jspCap {
+    display: none;
+}
+
+.priceContainer .jspHorizontalBar .jspCap {
+    float: left;
+}
+
+.priceContainer .jspTrack {
+    background: none;
+    position: relative;
+}
+
+.priceContainer .jspDrag {
+    background: #bbb;
+    position: relative;
+    top: 0;
+    left: 2px;
+    cursor: pointer;
+    width: 8px;
+    border-radius: 3px;
+    display: block !important;
+}
+
+.priceContainer .jspHorizontalBar .jspTrack, .priceContainer .jspHorizontalBar .jspDrag {
+    float: left;
+    height: 100%;
+}
+
+.vocationContainer .scroll-pane {
+    width: 1024px;
+    height: 170px;
+    overflow: auto;
+}
+
+.vocationContainer .jspContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.vocationContainer .jspPane {
+    position: absolute;
+}
+
+.vocationContainer .jspVerticalBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 100%;
+    background: transparent;
+}
+
+.vocationContainer .jspVerticalBar *, .vocationContainer .jspHorizontalBar * {
+    margin: 0;
+    padding: 0;
+}
+
+.vocationContainer .jspCap {
+    display: none;
+}
+
+.vocationContainer .jspHorizontalBar .jspCap {
+    float: left;
+}
+
+.vocationContainer .jspTrack {
+    background: none;
+    position: relative;
+}
+
+.vocationContainer .jspDrag {
+    background: #bbb;
+    position: relative;
+    top: 0;
+    left: 2px;
+    cursor: pointer;
+    width: 8px;
+    border-radius: 3px;
+    display: block !important;
+}
+
+.vocationContainer .jspHorizontalBar .jspTrack, .vocationContainer .jspHorizontalBar .jspDrag {
+    float: left;
+    height: 100%;
+}

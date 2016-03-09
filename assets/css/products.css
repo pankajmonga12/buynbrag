@@ -1,0 +1,493 @@
+@charset "utf-8";
+.productsLink1 {
+    float: left;
+    height: 47px;
+    cursor: pointer;
+    border-top: 1px solid #a0a0a0;
+    background: url("../images/middle_background.png") repeat;
+    -moz-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -webkit-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -khtml-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -pie-box-shadow: 0 1px 0 #f8f9f8 inset;
+    box-shadow: 0 1px 0 #f8f9f8 inset;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.productsLogo1 {
+    background-image: url(../images/products_hover.png);
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    margin-top: 9px;
+    margin-left: 13px;
+    float: left;
+}
+
+.productsText1 {
+    font-family: gill;
+    font-size: 20px;
+    color: #da3c63;
+    padding: 10px 10px 0 7px;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+}
+
+.addProductsBackgroundTransparent {
+    background: #fff;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity = 50);
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    opacity: .5;
+    width: 100%;
+    height: 56px;
+}
+
+.tabsLinksContainerAbsolute {
+    position: absolute;
+    top: 0;
+    height: 55px;
+    width: 100%;
+}
+
+.addProductLinkHolder {
+    height: 50px;
+    margin-top: -10px;
+    float: right;
+}
+
+.addProducts {
+    background: #749d5e;
+    background: -moz-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -webkit-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -o-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -ms-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    -pie-background: linear-gradient(bottom, #619049 50%, #749d5e 0);
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    -moz-box-shadow: 0 5px 0 #b3c5aa;
+    -webkit-box-shadow: 0 5px 0 #b3c5aa;
+    -khtml-box-shadow: 0 5px 0 #b3c5aa;
+    -pie-box-shadow: 0 5px 0 #b3c5aa;
+    box-shadow: 0 5px 0 #b3c5aa;
+    font-family: gill_bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    width: 137px;
+    height: 38px;
+    margin-right: 8px;
+    cursor: pointer;
+    float: left;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.addProducts:hover {
+    background: #8ec273;
+    background: -moz-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -webkit-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -o-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -ms-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    -pie-background: linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+}
+
+.addProducts:active {
+    background: #537541;
+}
+
+.bulkUpload {
+    background: #767676;
+    background: -moz-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -webkit-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -o-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -ms-linear-gradient(bottom, #666 50%, #767676 0);
+    -pie-background: linear-gradient(bottom, #666 50%, #767676 0);
+    border: none;
+    border-bottom: 1px solid #DFDBD9;
+    box-shadow: 0 5px 0 #959696;
+    -moz-box-shadow: 0 5px 0 #959696;
+    -webkit-box-shadow: 0 5px 0 #959696;
+    -khtml-box-shadow: 0 5px 0 #959696;
+    -pie-box-shadow: 0 5px 0 #959696;
+    color: #FFF;
+    cursor: pointer;
+    float: left;
+    font-family: gill_bold;
+    font-size: 18px;
+    height: 38px;
+    margin-right: 8px;
+    text-align: center;
+    width: 132px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.bulkUpload:hover {
+    background: #969595;
+    background: -moz-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -webkit-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -o-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -ms-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    -pie-background: linear-gradient(bottom, #8b8989 50%, #969595 0);
+}
+
+.bulkUpload:active {
+    background: #535353;
+    background: -moz-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -webkit-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -o-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -ms-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    -pie-background: linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+}
+
+.tabsContainerRelative {
+    position: relative;
+    width: 100%;
+}
+
+.tabsLinksContainer {
+    border-top: 1px solid #fff;
+    width: 1024px;
+    height: 56px;
+    position: relative;
+}
+
+.tabsLinksContainerTransparent {
+    background: #ccc;
+    border-bottom: 1px solid #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    filter: alpha(opacity = 25);
+    -moz-opacity: .25;
+    -khtml-opacity: .25;
+    opacity: .25;
+    width: 100%;
+    height: 56px;
+}
+
+.tabsContainer {
+    margin: 0 auto;
+    height: auto;
+    width: 1024px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.categoryHolder {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #c8c8c8;
+    float: left;
+    width: 167px;
+    height: 56px;
+}
+
+.categoryHolder1 {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #c8c8c8;
+    float: left;
+    width: 110px;
+    height: 56px;
+}
+
+.categoryHolder2 {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #c8c8c8;
+    float: left;
+    width: 109px;
+    height: 56px;
+}
+
+.categoryHolder3 {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #c8c8c8;
+    float: left;
+    width: 108px;
+    height: 56px;
+}
+
+.categoryHolder4 {
+    border-left: 1px solid #fff;
+    float: left;
+    width: 75px;
+    height: 56px;
+}
+
+.categoryText {
+    font-family: gill;
+    font-size: 14px;
+    float: left;
+    padding: 14px 5px 0;
+    text-shadow: 0 1px 0 #fff;
+    color: #666;
+}
+
+.productsTextHolder {
+    width: 445px;
+    height: 56px;
+    float: left;
+    border-right: 1px solid #c8c8c8;
+}
+
+.productText {
+    font-family: gill;
+    font-size: 18px;
+    color: #666;
+    width: 72px;
+    padding-top: 20px;
+    padding-left: 25px;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+}
+
+.searchProductsfield {
+    float: right;
+    width: 286px;
+    padding-top: 5px;
+    padding-right: 6px;
+}
+
+.searchProductsFieldMid {
+    background: #e8e8e8;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    width: 284px;
+    height: 44px;
+    position: relative;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.searchProductsFieldMid input[type="text"] {
+    background: transparent;
+    border: 0;
+    height: 44px;
+    width: 269px;
+    color: #333;
+    font-style: italic;
+    font-size: 15px;
+    padding-left: 15px;
+    padding-top: 0;
+    float: left;
+}
+
+.searchProductsFieldMid input:focus[type="text"] {
+    background-color: #efefef;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.textfieldSearch {
+    background-image: url(../images/textfield_search.png);
+    width: 16px;
+    height: 20px;
+    top: 11px;
+    position: absolute;
+    right: 12px;
+}
+
+.stableglassHolderProducts {
+    width: 445px;
+    height: 105px;
+    border-right: 1px solid #dbdbdb;
+    float: left;
+}
+
+.categoriesColumn {
+    float: left;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #dbdbdb;
+    width: 167px;
+    height: 105px;
+}
+
+.priceColumn {
+    float: left;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #dbdbdb;
+    width: 110px;
+    height: 105px;
+}
+
+.quantityColumn {
+    float: left;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #dbdbdb;
+    width: 109px;
+    height: 105px;
+}
+
+.statusColumn {
+    float: left;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #dbdbdb;
+    width: 108px;
+    height: 105px;
+}
+
+.actionColumn {
+    float: left;
+    border-left: 1px solid #fff;
+    width: 75px;
+    height: 105px;
+}
+
+.priceAmount {
+    font-family: gill;
+    font-size: 18px;
+    padding-top: 40px;
+    padding-left: 15px;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.stableglassImage {
+    width: 79px;
+    height: 79px;
+    float: left;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.stableglassImage img {
+    border: 3px solid #fff;
+}
+
+.onsaleImage {
+    background-image: url(../images/onsale.png);
+    width: 84px;
+    height: 45px;
+    float: right;
+    margin-top: 17px;
+    margin-right: 18px;
+}
+
+.soldoutImage {
+    background-image: url(../images/sold_out.png);
+    width: 84px;
+    height: 45px;
+    float: right;
+    margin-top: 17px;
+    margin-right: 18px;
+}
+
+.onImage {
+    background-image: url(../images/on_button.png);
+    width: 67px;
+    height: 29px;
+    margin: 38px auto;
+}
+
+.onOffSwitch{
+    background-image: url("../images/on_off.png");
+    background-position: 0 0;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -moz-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
+    width: 67px;
+    height: 29px;
+    margin: 38px auto;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.onOffSwitch.active{
+    background-position: 100% 0;
+}
+
+.offImage {
+    background-image: url(../images/off_button.png);
+    width: 67px;
+    height: 29px;
+    margin: 38px auto;
+}
+
+.actionEdit {
+    background-image: url(../images/edit_product.png);
+    width: 26px;
+    height: 27px;
+    margin: 12px auto;
+    cursor: pointer;
+}
+
+.actionClose {
+    background-image: url(../images/pupplestore_close.png);
+    width: 26px;
+    height: 26px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.stableGlassContainer1 {
+    width: 1024px !important;
+}
+
+.quantityColumn input {
+    width: 82px;
+    height: 44px;
+    padding-left: 6px;
+    margin-top: 30px;
+    margin-left: 9px;
+    background-color: #e5e5e8;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    float: left;
+    font-family: gill;
+    font-size: 18px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.quantityColumn input:focus {
+    background-color: #efefef;
+}
+
+.newstableGlassContainer1 {
+    border-bottom: 1px solid #d6d6d6 !important;
+}
+
+.noBottomBorder {
+    border-bottom: none !important;
+}
+
+.newtitleBackground {
+    height: 56px;
+    border-bottom: none;
+}
+
+.checkboxes {
+    display: block;
+    width: 66px;
+    height: 29px;
+    margin: 40px auto;
+    overflow: hidden;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -khtml-border-radius: 14px;
+    border-radius: 14px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]+label {
+    text-indent: -9999px;
+    display: block;
+    width: 80px;
+    height: 29px;
+    line-height: 29px;
+    background: transparent url(../images/on_off.png) no-repeat -37px 0;
+    -webkit-transition: background-position .3s ease-in-out;
+    -moz-transition: background-position .3s ease-in-out;
+}
+
+input[type=checkbox]:checked+label {
+    -webkit-transition: background-position .3s ease-in-out;
+    -moz-transition: background-position .3s ease-in-out;
+    background-position: 0 0;
+}

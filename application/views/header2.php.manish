@@ -1,0 +1,405 @@
+<?php if(! defined ('BASEPATH') ) exit('Direct script access not allowed'); ?>
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="revisit-after" content="7 days">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<script type="text/javascript">
+	/* IMPORTANT:: NEVER DELETE */
+	var baseUrl = <?php echo '"'.base_url().'"'; ?>;
+	var storeUrl = <?php echo '"'.$store_url.'"'; ?>;
+	var isLoggedIN = <?php echo ($isLoggedIN['status'] === TRUE)? 'true': 'false'; ?>;
+	/* IMPORTANT:: NEVER DELETE */
+</script>
+
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="<?php echo $base_url; ?>assets/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<!--<script src="--><?php //echo $base_url; ?><!--assets/js/libs/modernizr-2.5.3.min.js"></script>-->
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery-ui-1.8.16.custom.min.js"></script>
+<script src="<?php echo $base_url; ?>assets/js/plugins.js"></script>
+<!---->
+
+<link href="<?php echo $base_url; ?>favicon.ico" rel="shortcut icon" type="image/ico" />
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/common.css?version=<?php echo microtime(); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/common1.css?version=<?php echo microtime(); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/sexy-combo.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/badge_popup.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>assets/css/friends_follower.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/fonts.css" />
+<!--[if gt IE 7]>
+<link type="text/css" rel="stylesheet" href="<?php echo $base_url; ?>assets/css/ie.css" />
+<![endif] -->
+<!--[if IE 8]>
+<link type="text/css" rel="stylesheet" href="<?php echo $base_url; ?>assets/css/ie8.css" />
+<![endif]-->
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.ui.tabs.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.ui.dialog.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.ui.position.min.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.tooltip.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.selectbox-0.1.3.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.sexy-combo.js"></script>
+<!--<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.mousewheel.js"></script>-->
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.jscrollpane.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/jquery.dcmegamenu.1.3.3.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/pop-up.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/common.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/tooltip.js"></script>
+<!--<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/landing_page.js"></script>-->
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/galleria-1.2.7.js"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>assets/js/friend_follower.js"></script>
+
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>dist/styles/main.css" />
+<script type="text/javascript">
+
+	function login(){
+		$('.formError').html('');
+
+		var baseUrl ='<?php echo $base_url; ?>';
+		var email = $('#inputEmail').val();
+		var password = $('#inputPassword').val();
+		$.ajax({
+			type: "POST",
+			url: baseUrl+'index.php/async/login',
+			data: {
+				signin_email: email,
+				signin_pw: password
+			},
+			success: function(data, status, xhr){
+				console.log(data);
+				if (data[0].validCredentials){
+					window.location.reload();
+				}
+				else if(data[0].validCredentials === false){
+					$('.formError').html("Invalid username or password");
+				} else{
+					$('.formError').html("Some error occurred");
+				}
+			}
+		});
+	}
+
+	function register()
+	{
+		$('.formError').html('');
+
+		var baseUrl ='<?php echo $base_url; ?>';
+		var registerEmail = $('input[name="registerEmail"]').val();
+		var firstName = $('input[name="firstName"]').val();
+		var lastName = $('input[name="lastName"]').val();
+		var registerPassword = $('input[name="registerPassword"]').val();
+		var registerPasswordConfirm = $('input[name="registerPasswordConfirm"]').val();
+		var userGender = $('input[name=genderSelect]:radio:checked')[0].value;
+		$.ajax({
+			type: "POST",
+			url: baseUrl+'index.php/ajax/signup',
+			data:{
+				signup_email: registerEmail,
+				signup_fname: firstName,
+				signup_lname: lastName,
+				signup_pw1: registerPassword,
+				signup_pw2: registerPasswordConfirm,
+				signup_gender: userGender
+			},
+
+			success: function(data)
+			{
+				console.log(data);
+				if (data=='sign_up_success')
+					window.location.reload();
+				else if (data=='validation_error')
+				{
+					$('.formError').html('Please check the details entered');
+				}
+				else if (data=='existing_facebook_user')
+				{
+					$('.formError').html('User already signed up with facebook');
+				}
+				else if (data=='existing_signup_user')
+				{
+					$('.formError').html('User already registered');
+				} else{
+					$('.formError').html("Some error occurred");
+				}
+			}
+		});
+	}
+
+	var authorizationCheck = function(){
+
+		if($('.signInAccountHolder ').is(':VISIBLE')){
+			$('#loginModal').modal('show');
+		}
+
+	};
+	
+	jQuery(document).ready(function()
+	{
+		jQuery('#loginModalClose').on('click', function()
+		{
+			jQuery('#loginModal').modal('hide');
+		});
+		
+		jQuery('.loginRequired').on('click', function()
+		{
+			authorizationCheck();
+		});
+	});
+</script>
+
+<!-- sokrati seo code by gauri end -->
+
+<?php if(isset($status) && $status>0) : ?>
+	<?php
+	switch ($status)
+	{
+		case 1:
+			$badge_path='view';
+			break;
+		case 2:
+			$badge_path='poll';
+			break;
+		case 3:
+			$badge_path='fstore';
+			break;
+		case 4:
+			$badge_path='fprod';
+			break;
+		case 5:
+			$badge_path='brag';
+			break;
+		case 6:
+			$badge_path='buy';
+			break;
+	}
+	?>
+	<div class="badgePopup" id="badgePopup">
+		<div class="badgePopupTransp"></div>
+		<div class="badgePopupActual">
+			<div class="b_icon_holder"><img src="<?php echo $base_url;?>assets/images/badges/<?php echo $badge_path;?>/<?php echo $badge_level[$status];?>.png" /></div>
+			<!--                             <div id="badge_close" class="badge_close"></div> -->
+		</div>
+	</div>
+<?php endif; ?>
+
+<script type="text/javascript">
+	$(".b_icon_holder").click(function(){
+		$("#badgePopup").dialog('close');
+		$.ajax({
+			url: "<?php echo $base_url; ?>"+'index.php/ajax/badge_success/<?php echo (isset($b_i) ? $b_i: NULL); ?>',
+			success: function(data){
+			}
+		});
+	});
+</script>
+
+<!--================== Header Section ================================-->
+<header>
+	<div class="headerTop container">
+
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="logo pull-left hidden-phone" href="/">Home</a>
+				<?php
+				if($isLoggedIN["status"] === FALSE)
+				{
+					?>
+					<div class="signInAccountHolder pull-right">
+						<a href="#loginModal" class="signInImage pull-left" id="signInAccount" role="button" data-toggle="modal" >Sign In</a>
+						<div class="image_Separator pull-left visible-desktop"></div>
+						<a href="#registerModal" class="accountImage pull-left" id="createAccount" role="button" data-toggle="modal" >Sign Up</a>
+					</div>
+				<?php
+				}
+				if($isLoggedIN["status"] === TRUE)
+				{
+					$userImageSrc = (strcmp($userDetails[0]->FBID, "non-fb-member") === 0)? $baseURL."assets/images/default/".((strcmp($userDetails[0]->gender, "female") === 0)? "female": "male").".png": "https://graph.facebook.com/".$userDetails[0]->FBID."/picture?width=200&height=200";
+					?>
+					<div class="signedInProfileHolder pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<img class="userImage" src="<?php echo $userImageSrc; ?>" alt="<?php echo $userDetails[0]->fullName." picture"; ?>">
+							<span class="userName hidden-phone"><?php echo $userDetails[0]->fullName; ?></span>
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/user_info/user_detail/">Profile</a></li>
+							<li><a href="/order/user_fancy_product/">Fancy list</a></li>
+							<li><a href="/user_info/badges/">Badges unlocked</a></li>
+							<li><a href="/user_info/purchase_history/">Purchase history</a></li>
+							<li><a href="<?php echo $baseURL."index.php/sync/logout"; ?>">Log Out</a></li>
+						</ul>
+					</div>
+					<ul class="notificationCounterContainer pull-right">
+						<!--               <li><a class="userPollCount cssTransition" href="#"><span class="notificationBadge"><?php echo $headerData["pollCount"]; ?></span></a></li>-->
+						<li>
+							<a href="/order/user_fancy_product/" class="userFancyCount cssTransition">
+								<span class="notificationBadge"><?php echo $headerData["fancyCount"]; ?></span>
+								<span class="tooltips hide">Fancied items</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="userRankCount cssTransition">
+								<span class="notificationBadge"><?php echo $headerData["rank"]; ?></span>
+								<span class="tooltips hide">Your rank</span>
+							</a>
+						</li>
+						<li>
+							<a href="<?php echo $baseURL; ?>index.php/cart/shopping_cart" class="userCartCount cssTransition">
+								<span class="notificationBadge" id="countCart"><?php echo $headerData["cartCount"]; ?></span>
+								<span class="tooltips hide">Your cart</span>
+							</a>
+							<!--						<ul class="cartPreviewContainer dropdown-menu">-->
+							<!--						--><?php
+							//							if(isset($cartCount) && $cartCount > 0)
+							//							{
+							//								$totalQuantity = 0;
+							//								$grandTotal = 0;
+							//								foreach($headerData["cartData"] as $cartDataItem)
+							//								{
+							//									log_message('INFO', 'inside header2. cartDataItem = '.print_r($cartDataItem, TRUE));
+							//									$totalQuantity += $cartDataItem[0]->quantity;
+							//									$grandTotal += (($cartDataItem[0]->isOnDiscount === 0)? ($cartDataItem[0]->originalPrice*$cartDataItem->quantity): (($cartDataItem->originalPrice - $cartDataItem->discountAmount)*$cartDataItem->quantity));
+							//								?>
+							<!--									<li class="cartItemDetails">-->
+							<!--										<a href="--><?php //echo $baseURL."index.php/order/product_page/".$cartDataItem[0]->storeID."/".$cartDataItem[0]->productID; ?><!--">-->
+							<!--											<img src="--><?php //echo $store_url."assets/images/stores/".$cartDataItem[0]->storeID."/".$cartDataItem[0]->productID."/img2_40x40.jpg"; ?><!--" alt="item preview">-->
+							<!--											<span class="itemPreviewDescriptionContainer">-->
+							<!--												<span class="itemName">--><?php //echo $cartDataItem->productName; ?><!--</span>-->
+							<!--												<span class="itemTotalContainer">X-->
+							<!--													<span class="itemQuantity">--><?php //echo $cartDataItem->quantity; ?><!--</span>-->
+							<!--													<span class="itemPriceHolder">Total Cost   :<span class="itemPrice">--><?php //echo (($cartDataItem->isOnDiscount === 0)? ($cartDataItem->originalPrice*$cartDataItem->quantity): (($cartDataItem->originalPrice - $cartDataItem->discountAmount)*$cartDataItem->quantity)); ?><!--</span></span>-->
+							<!--												</span>-->
+							<!--											</span>-->
+							<!--										</a>-->
+							<!--									</li>-->
+							<!--								--><?php
+							//								}
+							//								?>
+							<!--								<li class="checkOutCart">-->
+							<!--									<a href="#">Checkout Cart-->
+							<!--										<span class="cartDetailsContainer">-->
+							<!--											<span class="cartTotalContainer">X-->
+							<!--												<span class="cartItemQuantity">--><?php //echo $totalQuantity; ?><!--</span>-->
+							<!--												<span class="cartTotalPriceHolder">Total Cost   :<span class="CartTotalPrice">--><?php //echo $grandTotal; ?><!--</span></span>-->
+							<!--											</span>-->
+							<!--										</span>-->
+							<!--									</a>-->
+							<!--								</li>-->
+							<!--							--><?php
+							//							}
+							//							?>
+							<!--						</ul>-->
+						</li>
+					</ul>
+				<?php
+				}
+				?>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="visible-phone"><a href="/">Home</a></li>
+						<li>
+							<a id="bootStrapDropDownFix" href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="<?php echo $base_url; ?>categories/cat_product/2">Fashion</a></li>
+								<li><a href="<?php echo $base_url; ?>categories/cat_product/3">Art</a></li>
+								<li><a href="<?php echo $base_url; ?>categories/cat_product/4">Collectibles &amp; Accessories</a></li>
+								<li><a href="<?php echo $base_url; ?>categories/cat_product/5">Personal Care</a></li>
+								<li><a href="<?php echo $base_url; ?>categories/cat_product/6">Furniture</a></li>
+								<li><a href="<?php echo $base_url; ?>categories/cat_product/7">Dining</a></li>
+								<li><a href="<?php echo $base_url; ?>categories/cat_product/8">Decor and Furnishings</a></li>
+								<li><a href="<?php echo $base_url; ?>categories/cat_product/10">Lighting</a></li>
+								<li><a href="<?php echo $base_url; ?>categories/cat_product/357">Collectibles</a></li>
+							</ul>
+						</li>
+						<li><a href='<?php echo $base_url; ?>homepage/#/store'>Stores</a></li>
+						<!--<li><a href="http://blog.buynbrag.com">Blog</a></li>-->
+						<!--                        <li class="navSearch hide">-->
+						<!--                            <input type="text" class="span2" placeholder="Search">-->
+						<!--                        </li>-->
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<!--	<div class="headerReveal hidden-phone hide">BuynBrag</div>-->
+</header>
+
+<!-- lOGIN Modal -->
+<div id="loginModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<!--<div class="modal-header">-->
+	<!--&lt;!&ndash;<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>&ndash;&gt;-->
+	<!--<h3 id="myModalLabel">Modal header</h3>-->
+	<!--</div>-->
+	<div class="modal-body">
+		<button type="button" id="loginModalClose" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+		<div class=" loginContainer">
+			<div class="span5 loginForm">
+				<form id="login" onsubmit="return false">
+					<fieldset>
+						<legend>Login to BuynBrag</legend>
+						<a href="<?php echo $baseURL."index.php/fbLogin/index"; ?>">
+							<img src="<?php echo $baseURL."assets/images/fbbutton.png"; ?>" />
+						</a>
+						<label>Email:<input type="email" id="inputEmail" placeholder="Email" autofocus></label>
+						<label>Password:<input type="password" id="inputPassword" placeholder="Password"></label>
+						<!--<label class="checkbox"><input type="checkbox"> Remember me</label>-->
+
+						<button onclick="login()" type="submit" class="btn btn-primary">Sign in</button>
+						<a href="<?php echo $base_url; ?>fbLogin/index" class="btn">Login with Facebook</a>
+						<!--<button class="fbLogin">Sign in with Facebook</button>-->
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<span class="formError"></span>
+
+	</div>
+	<!--<div class="modal-footer">-->
+	<!--<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>-->
+	<!--<button class="btn btn-primary">Save changes</button>-->
+	<!--</div>-->
+</div>
+
+<!-- REGISTER Modal -->
+<div id="registerModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="LoginController">
+	<!--<div class="modal-header">-->
+	<!--&lt;!&ndash;<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>&ndash;&gt;-->
+	<!--<h3 id="myModalLabel">Modal header</h3>-->
+	<!--</div>-->
+	<div class="modal-body">
+
+		<div class="registerContainer">
+			<div class="span6 registerForm">
+				<form id="register" onsubmit="return false">
+					<fieldset>
+						<legend>Sign up for BuynBrag</legend>
+						<input type="text" name="firstName" placeholder="Your first name" required>
+						<input type="text" name="lastName" placeholder="Your last name" required>
+						<input type="email" name="registerEmail" placeholder="Your email address" required>
+						<input type="password" name="registerPassword" placeholder="New password" required>
+						<input type="password" name="registerPasswordConfirm" placeholder="Confirm password" required>
+						<label class="inlineBlock">Male<input class="inlineBlock" name="genderSelect" type="radio" value="male" required></label>
+						<label class="inlineBlock">Female<input class="inlineBlock" name="genderSelect" type="radio" value="female" required></label>
+
+						<button onclick="register()" class="btn btn-primary" type="submit">Register</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<span class="formError"></span>
+
+	</div>
+	<!--<div class="modal-footer">-->
+	<!--<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>-->
+	<!--<button class="btn btn-primary">Save changes</button>-->
+	<!--</div>-->
+</div>

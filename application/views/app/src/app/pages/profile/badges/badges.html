@@ -1,0 +1,52 @@
+<!--=========================== BADGES LIST CONTAINER STARTS =======================================-->
+
+<div class="badgesViewContainer container" ng-controller="BadgesListController">
+
+    <ul class="spinner" ng-hide="hideSpinner">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <div class="badgesCategoryContainer" ng-repeat="badges in userBadges">
+
+        <div class="badgeHeader">{{badges.text}}</div>
+
+        <div class="badgeImgContainer shadedBackground">
+
+            <span class="badgeImg text-center pull-left" ng-repeat="badge in badges.unlockedBadges">
+                <a href="" ng-click="openModal('badgeInfoModal', badge)" role="button" data-toggle="modal">
+                    <img ng-src="{{badge.badgeSrc}}" alt="Fancy level 3 badge"/>
+                    <span class="badgeName hidden-iphone-landscape">{{badge.txt}}</span>
+                </a>
+            </span>
+
+            <span class="badgeImg lockedBadges text-center pull-left hidden-iphone-landscape" ng-repeat="badge in badges.lockedBadges.badges">
+                <a href="" role="button" data-toggle="modal">
+                    <img ng-src="{{badges.lockedBadges.badgeSrc}}" alt="Fancy level 3 badge"/>
+                    <span class="badgeName">{{badges.lockedBadges.badgesText}}</span>
+                </a>
+            </span>
+
+        </div>
+
+    </div>
+
+    <div id="badgeInfoModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+        <img class="pull-left" ng-src="{{activeBadge.badgeSrc}}" alt="Badge unlocked"/>
+        <div class="badgeInfoContainer inlineBlock">
+            <div class="badgeName">{{activeBadge.txt}}</div>
+            <span>Congratulations!! You unlocked this badge by {{activeBadge.txt1}}ing <strong>{{activeBadge.triggeredAt}}</strong> {{activeBadge.txt2}}.</span>
+            <!-- <div class="bragBucks"><em>This badge gives you&nbsp;<strong>{{activeBadge.bbucks}}</strong>&nbsp;BragBucks<span class="astrix">&ast;</span></em></div> -->
+        <!--<div class="badgeStats">-->
+            <!--<div><strong><em>4 Friends</em></strong>&nbsp;unlocked this badge.</div>-->
+            <!--<div><strong><em>9453 People</em></strong>&nbsp;unlocked this badge.</div>-->
+        <!--</div>-->
+        </div>
+
+    </div>
+
+</div>

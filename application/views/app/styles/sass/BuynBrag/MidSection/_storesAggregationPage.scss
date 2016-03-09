@@ -1,0 +1,171 @@
+#storeBanner{
+  position: relative;
+
+  .bannerTextShadedContainer{
+    position: absolute;
+    top: 0;
+    color: #fff;
+    left: 30px;
+    background: rgba(0,0,0,0.5);
+    padding: 0 20px;
+    height: 100%;
+    text-align: center;
+
+    h2{
+      margin-top: 40px;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      font-size: 29px;
+    }
+
+    .bannerStats{
+      letter-spacing: 1px;
+      font-variant: small-caps;
+    }
+  }
+}
+
+.storesContainer{
+  .dropdown{
+    margin-top: 10px;
+    margin-bottom: -5px;
+    outline: none;
+
+    &:focus{
+      outline: none;
+    }
+
+    .dropdown-toggle{
+      color: inherit;
+      font-size: 13px;
+      padding: 10px 40px;
+      font-weight: bold;
+      min-width: 125px;
+    }
+
+    .dropdown-menu{
+      width: 99%;
+      background: url("../images/sprites/body_bg.png"), #fff;
+      top: initial;
+
+      li a{
+        color: inherit;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.featuredStoresContainer, .mostVisitedStoresContainer, .allStoresContainer{
+  ul{
+    list-style: none;
+  }
+
+  > .row{
+//    margin: 30px 0;
+    margin: 5px 0 12px;
+  }
+
+}
+
+.storeDetailContainer{
+  min-width: 280px;
+}
+
+.storeBrandingContainer{
+  border-bottom: 1px solid $grayLighter;
+  position: relative;
+
+  //.storeBannerImgContainer{
+  //  top: 0;
+  //  left: 0px;
+  //  img{
+  //    max-height: 50px;
+  //  }
+  //}
+
+  .storeBannerName{
+    font-size: 0.8rem;
+//    font-family: HelveticaStd;
+    text-transform: uppercase;
+    padding: 10px 10px 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #5a5a5a;
+    box-sizing: border-box;
+  }
+
+  .storeBannerButton{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    padding: 5px 10px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    font-size: 0.6rem;
+  }
+}
+
+.storeDetailContainer{
+  background: #fff;
+  //box-shadow: 0 0 1px #aaa;
+  background-image: linear-gradient(to bottom, #ffffff, #f7f7f7);
+  box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.52);
+}
+
+.featuredBanner, .mostVisitedStoresBanner, .allStoresBanner{
+  padding: 10px 0;
+  font-size: 0.9rem;
+//  background: url("../images/sprites/header_footer_bg.png") repeat;
+//  background: rgba(0,0,0,0.9);
+  background: $bnbDarkBlue;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.storeName{
+  border-bottom: 1px solid $grayLighter;
+}
+
+.storeProductsPreviewContainer{
+  margin: 10px 0;
+  text-align: center;
+  min-height: 96px;
+
+  a{
+    text-decoration: none;
+
+    //img{
+    //  width: 32%;
+    //  //box-shadow: 0 0 1px #aaa;
+    //}
+  }
+
+  img{
+    width: 32%;
+    margin-right: 1%;
+    //box-shadow: 0 0 1px #aaa;
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+}
+
+.storeStatsContainer{
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  border-top: 1px solid $grayLighter;
+  padding: 5px 10px;
+  overflow: hidden;
+}
+
+#midSection.allStoresPage .spinner{
+  margin-top: 10px !important;
+  margin-bottom: 30px !important;
+}

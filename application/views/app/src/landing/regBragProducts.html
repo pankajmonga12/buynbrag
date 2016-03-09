@@ -1,0 +1,59 @@
+<!-- add class 'fluidHomePage' and 'container-fluid' -->
+<div id="midSection" class="postRegPage regBragProducts container-fluid" fancy-products>
+
+    <!--<div class="processStageContainer text-center relative">-->
+        <!--<div class="currentStage">-->
+            <!--<div class="stageContentBg first">1</div>-->
+            <!--<div class="stageContent active">Select Stores</div>-->
+        <!--</div>-->
+
+        <!--<div class="currentStage">-->
+            <!--<div class="stageContentBg middle">2</div>-->
+            <!--<span class="stageContent ">Follow people</span>-->
+        <!--</div>-->
+
+        <!--<div class="currentStage ">-->
+            <!--<div class="stageContentBg last">3</div>-->
+            <!--<span class="stageContent ">Fancy products</span>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="storeSelectContainer container">
+
+    <div id="msgBanner">
+        <span class="bannerText">Lastly fancy 3 products to save them to your fancy list.</span>
+        <button class="btn pull-right" ng-click="switchView()">Continue</button>
+    </div>
+
+    <div class="fanciedProductsContainer">
+
+        <div class="imageRepetition" ng-repeat="product in productsToFancy">
+            <ul class="fancyProductMediumContainer">
+                <li dm-click class="span3 fancyItem shadedBackground leftMar0">
+                    <div class="fancyImageBG">
+
+                        <div class="fancyItemImageContainer">
+                            <img class="fancyItemImage" ng-src="{{s3Url}}{{product.storeID}}/{{product.productID}}/img1_240x200.jpg" alt="{{product.productName}}">
+                        </div>
+
+                        <div class="fancyItemHiddenContainer invisible cssTransition">
+                            <div class="productCtaContainer">
+                                <button class="fancyItemBtn btn btn-red ng-isolate-scope" fancy-product productid="{{product.productID}}"><span class="btnText ng-binding"><span class="fancyIconWhite"></span>{{fancyText}}</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    </div>
+
+</div>
+
+<!--<script type="text/javascript">-->
+    <!--stickyElem(document.getElementById('msgBanner'), document.querySelector('.fanciedProductsContainer'), 0, 56);-->
+<!--</script>-->

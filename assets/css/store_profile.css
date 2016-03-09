@@ -1,0 +1,1186 @@
+@charset "utf-8";
+.storeLink1 {
+    float: left;
+    height: 47px;
+    cursor: pointer;
+    border-top: 1px solid #a0a0a0;
+    background: url("../images/middle_background.png") repeat;
+    -moz-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -webkit-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -khtml-box-shadow: 0 1px 0 #f8f9f8 inset;
+    -pie-box-shadow: 0 1px 0 #f8f9f8 inset;
+    box-shadow: 0 1px 0 #f8f9f8 inset;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.productsLogo {
+    background-image: url("../images/products_normal.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 27px;
+    margin-left: 13px;
+    margin-top: 9px;
+    width: 26px;
+}
+
+.storeText {
+    font-family: gill;
+    font-size: 20px;
+    color: #da3c63;
+    padding: 10px 10px 0 7px;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+}
+
+.storeHover {
+    background-image: url("../images/store_profile_hover.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 27px;
+    margin-left: 13px;
+    margin-top: 9px;
+    width: 26px;
+}
+
+.category_iconContainer {
+    width: 100px;
+    height: 115px;
+}
+
+.infoIcon {
+    background-image: url(../images/storeprofile_info_normal.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    width: 65px;
+}
+
+.infoIcon:hover {
+    background-image: url(../images/fancy/info_hover.png);
+}
+
+.infoIcon:active {
+    background-image: url(../images/storeprofile_info_click.png);
+}
+
+.categoryIcon {
+    background-image: url(../images/storeprofile_categories_click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.policyIcon {
+    background-image: url(../images/storeprofile_policies_faq_normal.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.policyIcon:hover {
+    background-image: url(../images/fancy/policies.png);
+}
+
+.policyIcon:active {
+    background-image: url(../images/storeprofile_policies_faq-click.png);
+}
+
+.customerSupportIcon {
+    background-image: url(../images/storeprofile_customersupport_normal.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.customerSupportIcon:hover {
+    background-image: url(../images/fancy/customersupport.png);
+}
+
+.customerSupportIcon:active {
+    background-image: url(../images/storeprofile_customersupport_click.png);
+}
+
+.legalBankingIcon {
+    background-image: url(../images/storeprofile_legal_bankinfo_normal.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.legalBankingIcon:hover {
+    background-image: url(../images/fancy/legal&banking.png);
+}
+
+.legalBankingIcon:active {
+    background-image: url(../images/storeprofile_legal_bankinfo_click.png);
+}
+
+.pickupIcon {
+    background-image: url(../images/storeprofile_pickupaddress_slice.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.pickupIcon:hover {
+    background-image: url(../images/fancy/pickupaddress.png);
+}
+
+.pickupIcon:active {
+    background-image: url(../images/storeprofile_pickupaddress_click.png);
+}
+
+.tableContentsContainer {
+    margin: 0 auto;
+    height: auto;
+    width: 1024px;
+    padding-top: 30px;
+}
+
+.leftPanel {
+    float: left;
+    width: 319px;
+    height: auto;
+}
+
+.rightPanel {
+    float: left;
+    width: 705px;
+    height: auto;
+}
+
+.category_Heading {
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #a9abac;
+    border-right: 1px solid #C8C8C8;
+    height: 56px;
+    position: relative;
+    width: 318px;
+}
+
+.categoryBackground {
+    background-color: #FFF;
+    height: 56px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity = 50);
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    opacity: .5;
+    width: 100%;
+}
+
+.categoryContentBackgroundHolder {
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #a9abac;
+    border-right: 1px solid #C8C8C8;
+    height: 51px;
+    position: relative;
+    width: 318px;
+    cursor: pointer;
+}
+
+.categoryContentBackground {
+    background-color: #eceeee;
+    height: 51px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity = 50);
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    opacity: .5;
+    width: 100%;
+}
+
+.categoryContent {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.chairCategoryContentBackgroundHolder {
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #a9abac;
+    height: 51px;
+    position: relative;
+    width: 318px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.topBoxShadow {
+    background-image: url(../images/category_shadow.png);
+    background-repeat: no-repeat;
+    width: 254px;
+    height: 6px;
+    position: absolute;
+    top: -8px;
+    right: 0;
+}
+
+.bottomBoxShadow {
+    background-image: url(../images/category_shadow_bottom.png);
+    background-repeat: no-repeat;
+    width: 254px;
+    height: 6px;
+    position: absolute;
+    bottom: -7px;
+    right: -3px;
+}
+
+.topBoxShadow1 {
+    background-image: url(../images/category_shadow.png);
+    background-repeat: no-repeat;
+    width: 254px;
+    height: 6px;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    display: none;
+}
+
+.bottomBoxShadow1 {
+    background-image: url(../images/category_shadow_bottom.png);
+    background-repeat: no-repeat;
+    width: 254px;
+    height: 6px;
+    position: absolute;
+    bottom: -7px;
+    right: -3px;
+    display: none;
+}
+
+.leftBoxShadow {
+    background-image: url(../images/category_shadow_left.png);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 508px;
+    position: absolute;
+    bottom: -7px;
+    left: -12px;
+}
+
+.shadowHolder {
+    position: relative;
+}
+
+.chairCategoryContentBackground {
+    background-color: #eceeee;
+    height: 51px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity = 50);
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    opacity: .5;
+    width: 100%;
+}
+
+.chairCategoryContent {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.categoryText {
+    color: #666;
+    float: left;
+    font-family: gill;
+    font-size: 18px;
+    padding-left: 18px;
+    padding-top: 18px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.allText {
+    color: #666;
+    float: left;
+    font-family: gill;
+    font-size: 18px;
+    padding-left: 18px;
+    padding-top: 16px;
+    text-shadow: 0 1px 0 #FFF;
+    text-transform: capitalize;
+}
+
+.addCategoryButton {
+    width: 120px;
+    height: 35px;
+    border: 1px solid #dcdcdc;
+    float: right;
+    background: #f0f0f0;
+    background: -moz-linear-gradient(top, #fefefe, #f0f0f0);
+    background: -webkit-linear-gradient(top, #fefefe, #f0f0f0);
+    background: -o-linear-gradient(top, #fefefe, #f0f0f0);
+    background: -ms-linear-gradient(top, #fefefe, #f0f0f0);
+    -pie-background: linear-gradient(top, #fefefe, #f0f0f0);
+    font-family: gill;
+    font-size: 15px;
+    color: #999;
+    text-align: center;
+    margin-right: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.addCategoryButton:hover {
+    background: -moz-linear-gradient(top, #fefefe, #e4e4e4);
+    background: -webkit-linear-gradient(top, #fefefe, #e4e4e4);
+    background: -o-linear-gradient(top, #fefefe, #e4e4e4);
+    background: -ms-linear-gradient(top, #fefefe, #e4e4e4);
+    -pie-background: linear-gradient(top, #fefefe, #e4e4e4);
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.addCategoryButton:active {
+    background: -moz-linear-gradient(top, #fefefe, #dadada);
+    background: -webkit-linear-gradient(top, #fefefe, #dadada);
+    background: -o-linear-gradient(top, #fefefe, #dadada);
+    background: -ms-linear-gradient(top, #fefefe, #dadada);
+    -pie-background: linear-gradient(top, #fefefe, #dadada);
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.addCategoryTextHolder {
+    float: right;
+    margin-top: 16px;
+    margin-right: 12px;
+}
+
+.addCategoryText {
+    width: 137px;
+    height: 41px;
+    position: relative;
+}
+
+.addCategoryHidden {
+    display: none;
+}
+
+.addCategoryTextBackground {
+    background-image: url(../images/category_image1.png);
+    background-repeat: repeat;
+    height: 41px;
+    width: 100%;
+}
+
+.addCategorySaveCancel {
+    width: 310px;
+    height: 123px;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+.addCategorySaveCancelHolder {
+    width: 310px;
+    height: 123px;
+    position: relative;
+}
+
+.addCategorySaveCancelBackground {
+    background-image: url(../images/category_image1.png);
+    background-repeat: repeat;
+    height: 123px;
+    width: 100%;
+}
+
+.addCategorySaveCancelContent {
+    width: 284px;
+    height: 111px;
+    position: absolute;
+    top: 0;
+    padding-top: 12px;
+    padding-left: 20px;
+    -moz-box-shadow: 0 4px 6px #000;
+    -webkit-box-shadow: 0 4px 6px #000;
+    -khtml-box-shadow: 0 4px 6px #000;
+    -pie-box-shadow: 0 4px 6px #000;
+    box-shadow: 0 4px 6px #000;
+    right: 0;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.buttonsContainer {
+    float: right;
+    padding-top: 16px;
+    padding-right: 9px;
+}
+
+.save_icon {
+    background: #eb3762;
+    background: -moz-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -webkit-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -o-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -ms-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    -pie-background: linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    -moz-box-shadow: 0 5px 0 #dfa7a7;
+    -webkit-box-shadow: 0 5px 0 #dfa7a7;
+    -khtml-box-shadow: 0 5px 0 #dfa7a7;
+    -pie-box-shadow: 0 5px 0 #dfa7a7;
+    box-shadow: 0 5px 0 #dfa7a7;
+    color: white;
+    cursor: pointer;
+    float: left;
+    font-family: gill_bold;
+    font-size: 16px;
+    height: 28px;
+    text-align: center;
+    width: 52px;
+    margin-right: 5px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.save_icon:hover {
+    background: #f25178;
+    background: -moz-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -webkit-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -o-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -ms-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    -pie-background: linear-gradient(bottom, #f03c67 50%, #f25178 0);
+}
+
+.save_icon:active {
+    background: #cb3055;
+    background: -moz-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -webkit-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -o-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -ms-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    -pie-background: linear-gradient(bottom, #c51640 50%, #cb3055 0);
+}
+
+.cancel_icon {
+    background: #767676;
+    background: -moz-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -webkit-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -o-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -ms-linear-gradient(bottom, #666 50%, #767676 0);
+    -pie-background: linear-gradient(bottom, #666 50%, #767676 0);
+    border: none;
+    border-bottom: 1px solid #DFDBD9;
+    box-shadow: 0 5px 0 #959696;
+    -moz-box-shadow: 0 5px 0 #959696;
+    -webkit-box-shadow: 0 5px 0 #959696;
+    -khtml-box-shadow: 0 5px 0 #959696;
+    -pie-box-shadow: 0 5px 0 #959696;
+    color: #FFF;
+    cursor: pointer;
+    float: left;
+    font-family: gill_bold;
+    font-size: 16px;
+    height: 28px;
+    text-align: center;
+    width: 67px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.cancel_icon:hover {
+    background: #969595;
+    background: -moz-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -webkit-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -o-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -ms-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    -pie-background: linear-gradient(bottom, #8b8989 50%, #969595 0);
+}
+
+.cancel_icon:active {
+    background: #535353;
+    background: -moz-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -webkit-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -o-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -ms-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    -pie-background: linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+}
+
+.addCategorySaveCancelContent input {
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    height: 40px;
+    padding-left: 11px;
+    width: 255px;
+    background-color: #E1E1E1;
+    border: 1px dashed #949494;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -o-border-radius: 3px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.addCategoryTextHiddenContent {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: #666;
+    float: left;
+    font-family: gill_bold;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.category_identity {
+    background-image: url(../images/categories_identity.png);
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 18px;
+    margin-top: 16px;
+    margin-left: 10px;
+    float: left;
+}
+
+.dragDropText {
+    color: #999;
+    font-family: gill;
+    font-size: 16px;
+    padding-left: 18px;
+    padding-top: 16px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.leftPanelContent {
+    height: auto;
+    width: 100%;
+}
+
+.rightPanelHeading {
+    border-bottom: 1px solid #A9ABAC;
+    border-top: 1px solid #FFF;
+    height: 56px;
+    position: relative;
+    width: 706px;
+}
+
+.rightPanelHeadingBackground {
+    background-color: #FFF;
+    height: 56px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity = 50);
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    opacity: .5;
+    width: 100%;
+}
+
+.rightPanelHeadingContents {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.itemsTextContainer {
+    width: 343px;
+    height: 36px;
+    border-right: 1px solid #C8C8C8;
+    border-left: 1px solid #fff;
+    float: left;
+    color: #666;
+    padding-top: 20px;
+    padding-left: 8px;
+    font-family: gill;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.itemsText {
+    color: #666;
+    font-family: gill;
+    font-size: 18px;
+    padding-left: 8px;
+    text-shadow: 0 1px 0 #FFF;
+    float: left;
+}
+
+.quantityTextContainer {
+    width: 90px;
+    height: 40px;
+    border-right: 1px solid #C8C8C8;
+    border-left: 1px solid #fff;
+    float: left;
+    color: #666;
+    font-family: gill;
+    font-size: 18px;
+    padding-left: 18px;
+    padding-top: 16px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.priceTextContainer {
+    width: 112px;
+    height: 40px;
+    border-right: 1px solid #C8C8C8;
+    border-left: 1px solid #fff;
+    float: left;
+    color: #666;
+    font-family: gill;
+    font-size: 18px;
+    padding-left: 18px;
+    padding-top: 16px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.actionTextContainer {
+    color: #666;
+    font-family: gill;
+    font-size: 18px;
+    padding-left: 18px;
+    padding-top: 16px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 92px;
+    height: 40px;
+    border-left: 1px solid #fff;
+    float: left;
+}
+
+.checkbox {
+    height: 19px;
+    width: 0;
+    float: left;
+    padding: 0 0 0 20px;
+    background: url(../images/categories_checkbox.png) no-repeat;
+    cursor: default;
+    text-align: left;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.rightPanelContents {
+    width: 706px;
+    height: auto;
+    position: relative;
+}
+
+.moveDrop {
+    float: right;
+    display: none;
+}
+
+#move_combo{
+    margin: -5px 5px 0 0;
+}
+
+.chairItem1 {
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #C8C8C8;
+    color: #666;
+    float: left;
+    font-family: gill;
+    font-size: 18px;
+    height: 46px;
+    padding-left: 8px;
+    padding-top: 5px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 343px;
+}
+
+.rightPanelContentRow {
+    border-bottom: 1px solid #A9ABAC;
+    border-top: 1px solid #FFF;
+    height: 51px;
+    position: relative;
+    width: 706px;
+}
+
+.rightPanelContentRowBackground {
+    background-color: #f1eff0;
+    height: 51px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity = 50);
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    opacity: .5;
+    width: 100%;
+}
+
+.rightPanelContentRow_1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.quantityTextContainerRow {
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #C8C8C8;
+    color: #666;
+    float: left;
+    font-family: gill;
+    font-size: 18px;
+    height: 35px;
+    padding-left: 12px;
+    padding-top: 16px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 96px;
+}
+
+.priceTextContainerRow {
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #C8C8C8;
+    color: #666;
+    float: left;
+    font-family: gill;
+    font-size: 18px;
+    height: 35px;
+    padding-left: 18px;
+    padding-top: 16px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 112px;
+}
+
+.actionTextContainerRow {
+    border-left: 1px solid #FFF;
+    color: #666;
+    float: left;
+    font-family: gill;
+    font-size: 18px;
+    height: 40px;
+    padding-left: 18px;
+    padding-top: 11px;
+    text-shadow: 0 1px 0 #FFF;
+    width: 92px;
+}
+
+.actionEditImage {
+    background-image: url("../images/edit_product.png");
+    cursor: pointer;
+    height: 27px;
+    width: 26px;
+    float: left;
+}
+
+.actionCloseImage {
+    background-image: url("../images/pupplestore_close.png");
+    cursor: pointer;
+    height: 26px;
+    width: 26px;
+    float: left;
+    margin-left: 20px;
+}
+
+.checkbox_Holder {
+    padding-top: 9px;
+    float: left;
+    padding-right: 10px;
+}
+
+.chairImage {
+    float: left;
+    cursor: pointer;
+}
+
+.chairCategoryText {
+    color: #666;
+    float: left;
+    font-family: gill;
+    font-size: 20px;
+    padding-left: 8px;
+    padding-top: 8px;
+    text-shadow: 0 1px 0 #FFF;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.slideBackground {
+    width: 706px !important;
+}
+
+.infoIcon_active {
+    background-image: url(../images/storeprofile_info_click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    width: 65px;
+}
+
+.categoryIcon1 {
+    background-image: url(../images/storeprofile_categories_normal.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.categoryIcon1:hover {
+    background-image: url(../images/fancy/category.png);
+}
+
+.categoryIcon1:active {
+    background-image: url(../images/storeprofile_categories_click.png);
+}
+
+.policyIcon_active {
+    background-image: url(../images/storeprofile_policies_faq-click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.customerSupportIcon_active {
+    background-image: url(../images/storeprofile_customersupport_click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.legalBankingIcon_active {
+    background-image: url(../images/storeprofile_legal_bankinfo_click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.pickupIcon_active {
+    background-image: url(../images/storeprofile_pickupaddress_click.png);
+    background-repeat: no-repeat;
+    float: left;
+    height: 65px;
+    margin-left: 13px;
+    width: 65px;
+}
+
+.policy_container {
+    width: 1024px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.policy_container input[type=text], .policy_container input[type=email], .policy_container input[type=password] {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: #999999;
+    font-size: 15px;
+    font-style: italic;
+    height: 40px;
+    margin-bottom: 0;
+    padding-left: 11px;
+}
+
+.policy_container input[type=text]:focus, .policy_container input[type=email]:focus, .policy_container input[type=password]:focus {
+    background: none repeat scroll 0 0 #EFEFEF;
+    border-left: medium none;
+    padding-right: 0;
+}
+
+.policy_left {
+    float: left;
+    padding-right: 30px;
+}
+
+.shop_text {
+    font: 20px gill_bold;
+    color: #666;
+}
+
+.policyDetails {
+    font: 16px gill;
+    text-shadow: 0 1px 0 #fff;
+    color: #999;
+    padding-top: 8px;
+}
+
+.text_label {
+    color: #999;
+    font: 20px gill;
+    padding: 25px 0 15px 0;
+    text-shadow: 0 1px 0 #FFF, -0.5px 0 0 #000;
+}
+
+.policySeperator {
+    float: left;
+    background: none repeat scroll 0 0 #D8D9D7;
+    border: 1px solid #B4B4B4;
+    width: 4px;
+    height: 462px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.policy_right {
+    float: right;
+}
+
+.rightMain {
+    position: relative;
+    width: 420px;
+    height: 385px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #D3CFCD;
+}
+
+.rightTransparent {
+    background-color: #f1f1f1;
+    height: 385px;
+    filter: alpha(opacity = 50);
+    opacity: .5;
+    -khtml-opacity: .5;
+}
+
+.rigntContent {
+    position: absolute;
+    top: 0;
+    padding-left: 20px;
+}
+
+.faq_text {
+    font: 20px gill_bold;
+    color: #999;
+    text-shadow: 0 1px 0 #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.sep {
+    height: 0;
+    border-top: 1px solid #D3CFCD;
+    border-bottom: 1px solid #fff;
+    width: 385px;
+}
+
+.ques {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    text-shadow: 0 1px 0 #fff;
+    height: 46px;
+    width: 355px;
+    padding-left: 12px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.ans {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    text-shadow: 0 1px 0 #fff;
+    resize: none;
+    font-size: 15px;
+    height: 50px;
+    width: 345px;
+    padding: 10px;
+    margin-bottom: 16px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+textarea:focus, input:focus {
+    background-color: #EFEFEF;
+}
+
+.save_width {
+    width: 100px !important;
+}
+
+.detail_text {
+    font: 20px gill;
+    color: #333;
+    text-shadow: 0 1px 0 #fff;
+    padding-bottom: 15px;
+}
+
+.input_width {
+    width: 468px;
+}
+
+.address_inputs {
+    float: left;
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    font-size: 15px;
+    text-shadow: 0 1px 0 #fff;
+    height: 40px;
+    width: 221px;
+    padding-left: 12px;
+    margin-right: 12px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.add_area {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 1px dashed #949494;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font-family: gill_italic;
+    resize: none;
+    font-size: 15px;
+    text-shadow: 0 1px 0 #fff;
+    height: 50px;
+    width: 461px;
+    padding: 10px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.chairPopupContainer {
+    width: 552px;
+    height: 505px;
+    display: none;
+}
+
+.chairPopupHolder {
+    width: 552px;
+    height: 495px;
+    position: relative;
+    border-top: 1px solid #fff;
+}
+
+.chairPopupBackground {
+    background-color: #fff;
+    height: 495px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=88)";
+    filter: alpha(opacity = 88);
+    -moz-opacity: .88;
+    -khtml-opacity: .88;
+    opacity: .88;
+    width: 100%;
+}
+
+.chairPopupBackgroundContent {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -moz-box-shadow: 0 6px 5px #000;
+    -webkit-box-shadow: 0 6px 5px #000;
+    -khtml-box-shadow: 0 6px 5px #000;
+    -pie-box-shadow: 0 6px 5px #000;
+    box-shadow: 0 6px 5px #000;
+    height: 495px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.textsHolder {
+    width: 468px;
+    height: 90px;
+    float: left;
+    padding-top: 16px;
+    padding-left: 36px;
+}
+
+.uniqueChairText {
+    color: #666;
+    font-family: gill;
+    font-size: 24px;
+    text-shadow: 0 1px 0 #FFF;
+    float: left;
+}
+
+.priceQuantityText {
+    color: #999;
+    font-family: gill;
+    font-size: 16px;
+    text-shadow: 0 1px 0 #FFF;
+    float: left;
+    padding-left: 8px;
+    padding-top: 8px;
+}
+
+.categoryChairText {
+    color: #999;
+    font-family: gill;
+    font-size: 16px;
+    text-shadow: 0 1px 0 #FFF;
+    float: left;
+    padding-top: 14px;
+}
+
+.changeItalicText {
+    color: #da3c63;
+    font-family: gill_italic;
+    font-size: 14px;
+    float: left;
+    padding-top: 15px;
+    padding-left: 8px;
+    cursor: pointer;
+}
+
+.closeIcon {
+    background-image: url("../images/problemwithorder_popup_close.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: left;
+    height: 27px;
+    margin-right: 22px;
+    margin-top: 17px;
+    width: 26px;
+}
+
+.closeIcon:hover {
+    background: url(../images/popup_close_click.png);
+}
+
+.popupChairImage {
+    width: 500px;
+    height: 375px;
+    margin: 0 auto;
+}
+
+.textCloseIcon {
+    clear: both;
+    height: 104px;
+}
+
+.categoryChangeText {
+    clear: both;
+}
+
+.addCategory {
+    clear: both;
+    display: none;
+    padding-top: 10px;
+}
+
+.tableContentsInner {
+    height: auto;
+    width: 1024px;
+    display: inline-block;
+}
+
+.checkboxText {
+    padding-top: 18px;
+}
+
+.checkText {
+    color: #666;
+    font-family: gill;
+    font-size: 15px;
+    padding-left: 8px;
+    text-shadow: 0 0 1px #fff;
+}

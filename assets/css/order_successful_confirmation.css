@@ -1,0 +1,125 @@
+@charset "utf-8";
+.quantity_column {
+    color: #666;
+    font-family: gill;
+    font-size: 20px;
+    padding-left: 15px;
+    width: 89px !important;
+    height: 63px !important;
+    padding-top: 40px;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.right_border_none {
+    border-right: none !important;
+}
+
+.new_height {
+    height: 103px !important;
+}
+
+.header_width {
+    width: 784px !important;
+}
+
+.stable_glass_holder_width {
+    width: 770px !important;
+}
+
+.products_ordered_text {
+    font-size: 23px;
+    font-family: gill_bold;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+    padding-bottom: 20px;
+    padding-top: 38px;
+}
+
+.order_successful_Holder {
+    margin: 0 auto;
+    width: 1024px;
+    height: 205px;
+    position: relative;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #a8a9a5;
+}
+
+.order_success_background {
+    background-color: #fff;
+    height: 205px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity = 50);
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    opacity: .5;
+    width: 100%;
+}
+
+.order_success_contents {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.thanks_text {
+    margin: 0 auto;
+    padding-top: 34px;
+    color: #333;
+    font-family: gill;
+    font-size: 30px;
+    width: 685px;
+}
+
+.email_confirmation_text {
+    font-size: 18px !important;
+    padding-top: 16px !important;
+    padding-bottom: 22px !important;
+}
+
+.button_holder {
+    margin: 0 auto;
+    width: 180px;
+}
+
+.view_order {
+    background: #eb3762;
+    background: -moz-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -webkit-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -o-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -ms-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    -pie-background: linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    -moz-box-shadow: 0 5px 0 #e58da2;
+    -webkit-box-shadow: 0 5px 0 #e58da2;
+    -khtml-box-shadow: 0 5px 0 #e58da2;
+    -pie-box-shadow: 0 5px 0 #e58da2;
+    box-shadow: 0 5px 0 #e58da2;
+    cursor: pointer;
+    height: 44px;
+    width: 176px;
+    float: left;
+    font-family: gill_bold;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.view_order:hover {
+    background: #f25178;
+    background: -moz-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -webkit-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -o-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -ms-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    -pie-background: linear-gradient(bottom, #f03c67 50%, #f25178 0);
+}
+
+.view_order:active {
+    background: #cb3055;
+    background: -moz-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -webkit-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -o-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -ms-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    -pie-background: linear-gradient(bottom, #c51640 50%, #cb3055 0);
+}

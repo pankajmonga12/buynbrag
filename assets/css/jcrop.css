@@ -1,0 +1,197 @@
+.jcrop-holder {
+    text-align: left;
+    width: 458px !important;
+    background-color: #fff !important;
+    margin: 0 auto !important;
+}
+
+.jcrop-vline, .jcrop-hline {
+    font-size: 0;
+    position: absolute;
+    background: white url('Jcrop.gif') top left repeat;
+}
+
+.jcrop-vline {
+    height: 100%;
+    width: 1px !important;
+}
+
+.jcrop-hline {
+    width: 100%;
+    height: 1px !important;
+}
+
+.jcrop-handle {
+    font-size: 1px;
+    width: 7px !important;
+    height: 7px !important;
+    border: 1px #eee solid;
+    background-color: #333;
+    *width: 9px;
+    *height: 9px;
+}
+
+#crop_details7 {
+    margin: 0 auto;
+    width: 300px;
+    padding-bottom: 20px;
+}
+
+.jcrop-tracker {
+    width: 100%;
+    height: 100%;
+    width: 458px !important;
+}
+
+.custom .jcrop-vline, .custom .jcrop-hline {
+    background: yellow;
+}
+
+.custom .jcrop-handle {
+    border-color: black;
+    background-color: #C7BB00;
+}
+
+.button-green:active, .button-green.active, .button-green.current {
+    color: #666 !important;
+    background: #ededed;
+    text-shadow: none !important;
+}
+
+.button-green[disabled] {
+    color: #666 !important;
+    background: #ededed;
+    text-shadow: none !important;
+}
+
+.button {
+    -moz-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 10px;
+    outline: none !important;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    -moz-box-sizing: border-box !important;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+}
+
+.button[disabled] {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.button-round {
+    padding: 7px 0;
+    width: 30px;
+}
+
+.button-red-mailme {
+    background: #eb3762;
+    background: -moz-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -webkit-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -o-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    background: -ms-linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    -pie-background: linear-gradient(bottom, #e81c4d 50%, #eb3762 0);
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    -moz-box-shadow: 0 5px 0 #dfa7a7;
+    -webkit-box-shadow: 0 5px 0 #dfa7a7;
+    -khtml-box-shadow: 0 5px 0 #dfa7a7;
+    -pie-box-shadow: 0 5px 0 #dfa7a7;
+    box-shadow: 0 5px 0 #dfa7a7;
+    width: 145px;
+    height: 41px;
+    float: left;
+    cursor: pointer;
+    font-family: gill_bold;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.button-red-mailme:hover {
+    background: #f25178;
+    background: -moz-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -webkit-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -o-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    background: -ms-linear-gradient(bottom, #f03c67 50%, #f25178 0);
+    -pie-background: linear-gradient(bottom, #f03c67 50%, #f25178 0);
+}
+
+.button-red-mailme:active {
+    background: #cb3055;
+    background: -moz-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -webkit-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -o-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    background: -ms-linear-gradient(bottom, #c51640 50%, #cb3055 0);
+    -pie-background: linear-gradient(bottom, #c51640 50%, #cb3055 0);
+}
+
+#crop_preview6 {
+    width: 75px;
+}
+
+#crop_preview6 img {
+    height: 82px;
+    margin: 0 auto !important;
+    width: 82px;
+}
+
+#crop_preview7 {
+    width: 75px;
+}
+
+#crop_preview7 img {
+    height: 113px !important;
+    margin: 0 auto !important;
+    width: 113px !important;
+}
+
+#imageCrop7 {
+    margin: 0 auto;
+}
+
+#cancel_crop {
+    background: #767676;
+    background: -moz-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -webkit-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -o-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -ms-linear-gradient(bottom, #666 50%, #767676 0);
+    -pie-background: linear-gradient(bottom, #666 50%, #767676 0);
+    box-shadow: 0 5px 0 #959696;
+    -moz-box-shadow: 0 5px 0 #959696;
+    -webkit-box-shadow: 0 5px 0 #959696;
+    -khtml-box-shadow: 0 5px 0 #959696;
+    -pie-box-shadow: 0 5px 0 #959696;
+}
+
+#cancel_crop:hover {
+    background: #969595;
+    background: -moz-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -webkit-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -o-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -ms-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    -pie-background: linear-gradient(bottom, #8b8989 50%, #969595 0);
+}
+
+#cancel_crop:active {
+    background: #535353;
+    background: -moz-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -webkit-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -o-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -ms-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    -pie-background: linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+}

@@ -1,0 +1,48 @@
+.bannerTop .ui-tabs {
+    position: relative;
+    padding: .2em;
+    zoom: 1;
+    text-align: center;
+}
+
+.bannerTop .ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding: .2em .2em 0;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.bannerTop .ui-tabs .ui-tabs-nav li {
+    background-image: url(../images/button.png);
+    height: 12px;
+    width: 12px;
+    background-repeat: no-repeat;
+    list-style: none;
+    float: left;
+    position: relative;
+    margin-right: 6px;
+}
+
+.bannerTop .ui-tabs .ui-tabs-nav li:hover {
+    background-image: url(../images/buttonSelected.png);
+}
+
+.bannerTop .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+    background-image: url(../images/buttonSelected.png);
+}
+
+.bannerTop .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+    cursor: pointer;
+    padding: 4px;
+}
+
+.bannerTop .ui-tabs .ui-tabs-panel {
+    display: block;
+    border-width: 0;
+    padding: 5px 0 0 0;
+    background: none;
+}
+
+.bannerTop .ui-tabs .ui-tabs-hide {
+    display: none !important;
+}

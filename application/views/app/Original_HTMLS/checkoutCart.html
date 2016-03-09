@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:ng="http://angularjs.org" ng-app="bnbApp" ng-controller="AppController">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="robots" content="index, follow">
+    <meta name="fragment" content="!"/>
+
+    <title ng-bind="dynamicSeoContent.title || defaultSeoContent.title"></title>
+
+    <meta name="description" content="{{dynamicSeoContent.description || defaultSeoContent.description}}">
+    <meta name="keywords" content="buy, and, brag, buyandbrag, buynbrag, buy and brag,  social, shopping, outfits, trends, fashion, style, advice, tips, fashion">
+    <meta name="author" content="BuynBrag">
+
+    <meta property="og:site_name" content="BuynBrag.com">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{dynamicSeoContent.title || defaultSeoContent.title}}">
+    <meta property="og:description" content="{{dynamicSeoContent.description || defaultSeoContent.description}}">
+
+    <meta property="og:image" content="{{dynamicSeoContent.image || defaultSeoContent.image}}"/>
+    <meta property="og:image:type" content="{{dynamicSeoContent.imageType || defaultSeoContent.imageType}}"/>
+    <meta property="og:image:width" content="{{dynamicSeoContent.imageWidth || defaultSeoContent.imageWidth}}"/>
+    <meta property="og:image:height" content="{{dynamicSeoContent.imageHeight || defaultSeoContent.imageHeight}}"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
+
+    <link href="/application/views/app/styles/vendor.css" rel="stylesheet">
+    <link href="/application/views/app/styles/main.css" rel="stylesheet">
+
+    <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png">
+    <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="/apple-touch-icon-precomposed.png">
+    <!-- Fallback for all browsers -->
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" href="/apple-touch-icon.png"/>
+
+    <script type="text/javascript">
+
+        (function(){
+            //      test for touch events support and if not supported, attach .no-touch class to the HTML tag.
+            if(!("ontouchstart" in document.documentElement)){
+                document.documentElement.className += " non-touch";
+            } else{
+                document.documentElement.className += " touch";
+            }
+
+            if(window.location.hash && window.location.hash === "#_=_"){
+                window.location.hash = "";
+            }
+
+            // test for non IE and modern IE browsers
+            if(navigator.appName == 'Microsoft Internet Explorer'){
+                var userAgent = navigator.userAgent;
+                var regEx = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                if(regEx.exec(userAgent) != null){
+                    ieVersion = parseFloat(RegExp.$1);
+                }
+
+                if(ieVersion >= 10.0){
+                    document.documentElement.className += " modernIE";
+                } else document.documentElement.className += " olderIE";
+            } else document.documentElement.className += " nonIE";
+
+        })();
+
+    </script>
+
+</head>
+
+<body>
+
+<!--================== Site alert message ================================--><!--<div class="siteMsgContainer alert text-center hidden-iphone-landscape {{newClass}}" ng-controller="siteMsgController">--><!--<button class="close">&times;</button>--><!--<span ng-bind-html-unsafe="message"></span>--><!--</div>-->
+
+<!--================== Header Section ================================-->
+<header class="cssTransitionSlow">
+    <div class="headerTop container-fluid">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+
+                <h1 class="logoHeading">
+                    <a class="logo pull-left hidden-phone" href="#!/">
+                        <img src="/application/views/dist/images/404_logo_200.png" alt="BuynBrag"/> </a>
+                </h1>
+
+                <div class="signInAccountHolder pull-right" ng-hide='user.userid'>
+                    <a href="#loginModal" class="loginRequired" id="signInAccount" role="button" data-toggle="modal">Login</a>
+                    <a href="#registerModal" class="registerModal" id="createAccount" role="button" data-toggle="modal">Register</a>
+                </div>
+
+                <div class="signedInProfileHolder pull-right" style="display:none;" ng-show="user.userid">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                        <img class="userImage" ng-src="{{user.userdata.fbsrc}}" alt="{{user.userdata.name}} Pic" ng-cloak>
+                        <span class="userName hidden-phone hidden-tablet" ng-cloak>{{user.userdata.name}}</span>
+                        <span class="caret"></span> </a>
+                    <ul class="dropdown-menu dark">
+                        <!-- <li><a href="#/inviteStatus">Brag bucks earned</a></li> -->
+                        <li><a href="#!/profile/social/{{user.userid}}">Profile</a></li>
+                        <li>
+                            <a href="#!/profile/fancy/{{user.userid}}">Fancy list<span class="dropDownBadge pull-right hidden-desktop">{{user.userdata.fancy}}</span></a>
+                        </li>
+                        <li>
+                            <a href="#!/profile/badges/{{user.userid}}">Badges unlocked<span class="dropDownBadge pull-right hidden-desktop">{{user.userdata.totalBadges}}</span></a>
+                        </li>
+                        <li><a href="/#couponsModal" role="button" data-toggle="modal">Coupons available</a></li>
+                        <li><a href="/user_info/purchase_history/">Purchase history</a></li>
+                        <li><a href="" ng-click="logout()">Log Out</a></li>
+                    </ul>
+                </div>
+
+                <ul class="notificationCounterContainer pull-right" style="display:none;" ng-show="user.userid">
+                    <li class="hidden-phone hidden-tablet">
+                        <a href="#!/profile/badges/{{user.userid}}" class="userBadgesCount">
+                            <span class="notificationBadge" ng-cloak>{{user.userdata.totalBadges}}</span>
+                            <span class="tooltips top invisible">Total badges unlocked</span> </a>
+                    </li>
+                    <li class="hidden-phone hidden-tablet">
+                        <a href="#!/profile/fancy/{{user.userid}}" class="userFancyCount">
+                            <span class="notificationBadge" ng-cloak>{{user.userdata.fancy}}</span>
+                            <span class="tooltips top invisible">Fancied items</span> </a>
+                    </li>
+                    <li class="hidden-phone">
+                        <a href="" class="userRankCount">
+                            <span class="notificationBadge" ng-cloak>{{user.userdata.rank}}</span>
+                            <span class="tooltips top invisible">Your rank</span> </a>
+                    </li>
+                    <!--<li>--><!--<a href="/cart/shopping_cart" class="userCartCount">--><!--<span class="notificationBadge" ng-cloak>{{user.userdata.cartcount}}</span>--><!--<span class="tooltips top invisible">Your cart</span>--><!--</a>--><!--</li>-->
+
+                    <li>
+                        <!--Link for mobiles-->
+                        <a href="/cart/shopping_cart" class="userCartCount visible-phone">
+                            <span class="notificationBadge" ng-cloak>{{user.userdata.cartcount}}</span> </a>
+                        <!--Link for tablets and desktops-->
+                        <a href="/" class="userCartCount cssTransition dropdown-toggle hidden-phone" data-toggle="dropdown">
+                            <span class="notificationBadge" ng-cloak>{{user.userdata.cartcount}}</span> </a>
+                        <ul class="cartPreviewContainer dropdown-menu dark hidden-phone">
+
+                            <li class="cartItemDetails" ng-repeat="item in user.userdata.cart">
+                                <a ng-href="#!/product/{{item.productName | beautify}}/{{item.productID}}">
+                                    <img ng-src="{{s3baseUrl}}{{item.storeID}}/{{item.productID}}/img1_40x40.jpg" src="" alt="item">
+                                    <span class="itemPreviewDescriptionContainer">
+                                        <span class="itemName">{{item.productName}}</span>
+                                        <span class="itemTotalContainer">X {{item.quantity}}
+                                            <span class="itemPriceHolder">Amount   :<span class="itemPrice">{{item.totalPayable}}</span></span>
+                                        </span>
+                                    </span> </a>
+                            </li>
+
+                            <li class="checkOutCart">
+                                <a id="checkoutCartBtn" class="btn btn-blue inlineBlock" href="/cart/shopping_cart">Checkout Cart</a>
+                                <span class="cartTotalDetailsContainer">
+                                    <span class="cartTotalContainer">Total Quantity :
+                                        <span class="cartTotalItemQuantity">{{user.userdata.cartTotalItemQuantity}}</span>
+                                        <span class="cartTotalPriceHolder">Total :<span class="cartTotalPrice">{{user.userdata.cartAmount}}</span></span>
+                                    </span>
+                                </span>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <div typeahead min-chars="2" class="searchBoxContainer pull-right relative">
+
+                    <div class="searchBox">
+                        <input ng-model="searchKey" class="searchInput cssTransition" type="text" placeholder="Search..." autocomplete="off" spellcheck="false"/>
+                        <button class="btn btn-flat hide closeSearch">Cancel</button>
+                    </div>
+
+                    <i class="searchIcon icon-search block"></i>
+
+                </div>
+
+                <!--                 <div typeahead min-chars="2" class="searchBoxContainer pull-right relative cssTransition">
+                                    <div class="searchBox cssTransition">
+                                        <input ng-model="searchKey" class="searchInput pull-left cssTransition" type="text" placeholder="Search" autofocus autocomplete="off" spellcheck="false"/>
+                                        <i class="icon-search-2 searchIcon inlineBlock cssTransition"></i>
+
+                                        <span class="searchText relative cssTransition visible-desktop">Search</span>
+
+                                    </div>
+
+                                    <ul class="{{ (showSuggestions == true) && 'searchSuggestionsContainer dropdown-menu block' || 'searchSuggestionsContainer dropdown-menu' }}">
+                                        <li typeahead-item="result" ng-repeat="result in searchResults">
+                                            <a href="" ng-bind-html-unsafe="result.product_name | highlight: searchKey"></a>
+                                        </li>
+                                    </ul>
+                                </div> -->
+
+                <div class="nav-collapse">
+
+                    <ul class="nav">
+                        <li class="visible-phone"><a href="#!/">Home</a></li>
+                        <li class="relative">
+                            <a id="bootStrapDropDownFix" href="" class="dropdown-toggle" data-toggle="dropdown">Categories
+                                <span class="caret"></span> </a>
+
+                            <ul class="dropdown-menu dark visible-iphone-landscape" style="display: none; height: 0; overflow: hidden;">
+                                <li><a href="#!/categories/Fashion/2">Fashion</a></li>
+                                <li><a href="#!/categories/Art/3">Art</a></li>
+                                <li><a href="#!/categories/Gadgets-Collectibles/4">Gadgets &amp; Collectibles</a></li>
+                                <li><a href="#!/categories/Furniture/6">Furniture</a></li>
+                                <li><a href="#!/categories/Dining/7">Dining</a></li>
+                                <li><a href="#!/categories/Decor-and-Furnishings/8">Decor and Furnishings</a></li>
+                                <li><a href="#!/categories/Lighting/10">Lighting</a></li>
+                            </ul>
+
+                            <!-- <ul class="dropdown-menu dark">
+                                <li ng-repeat="category in categories"><a ng-href="#/categories/{{category.catName | beautify}}/{{category.catID}}">{{category.catName}}</a></li>
+                            </ul> -->
+                            <navigationtree cats="categories"></navigationtree>
+                        </li>
+                        <li><a href='#!/allStores'>Stores</a></li>
+
+                        <li class="relative trendsDropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Trends <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu dark">
+                                <li ng-repeat="city in cities">
+                                    <a ng-href="#!/trends/{{city.urlParam | beautify}}">{{city.urlParam}}</a></li>
+                            </ul>
+                        </li>
+
+                        <!--Tour activation link--><!--<li class="visible-desktop">--><!--<a href="#homePageTourModal" id="startTour" class="hidden-phone" role="button" data-toggle="modal">Tour</a>--><!--</li>-->
+
+                    </ul>
+
+                    <!--<a href="#/inviteFriends" class="inviteLink pull-right">Invite Friends</a>--><!--<a href="#inviteFriendsModal" class="pull-right" role="button" data-toggle="modal">Invite Friends</a>-->
+
+                    <!--<a class="bragBucks hidden-phone bold pull-right" href="/#inviteStatus">{{user.userdata.bragBucks | currency}}</a>-->
+
+                    <!--<a href="#homePageTourModal" id="startTour" class="btn btn-red btn-small pull-right visible-desktop" role="button" data-toggle="modal">Tour</a>-->
+
+                    <!--<a href="#badgesModal" class="pull-right" role="button" data-toggle="modal">Badges toggle</a>-->
+
+                </div>
+
+                <!--<my-autocomplete min-chars="3">--><!--</my-autocomplete>-->
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!--================== Mid Section ================================-->
+
+<div id="midSection" class="container checkoutCartPage">
+
+    <h4>Review your order</h4>
+
+    <div class="cartContentContainer">
+        <div class="loadingOverlay ng-hide" ng-show="showSpinner">
+            <ul class="spinner">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <h2 ng-show="emptyCart" class="ng-hide">Your cart is empty.</h2>
+
+        <div class="cart-list" ng-show="!emptyCart">
+            <table class="tb-cart table">
+                <thead>
+                    <tr>
+                        <th class="item">Orders fulfilled by<em><strong>&nbsp;Hitplay&nbsp;</strong></em>( 3 )</th>
+                        <th class="price">Price</th>
+                        <th class="qty">Quantity</th>
+                        <th class="total">Total</th>
+                    </tr>
+                </thead>
+                <tbody><!-- ngRepeat: item in cartData.items -->
+                    <tr ng-repeat-start="item in cartData.items" class="ng-scope">
+                        <td class="item">
+                            <div class="relative cartDetailWrapper">
+                                <a ng-href="product/Blinged-Jewellery-Organizer/11697" class="figure" href="product/Blinged-Jewellery-Organizer/11697"><span class="figure-img"><img ng-src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/11697/img1_240x200.jpg" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/11697/img1_240x200.jpg"></span>
+                                    <b class="figcaption ng-binding">Blinged! Jewellery Organizer</b></a>
+                                <span class="detail"><em class="option ng-hide" ng-show="item.variants.sizeVariants.length &gt; 0">
+                                    <small>Size:</small>
+                                    <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedSize" ng-options="variant.size for variant in item.variants.sizeVariants" ng-change="updateCart(item)">
+                                        <option value="?" selected="selected"></option>
+                                    </select></em> <em class="option" ng-show="item.variants.colorVariants.length &gt; 0">
+                                    <small>Color:</small>
+                                    <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedColor" ng-options="variant.color for variant in item.variants.colorVariants" ng-change="updateCart(item)">
+                                        <option value="0">Blue</option>
+                                        <option value="1" selected="selected">Green</option>
+                                        <option value="2">Yellow</option>
+                                    </select></em>  <em class="arrival">
+                                    <small>Estimated Arrival</small>
+                                    <span class="ng-binding">Feb 22, 2014</span></em></span></div>
+                        </td>
+                        <td class="price ng-binding">Rs. 949</td>
+                        <td class="qty">
+                            <select class="embo-select ng-pristine ng-valid" cid="1720089" sicid="5866195" ng-model="item.selectedQuantity" ng-options="quantity.num for quantity in item.quantityRange" ng-change="updateCart(item)">
+                                <option value="0" selected="selected">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                            </select></td>
+                        <td class="total">
+                            <div class="relative"><b class="ng-binding">Rs. 949</b>
+                                <button class="btn btn-mini btn-red pull-right removeItm" ng-click="deleteCartItem(item)">
+                                    <i class="icon-trash"></i>Remove
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hide ng-scope" ng-repeat-end="">
+                        <td colspan="4" class="space"></td>
+                    </tr>
+                    <!-- end ngRepeat: item in cartData.items -->
+                    <tr ng-repeat-start="item in cartData.items" class="ng-scope">
+                        <td class="item">
+                            <div class="relative cartDetailWrapper">
+                                <a ng-href="product/Pass-This-On-iPhone-4-4s-Case/12159" class="figure" href="product/Pass-This-On-iPhone-4-4s-Case/12159"><span class="figure-img"><img ng-src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/261/12159/img1_240x200.jpg" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/261/12159/img1_240x200.jpg"></span>
+                                    <b class="figcaption ng-binding">Pass This On iPhone 4/4s Case</b></a>
+                                <span class="detail"><em class="option ng-hide" ng-show="item.variants.sizeVariants.length &gt; 0">
+                                    <small>Size:</small>
+                                    <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedSize" ng-options="variant.size for variant in item.variants.sizeVariants" ng-change="updateCart(item)">
+                                        <option value="?" selected="selected"></option>
+                                    </select></em> <em class="option ng-hide" ng-show="item.variants.colorVariants.length &gt; 0">
+                                    <small>Color:</small>
+                                    <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedColor" ng-options="variant.color for variant in item.variants.colorVariants" ng-change="updateCart(item)">
+                                        <option value="?" selected="selected"></option>
+                                    </select></em>  <em class="arrival">
+                                    <small>Estimated Arrival</small>
+                                    <span class="ng-binding">Feb 17, 2014</span></em></span></div>
+                        </td>
+                        <td class="price ng-binding">Rs. 999</td>
+                        <td class="qty">
+                            <select class="embo-select ng-pristine ng-valid" cid="1720089" sicid="5866195" ng-model="item.selectedQuantity" ng-options="quantity.num for quantity in item.quantityRange" ng-change="updateCart(item)">
+                                <option value="?" selected="selected"></option>
+                            </select></td>
+                        <td class="total">
+                            <div class="relative"><b class="ng-binding">Rs. 999</b>
+                                <button class="btn btn-mini btn-red pull-right removeItm" ng-click="deleteCartItem(item)">
+                                    <i class="icon-trash"></i>Remove
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hide ng-scope" ng-repeat-end="">
+                        <td colspan="4" class="space"></td>
+                    </tr>
+                    <!-- end ngRepeat: item in cartData.items -->
+                    <tr ng-repeat-start="item in cartData.items" class="ng-scope">
+                        <td class="item">
+                            <div class="relative cartDetailWrapper">
+                                <a ng-href="product/Words-Worth-Bookends/4904" class="figure" href="product/Words-Worth-Bookends/4904"><span class="figure-img"><img ng-src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4904/img1_240x200.jpg" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4904/img1_240x200.jpg"></span>
+                                    <b class="figcaption ng-binding">Words Worth Bookends</b></a>
+                                <span class="detail"><em class="option ng-hide" ng-show="item.variants.sizeVariants.length &gt; 0">
+                                    <small>Size:</small>
+                                    <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedSize" ng-options="variant.size for variant in item.variants.sizeVariants" ng-change="updateCart(item)">
+                                        <option value="?" selected="selected"></option>
+                                    </select></em> <em class="option" ng-show="item.variants.colorVariants.length &gt; 0">
+                                    <small>Color:</small>
+                                    <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedColor" ng-options="variant.color for variant in item.variants.colorVariants" ng-change="updateCart(item)">
+                                        <option value="0" selected="selected">Black</option>
+                                        <option value="1">White</option>
+                                    </select></em>  <em class="arrival">
+                                    <small>Estimated Arrival</small>
+                                    <span class="ng-binding">Feb 15, 2014</span></em></span></div>
+                        </td>
+                        <td class="price ng-binding">Rs. 2549</td>
+                        <td class="qty">
+                            <select class="embo-select ng-pristine ng-valid" cid="1720089" sicid="5866195" ng-model="item.selectedQuantity" ng-options="quantity.num for quantity in item.quantityRange" ng-change="updateCart(item)">
+                                <option value="0" selected="selected">1</option>
+                                <option value="1">2</option>
+                            </select></td>
+                        <td class="total">
+                            <div class="relative"><b class="ng-binding">Rs. 2549</b>
+                                <button class="btn btn-mini btn-red pull-right removeItm" ng-click="deleteCartItem(item)">
+                                    <i class="icon-trash"></i>Remove
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hide ng-scope" ng-repeat-end="">
+                        <td colspan="4" class="space"></td>
+                    </tr>
+                    <!-- end ngRepeat: item in cartData.items -->
+                </tbody>
+            </table>
+
+            <table class="tb-cart table">
+                <thead>
+                    <tr>
+                        <th class="item">Orders fulfilled by <em><strong>&nbsp;Gefu&nbsp;</strong></em>( 2 )</th>
+                        <th class="price">Price</th>
+                        <th class="qty">Quantity</th>
+                        <th class="total">Total</th>
+                    </tr>
+                </thead>
+                <tbody><!-- ngRepeat: item in cartData.items -->
+                    <tr ng-repeat-start="item in cartData.items" class="ng-scope">
+                        <td class="item">
+                            <div class="relative cartDetailWrapper">
+                                <a ng-href="product/Blinged-Jewellery-Organizer/11697" class="figure" href="product/Blinged-Jewellery-Organizer/11697"><span class="figure-img"><img ng-src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/11697/img1_240x200.jpg" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/11697/img1_240x200.jpg"></span>
+                                    <b class="figcaption ng-binding">Blinged! Jewellery Organizer</b></a>
+                                <span class="detail"><em class="option ng-hide" ng-show="item.variants.sizeVariants.length &gt; 0">
+                                    <small>Size:</small>
+                                    <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedSize" ng-options="variant.size for variant in item.variants.sizeVariants" ng-change="updateCart(item)">
+                                        <option value="?" selected="selected"></option>
+                                    </select></em> <em class="option" ng-show="item.variants.colorVariants.length &gt; 0">
+                                    <small>Color:</small>
+                                    <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedColor" ng-options="variant.color for variant in item.variants.colorVariants" ng-change="updateCart(item)">
+                                        <option value="0">Blue</option>
+                                        <option value="1" selected="selected">Green</option>
+                                        <option value="2">Yellow</option>
+                                    </select></em>  <em class="arrival">
+                                    <small>Estimated Arrival</small>
+                                    <span class="ng-binding">Feb 22, 2014</span></em></span></div>
+                        </td>
+                        <td class="price ng-binding">Rs. 949</td>
+                        <td class="qty">
+                            <select class="embo-select ng-pristine ng-valid" cid="1720089" sicid="5866195" ng-model="item.selectedQuantity" ng-options="quantity.num for quantity in item.quantityRange" ng-change="updateCart(item)">
+                                <option value="0" selected="selected">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                            </select></td>
+                        <td class="total">
+                            <div class="relative"><b class="ng-binding">Rs. 949</b>
+                                <button class="btn btn-mini btn-red pull-right removeItm" ng-click="deleteCartItem(item)">
+                                    <i class="icon-trash"></i>Remove
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hide ng-scope" ng-repeat-end="">
+                        <td colspan="4" class="space"></td>
+                    </tr>
+                    <!-- end ngRepeat: item in cartData.items -->
+                    <tr ng-repeat-start="item in cartData.items" class="ng-scope">
+                        <td class="item">
+                            <div class="relative cartDetailWrapper">
+                                <a ng-href="product/Words-Worth-Bookends/4904" class="figure" href="product/Words-Worth-Bookends/4904"><span class="figure-img"><img ng-src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4904/img1_240x200.jpg" src="https://buynbragstores.s3.amazonaws.com/assets/images/stores/186/4904/img1_240x200.jpg"></span>
+                                    <b class="figcaption ng-binding">Words Worth Bookends</b></a>
+                                <span class="detail"><em class="option ng-hide" ng-show="item.variants.sizeVariants.length &gt; 0">
+                                    <small>Size:</small>
+                                    <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedSize" ng-options="variant.size for variant in item.variants.sizeVariants" ng-change="updateCart(item)">
+                                        <option value="?" selected="selected"></option>
+                                    </select></em> <em class="option" ng-show="item.variants.colorVariants.length &gt; 0">
+                                    <small>Color:</small>
+                                    <select class="embo-select option_ ng-pristine ng-valid" data-siid="170247" data-cid="1720089" data-sicid="5866195" ng-model="item.selectedColor" ng-options="variant.color for variant in item.variants.colorVariants" ng-change="updateCart(item)">
+                                        <option value="0" selected="selected">Black</option>
+                                        <option value="1">White</option>
+                                    </select></em>  <em class="arrival">
+                                    <small>Estimated Arrival</small>
+                                    <span class="ng-binding">Feb 15, 2014</span></em></span></div>
+                        </td>
+                        <td class="price ng-binding">Rs. 2549</td>
+                        <td class="qty">
+                            <select class="embo-select ng-pristine ng-valid" cid="1720089" sicid="5866195" ng-model="item.selectedQuantity" ng-options="quantity.num for quantity in item.quantityRange" ng-change="updateCart(item)">
+                                <option value="0" selected="selected">1</option>
+                                <option value="1">2</option>
+                            </select></td>
+                        <td class="total">
+                            <div class="relative"><b class="ng-binding">Rs. 2549</b>
+                                <button class="btn btn-mini btn-red pull-right removeItm" ng-click="deleteCartItem(item)">
+                                    <i class="icon-trash"></i>Remove
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hide ng-scope" ng-repeat-end="">
+                        <td colspan="4" class="space"></td>
+                    </tr>
+                    <!-- end ngRepeat: item in cartData.items -->
+                </tbody>
+            </table>
+
+            <div class="totalSummary">
+                <div class="redeemCouponContainer span6">
+                    <a href="#">Redeem coupon or BragBucks</a>
+                    <div class="couponSuccess">You availed discount of&nbsp;<em><strong>Rs 500</strong></em>&nbsp;using coupon&nbsp;<em><strong>BNBNEW2014</strong></em>.</div>
+                    <div class="couponSuccess">You availed discount of&nbsp;<em><strong>Rs 500</strong></em>&nbsp;using&nbsp;<em><strong>1000 BragBucks</strong></em>.</div>
+                    <div class="couponChange"><span class="changeText">Change coupon</span>&nbsp;or&nbsp;<span class="changeText">Remove coupon</span>?</div>
+                </div>
+                <div class="rightFloatWrapper span4 pull-right">
+                    <div class="grandTotal">Grand total :<strong class="pull-right">Rs 23,000</strong></div>
+                    <div class="discounts">Total Discounts :<strong class="pull-right">-&nbsp;&nbsp;Rs 500</strong></div>
+                    <div class="separator"></div>
+                    <div class="finalPrice">Total payable :<strong class="pull-right">Rs 22,500</strong></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer ng-scope">
+        <button class="btn btn-blue pull-left" role="button" data-dismiss="modal">Continue shopping</button>
+        <!--<button class="btn btn-blue">Redeem coupon or BragBucks</button>-->
+        <a target="_self" href="/cart/shopping_cart" class="btn btn-red" role="button">Proceed ahead</a>
+    </div>
+
+</div>
+
+<!--================== End Mid Section ================================-->
+
+
+
+<!--================== Coupon Modal section ================================-->
+
+<div id="couponSelectModal" class="modal " tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-header ng-scope">
+        <button class="close hidden-iphone-portrait" role="button" data-dismiss="modal">×</button>
+        <h3>Redeem coupons or BragBucks</h3>
+    </div>
+    <div class="modal-body ng-scope">
+
+        <div class="disclaimer"><i class="astrix">*</i>Either a coupon or BragBucks can be redeemed for a cart.</div>
+
+        <div class="resultStatsContainer">
+
+            <ul class="unstyled inline">
+                <li class="active">
+                    <a href="">
+                        <span>Coupons</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="">
+                        <span>BragBucks</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="list-box couponRedeem">
+
+            <ul class="unstyled">
+                <li class="editing">
+
+                    <span class="inputWrapper">
+                        <input type="text" placeholder="Coupon code"/>
+                        <button class="btn btn-lightBlue">Apply</button>
+                    </span>
+
+                    <span>or choose one from below</span>
+
+                    <select name="coupons" id="coupons">
+                        <option value="">Select from your available coupons</option>
+                        <option value="">200% off - Hitplay store only</option>
+                        <option value="">R1000 off - Lambadogri & dumbdogi store only</option>
+                        <option value="">R500 off - Site wide</option>
+                        <option value="">5% off - Site wide</option>
+                    </select>
+
+                </li>
+                <li>
+                    <span class="couponSuccess">You will get a discount of&nbsp;<strong><em>Rs 500</em></strong>&nbsp;using coupon&nbsp;<strong><em>BNBNEW2014</em></strong>&nbsp;on store - <strong><em>Hitplay</em></strong>.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list-box bragBucksRedeem hide">
+
+            <div class="bragBucksCont couponSuccess"><strong><em>2890 BragBucks</em></strong>&nbsp;available</div>
+
+            <ul class="unstyled">
+                <li class="editing">
+                    <span class="inputWrapper">
+                        <input type="text" placeholder="BragBucks to redeem"/>
+                        <button class="btn btn-lightBlue">Apply</button>
+                    </span>
+                </li>
+                <li>
+                    <span class="couponSuccess">You will get a discount of&nbsp;<strong><em>Rs 500</em></strong>&nbsp;on your cart value.</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="modal-footer ng-scope">
+        <button class="btn btn-red" role="button" data-dismiss="modal">Redeem</button>
+    </div>
+</div>
+
+<!--================== End Coupon Modal section ============================-->
+
+
+<!-- Scroll to top button -->
+<div id="backtotop" class="hide hidden-phone">&#8679;</div>
+
+<!--================== Footer section ================================-->
+<footer class="cssTransition hidden-phone">
+
+    <div class="footerReveal">About us</div>
+
+    <a href="#!/aboutUs">About us</a>
+    <!--<a href="#/policies">Privacy</a>-->
+    <a href="#!/policies">Shipping and returns</a> <a href="#!/forSellers">For sellers</a>
+    <a href="#!/contact">Contact us</a>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:ng="http://angularjs.org" ng-app="bnbApp" ng-controller="AppController">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="robots" content="index, follow">
+    <meta name="fragment" content="!"/>
+
+    <title ng-bind="dynamicSeoContent.title || defaultSeoContent.title"></title>
+
+    <meta name="description" content="{{dynamicSeoContent.description || defaultSeoContent.description}}">
+    <meta name="keywords" content="buy, and, brag, buyandbrag, buynbrag, buy and brag,  social, shopping, outfits, trends, fashion, style, advice, tips, fashion">
+    <meta name="author" content="BuynBrag">
+
+    <meta property="og:site_name" content="BuynBrag.com">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{dynamicSeoContent.title || defaultSeoContent.title}}">
+    <meta property="og:description" content="{{dynamicSeoContent.description || defaultSeoContent.description}}">
+
+    <meta property="og:image" content="{{dynamicSeoContent.image || defaultSeoContent.image}}"/>
+    <meta property="og:image:type" content="{{dynamicSeoContent.imageType || defaultSeoContent.imageType}}"/>
+    <meta property="og:image:width" content="{{dynamicSeoContent.imageWidth || defaultSeoContent.imageWidth}}"/>
+    <meta property="og:image:height" content="{{dynamicSeoContent.imageHeight || defaultSeoContent.imageHeight}}"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
+
+    <link href="/application/views/app/styles/vendor.css" rel="stylesheet">
+    <link href="/application/views/app/styles/main.css" rel="stylesheet">
+
+    <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png">
+    <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="/apple-touch-icon-precomposed.png">
+    <!-- Fallback for all browsers -->
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" href="/apple-touch-icon.png"/>
+
+    <script type="text/javascript">
+
+        (function(){
+            //      test for touch events support and if not supported, attach .no-touch class to the HTML tag.
+            if(!("ontouchstart" in document.documentElement)){
+                document.documentElement.className += " non-touch";
+            } else{
+                document.documentElement.className += " touch";
+            }
+
+            if(window.location.hash && window.location.hash === "#_=_"){
+                window.location.hash = "";
+            }
+
+            // test for non IE and modern IE browsers
+            if(navigator.appName == 'Microsoft Internet Explorer'){
+                var userAgent = navigator.userAgent;
+                var regEx = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                if(regEx.exec(userAgent) != null){
+                    ieVersion = parseFloat(RegExp.$1);
+                }
+
+                if(ieVersion >= 10.0){
+                    document.documentElement.className += " modernIE";
+                } else document.documentElement.className += " olderIE";
+            } else document.documentElement.className += " nonIE";
+
+        })();
+
+    </script>
+
+</head>
+
+<body>
+
+<!--================== Site alert message ================================--><!--<div class="siteMsgContainer alert text-center hidden-iphone-landscape {{newClass}}" ng-controller="siteMsgController">--><!--<button class="close">&times;</button>--><!--<span ng-bind-html-unsafe="message"></span>--><!--</div>-->
+
+<!--================== Header Section ================================-->
+<header class="cssTransitionSlow">
+    <div class="headerTop container-fluid">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+
+                <h1 class="logoHeading">
+                    <a class="logo pull-left hidden-phone" href="#!/">
+                        <img src="/application/views/dist/images/404_logo_200.png" alt="BuynBrag"/> </a>
+                </h1>
+
+                <div class="signInAccountHolder pull-right" ng-hide='user.userid'>
+                    <a href="#loginModal" class="loginRequired" id="signInAccount" role="button" data-toggle="modal">Login</a>
+                    <a href="#registerModal" class="registerModal" id="createAccount" role="button" data-toggle="modal">Register</a>
+                </div>
+
+                <div class="signedInProfileHolder pull-right" style="display:none;" ng-show="user.userid">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                        <img class="userImage" ng-src="{{user.userdata.fbsrc}}" alt="{{user.userdata.name}} Pic" ng-cloak>
+                        <span class="userName hidden-phone hidden-tablet" ng-cloak>{{user.userdata.name}}</span>
+                        <span class="caret"></span> </a>
+                    <ul class="dropdown-menu dark">
+                        <!-- <li><a href="#/inviteStatus">Brag bucks earned</a></li> -->
+                        <li><a href="#!/profile/social/{{user.userid}}">Profile</a></li>
+                        <li>
+                            <a href="#!/profile/fancy/{{user.userid}}">Fancy list<span class="dropDownBadge pull-right hidden-desktop">{{user.userdata.fancy}}</span></a>
+                        </li>
+                        <li>
+                            <a href="#!/profile/badges/{{user.userid}}">Badges unlocked<span class="dropDownBadge pull-right hidden-desktop">{{user.userdata.totalBadges}}</span></a>
+                        </li>
+                        <li><a href="/#couponsModal" role="button" data-toggle="modal">Coupons available</a></li>
+                        <li><a href="/user_info/purchase_history/">Purchase history</a></li>
+                        <li><a href="" ng-click="logout()">Log Out</a></li>
+                    </ul>
+                </div>
+
+                <ul class="notificationCounterContainer pull-right" style="display:none;" ng-show="user.userid">
+                    <li class="hidden-phone hidden-tablet">
+                        <a href="#!/profile/badges/{{user.userid}}" class="userBadgesCount">
+                            <span class="notificationBadge" ng-cloak>{{user.userdata.totalBadges}}</span>
+                            <span class="tooltips top invisible">Total badges unlocked</span> </a>
+                    </li>
+                    <li class="hidden-phone hidden-tablet">
+                        <a href="#!/profile/fancy/{{user.userid}}" class="userFancyCount">
+                            <span class="notificationBadge" ng-cloak>{{user.userdata.fancy}}</span>
+                            <span class="tooltips top invisible">Fancied items</span> </a>
+                    </li>
+                    <li class="hidden-phone">
+                        <a href="" class="userRankCount">
+                            <span class="notificationBadge" ng-cloak>{{user.userdata.rank}}</span>
+                            <span class="tooltips top invisible">Your rank</span> </a>
+                    </li>
+                    <!--<li>--><!--<a href="/cart/shopping_cart" class="userCartCount">--><!--<span class="notificationBadge" ng-cloak>{{user.userdata.cartcount}}</span>--><!--<span class="tooltips top invisible">Your cart</span>--><!--</a>--><!--</li>-->
+
+                    <li>
+                        <!--Link for mobiles-->
+                        <a href="/cart/shopping_cart" class="userCartCount visible-phone">
+                            <span class="notificationBadge" ng-cloak>{{user.userdata.cartcount}}</span> </a>
+                        <!--Link for tablets and desktops-->
+                        <a href="/" class="userCartCount cssTransition dropdown-toggle hidden-phone" data-toggle="dropdown">
+                            <span class="notificationBadge" ng-cloak>{{user.userdata.cartcount}}</span> </a>
+                        <ul class="cartPreviewContainer dropdown-menu dark hidden-phone">
+
+                            <li class="cartItemDetails" ng-repeat="item in user.userdata.cart">
+                                <a ng-href="#!/product/{{item.productName | beautify}}/{{item.productID}}">
+                                    <img ng-src="{{s3baseUrl}}{{item.storeID}}/{{item.productID}}/img1_40x40.jpg" src="" alt="item">
+                                    <span class="itemPreviewDescriptionContainer">
+                                        <span class="itemName">{{item.productName}}</span>
+                                        <span class="itemTotalContainer">X {{item.quantity}}
+                                            <span class="itemPriceHolder">Amount   :<span class="itemPrice">{{item.totalPayable}}</span></span>
+                                        </span>
+                                    </span> </a>
+                            </li>
+
+                            <li class="checkOutCart">
+                                <a id="checkoutCartBtn" class="btn btn-blue inlineBlock" href="/cart/shopping_cart">Checkout Cart</a>
+                                <span class="cartTotalDetailsContainer">
+                                    <span class="cartTotalContainer">Total Quantity :
+                                        <span class="cartTotalItemQuantity">{{user.userdata.cartTotalItemQuantity}}</span>
+                                        <span class="cartTotalPriceHolder">Total :<span class="cartTotalPrice">{{user.userdata.cartAmount}}</span></span>
+                                    </span>
+                                </span>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <div typeahead min-chars="2" class="searchBoxContainer pull-right relative">
+
+                    <div class="searchBox">
+                        <input ng-model="searchKey" class="searchInput cssTransition" type="text" placeholder="Search..." autocomplete="off" spellcheck="false"/>
+                        <button class="btn btn-flat hide closeSearch">Cancel</button>
+                    </div>
+
+                    <i class="searchIcon icon-search block"></i>
+
+                </div>
+
+                <!--                 <div typeahead min-chars="2" class="searchBoxContainer pull-right relative cssTransition">
+                                    <div class="searchBox cssTransition">
+                                        <input ng-model="searchKey" class="searchInput pull-left cssTransition" type="text" placeholder="Search" autofocus autocomplete="off" spellcheck="false"/>
+                                        <i class="icon-search-2 searchIcon inlineBlock cssTransition"></i>
+
+                                        <span class="searchText relative cssTransition visible-desktop">Search</span>
+
+                                    </div>
+
+                                    <ul class="{{ (showSuggestions == true) && 'searchSuggestionsContainer dropdown-menu block' || 'searchSuggestionsContainer dropdown-menu' }}">
+                                        <li typeahead-item="result" ng-repeat="result in searchResults">
+                                            <a href="" ng-bind-html-unsafe="result.product_name | highlight: searchKey"></a>
+                                        </li>
+                                    </ul>
+                                </div> -->
+
+                <div class="nav-collapse">
+
+                    <ul class="nav">
+                        <li class="visible-phone"><a href="#!/">Home</a></li>
+                        <li class="relative">
+                            <a id="bootStrapDropDownFix" href="" class="dropdown-toggle" data-toggle="dropdown">Categories
+                                <span class="caret"></span> </a>
+
+                            <ul class="dropdown-menu dark visible-iphone-landscape" style="display: none; height: 0; overflow: hidden;">
+                                <li><a href="#!/categories/Fashion/2">Fashion</a></li>
+                                <li><a href="#!/categories/Art/3">Art</a></li>
+                                <li><a href="#!/categories/Gadgets-Collectibles/4">Gadgets &amp; Collectibles</a></li>
+                                <li><a href="#!/categories/Furniture/6">Furniture</a></li>
+                                <li><a href="#!/categories/Dining/7">Dining</a></li>
+                                <li><a href="#!/categories/Decor-and-Furnishings/8">Decor and Furnishings</a></li>
+                                <li><a href="#!/categories/Lighting/10">Lighting</a></li>
+                            </ul>
+
+                            <!-- <ul class="dropdown-menu dark">
+                                <li ng-repeat="category in categories"><a ng-href="#/categories/{{category.catName | beautify}}/{{category.catID}}">{{category.catName}}</a></li>
+                            </ul> -->
+                            <navigationtree cats="categories"></navigationtree>
+                        </li>
+                        <li><a href='#!/allStores'>Stores</a></li>
+
+                        <li class="relative trendsDropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Trends <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu dark">
+                                <li ng-repeat="city in cities">
+                                    <a ng-href="#!/trends/{{city.urlParam | beautify}}">{{city.urlParam}}</a></li>
+                            </ul>
+                        </li>
+
+                        <!--Tour activation link--><!--<li class="visible-desktop">--><!--<a href="#homePageTourModal" id="startTour" class="hidden-phone" role="button" data-toggle="modal">Tour</a>--><!--</li>-->
+
+                    </ul>
+
+                    <!--<a href="#/inviteFriends" class="inviteLink pull-right">Invite Friends</a>--><!--<a href="#inviteFriendsModal" class="pull-right" role="button" data-toggle="modal">Invite Friends</a>-->
+
+                    <!--<a class="bragBucks hidden-phone bold pull-right" href="/#inviteStatus">{{user.userdata.bragBucks | currency}}</a>-->
+
+                    <!--<a href="#homePageTourModal" id="startTour" class="btn btn-red btn-small pull-right visible-desktop" role="button" data-toggle="modal">Tour</a>-->
+
+                    <!--<a href="#badgesModal" class="pull-right" role="button" data-toggle="modal">Badges toggle</a>-->
+
+                </div>
+
+                <!--<my-autocomplete min-chars="3">--><!--</my-autocomplete>-->
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!--================== Mid Section ================================-->
+
+<div id="midSection" class="container checkout1">
+
+    <div class="addressSelectWrapper inlineBlock">
+
+        <div class="selectAddress">
+
+            <h4>Your item(s) will be billed and shipped to this address</h4>
+
+            <table class="table table-bordered addressTable">
+                <thead>
+                    <tr>
+                        <th>Billing address</th>
+                        <th>Shipping address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="shippingAdd address">
+                            <div class="custName">Manish Kumar</div>
+                            <div class="custAddress part1">C-17 STC Colony,</div>
+                            <div class="custAddress part2">Mehrauli Road</div>
+                            <div class="custAddress state">New Delhi, Delhi</div>
+                            <div class="custAddress country">India</div>
+                            <div class="custAddress contactNo">+91-9990119948</div>
+                        </td>
+
+                        <td class="billingAdd address">
+                            <div class="custName">Manish Kumar</div>
+                            <div class="custAddress part1">C-17 STC Colony, Mehrauli Road</div>
+                            <div class="custAddress state">New Delhi, Delhi</div>
+                            <div class="custAddress country">India</div>
+                            <div class="custAddress contactNo">+91-9990119948</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="changeAdd">
+                            <a href="">Change billing address</a>
+                        </td>
+
+                        <td class="changeAdd">
+                            <a href="">Change shipping address</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="addressWrappers">
+
+            <div class="oldAddress pull-left">
+
+                <h4>Saved addresses</h4>
+
+                <div class="addressCont">
+                    <div class="custName">Manish Kumar</div>
+                    <div class="custAddress part1">C-17 STC Colony,</div>
+                    <div class="custAddress part2">Mehrauli Road</div>
+                    <div class="custAddress state">New Delhi, Delhi</div>
+                    <div class="custAddress country">India</div>
+                    <div class="custAddress contactNo">+91-9990119948</div>
+
+                    <a class="btn" href="">Edit</a>
+                    <a class="btn btn-lightBlue" href="">Select</a>
+                </div>
+
+                <div class="addressCont">
+                    <div class="custName">Manish Kumar</div>
+                    <div class="custAddress part1">C-17 STC Colony,</div>
+                    <div class="custAddress part2">Mehrauli Road</div>
+                    <div class="custAddress state">New Delhi, Delhi</div>
+                    <div class="custAddress country">India</div>
+                    <div class="custAddress contactNo">+91-9990119948</div>
+
+                    <a class="btn" href="">Edit</a>
+                    <a class="btn btn-lightBlue" href="">Select</a>
+                </div>
+
+                <div class="addressCont">
+                    <div class="custName">Manish Kumar</div>
+                    <div class="custAddress part1">C-17 STC Colony,</div>
+                    <div class="custAddress part2">Mehrauli Road</div>
+                    <div class="custAddress state">New Delhi, Delhi</div>
+                    <div class="custAddress country">India</div>
+                    <div class="custAddress contactNo">+91-9990119948</div>
+
+                    <a class="btn" href="">Edit</a>
+                    <a class="btn btn-lightBlue" href="">Select</a>
+                </div>
+
+            </div>
+
+            <div class="newAddress pull-right">
+
+                <h4>Or enter a new shipping address</h4>
+
+                <label for="fullName" style="margin-top: 15px;">Full name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Enter your full name">
+
+                <label for="address">Full Address</label>
+                <!--<textarea id="address" name="address" rows="5" placeholder="Enter your full address"></textarea>-->
+                <input type="text" name="address" id="address" placeholder="Address line 1"/>
+                <input type="text" name="address" placeholder="Address line 2 (optional)"/>
+
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" placeholder="Enter your city">
+
+                <label for="state">State</label>
+                <input id="state" name="state" type="text" placeholder="Enter your state">
+
+                <label for="pinCode">Zip code</label>
+                <input id="pinCode" name="pinCode" type="number" placeholder="Zip code">
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="">--</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AX">Aland Islands</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AO">Angola</option>
+                    <option value="AI">Anguilla</option>
+                    <option value="AQ">Antarctica</option>
+                    <option value="AG">Antigua and Barbuda</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AM">Armenia</option>
+                    <option value="AW">Aruba</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="AZ">Azerbaijan</option>
+                    <option value="BS">Bahamas, The</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="HK">Hong Kong</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="IN" selected="">India</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IQ">Iraq</option>
+                    <option value="IE">Ireland, Republic of</option>
+                    <option value="IM">Isle of Man</option>
+                    <option value="IL">Israel</option>
+                    <option value="IT">Italy</option>
+                    <option value="CI">Ivory Coast (Côte D'ivoire)</option>
+                    <option value="JM">Jamaica</option>
+                    <option value="JP">Japan</option>
+                    <option value="JE">Jersey</option>
+                    <option value="JO">Jordan</option>
+                    <option value="KZ">Kazakhstan</option>
+                    <option value="KE">Kenya</option>
+                </select>
+
+                <div class="mobileCont">
+                    <label for="countryCode">Mobile no</label>
+                    <div class="countryCodeCont">
+                        <select id="countryCode" name="countryCode">
+                            <option value="201">+201</option>
+                            <option value="91" selected="">+91</option>
+                            <option value="1">+1</option>
+                        </select>
+                    </div>
+
+                    <div class="mobileCont">
+                        <input id="mobile" name="mobile" type="tel" placeholder="Ex: 1126511111 or 9911111111">
+                    </div>
+                </div>
+
+                <label><input type="checkbox"/>Make this my default shipping address</label>
+
+                <button class="btn">Cancel</button>
+                <button class="btn btn-lightBlue">Save</button>
+
+            </div>
+
+        </div>
+
+        <div class="modeOfPayment">
+
+            <h4>Select mode of payment</h4>
+
+            <label><input type="radio" name="payOpt"/>Pay online</label>
+            <label><input type="radio" name="payOpt"/>COD</label>
+        </div>
+
+        <div class="totalSummary">
+            <button class="btn pull-left">Go back</button>
+            <button class="btn btn-red pull-right">Proceed to pay</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!--================== End Mid Section ================================-->
+
+<!--================== Pre paid products modal ================================-->
+
+<div id="checkoutModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div>
+        <div class="modal-header">
+            <button class="close hidden-iphone-portrait" role="button" data-dismiss="modal">×</button>
+            <h3>Prepaid products in your cart</h3>
+        </div>
+
+        <div class="modal-body">
+
+            <div class="disclaimer bnbRedFont" style="margin: 10px 0;"><i class="astrix">*</i>&nbsp;The following products in your cart are not available for COD. You will be able to pay for them after current COD order. Inconvenience is regretted.</div>
+
+            <div class="cart-list">
+                <table class="tb-cart table">
+
+                    <thead>
+                    <tr>
+                        <th class="item">Item</th>
+                        <th class="price">Price</th>
+                        <th class="qty">Quantity</th>
+                        <th class="total">Total</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+            <!-- Repaeat this to end where this commment ends -->
+
+            <!-- ngRepeat: item in cartData.items -->
+            <tr>
+                <td class="item">
+                    <div class="relative cartDetailWrapper">
+                        <a ng-href="product/Three-Drawer-Nightstand/235" class="figure" href="product/Three-Drawer-Nightstand/235">
+                            <span class="figure-img">
+                                <img src="https://ir0.mobify.com/jpg50/http://buynbragstores.s3.amazonaws.com/assets/images/stores/106/235/img1_240x200.jpg">
+                            </span>
+                            <b class="figcaption">Three Drawer Nightstand</b>
+                        </a>
+                        <span class="detail">
+
+                            <em class="option"><small>Size:</small>Large</em>
+
+                            <em class="option"><small>Color:</small>Red</em>
+
+                            <em class="arrival"><small>Estimated Arrival</small>
+                                <span>Apr 24, 2014</span>
+                            </em>
+
+                        </span>
+                    </div>
+                </td>
+                <td class="price">Rs. 6000</td>
+                <td class="qty">
+                    2
+                </td>
+                <td class="total">
+                    <div class="relative">
+                        <b>Rs. 12000</b>
+                    </div>
+                </td>
+            </tr>
+            <tr class="hide">
+                <td colspan="4" class="space"></td>
+            </tr>
+
+
+            </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="modal-footer ng-scope">
+            <button class="btn btn-blue pull-left" role="button" ng-click="closeModal('checkoutModal')">Review order again</button>
+            <a class="btn btn-red" href="">Pay now</a>
+        </div>
+    </div>
+</div>
+
+<!--================== End pre paid products modal ================================-->
+
+<!-- Scroll to top button -->
+<div id="backtotop" class="hide hidden-phone">&#8679;</div>
+
+<!--================== Footer section ================================-->
+<footer class="cssTransition hidden-phone">
+
+    <div class="footerReveal">About us</div>
+
+    <a href="#!/aboutUs">About us</a>
+    <!--<a href="#/policies">Privacy</a>-->
+    <a href="#!/policies">Shipping and returns</a> <a href="#!/forSellers">For sellers</a>
+    <a href="#!/contact">Contact us</a>
+
+</footer>
+
+</body>
+</html>

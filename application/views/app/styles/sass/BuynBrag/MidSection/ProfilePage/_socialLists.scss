@@ -1,0 +1,68 @@
+.socialViewContainer {
+
+  .commentsContainer{
+    box-sizing: border-box;
+    margin-left: 20px;
+
+    .socialHeader{
+      padding: 0 5px 10px 5px;
+      border-bottom: 1px solid #efefef;
+    }
+
+    .comment{
+      overflow: hidden;
+      margin-top: 20px;
+
+      .commenterImg{
+        width: 13%;
+        margin-bottom: 0;
+      }
+
+      .commentContent{
+        width: inherit;
+        margin-top: 5px;
+        width: 59%;
+
+        .commenterName{
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+
+      button{
+        margin-top: 6px;
+        font-size: 11px;
+        width: 85px;
+
+        &.btnActivated{
+          top: 2px;
+        }
+      }
+    }
+  }
+
+  .noSocial{
+    text-transform: none;
+
+    .icon{
+      font-size: 36px;
+      color: #04BE76;
+      margin-bottom: 20px;
+    }
+
+    .msg {
+//      font-family: gill;
+      font-size: 16px;
+    }
+
+  }
+
+  .loadMoreBtn{
+    font-size: 11px;
+    width: 100%;
+    margin-top: 15px;
+    height: 36px;
+  }
+
+}

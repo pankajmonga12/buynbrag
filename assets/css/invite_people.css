@@ -1,0 +1,334 @@
+@charset "utf-8";
+.middleBackground {
+    min-height: 748px !important;
+}
+
+.inviteFriendsContainer {
+    width: 1024px;
+    height: 64px;
+    margin: 0 auto;
+    padding-top: 26px;
+}
+
+.inviteFriendsIcon {
+    background-image: url(../images/invitefriend_icon.png);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 37px;
+    margin-top: 5px;
+    float: left;
+}
+
+.buttonsClear {
+    height: auto;
+    display: inline-block;
+}
+
+.inviteFriendsText {
+    font-family: gill;
+    font-size: 40px;
+    color: #333;
+    float: left;
+    padding-left: 12px;
+    text-shadow: 1px solid #fff;
+}
+
+.skipText {
+    font-family: gill;
+    font-size: 18px;
+    color: #666;
+    float: right;
+    padding-top: 6px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1px;
+}
+
+.inviteFriendsContainerStyle {
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 15px;
+    height: 75px;
+}
+
+.facebookIcon {
+    background-image: url(../images/facebook_click.png);
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-right: 12px;
+}
+
+.facebookNormal {
+    background-image: url(../images/fb_normal.png);
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    float: left;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.facebookTextImage {
+    background-image: url(../images/facebook_logo.png);
+    background-repeat: no-repeat;
+    width: 184px;
+    height: 38px;
+    margin-top: 14px;
+    margin-right: 40px;
+    float: left;
+}
+
+.twitterIcon {
+    background-image: url(../images/twiter_normal.png);
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.twitterActive {
+    background-image: url(../images/twitter_clic.png);
+}
+
+.twitterTextImage {
+    background-image: url(../images/twitter_logo.png);
+    background-repeat: no-repeat;
+    width: 184px;
+    height: 37px;
+    margin-top: 14px;
+    margin-right: 40px;
+    float: left;
+}
+
+.googleTextImage {
+    background-image: url(../images/googleplus_logo.png);
+    background-repeat: no-repeat;
+    width: 184px;
+    height: 56px;
+    margin-top: 10px;
+    margin-right: 40px;
+    float: left;
+}
+
+.yahooTextImage {
+    background-image: url(../images/yahoo_logo.png);
+}
+
+.linkedTextImage {
+    background-image: url(../images/linkedin_logo.png);
+    background-repeat: no-repeat;
+    width: 183px;
+    height: 47px;
+    margin-top: 8px;
+    margin-right: 40px;
+    float: left;
+}
+
+.wordpressTextImage {
+    background-image: url(../images/wordpress_logo.png);
+    background-repeat: no-repeat;
+    width: 238px;
+    height: 36px;
+    margin-top: 18px;
+    margin-right: 40px;
+    float: left;
+}
+
+.blogTextImage {
+    background-image: url(../images/blogger_logo.png);
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 54px;
+    margin-top: 10px;
+    margin-right: 40px;
+    float: left;
+}
+
+.googleIcon {
+    background-image: url(../images/gmail_normal.png);
+}
+
+.googleIconClick {
+    background-image: url(../images/gmail_clic.png);
+}
+
+.yahooIcon {
+    background-image: url(../images/yahoo_normal.png);
+}
+
+.yahooClick {
+    background-image: url(../images/yahoo_clic.png);
+}
+
+.linkedIcon {
+    background-image: url(../images/linkedin_normal.png);
+}
+
+.linkedClick {
+    background-image: url(../images/linkedin_clic.png);
+}
+
+.wordpressIcon {
+    background-image: url(../images/wordpress_normal.png);
+}
+
+.wordpressClick {
+    background-image: url(../images/wordpress_clic.png);
+}
+
+.blogIcon {
+    background-image: url(../images/blog_normal.png);
+}
+
+.blogClick {
+    background-image: url(../images/blog_clic.png);
+}
+
+.friendsImagesContainer {
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 40px;
+    height: auto;
+    position: relative;
+    z-index: 5;
+}
+
+.peopleImage_1 {
+    width: 96px;
+    height: 96px;
+    background-color: #fff;
+    padding: 3px;
+}
+
+.peopleImageCheckBoxHolder {
+    position: relative;
+    padding-right: 9px;
+    width: 102px;
+    height: 145px;
+    float: left;
+}
+
+.friendName {
+    font-family: gill;
+    font-size: 16px;
+    color: #333;
+    padding-top: 8px;
+}
+
+.lastImageStyle {
+    padding-right: 0;
+}
+
+.invite {
+    background: #749d5e;
+    background: -moz-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -webkit-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -o-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    background: -ms-linear-gradient(bottom, #619049 50%, #749d5e 0);
+    -pie-background: linear-gradient(bottom, #619049 50%, #749d5e 0);
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    -moz-box-shadow: 0 5px 0 #b3c5aa;
+    -webkit-box-shadow: 0 5px 0 #b3c5aa;
+    -khtml-box-shadow: 0 5px 0 #b3c5aa;
+    -pie-box-shadow: 0 5px 0 #b3c5aa;
+    box-shadow: 0 5px 0 #b3c5aa;
+    font-family: gill_bold;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    width: 119px;
+    height: 46px;
+    margin-right: 8px;
+    cursor: pointer;
+    float: left;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.invite:hover {
+    background: #8ec273;
+    background: -moz-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -webkit-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -o-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    background: -ms-linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+    -pie-background: linear-gradient(bottom, #7eb960 50%, #8ec273 0);
+}
+
+.invite:active {
+    background: #537541;
+}
+
+.inviteAll {
+    background: #767676;
+    background: -moz-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -webkit-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -o-linear-gradient(bottom, #666 50%, #767676 0);
+    background: -ms-linear-gradient(bottom, #666 50%, #767676 0);
+    -pie-background: linear-gradient(bottom, #666 50%, #767676 0);
+    border: none;
+    border-bottom: 1px solid #DFDBD9;
+    box-shadow: 0 5px 0 #959696;
+    -moz-box-shadow: 0 5px 0 #959696;
+    -webkit-box-shadow: 0 5px 0 #959696;
+    -khtml-box-shadow: 0 5px 0 #959696;
+    -pie-box-shadow: 0 5px 0 #959696;
+    color: #FFF;
+    cursor: pointer;
+    float: left;
+    font-family: gill_bold;
+    font-size: 25px;
+    height: 46px;
+    margin-right: 8px;
+    text-align: center;
+    width: 147px;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.inviteAll:hover {
+    background: #969595;
+    background: -moz-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -webkit-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -o-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    background: -ms-linear-gradient(bottom, #8b8989 50%, #969595 0);
+    -pie-background: linear-gradient(bottom, #8b8989 50%, #969595 0);
+}
+
+.inviteAll:active {
+    background: #535353;
+    background: -moz-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -webkit-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -o-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    background: -ms-linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+    -pie-background: linear-gradient(bottom, #3f3f3f 50%, #535353 0);
+}
+
+.checkbox {
+    height: 19px;
+    width: 0;
+    float: left;
+    padding: 0 0 0 20px;
+    background: url(../images/categories_checkbox.png) no-repeat;
+    cursor: default;
+    text-align: left;
+    position: absolute;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.banner {
+    background-repeat: repeat !important;
+    height: 234px !important;
+}
+
+.slide {
+    height: 237px !important;
+}
+
+.newWidth {
+    width: 181px !important;
+}

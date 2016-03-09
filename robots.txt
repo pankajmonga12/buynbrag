@@ -1,0 +1,23 @@
+User-Agent: *
+Disallow: /index.php/
+Disallow: /footer/
+Disallow: /me/
+Disallow: /0/
+Disallow: /cart/
+Disallow: /order/
+Disallow: /order2/
+Disallow: /fbLogin/
+Disallow: /homepage/
+Disallow: /index.php/order2/
+Disallow: /tree_products/
+Disallow: /user_info/
+Disallow: /user_info/homepage_afterlogin/
+Disallow: /order/user_fancy_product
+Disallow: /user_info/purchase_history
+Disallow: /login
+Disallow: /register
+Disallow: /order/friend_fancy_product/
+Disallow: /user_info/user_detail/
+Disallow: /user_info/account_detail/
+
+Sitemap: https://buynbrag.com/sitemap.xml

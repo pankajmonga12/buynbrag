@@ -1,0 +1,82 @@
+<div id="midSection" class="homePage {{(deviceType == 'nonTouch') && 'container-fluid fluidHomePage' || 'container'}}" ng-controller="PeopleController">   
+
+    <div class="resultStatsContainer"> 
+   
+        <ul class="unstyled inline">
+            <li class="{{ (filter == filters.topRankers.val) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.topRankers.val) || filterBySelection(filters.topRankers)">
+                    <span>Top Rankers</span>
+                </a>
+            </li>
+            <li class="{{ (filter == filters.mostFollowed.val) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.mostFollowed.val) || filterBySelection(filters.mostFollowed)">
+                    <span>Most followed</span>
+                </a>
+            </li>
+            <li class="{{ (filter == filters.friends.val) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.friends.val) || filterBySelection(filters.friends)">
+                    <span>My Friends</span>
+                </a>
+            </li>
+            <li class="{{ (filter == filters.favourites.val) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.favourites.val) || filterBySelection(filters.favourites)">
+                    <span>Our favourites</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="postRegPage regFollowPeople container">
+
+        <div class="featuredStoresContainer" infinite-scroll="getUsers()" infinite-scroll-distance="1">
+
+            <div class="fanciedProductsContainer">
+
+                <div class="inlineBlock" ng-repeat="user in users">
+                    <ul class="{{ ($index%2==1) && 'span6' || 'span6 leftMar0' }}">
+                        <li class="storeDetailContainer">
+                            <div class="storeBrandingContainer shadedBackground relative">
+                                <a ng-href="profile/fancy/{{user.userDetails.userID}}">
+                                    <img class="userImg" ng-src="{{userImg({id: user.userDetails.userFBID, dimension: 75, gender: user.userDetails.userGender})}}">
+                                    <span class="storeBannerName inlineBlock">{{user.userDetails.userFullName}}</span>
+                                </a>
+                                
+                                <div class="userStatsContainer">
+                                    <!--<a ng-href="profile/social/{{user.userDetails.userID}}"><span class="fancyCount bnbRedFont ng-binding">{{user.userDetails.totalFollowers}}</span> followers</a>-->
+                                    <!--<a ng-href="profile/fancy/{{user.userDetails.userID}}"><span class="viewCount bnbRedFont ng-binding">{{user.userDetails.totalFanciedProducts}}</span> products bragged</a>-->
+                                    <div class="aboutUser">{{user.userDetails.userAboutMe}}</div>
+                                </div>
+
+
+                                <btn-follow usertofollow="{{user.userDetails.userID}}" followers="{{user.userDetails.totalFollowers}}" has-followed="{{user.userDetails.hasFollowed}}"></btn-follow>
+                                <!-- <button class="storeBannerButton btn btn-blue btn-mini" follow-user userid="{{userDetails.ID}}" usertofollow="{{person.userID}}">{{followText}}</button> -->
+                            </div>
+                            <div class="storeProductsPreviewContainer">
+                                <span class="noFanciedProds" ng-show="!user.productDetails">No products bragged</span>
+                                <img ng-repeat="product in user.productDetails | limitTo:3"  ng-src="{{s3baseUrl}}{{product.storeID}}/{{product.productID}}/img1_240x200.jpg" alt="{{product.productName}}">
+
+                                <div class="categoryBg relative stripedBg green bragCountWrapper">
+                                    <strong class="totalItems"><span class="itemNo">+ {{user.userDetails.totalFanciedProducts}}</span>&nbsp;Brags</strong>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <ul class="spinner" ng-hide="hideSpinner">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</div>

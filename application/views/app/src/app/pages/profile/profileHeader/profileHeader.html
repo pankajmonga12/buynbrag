@@ -1,0 +1,175 @@
+<div id="midSection" class="profilePage cssTransitionSlow" ng-controller="ProfileInfoController">
+
+    <div class="loadingOverlay" ng-hide="hideLoader">
+        <ul class="spinner">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="profileHeaderBg">
+
+        <div class="userDetailContainer container">
+
+            <div class="profileImgContainer span3 leftMar0">
+
+                <div class="userImgBorder relative">
+                    <div class="userImgContainer">
+                        <img clear-image ng-src="{{userImg({id: userInfo.userFBID, dimension: 200, gender: userInfo.userGender})}}" alt="User Image"/>
+                    </div>
+                    <div class="userCurativeScore visible-desktop" data-percent="100">
+                        <!--<canvas></canvas>-->
+                    </div>
+                    <div class="userCurativeScore visible-tablet" data-percent="100">
+                        <!--<canvas></canvas>-->
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="profileDetailContainer span9 relative">
+
+                <div class="profileUserName inlineBlock">
+                    {{userInfo.firstName}}<span class="userSurname relative">&nbsp;{{userInfo.lastName}}</span>
+                </div>
+
+                <div class="userLocationContainer" ng-hide="!userInfo.userCity || userInfo.userCity == 0">
+                    <div class="userLocation inlineBlock relative">
+                        <!--<div class='pin icon-location-1'></div>-->
+                        <div class='pin icon-favorite-map-pin'></div>
+                        <!--<div class='pulse'></div>-->
+                    </div>
+                    <span class="userCity inlineBlock">{{userInfo.userCity}}</span>
+                </div>
+
+                <textarea class="profileOneLiner block" rows="1" maxlength="100" placeholder=""  disabled>{{userInfo.userAboutMe}}</textarea>
+
+                <btn-follow url="/application/views/app/src/app/exhaustiveFeatures/callToActions/follow/followBtnProfile.html" usertofollow="{{userID}}" has-followed="{{userInfo.hasFollowed}}"></btn-follow>
+
+                <div class="connectBtnContainer" ng-show="user.userid == userID">
+                    <button class="icon-facebook-circle cssTransition {{fbConnectClass}}" ng-click="!fbConnectClass && connectWithFB()"></button>
+                    <p ng-show="!fbConnectClass">Connect with facebook</p>
+                    <p ng-show="fbConnectClass">Connected</p>
+                    <!-- <button class="icon-twitter-circle cssTransition" ng-show="user.userid == userID"></button> -->
+                    <!-- <button class="icon-google-plus-circle cssTransition"></button> -->
+                </div>
+
+                <div class="profileStats pull-right">
+
+                    <a href="" class="rankStats inlineBlock">
+                        <div class="rank">{{(!userInfo.userRank || userInfo.userRank == 0) && userID || userInfo.userRank}}</div>
+                        <div>Rank</div>
+                    </a>
+
+                    <a href="profile/fancy/{{userID}}" class="fancyStats inlineBlock">
+                        <div class="fancied">{{userInfo.totalFanciedProducts || 0}}</div>
+                        <div>Brags</div>
+                    </a>
+
+                    <a href="profile/badges/{{userID}}" class="badgeStats inlineBlock">
+                        <div class="badges">{{userInfo.totalBadges || 0}}</div>
+                        <div>Badges</div>
+                    </a>
+
+                    <a href="profile/social/{{userID}}" class="followingStats inlineBlock">
+                        <div class="following">{{userInfo.totalFollowers || 0}}</div>
+                        <div>Followers</div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="viewTabsContainer darkBG top container cssTransition">
+            <!--<a activate href="">Timeline</a>-->
+            <a ng-href="profile/fancy/{{userID}}" class="{{(subview == 'fancy') && 'active' || ''}}">Collections (<span class="bnbPink">{{userInfo.fancyListCount}}</span>)</a>
+            <a ng-href="profile/allBrags/{{userID}}" class="{{(subview == 'allBrags') && 'active' || ''}}">Brags (<span class="bnbPink">{{userInfo.totalFanciedProducts}}</span>)</a>
+            <a ng-href="profile/mutualproducts/{{userID}}" class="{{(subview == 'mutualproducts') && 'active' || ''}}" ng-show="userID != user.userid">Things you both love (<span class="bnbPink">{{userInfo.totalMutualProducts}}</span>)</a>
+            <a ng-href="profile/badges/{{userID}}" class="{{(subview == 'badges') && 'active' || ''}}">Badges (<span class="bnbPink">{{userInfo.totalBadges}}</span>)</a>
+            <a ng-href="profile/social/{{userID}}" class="{{(subview == 'social') && 'active' || ''}}">Followers</a>
+            <a ng-href="profile/about/{{userID}}" class="{{(subview == 'about') && 'active' || ''}}">About {{userInfo.firstName}}</a>
+            <a ng-href="profile/settings/{{userID}}" class="{{(subview == 'settings') && 'active' || ''}}" ng-show="userID == user.userid">Settings</a>
+            <!--<a activate href="#/profile/purchaseHistory" class="purchaseHistory pull-right">Purchase history</a>-->
+            <a href="/user_info/purchase_history/" class="purchaseHistory pull-right" ng-show="userID == user.userid">Purchase history</a>
+        </div>
+
+    </div>
+
+        <!-- Include Body Content. -->
+        <div ng-switch="subview">
+            <div ng-switch-when="fancy">
+                <div ng-include=" '/application/views/app/src/app/pages/profile/fancyList/fancyList.html' "></div>
+            </div>
+
+            <div ng-switch-when="list">
+                <div ng-include=" '/application/views/app/src/app/pages/profile/fancyListView/fancyListView.html' "></div>
+            </div>
+
+            <div ng-switch-when="mutualproducts">
+                <div ng-include=" '/application/views/app/src/app/pages/profile/mutualProducts/mutualProducts.html' "></div>
+            </div>
+
+            <div ng-switch-when="allBrags">
+                <div ng-include=" '/application/views/app/src/app/pages/profile/allBrags/allBrags.html' "></div>
+            </div>
+
+            <div ng-switch-when="badges">
+                <div ng-include=" '/application/views/app/src/app/pages/profile/badges/badges.html' "></div>
+            </div>
+
+            <div ng-switch-when="social">
+                <div ng-include=" '/application/views/app/src/app/pages/profile/social/social.html' "></div>
+            </div>
+
+            <div ng-switch-when="about">
+                <div ng-include=" '/application/views/app/src/app/pages/profile/about/about.html' "></div>
+            </div>
+
+            <div ng-switch-when="settings">
+                <div ng-include=" '/application/views/app/src/app/pages/profile/settings/settings.html' "></div>
+            </div>
+        </div>
+
+</div>
+
+<script type="text/javascript">
+    var userCurativeScoreDesktop = function() {
+
+        $('.userCurativeScore.visible-desktop').easyPieChart({
+            animate: 1000,
+            trackColor: '#000',
+            barColor: '#1FAAC4',
+            scaleColor: false,
+//            lineWidth: 4,
+            size: 205
+        });
+
+//        $('.percentage').data('easyPieChart').update(23);
+
+    };
+
+    var userCurativeScoreTablet = function() {
+
+        $('.userCurativeScore.visible-tablet').easyPieChart({
+            animate: 1000,
+            trackColor: '#000',
+            barColor: '#1FAAC4',
+            scaleColor: false,
+//            lineWidth: 4,
+            size: 170
+        });
+
+//        $('.percentage').data('easyPieChart').update(23);
+
+    };
+
+    setTimeout(function(){
+        userCurativeScoreDesktop();
+        userCurativeScoreTablet();
+    }, 1000);
+
+</script>

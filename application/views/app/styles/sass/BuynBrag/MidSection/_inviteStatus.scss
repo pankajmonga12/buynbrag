@@ -1,0 +1,29 @@
+.inviteStatusContainer, .badgesBucksStatusContainer{
+  font-size: 27px;
+  font-weight: bold;
+  margin: 7px 0;
+
+  input[type=checkbox]{
+    position: relative;
+    top: -4px;
+    left: 5px;
+  }
+
+  th, td{
+    font-size: 16px;
+  }
+}
+
+.badgesBucksStatusContainer{
+  margin-top: 40px;
+}
+
+.tableBadgeContainer{
+  width: 150px;
+
+  img{
+    width: 65%;
+    display: block;
+    margin: 0 auto;
+  }
+}

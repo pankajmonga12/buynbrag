@@ -1,0 +1,1 @@
+<?php ?> <a href="<?php echo $base_url . 'index.php/test/next';?>">Login</a>

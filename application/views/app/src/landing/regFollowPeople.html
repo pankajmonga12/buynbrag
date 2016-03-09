@@ -1,0 +1,63 @@
+<!-- add class 'fluidHomePage' and 'container-fluid' -->
+<div id="midSection" class="postRegPage regFollowPeople container-fluid" follow-people>
+
+    <!--<div class="processStageContainer text-center relative">-->
+    <!--<div class="currentStage">-->
+    <!--<div class="stageContentBg first">1</div>-->
+    <!--<div class="stageContent active">Select Stores</div>-->
+    <!--</div>-->
+
+    <!--<div class="currentStage">-->
+    <!--<div class="stageContentBg middle">2</div>-->
+    <!--<span class="stageContent ">Follow people</span>-->
+    <!--</div>-->
+
+    <!--<div class="currentStage ">-->
+    <!--<div class="stageContentBg last">3</div>-->
+    <!--<span class="stageContent ">Fancy products</span>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <div class="storeSelectContainer container">
+
+        <div class="featuredStoresContainer">
+
+            <div id="msgBanner">
+                <span class="bannerText">Now follow 3 people.</span>
+                <button class="btn pull-right" ng-click="switchView()">Finish</button>
+            </div>
+
+            <div class="fanciedProductsContainer">
+
+                <div class="inlineBlock" ng-repeat="person in personsToFollow | orderBy: '-totalFollowers'">
+                    <ul class="{{ ($index%2==1) && 'span6' || 'span6 leftMar0' }}">
+                        <li class="storeDetailContainer">
+                            <div class="storeBrandingContainer shadedBackground relative">
+                                <img class="userImg" ng-src="{{person.userImgSrc}}">
+                                <span class="storeBannerName inlineBlock">{{person.userFullName}}</span>
+                                <div class="userStatsContainer">
+                                    <div><span class="fancyCount bnbRedFont ng-binding">{{person.totalFollowers}}</span> followers</div>
+                                    <div><span class="viewCount bnbRedFont ng-binding">{{person.totalFanciedProducts}}</span> products fancied</div>
+                                </div>
+                                <button class="storeBannerButton btn btn-info btn-mini" follow-user userid="{{userDetails.ID}}" usertofollow="{{person.userID}}">{{followText}}</button>
+                            </div>
+                            <div class="storeProductsPreviewContainer">
+                                <img alt="Store Item" ng-src="{{s3Url}}{{person.fp1StoreID}}/{{person.fp1ProductID}}/img1_240x200.jpg">
+                                <img alt="Store Item" ng-src="{{s3Url}}{{person.fp2StoreID}}/{{person.fp2ProductID}}/img1_240x200.jpg">
+                                <img alt="Store Item" ng-src="{{s3Url}}{{person.fp3StoreID}}/{{person.fp3ProductID}}/img1_240x200.jpg">
+                                <img alt="Store Item" ng-src="{{s3Url}}{{person.fp4StoreID}}/{{person.fp4ProductID}}/img1_240x200.jpg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--<script type="text/javascript">-->
+    <!--stickyElem(document.getElementById('msgBanner'), document.querySelector('.fanciedProductsContainer'), 0, 56);-->

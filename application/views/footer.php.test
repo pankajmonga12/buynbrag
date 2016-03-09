@@ -1,0 +1,106 @@
+<footer class="footerContainer">
+	<div class="footerNavigTop">
+    	<div class="footerNavigContainer">
+        	<div class="why">
+            	<div class="whyUs"></div>
+           		<div class="whyUsText"><span style="color:#DA3C63">Curated</span>
+                <div>products</div>
+                </div>
+            </div>
+            <div class="unique">
+            	<div class="uniqueHandPick"></div>
+                <div class="freeshipText">
+                	<div class="whyUsText"><span style="color:#DA3C63">Secure</span></div>
+            		<div class="whyUsText clear_both">Payment</div>
+                </div>   
+            </div>
+            <div class="freeship">
+            	<div class="freeshipImage"></div>
+                <div class="freeshipText">
+                    <div class="whyUsText"><span style="color:#DA3C63">Free Shipping</span></div>
+                    <div class="whyUsText clear_both">across India</div>
+                </div>    
+            </div>
+            <div class="ret">
+            	<div class="returnImage"></div>
+                <div class="freeshipText">
+            		<div class="whyUsText"><span style="color:#DA3C63">100%</span></div>
+                    <div class="whyUsText clear_both">Buyer Protection</div>
+                </div>   
+            </div>
+            <div class="cust">
+            	<div class="custImage"></div>
+                <div class="freeshipText">
+            		<div class="whyUsText"><span style="color:#DA3C63">0124-4423999</span></div>
+                    <div class="whyUsText clear_both">10:00 AM- 6:00 PM </div>
+                </div>   
+            </div>
+       </div>
+	</div>
+	
+    <div class="footerBody">
+    	<div class="dottedDividerBottom"></div>
+    	<div class="footerBodyContainer">
+    		<div class="ourCompany">
+            	<div class="ourCompanyHeading">About Us</div>
+                <div class="ourCompanyContent">
+                	<a href="<?php echo $base_url.'index.php/footer/about_us' ?>"><div class="aboutUsText">About BuynBrag</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/careers' ?>"><div class="aboutUsText">Careers</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/bnb_news' ?>"><div class="aboutUsText">BnB in the news</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/team' ?>"><div class="aboutUsText">Team</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/take_the_tour' ?>"><div class="aboutUsText">Take the Tour</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/why_bnb' ?>"><div class="aboutUsText">Why BuynBrag?</div></a>
+                </div>
+            </div>
+            <div class="footerBodySeparater"></div>
+            <div class="ourCompany">
+            	<div class="usefulInfoHeading">Seller Info</div>
+                <div class="ourCompanyContent">
+                	<a href="javascript:void(0)" id="seller_signin"><div class="faqText">Seller Sign in</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/how_it_works' ?>"><div class="faqText">Selling with BuynBrag</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/seller_registration' ?>"><div class="faqText">Seller Registration</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/rules_policies' ?>"><div class="faqText">Rules and Policies</div></a>
+                </div>
+            </div>
+            <div class="footerBodySeparater"></div>
+            <div class="ourCompany">
+            	<div class="usefulInfoHeading">Buyers Info</div>
+                <div class="policyContent">
+                    <a href="<?php echo $base_url.'index.php/footer/payment_policies' ?>"><div class="faqText">Payment Policies</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/buyer_interest' ?>"><div class="faqText">Buyer Interest Protection</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/other_policy' ?>"><div class="faqText">Privacy & Other Policies</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/shipping_delivery' ?>"><div class="faqText">Shipping & Delivery Policies</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/cancellation_policy' ?>"><div class="faqText">Return & Cancellation Policies</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/user_agreement' ?>"><div class="faqText">User Agreement</div></a>
+                </div>
+            </div>
+            <div class="footerBodySeparater"></div>
+            <div class="ourCompany" style="width:160px;">
+            	<div class="usefulInfoHeading">Contacts</div>
+                <div class="policyContent">
+                	<a href="<?php echo $base_url.'index.php/footer/contact' ?>"><div class="faqText">Buyer Support</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/contact' ?>"><div class="faqText">Seller Support</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/contact' ?>"><div class="faqText">Write to Us</div></a>
+                    <a href="<?php echo $base_url.'index.php/footer/contact' ?>"><div class="faqText">Technical Support</div></a>
+                </div>
+            </div>
+            <div class="footerBodySeparater"></div>
+            <div class="ourCompany">
+            	<a href="javascript:void(0)"><div class="paymeth1"></div></a>
+                <a href="javascript:void(0)"><div class="paymeth2"></div></a>
+                <div class="clear_margin"></div>
+                <a href="javascript:void(0)"><div class="paymeth3"></div></a>
+                <a href="javascript:void(0)"><div class="paymeth4"></div></a>
+                <div class="clear_margin"></div>
+                <a href="javascript:void(0)"><div class="paymeth5"></div></a>
+                <a href="javascript:void(0)"><div class="paymeth6"></div></a>
+            </div>
+         </div>
+     </div>
+    <div class="footerBottom">
+        	<div class="footerBottomContainer">
+            	<div class="copyright">Copyright &copy; 2012 BuynBrag . All rights reserved. || Best Viewed in Firefox , Chrome , Safari with Resolution 1024 x 768 or Higher </div>
+           </div>
+    </div>
+    <?php include "seller_login.php" ?> 
+</footer>    

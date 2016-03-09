@@ -1,0 +1,1 @@
+$(function(){$(".scroll-pane").jScrollPane({showArrows:false,animateScroll:true});$(".checkbox").dgStyl();$("#selectAll").click(function(){$(".checkbox").css("background-position"," center -33px")})});function changeSite(a){$.ajax({url:"sites.php?typeID="+a,success:function(b){$("#siteContents").html(b)}})};

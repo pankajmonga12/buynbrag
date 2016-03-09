@@ -1,0 +1,336 @@
+//.currentStage {
+//  position: relative;
+//  width: 230px;
+////  height: 10px;
+//  text-align: center;
+//  display: inline-block;
+//  vertical-align: top;
+//}
+//
+//.stageContentBg{
+//  background: #fff;
+//  display: inline-block;
+//  padding: 2px 8px;
+//  border-radius: 50%;
+//  position: relative;
+//
+//  &.first:after{
+//    content: '';
+//    background: #fff;
+//    display: inline-block;
+//    width: 100px;
+//    height: 8px;
+//    position: absolute;
+//    top: 7px;
+//  }
+//
+//  &.last:before{
+//    content: '';
+//    background: #fff;
+//    display: inline-block;
+//    width: 500%;
+//    height: 8px;
+//    position: absolute;
+//    top: 7px;
+//    right: 20px;
+//  }
+//}
+
+#midSection.postRegPage{
+  margin-top: 15px;
+  padding-top: 100px;
+
+  .fanciedProductsContainer{
+    margin-top: 15px;
+  }
+}
+
+.postRegPage {
+
+  .msgBanner{
+//    background: $bnbDarkBlue;
+//    background: url('../images/registerationBanners/reg_step_1.jpg');
+    //font-size: 0.9em;
+//    padding: 6px 10px;
+    color: #FFF;
+//    position: relative;
+    position: fixed;
+    width: 940px;
+    top: 0;
+    z-index: 99;
+    margin: 0 auto;
+    height: 102px;
+    //opacity: 0.9;
+    //border-radius: 3px;
+//    width: 940px;
+    //z-index: 2;
+
+//    &.stick{
+//      position: fixed;
+////      top: -45px;
+//      top: 0;
+//      //opacity: 0.99;
+//      transform: translate3d(0, 0, 0);
+////      transition: transform 0.3s ease;
+//    }
+
+   .subHeading{
+     font-size: 0.8rem;
+     font-style: italic;
+   }
+
+    .backBtn, button{
+      font-size: 0.75em;
+      margin-right: 10px;
+      color: #444;
+      padding: 4px 15px;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 500px;
+      top: 22px;
+      right: 3px;
+      border: 0;
+      background: url('/application/views/app/images/sprites/reg_forward.png') transparent;
+
+      &:hover, &:focus, &:active {
+        color: #333333;
+      }
+
+      .disabled, &[disabled] {
+        opacity: 0.8;
+      }
+    }
+
+    .backBtn{
+      background: url('/application/views/app/images/sprites/reg_back.png') transparent;
+      right: 60px;
+    }
+
+    .shuffleBtn {
+      left: 50%;
+      margin-left: -27px;
+      top: 86px;
+      width: 69px;
+      background: none;
+    }
+
+    .imageRepetition{
+      border-radius: 3px;
+    }
+  }
+
+  .bannerText{
+    margin: 5px 0;
+//    display: inline-block;
+  }
+
+  .userImg{
+    width: 13%;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 1000px;
+  }
+
+  .userStatsContainer{
+    position: absolute;
+    top: 39%;
+    left: 16%;
+    line-height: 1.3em;
+    font-size: 0.9em;
+
+    .aboutUser{
+      overflow: hidden;
+      height: 35px;
+      width: 65%;
+    }
+  }
+
+  button.btn{
+    outline: none !important;
+    z-index: 999;
+  }
+
+  .span6 {
+    margin-left: 16px;
+  }
+
+  .storeBannerName{
+    font-size: 0.9em;
+  }
+
+  .storeStatsContainer{
+    font-size: 0.8em;
+  }
+
+  .storeProductsPreviewContainer {
+    text-align: center;
+    padding-bottom: 5px;
+    min-height: 92px;
+
+    img {
+      width: 23%;
+    }
+
+    .bragCountWrapper {
+      height: 88px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 105px;
+
+      .totalItems{
+        position: relative;
+        top: 50%;
+        transform: translateY(-55%);
+        display: block;
+      }
+
+      .itemNo{
+        display: block;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .storeBannerButton {
+    float: right;
+    position: relative;
+    right: 0;
+    font-size: 0.7em;
+    padding: 3px 5px 2px;
+    width: 15%;
+    margin: 1px 3px;
+
+    &:hover, &:active, &:focus{
+      color: #fff;
+    }
+
+    &.btnSelected{
+      background:  darken($bnbBlue, 10%);
+    }
+  }
+
+  .storeDetailContainer{
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #E0E0E0;
+  }
+
+  .storeBannerName {
+    max-width: 80% !important;
+    vertical-align: middle;
+  }
+}
+
+.regFollowPeople{
+
+  .storeBannerName {
+    padding: 0;
+    position: relative;
+    top: 5px;
+    display: inline-block !important;
+    font-weight: bold;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  .storeBrandingContainer{
+    min-height: 71px;
+  }
+
+  .storeBannerButton{
+    margin: 18px 7px;
+  }
+
+  .followBtn {
+    font-size: 11px;
+    margin: 20px 10px;
+    position: relative;
+    padding-left: 35px;
+  }
+
+  .followCount{
+    position: absolute;
+    border: 1px solid;
+    border-radius: 1000px;
+    padding: 4px 5px;
+    top: -1px;
+    left: -1px;
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+}
+
+.regBragProducts{
+
+  .fancyProductMediumContainer{
+    margin: 0;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+
+  .fancyImageBG {
+    padding: 3px;
+  }
+
+  .span3{
+    margin-left: 16px;
+  }
+
+  .fancyItem{
+    min-height: 117px;
+    border-radius: 0;
+
+    //img{
+    //  border-radius: 3px;
+    //}
+  }
+
+  //.fancyItemHiddenContainer{
+  //  bottom: 0;
+  //  background: linear-gradient(rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.7));
+  //}
+
+  .productCtaContainer{
+    bottom: auto;
+    top: 42%;
+  }
+
+  .fancyItemBtn{
+    height: 30px;
+    font-size: 0.6em;
+
+    .btnText {
+      padding-left: 8px;
+    }
+
+    .fancyIconWhite{
+      height: 18px;
+      width: 18px;
+      background-size: 15px;
+      top: -3px;
+    }
+  }
+
+}
+
+.storeSelectContainer{
+
+  .fancyItem{
+
+    .newBragBtn {
+      left: 0;
+      right: 0;
+      top: 37%;
+    }
+  }
+}
+
+.regSelectCat{
+  .storeProductsPreviewContainer img {
+    width: 19%;
+    margin-right: 3%;
+  }
+}

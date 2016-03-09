@@ -1,0 +1,316 @@
+@charset "utf-8";
+@font-face {
+    font-family: gill;
+    src: url("../font/rock.ttf");
+}
+
+input[type="text"], textarea, select {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+img {
+    border: 0 solid;
+}
+
+.wrapper {
+    height: auto;
+    padding-top: 20px;
+    background: transparent;
+    min-width: 1150px;
+}
+
+.logoContainer img {
+    cursor: pointer;
+}
+
+.leftContent {
+    float: left;
+}
+
+.logoContainer {
+    height: 206px;
+    padding-left: 30px;
+}
+
+.facebookSignupHolder {
+    position: relative;
+    height: 325px;
+    width: 835px;
+    padding-bottom: 80px;
+}
+
+.facebookSignupColr {
+    background-color: #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity = 40);
+    -moz-opacity: .4;
+    -khtml-opacity: .4;
+    opacity: .4;
+    height: 325px;
+    width: 100%;
+}
+
+.facebookSignupContents {
+    padding-top: 25px;
+    padding-left: 25px;
+    position: absolute;
+    top: 0;
+    width: 810px;
+}
+
+.soulTextHolder {
+    font-family: gill;
+    font-size: 53px;
+    color: #fff;
+    padding-bottom: 5px;
+    text-shadow: 0 1px 0 #fff;
+    width: 810px;
+}
+
+.signupfromfacebookHolder {
+    width: 395px;
+    height: 70px;
+    background-color: #5b95eb;
+    border-bottom: 1px solid #010101;
+    -moz-box-shadow: 0 5px 0 #3968ae;
+    -webkit-box-shadow: 0 5px 0 #3968ae;
+    -khtml-box-shadow: 0 5px 0 #3968ae;
+    -pie-box-shadow: 0 5px 0 #3968ae;
+    box-shadow: 0 5px 0 #3968ae;
+    behavior: url(../../application/views/PIE.htc);
+}
+
+.newFont {
+    font-size: 30px !important;
+    padding-bottom: 15px;
+}
+
+.facebook_icon_holder {
+    width: 60px;
+    height: 70px;
+    border-right: 1px solid #487cca;
+    float: left;
+}
+
+.facebook_icon {
+    background-image: url(../images/facebook.png);
+    width: 17px;
+    height: 34px;
+    margin: 18px auto 0;
+}
+
+.signup_facebook_text {
+    font-family: gill;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    width: 333px;
+    height: 54px;
+    padding-top: 16px;
+    float: left;
+    border-left: 1px solid #7aa9ee;
+}
+
+.memberText {
+    font-family: gill;
+    font-size: 22px;
+    color: #fff;
+    padding-top: 8px;
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+}
+
+.signinText {
+    font-family: gill;
+    font-size: 22px;
+    color: #f93873;
+    margin-top: 8px;
+    margin-left: 3px;
+    padding: 3px;
+    background-color: #000;
+    float: left;
+}
+
+.rightContent {
+    float: right;
+    padding-top: 30px;
+    padding-right: 60px;
+}
+
+.topIconsHolder {
+    position: relative;
+}
+
+.fancy_icon {
+    background-image: url(../images/fancy_normal.png);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 37px;
+    float: left;
+    cursor: pointer;
+}
+
+.fancy_icon:hover {
+    background-image: url(../images/fancy_click.png);
+}
+
+.styleboard_icon {
+    background-image: url(../images/styleboard_normal.png);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 36px;
+    margin-left: 40px;
+    float: left;
+    cursor: pointer;
+}
+
+.styleboard_icon:hover {
+    background-image: url(../images/styleboard_click.png);
+}
+
+.poll_icon {
+    background-image: url(../images/poll_normal.png);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 35px;
+    margin-left: 40px;
+    float: left;
+    cursor: pointer;
+}
+
+.poll_icon:hover {
+    background-image: url(../images/poll_click.png);
+}
+
+.blog_icon {
+    background-image: url(../images/blog_norm.png);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 33px;
+    margin-left: 40px;
+    float: left;
+    cursor: pointer;
+}
+
+.blog_icon:hover {
+    background-image: url(../images/blog_click.png);
+}
+
+.fancy_tooltip {
+    background-image: url(../images/fancy.png);
+    background-repeat: no-repeat;
+    width: 410px;
+    height: 375px;
+    position: absolute;
+    right: -12px;
+    top: 40px;
+    display: none;
+}
+
+.fancyHeading {
+    font-family: gill;
+    font-size: 53px;
+    color: #333;
+    padding-top: 186px;
+    padding-left: 40px;
+    text-shadow: 0 1px 0 #fff;
+    width: 340px;
+}
+
+.fancyContent {
+    font-family: gill;
+    font-size: 21px;
+    color: #333;
+    width: 354px;
+    height: 90px;
+    padding-left: 40px;
+}
+
+.styleboard_tooltip {
+    background-image: url(../images/styleboard.png);
+    background-repeat: no-repeat;
+    width: 441px;
+    height: 400px;
+    position: absolute;
+    right: -32px;
+    top: 40px;
+    display: none;
+}
+
+.poll_tooltip {
+    background-image: url(../images/poll_tool.png);
+    background-repeat: no-repeat;
+    width: 441px;
+    height: 400px;
+    position: absolute;
+    right: -54px;
+    top: 40px;
+    display: none;
+}
+
+.blog_tooltip {
+    background-image: url(../images/blog.png);
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 383px;
+    position: absolute;
+    right: 1px;
+    top: 40px;
+    display: none;
+}
+
+.footerContainer {
+    width: 100%;
+    height: 40px;
+    clear: both;
+    position: relative;
+}
+
+.footerContainerBackground {
+    background-color: #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity = 40);
+    -moz-opacity: .4;
+    -khtml-opacity: .4;
+    opacity: .4;
+    height: 40px;
+    width: 100%;
+}
+
+.footerContent {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.footerContentHolder {
+    width: 458px;
+    margin: 0 auto;
+    height: 23px;
+    padding-top: 14px;
+}
+
+.aboutusText {
+    font-family: gill;
+    font-size: 12px;
+    margin-right: 24px;
+    color: #fff;
+    float: left;
+}

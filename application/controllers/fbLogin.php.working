@@ -1,0 +1,190 @@
+<?php
+class FbLogin extends CI_Controller
+{
+	public function __constructor()
+	{
+		parent::__constructor();
+	}
+	
+	public function index()
+	{
+		log_message('INFO', 'fb sdk test by shammi shailaj started');
+		log_message('INFO', 'current directory is: '.__DIR__);
+		$fbAppID = '394741787279624';
+		$fbAppSecret = '48a073a1b1e78e2b35a88610bace7f92';
+		$fbConfig = array('appId' => $fbAppID, 'secret' => $fbAppSecret);
+		$this->load->library('facebook', $fbConfig);
+		log_message('INFO', 'reading CI fb config');
+		//$this->config->load('facebook');
+		//$fbConfig = $this->config->item('facebook');
+		log_message('INFO', 'FB-APP-ID: '.$fbAppID.', FB-APP-SECRET: '.$fbAppSecret);
+		
+		// Create our Application instance (replace this with your appId and secret).
+		//$facebook = new Facebook(array('appId' => $fbAppID, 'secret' => $fbAppSecret));
+		
+		// Get User ID
+		$data['user'] = $this->facebook->getUser();
+		
+		// We may or may not have this data based on whether the user is logged in.
+		//
+		// If we have a $user id here, it means we know the user is logged into
+		// Facebook, but we don't know if the access token is valid. An access
+		// token is invalid if the user logged out of Facebook.
+		
+		if($data['user'])
+		{
+			try
+			{
+				// Proceed knowing you have a logged in user who's authenticated.
+				$data['user_profile'] = $this->facebook->api('/me');
+				log_message('INFO', 'Someone is probably logged-in');
+				log_message('INFO', 'user_profile = '.print_r($data['user_profile'], TRUE));
+			}
+			catch (FacebookApiException $e)
+			{
+				log_message('INFO', 'FACEBOOKAPIEXCEPTION OCCURRED');
+				log_message('INFO', 'no-one is logged-in');
+				error_log($e);
+				$data['user'] = null;
+			}
+		}
+		// Login or logout url will be needed depending on current user state.
+		if($data['user'])
+		{
+			$data['logoutUrl'] = $this->facebook->getLogoutUrl();
+		}
+		else
+		{
+			$data['loginUrl'] = $this->facebook->getLoginUrl();
+		}
+		
+		log_message('INFO', 'data = '.print_r($data, TRUE));
+		//$this->load->view('fbLogin', $data);
+		$this->load->view('fbLogin2', $data);
+	}
+	
+	public function login()
+	{
+		log_message('INFO', 'fb sdk test by shammi shailaj started');
+		log_message('INFO', 'current directory is: '.__DIR__);
+		log_message('INFO', 'trying to load file: '.__DIR__.'/../../fbphpsdk/src/facebook.php');
+		require __DIR__.'/../../fbphpsdk/src/facebook.php';
+		log_message('INFO', 'reading CI fb config');
+		//$this->config->load('facebook');
+		//$fbConfig = $this->config->item('facebook');
+		$fbAppID = '394741787279624';
+		$fbAppSecret = '48a073a1b1e78e2b35a88610bace7f92';
+		log_message('INFO', 'FB-APP-ID: '.$fbAppID.', FB-APP-SECRET: '.$fbAppSecret);
+		
+		// Create our Application instance (replace this with your appId and secret).
+		$facebook = new Facebook(array('appId' => $fbAppID, 'secret' => $fbAppSecret));
+		
+		// Get User ID
+		$data['user'] = $facebook->getUser();
+		
+		// We may or may not have this data based on whether the user is logged in.
+		//
+		// If we have a $user id here, it means we know the user is logged into
+		// Facebook, but we don't know if the access token is valid. An access
+		// token is invalid if the user logged out of Facebook.
+		
+		if($data['user'])
+		{
+			try
+			{
+				// Proceed knowing you have a logged in user who's authenticated.
+				$data['user_profile'] = $facebook->api('/me');
+				log_message('INFO', 'Someone is probably logged-in');
+				log_message('INFO', 'user_profile = '.print_r($data['user_profile'], TRUE));
+			}
+			catch (FacebookApiException $e)
+			{
+				log_message('INFO', 'FACEBOOKAPIEXCEPTION OCCURRED');
+				log_message('INFO', 'no-one is logged-in');
+				error_log($e);
+				$data['user'] = null;
+			}
+		}
+		// Login or logout url will be needed depending on current user state.
+		if($data['user'])
+		{
+			$data['logoutUrl'] = $facebook->getLogoutUrl();
+		}
+		else
+		{
+			$data['loginUrl'] = $facebook->getLoginUrl();
+		}
+		
+		// This call will always work since we are fetching public data.
+		$data['naitik'] = $facebook->api('/naitik');
+		log_message('INFO', 'data = '.print_r($data, TRUE));
+		?>
+		<?php if( ! defined ( 'BASEPATH' ) ) exit('Direct script access not allowed'); ?>
+		<!doctype html>
+		<html xmlns:fb="http://www.facebook.com/2008/fbml">
+			<head>
+				<title>php-sdk test by shammi</title>
+				<style>
+				<!--
+					body { font-family: 'Lucida Grande', Verdana, Arial, sans-serif; }
+					h1 a { text-decoration: none; color: #3b5998; }
+					h1 a:hover { text-decoration: underline; }
+				-->
+				</style>
+			</head>
+			<body>
+				<h1>php-sdk  by shammi shailaj</h1>
+				
+				<?php
+				if($data['user'])
+				{
+					?>
+					<a href="<?php echo $data['logoutUrl']; ?>">Logout</a>
+					<?php
+				}
+				else
+				{
+					?>
+					<div>
+					Login using OAuth 2.0 handled by the PHP SDK:
+					<a href="<?php echo $data['loginUrl']; ?>">Login with Facebook</a>
+					</div>
+					<?php
+				}
+				?>
+				
+				<h3>PHP Session</h3>
+				<pre>
+					<?php
+						print_r($_SESSION);
+					?>
+				</pre>
+				
+				<?php
+				if($data['user'])
+				{
+					?>
+					<h3>You</h3>
+					<img src="https://graph.facebook.com/<?php echo $data['user']; ?>/picture">
+					<h3>Your User Object (/me)</h3>
+					<pre><?php print_r($data['user_profile']); ?></pre>
+					<?php
+				}
+				else
+				{
+					?>
+					<strong><em>You are not Connected.</em></strong>
+					<?php
+				}
+				?>
+				<h3>Public profile of Naitik</h3>
+				<img src="https://graph.facebook.com/naitik/picture">
+				<?php
+					echo $data['naitik']['name'];
+				?>
+			</body>
+		</html>
+	<?php
+	}
+}
+?>

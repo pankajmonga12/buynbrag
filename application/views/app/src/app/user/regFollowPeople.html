@@ -1,0 +1,88 @@
+<!-- add class 'fluidHomePage' and 'container-fluid' -->
+<div id="midSection" class="postRegPage regFollowPeople container-fluid" follow-people>
+
+    <!--<div class="processStageContainer text-center relative">-->
+    <!--<div class="currentStage">-->
+    <!--<div class="stageContentBg first">1</div>-->
+    <!--<div class="stageContent active">Select Stores</div>-->
+    <!--</div>-->
+
+    <!--<div class="currentStage">-->
+    <!--<div class="stageContentBg middle">2</div>-->
+    <!--<span class="stageContent ">Follow people</span>-->
+    <!--</div>-->
+
+    <!--<div class="currentStage ">-->
+    <!--<div class="stageContentBg last">3</div>-->
+    <!--<span class="stageContent ">Fancy products</span>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <div class="storeSelectContainer container">
+
+        <div class="featuredStoresContainer">
+
+            <div id="msgBanner" class="msgBanner">
+                <span class="bannerText hide"><b>Step 3/3 --- </b>Follow a few top contributors to explore great things.</span>
+                <p class="subHeading hide">Follow 3 people to continue.</p>
+                <!--<button class="btn pull-right" ng-disabled="personsFollowed < 3" ng-click="switchView()">{{buttonText}}</button>-->
+                <img class="visible-desktop" src="/application/views/dist/images/registerationBanners/reg_step_3.png" alt="Banner desktop"/>
+                <img class="visible-tablet" src="/application/views/dist/images/registerationBanners/reg_step_ipad_3.jpg" alt="Banner iPad"/>
+                <a href="" class="backBtn" ng-click="goBack(3)"></a>
+                <button class="btn pull-right {{(personsFollowed > 2) && 'btn-green' || ''}}" ng-disabled="personsFollowed < 3" ng-click="switchView()"></button>
+            </div>
+
+            <div class="fanciedProductsContainer">
+
+                <h3 ng-show="friendsOnFacebook.length > 0">Your friends on BuynBrag</h3>
+
+                <div style="background: #fff; padding: 10px; margin: 10px;" ng-show="friendsOnFacebook.length > 0">
+
+                    <div style="display: inline-block;text-align: center;margin: 0 10px;" ng-repeat="friend in friendsOnFacebook">
+                        <img class="" ng-src="{{friend.userImgSrc}}" style="border-radius: 1000px;margin: 0;vertical-align: middle;width: 75px;">
+                        <span class="text-center" style="vertical-align: middle;margin: 13px 0 0;padding: 0;line-height: 1;top: -1px;display: block !important;width: 90px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">{{friend.userFullName}}</span>
+                    </div>
+
+                </div>
+
+                <div class="inlineBlock" ng-repeat="person in personsToFollow">
+                    <ul class="{{ ($index%2==1) && 'span6' || 'span6 leftMar0' }}">
+                        <li class="storeDetailContainer">
+                            <div class="storeBrandingContainer shadedBackground relative">
+                                <img class="userImg" ng-src="{{person.userImgSrc}}">
+                                <span class="storeBannerName inlineBlock">{{person.userFullName}}</span>
+                                <div class="userStatsContainer">
+                                    <!--<div><span class="fancyCount bnbRedFont ng-binding">{{person.totalFollowers}}</span> followers</div>-->
+                                    <!--<div><span class="viewCount bnbRedFont ng-binding">{{person.totalFanciedProducts}}</span> products bragged</div>-->
+                                    <div class="aboutUser">{{person.userAboutMe}}</div>
+                                </div>
+                                <follow-user classlist="hidden-iphone-portrait" followers="{{person.totalFollowers}}" userid="{{userDetails.ID}}" usertofollow="{{person.userID}}"></follow-user>
+                            </div>
+                            <div class="storeProductsPreviewContainer">
+                                <img alt="{{person.fp1ProductName}}" ng-src="{{s3baseUrl}}{{person.fp1StoreID}}/{{person.fp1ProductID}}/img1_240x200.jpg">
+                                <img alt="{{person.fp2ProductName}}" ng-src="{{s3baseUrl}}{{person.fp2StoreID}}/{{person.fp2ProductID}}/img1_240x200.jpg">
+                                <img alt="{{person.fp3ProductName}}" ng-src="{{s3baseUrl}}{{person.fp3StoreID}}/{{person.fp3ProductID}}/img1_240x200.jpg">
+                                <!-- <img alt="{{person.fp4ProductName}}" ng-src="{{s3baseUrl}}{{person.fp4StoreID}}/{{person.fp4ProductID}}/img1_240x200.jpg"> -->
+
+                                <div class="categoryBg relative stripedBg green bragCountWrapper">
+                                    <strong class="totalItems"><span class="itemNo">+ {{person.totalFanciedProducts}}</span>&nbsp;Brags</strong>
+                                </div>
+                            </div>
+
+                            <div class="secondBtn">
+                                <follow-user classlist="visible-iphone-portrait" followers="{{person.totalFollowers}}" userid="{{userDetails.ID}}" usertofollow="{{person.userID}}"></follow-user>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--<script type="text/javascript">-->
+    <!--stickyElem(document.getElementById('msgBanner'), document.querySelector('.fanciedProductsContainer'), 0, 56);-->

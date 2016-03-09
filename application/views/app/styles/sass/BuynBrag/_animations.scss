@@ -1,0 +1,203 @@
+// Start animation for spinning circles animation
+
+@keyframes spinAnimaton {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes opacityAnimation {
+  12.0% { opacity: 0.80; }
+  19.5% { opacity: 0.88; }
+  37.2% { opacity: 0.64; }
+  40.5% { opacity: 0.52; }
+  52.7% { opacity: 0.69; }
+  60.2% { opacity: 0.60; }
+  66.6% { opacity: 0.52; }
+  70.0% { opacity: 0.63; }
+  79.9% { opacity: 0.60; }
+  84.2% { opacity: 0.75; }
+  91.0% { opacity: 0.87; }
+}
+
+// End animation for spinning circles animation
+
+// Start animation for bouncing containers and modals animation
+
+@keyframes fadeIn{
+  from {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut{
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes bounceFromBottom{
+  0% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+
+  5% {
+    opacity: 0.5;
+    transform: translateY(-30px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+}
+
+// End animation for bouncing containers and modals animation
+
+
+// New loading animation
+
+//@keyframes leftBall
+//{
+//  0% {
+//    transform: rotate(0deg) translateY(0px);
+//  }
+///*this pauses the ball at the begining*/
+//  50% {
+//    transform: rotate(0deg) translateY(0px);
+//  }
+//  100% {
+//    transform: rotate(50deg) translateY(-20px);
+//  }
+//
+//}
+//
+//@keyframes rightBall
+//{
+//  0% {
+//    transform: rotate(-50deg) translateY(-20px);
+//  }
+///*this pauses the ball at the begining*/
+//  50% {
+//    transform: rotate(0deg) translateY(0px);
+//  }
+//  100% {
+//    transform: rotate(0deg) translateY(0px) translateX(0px);
+//  }
+//
+//}
+//
+//@keyframes leftShadowN
+//{
+//  0% {
+//    transform: translateX(0px);
+//  }
+///*this pauses the ball at the begining*/
+//  50% {
+//    transform: translateX(0px);
+//  }
+//
+//  100% {
+//    transform: translateX(-25px);
+//  }
+//
+//}
+//
+//@keyframes rightShadowN
+//{
+//  0% {
+//    transform: translateX(25px);
+//  }
+///*this pauses the ball at the begining*/
+//  50% {
+//    transform: translateY(0px);
+//  }
+//
+//  100% {
+//    transform: translateY(0px);
+//  }
+//
+//}
+
+// Start animation for user profile dropped pin animation
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// End animation for user profile dropped pin animation
+
+// Start animation of button fill
+
+//@keyframes fillToRight {
+//  to {
+//    width: 100%;
+//  }
+//}
+
+// End animation of button fill
+
+@keyframes spinnerLightSaber-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinnerLightSaber-fade {
+  20% {
+    opacity: .1;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: .1;
+  }
+}

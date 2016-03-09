@@ -1,0 +1,250 @@
+<div id="midSection" class="container storePage" ng-controller="StorePageController">
+
+    <ul class="breadcrumb">
+        <li class="linkBack"><a href="/">Home</a></li>
+        <li class="linkBack"><a href="allStores">All Stores</a></li>
+        <li class="linkBack"><a ng-href="store/{{storeInfo.store_name | beautify}}/{{storeID}}">{{storeInfo.store_name}}</a></li>
+    </ul>
+
+    <div class="subCategoriesContainer">
+        <h5 class="subCatHeading">Subcategories</h5>
+
+        <div class="subCats">
+            <span class="inlineBlock" ng-repeat="section in storeSections">
+                <a class="{{(section.storeSectionID == storeSectionID) && 'lastActive' || '' }}" ng-href="store/{{storeInfo.store_name | beautify}}/{{section.storeSectionName | beautify}}/{{storeID}}/{{section.storeSectionID}}">{{section.storeSectionName}} ({{section.totalProducts}})</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="storeNameWrapper relative">
+
+        <div id="banner" class="">
+            <a ng-href="store/{{storeInfo.store_name | beautify}}/{{storeID}}"><img class="storeBannerImg pull-left" ng-src="{{s3baseUrl}}{{storeID}}/storepage_banner.jpg" alt="BuynBrag {{storeInfo.store_name}} banner"/></a>
+
+            <h1 class="storeName pull-left ng-binding"><a ng-href="store/{{storeInfo.store_name | beautify}}/{{storeID}}">{{storeInfo.store_name}}</a></h1>
+
+            <div class="storeStats pull-left">
+                <!--<div class="bragIconLarge inlineBlock">-->
+                    <!--<span class="bragCount bnbRedFont ng-binding">{{storeInfo.storeBragCounter}}</span>-->
+                    <!--<span class="statsText block">People bragged it</span>-->
+                <!--</div>-->
+                <div class="inlineBlock">
+                    <span class="fancyCount bnbRedFont inlineBlock ng-binding">{{storeInfo.totalProducts}}</span>
+                    <span class="statsText inlineBlock">Products</span>
+                </div>
+                <div class="inlineBlock">
+                    <span class="fancyCount bnbRedFont inlineBlock ng-binding">{{storeInfo.storeFancyCounter}}</span>
+                    <span class="statsText inlineBlock">Followers</span>
+                </div>
+                <div class="inlineBlock">
+                    <span class="viewCount bnbRedFont inlineBlock ng-binding">{{storeInfo.storeVisitCounter}}</span>
+                    <span class="statsText inlineBlock">Views</span>
+                </div>
+                <div class="inlineBlock">
+                    <span class="viewCount bnbRedFont inlineBlock ng-binding">{{storeInfo.totalFancied}}</span>
+                    <span class="statsText inlineBlock">Products bragged</span>
+                </div>
+            </div>
+
+            <button xhr-spinner class="btn btn-blue pull-right storeFancyBtn" ng-click="fancyStore()"><span>{{followText}}</span></button>
+
+        </div>
+
+        <div class="storeDescriptionContainer">
+
+            <!--<div class="storePolicies pull-right hidden-iphone-landscape">-->
+                <!--<img ng-show="storeInfo.COD_policy == 1" src="/assets/images/badges/stores/cod.png" alt="cod badge">-->
+                <!--<img ng-show="storeInfo.return_policy == 1" src="/assets/images/badges/stores/happyreturn.png" alt="return badge">-->
+                <!--<img ng-show="storeInfo.EMI_policy == 1" src="/assets/images/badges/stores/emi.png" alt="emi badge">-->
+            <!--</div>-->
+
+            <div class="storeDescription">
+                {{storeInfo.about_store}}
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="resultStatsContainer">
+        <ul class="unstyled inline">
+            <li class="{{ (filter == filters.trending) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.trending) || filterProducts(filters.trending)">
+                    <span>
+                        Trending
+                    </span>
+                </a>
+            </li>
+            <li class="{{ (filter == filters.latest) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.latest) || filterProducts(filters.latest)">
+                    <span>
+                        New Arrivals
+                    </span>
+                </a>
+            </li>
+            <li class="{{ (filter == filters.popularity) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.popularity) || filterProducts(filters.popularity)">
+                    <span>
+                        Popularity
+                    </span>
+                </a>
+            </li>
+            <li class="{{ (filter == filters.lowestPrice) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.lowestPrice) || filterProducts(filters.lowestPrice)">
+                    <span>
+                        Lowest Price
+                    </span>
+                </a>
+            </li>
+            <li class="{{ (filter == filters.highestPrice) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.highestPrice) || filterProducts(filters.highestPrice)">
+                    <span>
+                        Highest Price
+                    </span>
+                </a>
+            </li>
+            <li class="{{ (filter == filters.onSale) && 'active' || '' }}">
+                <a ng-href="" ng-click="(filter == filters.onSale) || filterProducts(filters.onSale)">
+                    <span>
+                        On Sale
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--<button class="btn btn-flat hideFilter closed">Show Filters</button>-->
+    <!-- <div class="filtersContainer">
+        
+        <div class="sortText visible-phone">Sort By:</div>
+    <span class="filterButtons">
+        <button class="btn {{ (filter == filters.latest) && 'selected disabled' || 'btn-blue' }}" ng-disabled="filter == filters.latest" ng-click="filterProducts(filters.latest)">New Arrivals</button>
+        <button class="btn {{ (filter == filters.popularity) && 'selected disabled' || 'btn-blue' }}" ng-disabled="filter == filters.popularity" ng-click="filterProducts(filters.popularity)">Popularity</button>
+        <button class="btn {{ (filter == filters.lowestPrice) && 'selected disabled' || 'btn-blue' }}" ng-disabled="filter == filters.lowestPrice" ng-click="filterProducts(filters.lowestPrice)"><span class="priceFilterText low">Lowest Price</span></button>
+        <button class="btn {{ (filter == filters.highestPrice) && 'selected disabled' || 'btn-blue' }}" ng-disabled="filter == filters.highestPrice" ng-click="filterProducts(filters.highestPrice)"><span class="priceFilterText high">Highest Price</span></button>
+        <button class="btn pull-right onSaleButton {{ (filter == filters.onSale) && 'selected disabled' || 'btn-red' }}" ng-disabled="filter == filters.onSale" ng-click="filterProducts(filters.onSale)">On Sale</button>
+    </span>
+    </div> -->
+
+    <!--<div class="span3 sidebarNav">-->
+    <!--<ul class="navList unstyled">-->
+    <!--<li>-->
+    <!--<a class="navOpen" href="">Living Room</a>-->
+    <!--<ul class="subNavList">-->
+    <!--<li><a href="">Second level link</a></li>-->
+    <!--<li>-->
+    <!--<a class="navOpen" href="">Second level link</a>-->
+    <!--<ul class="subNavList">-->
+    <!--<li><a href="">Third level link</a></li>-->
+    <!--<li><a href="">Third level link</a></li>-->
+    <!--<li>-->
+    <!--<a class="navOpen" href="">Third level link</a>-->
+    <!--<ul class="subNavList lastLevel">-->
+    <!--<li><a href="">Fourth level link</a></li>-->
+    <!--<li><a href="">Fourth level link</a></li>-->
+    <!--<li><a class="navOpen" href="">Fourth level link</a></li>-->
+    <!--<li><a href="">Fourth level link</a></li>-->
+    <!--<li><a href="">Fourth level link</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li><a href="">Third level link</a></li>-->
+    <!--<li><a href="">Third level link</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li><a href="">Second level link</a></li>-->
+    <!--<li><a href="">Second level link</a></li>-->
+    <!--<li><a href="">Second level link</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li><a href="">Dining Room</a></li>-->
+    <!--<li><a href="">Bed Room</a></li>-->
+    <!--<li><a href="">Home Office</a></li>-->
+    <!--<li><a href="">Entry Way</a></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+
+    <div class="fanciedProductsContainer" infinite-scroll="getProducts()" infinite-scroll-distance='1'>
+
+        <div class="imageRepetition" ng-repeat="product in storeProducts track by product.productID">
+
+            <ul class="fancyProductMediumContainer">
+                <!--<li class="span4 fancyItem" style="margin-left: 0;">-->
+                <li ng-click class="{{ ($index%3==0) && 'span4 fancyItem shadedBackground leftMar0' || 'span4 fancyItem hover-alive shadedBackground' }}">
+
+                    <div class="fancyImageBG">
+
+                        <div class="fancyItemImageContainer">
+                            <a ng-href="product/{{product.productName | beautify}}/{{product.productID}}">
+                                <img class="fancyItemImage" ng-src="{{s3baseUrl}}{{storeID}}/{{product.productID}}/img1_240x200.jpg" alt="{{product.productName}} picture">
+                                <span class="imgHoverState"></span>
+
+                                <div class="itemDetailsContainer cssTransition">
+                                    <div class="{{ (img.productIsOnDiscount == 1) && 'productOriPrice strike' || 'productOriPrice hide' }}"><i class="icon-fontawesome-webfont-5"></i>{{product.productSellingPrice}}</div>
+                                    <div class="productDiscountedPrice bnbRedFont"><i class="icon-fontawesome-webfont-5"></i>{{product.discountedPrice}}</div>
+
+                                    <span class="hidden-iphone-landscape outOfStockText {{ (product.productQuantity < 1) && 'quantityText' || 'quantityText hide' }}">Out of Stock!</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <btn-fancy sid="{{storeID}}" pid="{{product.productID}}" uname="{{user.userdata.name}}" pname="{{product.productName}}" has-fancied="{{product.hasFancied}}"></btn-fancy>
+
+                        <btn-tag pid="{{product.productID}}" sid="{{storeID}}" pname="{{product.productName}}" uname="{{user.userdata.name}}"></btn-tag>
+
+                        <button class="shareBtn icon icon-export"></button>
+
+                        <!--<div class="fancyItemHiddenContainer invisible cssTransition">-->
+                            <!--<span class="hidden-iphone-landscape  {{ (product.productQuantity < 6 && product.productQuantity > 0) && 'quantityText' || 'quantityText hide' }} ng-binding">Only {{product.productQuantity}} left!</span>-->
+                            <!--<span class="hidden-iphone-landscape {{ (product.productQuantity < 1) && 'quantityText' || 'quantityText hide' }}">Out of Stock!</span>-->
+
+                            <!--&lt;!&ndash;<a href="#quickViewModal" role="button" class="openQuickView hidden-phone font13" data-toggle="modal" ng-click="pidtoquickview(product.productID, storeID)">Click here for more info</a>&ndash;&gt;-->
+
+                            <!--<div class="productCtaContainer">-->
+                                <!--<button xhr-spinner btn-fancy sid="{{product.storeID}}" pid="{{product.productID}}" uname="{{user.userdata.name}}" pname="{{product.productName}}" has-fancied="{{product.hasFancied}}" ng-click="triggerFancy()" class="fancyItemBtn btn btn-red"><span class="btnText"><span class="fancyIconWhite"></span>{{fancytext}}</span></button>-->
+                                <!--&lt;!&ndash;<button class="bragItemBtn btn btn-flat"><span class="btnText"><span class="bragIconPink"></span>Brag</span></button>&ndash;&gt;-->
+                            <!--</div>-->
+
+                            <!--<a ng-href="/product/{{product.productName | beautify}}/{{product.productID}}" class="itemDirectLink">More about this product</a>-->
+                        <!--</div>-->
+
+                    </div>
+
+                    <div class="fancyItemDetails relative">
+
+                        <a ng-href="product/{{product.productName | beautify}}/{{product.productID}}"><h5 class="fancyItemName">{{product.productName}}</h5></a>
+
+                        <div class="productPriceContainer pull-right">
+                            <div class="{{ (product.productIsOnDiscount == 1) && 'productOriPrice strike' || 'productOriPrice hide' }}"><i class="icon-fontawesome-webfont-5"></i>{{product.productSellingPrice}}</div>
+                            <div class="productDiscountedPrice bnbRedFont"><i class="icon-fontawesome-webfont-5"></i>{{product.discountedPrice}}</div>
+                        </div>
+
+                        <div class="fancyItemStats">
+                            <div class="fancyIcon block">
+                                <span class="fancyCount bnbRedFont">{{product.productFancyCounter}}</span> brags
+                            </div>
+                            <div class="viewIcon block">
+                                <span class="viewCount bnbRedFont">{{product.productVisitCounter}}</span> views
+                            </div>
+                        </div>
+
+                        <!--<div class="newCTA_wrapper">-->
+                            <!--<i class="newTagBtn"></i>-->
+                            <!--<i class="newShareBtn"></i>-->
+                        <!--</div>-->
+
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <ul class="spinner" ng-hide="hideSpinner">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</div>

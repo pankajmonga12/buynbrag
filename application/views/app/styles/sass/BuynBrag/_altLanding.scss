@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Brann Boll';
+  src: url("../fonts/BrannbollSmal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.landingActive{
+
+  .headerTop .navbar .nav, .searchBoxContainer {
+    display: none;
+  }
+}
+
+.altLanding{
+  margin-top: 0 !important;
+
+  .welcomeBg{
+//    letter-spacing: 0.1em;
+    font-family: 'Josefin sans', 'Open sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+    width: 100%;
+    margin-top: -1px;
+    background: url("../images/landingBG/backgrounds/landing.jpg") no-repeat center center scroll;
+    background-size: cover;
+//    min-height: 80%;
+    min-height: 390px;
+//    position: absolute;
+//    overflow: hidden;
+//    transform: translate3d(0,0,0);
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2) !important;
+    color: #fff;
+
+    h1, h2{
+      font-weight: lighter;
+    }
+
+    h1 {
+      font-size: 4rem;
+      letter-spacing: -2px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 2;
+    }
+
+    .brennBallFont{
+      font-family: "Brann Boll";
+    }
+  }
+
+  .innerTxtWrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 21%;
+    //padding-top: 75px;
+  }
+
+  .facePileWrapper {
+    margin-top: 20px;
+  }
+
+//  .amp{
+//    font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+//    font-style: italic;
+//    text-transform: none;
+//    font-weight: 500;
+//  }
+
+  .fbBtn{
+    margin: 60px auto;
+    color: #fff;
+
+    &:active, &:focus{
+      color: #fff;
+    }
+  }
+
+  .innerImgWrapper{
+//    position: absolute;
+//    top: 85%;
+//    width: 100%;
+    transform: translate3d(0,0,0);
+
+    h1{
+      line-height: 2;
+      font-size: 2.5em;
+      font-family: DinCondensed, 'bebas-neue', 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+//      margin-top: 25px;
+    }
+  }
+
+  .imageRepetition {
+    border-radius: 0;
+    overflow: auto;
+  }
+
+  .fancyProductMediumContainer {
+    margin: 0;
+  }
+
+  .fancyItem{
+    border-radius: 0;
+    margin-bottom: 20px;
+    min-height: 183px;
+  }
+}

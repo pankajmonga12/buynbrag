@@ -1,0 +1,63 @@
+
+            <!--div id="dialog" title="Basic dialog">
+                <div class="bigLabel clear_both">Buyer Details of mobile no. XYZ</div>
+                <div class="rows">
+                    <div class="labeldetails">
+                        <div class="smallLabel">Buyer First Name</div>
+                         <input type="text" name="buyer_first" class="text_field buyer" disabled="disabled" />
+                    </div>
+                    <div class="labeldetails">
+                        <div class="smallLabel">Buyer Last Name</div>
+                        <input type="text" name="buyer_last" class="text_field buyer" disabled="disabled" />
+                    </div>
+                    <input type="radio" name="pers_mob" class="pop_radio" />
+                </div>
+                <div class="rows">
+                    <div class="labeldetails">
+                        <div class="smallLabel">Buyer First Name</div>
+                         <input type="text" name="buyer_first" class="text_field buyer" disabled="disabled" />
+                    </div>
+                    <div class="labeldetails">
+                        <div class="smallLabel">Buyer Last Name</div>
+                        <input type="text" name="buyer_last" class="text_field buyer" disabled="disabled" />
+                    </div>
+                    <input type="radio" name="pers_mob" class="pop_radio" />
+                </div>
+                <div class="rows">
+                    <div class="labeldetails">
+                        <div class="smallLabel">Buyer First Name</div>
+                         <input type="text" name="buyer_first" class="text_field buyer" disabled="disabled" />
+                    </div>
+                    <div class="labeldetails">
+                        <div class="smallLabel">Buyer Last Name</div>
+                        <input type="text" name="buyer_last" class="text_field buyer" disabled="disabled" />
+                    </div>
+                    <input type="radio" name="pers_mob" class="pop_radio" />
+                </div>
+                <div class="rows">
+                    <div class="labeldetails">
+                        <div class="smallLabel">Buyer First Name</div>
+                         <input type="text" name="buyer_first" class="text_field buyer" disabled="disabled" />
+                    </div>
+                    <div class="labeldetails">
+                        <div class="smallLabel">Buyer Last Name</div>
+                        <input type="text" name="buyer_last" class="text_field buyer" disabled="disabled" />
+                    </div>
+                    <input type="radio" name="pers_mob" class="pop_radio" />
+                </div>
+                <div class="rows">
+                    <div class="labeldetails">
+                        <div class="smallLabel">Buyer First Name</div>
+                         <input type="text" name="buyer_first" class="text_field buyer" disabled="disabled" />
+                    </div>
+                    <div class="labeldetails">
+                        <div class="smallLabel">Buyer Last Name</div>
+                        <input type="text" name="buyer_last" class="text_field buyer" disabled="disabled" />
+                    </div>
+                    <input type="radio" name="pers_mob" class="pop_radio" />
+                </div>
+                <div class="buttonDiv">
+                    <input type="button" class="ok fl" value="OK" />
+                    <input type="button" class="fl" id="cancel" value="CANCEL" />
+                </div>
+            </div-->

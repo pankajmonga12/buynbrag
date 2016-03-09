@@ -1,0 +1,130 @@
+.aboutUs{
+
+  h3.heading{
+    display: inline-block;
+    border-bottom: 2px solid #BDBDBD;
+  }
+
+  ul.affix{
+    top: 65px;
+    padding: 0;
+
+    li{
+      background: #fff;
+      //position: relative;
+
+      &>a{
+        margin: 0;
+        padding: 7px 14px;
+        font-size: 13px;
+        border: 1px solid #e5e5e5;
+        width: 220px;
+        box-sizing: border-box;
+        border-bottom: 0;
+
+        &:after{
+          font-family: "bnb-social-font";
+          content: "H";
+          float: right;
+          margin-right: -5px;
+        }
+
+        &:hover, &:focus {
+          background-color: #F7F5F5;
+        }
+      }
+
+      &:last-child a{
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      &.active{
+
+        &>a{
+          background: #b91919;
+        }
+      }
+
+      //&:after{
+      //  font-family: "bnb-social-font";
+      //  content: "H";
+      //  position: absolute;
+      //  right: 5px;
+      //  top: 25%;
+      //}
+    }
+  }
+
+  //defaults from previous layout
+  .rightPanelDescSmall2 {
+    color: #333;
+    line-height: 26px;
+    padding-left: 20px;
+  }
+
+  .rightPanelDescSmall3 {
+    color: #333;
+    padding-left: 50px;
+  }
+
+  .rightPanelDescSmall4 {
+    color: #333;
+    padding-left: 70px;
+  }
+
+  .rightPanelDescSmall5 {
+    color: #333;
+    padding-left: 90px;
+  }
+
+  .paddingBottom18 {
+    padding-bottom: 18px !important;
+  }
+
+  strong{
+    font-size: 16px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  //end defaults from previous layout
+
+  .aboutUsDescription{
+
+    .abtCircleBg {
+      background-image: url('../images/abt_us_bg.png');
+      background-size: contain;
+      margin: 10px 0 20px;
+    }
+
+    #abtCircle {
+      background: #FFF;
+      border-radius: 50%;
+      opacity: .9;
+      padding: 55px 105px 0px;
+      height: 590px;
+    }
+
+    #bnbBasics{
+
+      .descriptionContainer{
+
+        h1{
+          font-size: 6em;
+        }
+      }
+    }
+
+    #bnbCareers{
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.aboutUs.siteMsgActive {
+
+  ul.affix{
+    top: 100px;
+    padding: 0;
+  }
+}

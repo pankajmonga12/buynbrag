@@ -1,0 +1,756 @@
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/reset";
+@import "bootstrap/grid";
+@import "bootstrap/layouts";
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+@import "bootstrap/responsive-1200px-min";
+@import "bootstrap/responsive-768px-979px";
+@import "bootstrap/responsive-767px-max";
+
+@import "BuynBrag/genericClasses";
+@import "BuynBrag/landingBlockade/bnbLandingFont";
+
+// Common styles
+$bnbPink:  #e81c4d !default;
+$bnbRed: #b91919 !default;
+//$bnbGreen:  #1b7e5a !default;
+//$bnbGreen:  #00910F !default;
+$bnbGreen:  #1bc784 !default;
+$bnbBlue:  #006ccc !default;
+$bnbBorderRadius:   1px !default;
+
+$btnBorder: 1px !default;
+
+*{
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+::selection {
+  background: $bnbGreen;
+  color: #fff;
+  text-shadow: none;
+}
+.bnbRed{
+  color: $bnbRed;
+}
+.bnbRedFont{
+  color: #d41912;
+}
+.inlineBlock{
+  display: inline-block;
+}
+.block{
+  display: block;
+}
+.clear{
+  clear: both;
+}
+.invisible{
+  //visibility: hidden;  //pre-exists in bootstrap
+  opacity: 0;
+}
+.relative{
+  position: relative;
+}
+.topMar0{
+  margin-top: 0;
+}
+
+.leftMar0{
+  margin-left: 0;
+}
+
+.rightMar0{
+  margin-right: 0;
+}
+
+.cssTransition{
+  transition: all 0.4s ease-in-out;
+}
+
+.btn{
+  //text-transform: uppercase;
+  border-radius: $bnbBorderRadius;
+  overflow: hidden;
+
+  &.btnActivated{
+
+    &:after{
+      content: "g";
+      font-family: "bnblanding";
+      //position: absolute;
+      position: relative;
+      top: 0;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      speak: none;
+      line-height: 1;
+      display: inline-block;
+      font-size: 1.2em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      animation: spinAnimaton 1s linear infinite;
+      opacity: 0.9;
+    }
+  }
+}
+
+.btn-blue{
+  background: $bnbBlue;
+  @include gradient-vertical(lighten($bnbBlue, 2%), darken($bnbBlue, 5%));
+
+  &:hover{
+    @include gradient-vertical(darken($bnbBlue, 1%), darken($bnbBlue, 8%));
+    background-position: 0;
+    color: #fff;
+  }
+
+  color: #fff;
+  text-shadow: none;
+  //border: 1px solid (lighten($bnbBlue, 3%));
+  border: 1px solid darken($bnbBlue, 3%);
+}
+
+input, select{
+  outline: none;
+
+  &.ng-invalid {
+    outline: 2px solid rgba(255, 0, 0, 0.69);
+    outline-offset: 0;
+
+    &:focus, &:active{
+      outline: 2px solid rgba(255, 0, 0, 0.69);
+      outline-offset: 0;
+    }
+  }
+
+  &.ng-valid {
+    outline: 2px solid rgba(74, 180, 14, 0.69);
+    outline-offset: 0;
+
+    &:focus, &:active{
+      outline: 2px solid rgba(74, 180, 14, 0.69);
+      outline-offset: 0;
+    }
+  }
+
+  &[type=radio]{
+    outline: 0;
+  }
+
+}
+
+// LANDING PAGE DESIGN
+
+body{
+  background: url("../images/landingBG/exemple_optimized.jpg") no-repeat center center fixed;
+  color: #fff;
+  background-size: cover;
+  font-size: 16px;
+  font-family: Raleway, 'Josefin sans';
+  margin: 0;
+  //overflow: hidden;
+
+  h2{
+    font-size: 2em;
+    line-height: 0.7em;
+    font-family: 'Josefin sans';
+  }
+
+  button, a, span.bnbRedFont{
+    font-family: Raleway, 'Josefin sans';
+    text-decoration: none;
+  }
+
+  .dottedOverlay{
+    background: url("../images/landingBG/dotted_overlay.png") repeat center center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+  }
+}
+
+.landingBlockade{
+  position: absolute;
+  font-size: 0.9rem;
+  height: 100%;
+  width: 100%;
+
+  .formError{
+    position: absolute;
+    top: 9px;
+    left: 315px;
+    white-space: nowrap;
+    font-size: 14px;
+    background: rgba(212, 25, 18, 0.59);
+    padding: 1px 5px 3px;
+    border-radius: 2px;
+    box-shadow: 5px 5px 5px -4px #222;
+    //opacity: 0;
+    //visibility: hidden;
+    animation: errorAnimRight 2s 1;
+
+    &:after {
+      content: '';
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-right: 6px solid rgba(224, 30, 23, 0.56);
+      position: absolute;
+      top: 4px;
+      left: -6px;
+    }
+  }
+
+  .btn, input, select{
+    width: 302px;
+    height: 42px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 2px;
+    box-sizing: border-box;
+
+    //b{
+    //  font-weight: normal;
+    //}
+  }
+
+  input, select{
+    font-size: 15px;
+    font-family: Raleway;
+    padding: 0 10px;
+  }
+
+  select{
+    padding-right: 0;
+    //appearance: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 3px #555 inset;
+  }
+
+  .bnbRedFont{
+    font-weight: normal;
+  }
+
+  header {
+    overflow: hidden;
+
+    .logoHeading {
+      margin-top: 1%;
+      margin-left: 1%;
+      //transform: rotate(4deg);
+
+      .logo{
+        margin-top: -0.9%;
+      }
+
+      img.logoImg{
+        width: 150px;
+      }
+    }
+
+    .linksContainer{
+      margin-top: -0.5%;
+      margin-right: 1%;
+      font-size: 0.9em;
+    }
+
+    .loginLink, .registerLink{
+//      text-decoration: none;
+      cursor: pointer;
+      //font-weight: normal;
+    }
+  }
+
+  .msgContainer{
+    position: absolute;
+    top: 33%;
+    left: 0;
+    //overflow: hidden;
+  }
+
+  .registerFrom{
+    padding-left: 5%;
+    animation: landingAnimRight 2s 1;
+  }
+}
+
+.stepsContainer{
+
+  .fbIcon{
+    font-size: 22px;
+    position: absolute;
+    left: 2px;
+    top: 1px;
+    border-right: 1px solid #115897;
+    padding: 8px 11px 5px;
+  }
+
+  .goToSecond{
+    cursor: pointer;
+  }
+
+  .fbBtn{
+    padding-left: 40px;
+    padding-top: 9px;
+    text-align: center;
+  }
+
+  .loginTxt, .forgotPwd{
+
+    a:hover{
+      text-decoration: none;
+      color: #d41912;
+    }
+  }
+
+  .firstStep, .secondStep{
+    transition-property: opacity, visibility, height, line-height, margin, padding;
+    transition-duration: 0.4s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .firstStep{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .secondStep{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    .backIcon{
+      opacity: 0;
+      visibility: hidden;
+
+      transition-property: opacity, visibility, height, line-height, margin, padding;
+      transition-duration: 0.4s;
+      transition-delay: 0s;
+      transition-timing-function: ease-in-out;
+    }
+
+    input{
+      height: 0;
+      line-height: 0;
+      padding: 0 10px;
+      margin: 0;
+      border: 0;
+      opacity: 0;
+      visibility: hidden;
+
+      transition-property: opacity, visibility, height, line-height, margin, padding;
+      transition-duration: 0.4s;
+      transition-delay: 0.2s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+
+  .passwordResetStep{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    transition-property: opacity, visibility, height, line-height, margin, padding;
+    transition-duration: 0.3s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    input{
+      margin-top: 1px;
+      height: 40px;
+    }
+  }
+
+  &.active{
+    //&:hover{
+
+    .firstStep, .secondStep{
+      transition-property: opacity, visibility, height, line-height, margin, padding;
+      transition-duration: 0.4s;
+      transition-delay: 0s;
+      transition-timing-function: ease-in-out;
+    }
+
+    .firstStep{
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .secondStep{
+      opacity: 1;
+      visibility: visible;
+
+      .backIcon{
+        opacity: 1;
+        visibility: visible;
+
+        transition-property: opacity, visibility, height, line-height, margin, padding;
+        transition-duration: 0.4s;
+        transition-delay: 0.8s;
+        transition-timing-function: ease-in-out;
+      }
+
+      input{
+        margin-bottom: 15px;
+        margin-top: 2px;
+        border: inherit;
+        line-height: 30px;
+        height: 39px;
+        padding: 0 10px;
+        opacity: 1;
+        visibility: visible;
+
+        transition-property: opacity, visibility, height, line-height, margin, padding;
+        transition-duration: 0.4s;
+        transition-delay: 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+    }
+
+    &.passResetActive{
+
+      .secondStep{
+        opacity: 0;
+        visibility: hidden;
+
+        transition-property: opacity, visibility, height, line-height, margin, padding;
+        transition-duration: 0.3s;
+        transition-delay: 0.3s;
+        transition-timing-function: ease-in-out;
+
+        input[type=password]{
+          height: 0;
+          line-height: 0;
+          padding: 0 10px;
+          margin: 0;
+          border: 0;
+          opacity: 0;
+          visibility: hidden;
+
+          transition-property: opacity, visibility, height, line-height, margin, padding;
+          transition-duration: 0.4s;
+          transition-delay: 0s;
+          transition-timing-function: ease-in-out;
+        }
+      }
+
+      .passwordResetStep{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.dobSelectContainer{
+  label{
+    margin-bottom: 10px;
+  }
+  select, input{
+    display: inline-block;
+    margin-right: 5px;
+    width: 95px;
+  }
+}
+
+.radioBtnContainer{
+  margin: 0px 0 12px 0;
+
+  input{
+    width: 12px;
+    height: 12px;
+    margin: -2px 15px 0 10px;
+    background: rgba(0, 0, 0, 0);
+    outline: 0;
+    border: none;
+    background-image: none;
+
+    &:hover, &:active, &:focus{
+      outline: 0;
+      outline-offset: 0;
+    }
+  }
+
+  &+.formError{
+    left: 180px;
+    top: 0px;
+    //transform: translate3d(5px, 0, 0);
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 1%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  font-weight: normal;
+  color: #6B6B6B;
+
+  .mixPanelLink{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+//.-moz- body, .touch body{
+//  font-weight: normal;
+//
+//  h2, .fbBtn{
+//    font-weight: normal;
+//
+//    b{
+//      font-weight: bold;
+//    }
+//  }
+//}
+
+@keyframes spinAnimaton {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes landingAnimRight{
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes errorAnimRight{
+  from {
+    opacity: 0;
+    transform: translate3d(15px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+//@keyframes landingAnimLeft{
+//  from {
+//    opacity: 0;
+//    transform: translate3d(-25px, 0, 0);
+//  }
+//
+//  to {
+//    opacity: 1;
+//    transform: translate3d(0, 0, 0);
+//  }
+//}
+
+/* Retina display rules */
+@media (min--moz-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3/2),
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+
+}
+
+// Height based media queries
+@media (max-height: 768px){
+
+}
+
+@media (max-width: 979px){
+
+}
+
+@media (max-width: 979px) and (min-width: 768px){
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px){
+
+  body{
+    font-size: 15px;
+  }
+
+  .landingBlockade{
+
+    header .logoHeading{
+      margin-left: 0;
+      img.logoImg {
+        width: 165px;
+      }
+    }
+
+    .msgContainer {
+      top: 23%;
+      padding: 25px;
+      box-sizing: border-box;
+      overflow: visible;
+      text-align: center;
+
+      .introMsg{
+        //height: 0;
+        margin-top: 0px;
+        opacity: 1;
+        visibility: visible;
+
+        transition-property: opacity, visibility, height, line-height, margin, padding;
+        transition-duration: 0.3s;
+        transition-delay: 0s;
+        transition-timing-function: ease-in-out;
+      }
+
+      &.active{
+
+        .introMsg{
+          //height: 0;
+          margin-top: -150px;
+          opacity: 0;
+          visibility: hidden;
+
+          transition-property: opacity, visibility, height, line-height, margin, padding;
+          transition-duration: 0.4s;
+          transition-delay: 0s;
+          transition-timing-function: ease-in-out;
+        }
+      }
+    }
+
+    .registerFrom{
+      padding: 0;
+      margin-top: 40px;
+    }
+
+    .stepsContainer{
+
+      .fbBtn {
+        margin: 0 auto 15px auto;
+      }
+
+      .secondStep{
+        left: 10%;
+        right: 10%;
+
+        input{
+          margin: 0 auto;
+        }
+
+        select{
+          margin: 2px auto 15px auto;
+        }
+
+        .radioBtnContainer{
+
+          input{
+            margin: -2px 15px 0 10px;
+          }
+        }
+      }
+
+      &.active{
+        .secondStep{
+
+          input, select{
+            margin: 2px auto 15px auto;
+          }
+        }
+      }
+    }
+
+    .finalStepsContainer{
+      .secondStep{
+        left: 10%;
+        right: 10%;
+
+        input, select{
+          margin: 2px auto 15px auto;
+        }
+
+        .radioBtnContainer{
+
+          input{
+            width: 15px;
+            height: 15px;
+            margin: -3px 15px 0 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// iPhone 5 landscape media queries
+@media only screen and (max-width : 600px) and (orientation:landscape){
+
+  .landingBlockade{
+
+    .msgContainer {
+      top: 10%;
+
+      &.active{
+
+        .introMsg{
+          //height: 0;
+          margin-top: -170px;
+        }
+      }
+    }
+  }
+
+  footer{
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 480px){
+
+  body{
+    font-size: 15px;
+  }
+
+  .landingBlockade{
+
+    .msgContainer {
+      top: 10%;
+
+      &.active{
+
+        .introMsg{
+          //height: 0;
+          margin-top: -170px;
+        }
+      }
+    }
+  }
+
+  footer{
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width : 320px){
+
+}

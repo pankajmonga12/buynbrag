@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="robots" content="index, follow">
+    <meta name="fragment" content="!" />
+
+    <title>New Landing</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link href="/application/views/app/styles/vendor.css" rel="stylesheet">
+    <link href="/application/views/app/styles/main.css" rel="stylesheet">
+
+    <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png">
+    <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="/apple-touch-icon-precomposed.png">
+    <!-- Fallback for all browsers -->
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/apple-touch-icon.png" />
+
+    <script type="text/javascript">
+
+        (function(){
+            //      test for touch events support and if not supported, attach .no-touch class to the HTML tag.
+            if (!("ontouchstart" in document.documentElement)) {
+                document.documentElement.className += " non-touch";
+            } 
+            else {
+                document.documentElement.className += " touch";
+            }
+
+            if(window.location.hash && window.location.hash === "#_=_") {
+                window.location.hash = "";
+            }
+
+            // test for non IE and modern IE browsers
+            if (navigator.appName == 'Microsoft Internet Explorer'){
+                var userAgent = navigator.userAgent;
+                var regEx  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                if (regEx.exec(userAgent) != null){
+                    ieVersion = parseFloat( RegExp.$1 );
+                }
+
+                if ( ieVersion >= 10.0 ){
+                    document.documentElement.className += " modernIE";
+                } else document.documentElement.className += " olderIE";
+            } else document.documentElement.className += " nonIE";
+
+        })();
+        
+    </script>
+
+</head>
+
+<body>
+
+<header class="row-fluid lightBg">
+    <section class="headerTop container-fluid">
+
+        <nav class="navbar navbar-inverse">
+
+                <h1 class="logoHeading">
+                    <a class="logo pull-left hidden-phone" href="#!/">
+                        <img src="/application/views/dist/images/404_logo_200.png" alt="BuynBrag logo"/>
+                    </a>
+                </h1>
+
+                <div class="signInAccountHolder pull-right" ng-hide='user.userid' >
+                    <a href="#loginModal" class="loginRequired" id="signInAccount" role="button" data-toggle="modal">Login</a>
+                    <a href="#registerModal" class="registerModal" id="createAccount" role="button" data-toggle="modal">Register</a>
+                </div>
+
+                <div typeahead min-chars="2" class="searchBoxContainer pull-right relative">
+
+                    <div class="searchBox">
+                        <input ng-model="searchKey" class="searchInput cssTransition" type="text" placeholder="Search..." autocomplete="off" spellcheck="false"/>
+                        <button class="btn btn-flat hide closeSearch">Cancel</button>
+                    </div>
+
+                    <i class="searchIcon icon-search block"></i>
+
+                </div>
+        </nav>
+
+    </section>
+</header>
+
+<div id="midSection" class="altLanding">
+
+    <section>
+        <div class="welcomeBg relative">
+            <div class="innerTxtWrapper container text-center">
+
+                <h1>Discover, Brag&nbsp;<em class="amp">&amp;</em>&nbsp;Share</h1>
+                <h2 class="bnbRed">Social shopping&nbsp;<em class="amp">&amp;</em>&nbsp;Curation</h2>
+
+                <button href="/fbLogin/index" class="btn fbBtn relative text-center block">
+                    <i class="fbIcon icon-facebook-1 left"></i>
+                    Discover with <span class="fbName">Facebook</span>
+                </button>
+
+                <div class="container text-center facePileWrapper">
+                    <iframe src="https://www.facebook.com/plugins/facepile.php?app_id=394741787279624" allowtransparency="true" frameborder="0" scrolling="no" style="border: none;overflow: hidden;height: 70px;"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="innerImgWrapper">
+
+            <div class="container-fluid text-center">
+
+                <h1>Trending right now</h1>
+
+                <div class="innerWrapper">
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="imageRepetition ng-scope" ng-repeat="product in similarProducts">
+
+                        <ul class="fancyProductMediumContainer">
+                            <li class="span2 fancyItem shadedBackground">
+                                <a ng-href="#!/product/Aroma-Aerating-Wine-Pourer/9890" href="#!/product/Aroma-Aerating-Wine-Pourer/9890">
+                                    <img class="fancyItemImage" ng-src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg" alt="Aroma Aerating Wine Pourer picture" src="http://buynbragstores.s3.amazonaws.com/assets/images/stores/242/9890/img1_240x200.jpg">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button href="/fbLogin/index" class="btn fbBtn pageEndBtn relative text-center block">
+                <i class="fbIcon icon-facebook-1 left"></i>
+                Start discovering with <span class="fbName">Facebook</span>
+            </button>
+
+            <div class="container text-center facePileWrapper">
+                <iframe src="https://www.facebook.com/plugins/facepile.php?app_id=394741787279624" allowtransparency="true" frameborder="0" scrolling="no" style="border: none;overflow: hidden;height: 70px;"></iframe>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- build:js scripts/analyticsTracking.js -->
+<script src="scripts/analyticsTracking.js"></script>
+<!-- endbuild -->
+
+<!--Use of CDN's for faster loading-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-cookies.min.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-animate.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-touch.min.js"></script> -->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script> -->
+
+<!-- build:js scripts/vendor.js -->
+<script src="scripts/vendor/bootstrap/bootstrap-collapse.js"></script>
+<script src="scripts/vendor/bootstrap/bootstrap-tab.js"></script>
+<script src="scripts/vendor/bootstrap/bootstrap-modal.js"></script>
+<script src="scripts/vendor/bootstrap/bootstrap-dropdown.js"></script>
+<script src="scripts/vendor/angular/angularytics.js"></script>
+<script src="scripts/vendor/jquery.easy-pie-chart.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/bnb.js -->
+<script src="src/app/common/unAngular/customJS.js"></script>
+
+<script src="src/app/common/filters/beautify.js"></script>
+<script src="src/app/common/filters/compress.js"></script>
+
+<script src="src/app/common/services/apiBroadcast.js"></script>
+<script src="src/app/common/services/api.js"></script>
+<script src="src/app/common/services/dataService.js"></script>
+<script src="src/app/common/services/user.js"></script>
+<script src="src/app/common/services/cart.js"></script>
+<script src="src/app/common/services/seo.js"></script>
+<script src="src/app/common/services/hoverTimestamp.js"></script>
+<script src="src/app/common/services/eventThrottler.js"></script>
+
+<script src="src/app/common/directives/dmClick.js"></script>
+<script src="src/app/common/directives/stabiliseHover.js"></script>
+<script src="src/app/common/directives/bragBtn.js"></script>
+<script src="src/app/common/directives/cartBtn.js"></script>
+<script src="src/app/common/directives/fancyBtn.js"></script>
+<script src="src/app/common/directives/followBtn.js"></script>
+<script src="src/app/common/directives/checkImage.js"></script>
+<script src="src/app/common/directives/checkLoad.js"></script>
+<script src="src/app/common/directives/emptyImg.js"></script>
+<script src="src/app/common/directives/scrollTo.js"></script>
+<script src="src/app/common/directives/dynamicModals.js"></script>
+<script src="src/app/common/directives/imageZoom.js"></script>
+<script src="src/app/common/directives/loadingSpinner.js"></script>
+<script src="src/app/common/directives/masonryLayout.js"></script>
+
+<script src="src/app/pages/home/homePage.js"></script>
+<script src="src/app/pages/allStores/allStoresPage.js"></script>
+<script src="src/app/pages/trends/trendsPage.js"></script>
+<script src="src/app/pages/profile/profilePage.js"></script>
+<script src="src/app/pages/category/categoryPage.js"></script>
+<script src="src/app/pages/store/storePage.js"></script>
+<script src="src/app/pages/search/searchPage.js"></script>
+<script src="src/app/pages/product/productPage.js"></script>
+
+<script src="src/app/social/inviteFacebookFriends.js"></script>
+<!-- <script src="src/app/social/addThisShare.js"></script> -->
+<!-- <script src="src/app/social/inviteFriends.js"></script> -->
+<!-- <script src="src/app/social/loadSdks.js"></script> -->
+<!-- <script src="src/app/social/facepile.js"></script> -->
+
+<script src="src/app/modals/coupons.js"></script>
+<script src="src/app/modals/quickView/quickView.js"></script>
+<script src="src/app/modals/userInfo/userInfo.js"></script>
+<script src="src/app/modals/profileFill/profileFill.js"></script>
+
+<script src="src/app/user/signIn.js"></script>
+<script src="src/app/user/signUp.js"></script>
+<script src="src/app/user/auth.js"></script>
+<script src="src/app/user/registrationFlow.js"></script>
+<script src="src/app/user/regBragProducts.js"></script>
+<script src="src/app/user/regFollowPeople.js"></script>
+<script src="src/app/user/changePassword.js"></script>
+
+<script src="src/app/router/renderRequest.js"></script>
+<script src="src/app/router/routesConfig.js"></script>
+<script src="src/app/router/router.js"></script>
+
+<script src="src/app/siteMessage/siteMsg.js"></script>
+
+<script src="src/app/prefetcher/gallery.js"></script>
+
+<script src="src/app/app.js"></script>
+<!-- endbuild -->
+<!--<script src="/application/views/dist/scripts/scripts.js"></script>-->
+
+
+<!-- NETCORE PIXEL -->
+<script type="text/javascript">/*<![CDATA[*/document.write('<script type="text/javascript" src="'+ document.location.protocol+ '//buynbragin.nsfleximail.com/buynbragin/etrack.php"><'+'/script>');/*]]>*/</script>
+<!-- END SECTION FROGIDEAS PIXEL -->
+
+<!--Addthis code-->
+<!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52230be844baaf4d"></script>-->
+<!--<script type="text/javascript">-->
+    <!--var addthis_config = {-->
+        <!--data_track_addressbar:false,-->
+        <!--data_track_clickback : true,-->
+        <!--data_ga_tracker : 'UA-35785264-1',-->
+        <!--data_ga_social : true,-->
+        <!--ervices_expanded : 'facebook,twitter,google_plusone_share,pinterest,email',-->
+        <!--services_compact : 'facebook,twitter,google_plusone_share,pinterest,email',-->
+        <!--services_exclude : 'thefancy,print,yahoomail',-->
+        <!--ui_click : true,-->
+         <!--//        ui_header_background : "#000",-->
+        <!--//        ui_use_css : false,-->
+        <!--ui_use_addressbook : true-->
+    <!--};-->
+<!--</script>-->
+
+<!--Start of Zopim Live Chat Script-->
+
+<!--<script type="text/javascript">-->
+    <!--window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=-->
+            <!--d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.-->
+            <!--_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');-->
+        <!--$.src='//v2.zopim.com/?cepyWqn8hSI5UyvtIPXCkXHHyej1Ossn';z.t=+new Date;$.-->
+                <!--type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');-->
+<!--</script>-->
+
+<!--End of Zopim Live Chat Script-->
+
+<!--Start of Purechat Live Chat Script-->
+<!--<script type='text/javascript'>(function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://www.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({ c: '7429a371-e0c1-40f7-97d2-be8c478085c4', f: true }); done = true; } }; })();</script>-->
+<!--End of Purechat Live Chat Script-->
+
+
+<!-- UserVoice JavaScript SDK (only needed once on a page) -->
+<!--<script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/Lxa7YqX1lhPt6poIpSFQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>-->
+
+<!-- A tab to launch the Classic Widget -->
+<!--<script>
+    UserVoice = window.UserVoice || [];
+    UserVoice.push(['showTab', 'classic_widget', {
+//        mode: 'feedback',
+        mode: 'full',
+        default_mode: 'feedback',
+        primary_color: '#cc6d00',
+        link_color: '#007dbf',
+        forum_id: 221063,
+        tab_label: 'Give Feedback',
+        tab_color: '#cc6d00',
+        tab_position: 'middle-left',
+        tab_inverted: true
+    }]);
+</script>-->
+<!-- Webengage Code -->
+<!--<script id="_webengage_script_tag" type="text/javascript">-->
+  <!--var _weq = _weq || {};-->
+  <!--_weq['webengage.licenseCode'] = '~10a5cbb72';-->
+  <!--_weq['webengage.widgetVersion'] = "4.0";-->
+  <!--(function(d){-->
+    <!--var _we = d.createElement('script');-->
+    <!--_we.type = 'text/javascript';-->
+    <!--_we.async = true;-->
+    <!--_we.src = (d.location.protocol == 'https:' ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-4.0.js";-->
+    <!--var _sNode = d.getElementById('_webengage_script_tag');-->
+    <!--_sNode.parentNode.insertBefore(_we, _sNode);-->
+  <!--})(document);-->
+<!--</script>-->
+
+<!-- Segment.io code -->
+<!--<script type="text/javascript">-->
+    <!--var analytics=analytics||[];(function(){var e=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group"],t=function(e){return function(){analytics.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var n=0;n<e.length;n++)analytics[e[n]]=t(e[n])})(),analytics.load=function(e){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+e+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)};-->
+    <!--analytics.load("n6i7pso6ai");-->
+<!--</script>-->
+
+</body>
+</html>
